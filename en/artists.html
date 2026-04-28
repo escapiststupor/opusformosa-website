@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Opus Formosa Artists — Meet the world-class musicians performing at Opus Formosa Festival."
+    />
+    <meta
+      name="keywords"
+      content="Opus Formosa, artists, Steven Lin, Belle Ting, Boris Borgolotto, classical music"
+    />
+    <meta property="og:title" content="Artists | Opus Formosa" />
+    <meta
+      property="og:description"
+      content="Meet the world-class musicians performing at Opus Formosa Festival."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opusformosa.org/en/artists.html" />
+    <link rel="canonical" href="https://opusformosa.org/en/artists.html" />
+    <link
+      rel="alternate"
+      hreflang="zh-TW"
+      href="https://opusformosa.org/artists.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://opusformosa.org/en/artists.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://opusformosa.org/artists.html"
+    />
+    <meta
+      property="og:image"
+      content="https://opusformosa.org/images/opus-formosa-logo.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Artists | Opus Formosa" />
+    <link rel="icon" href="../assets/opus_formosa_logo.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/nav-mobile.css" />
+    <script src="../assets/nav-bar.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0d0b09',
+              cream: '#f0e8d8',
+              'cream-dim': '#9e9080',
+              gold: '#c89840',
+              warm: '#5a4f45',
+              classical: { gold: '#c89840', dark: '#0d0b09', paper: '#f0e8d8', soft: '#2a2520' },
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              body: ['"Crimson Pro"', 'Georgia', 'serif'],
+              sans: ['"Crimson Pro"', 'Georgia', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Artists | Opus Formosa</title>
+
+    <style>
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.032;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 1s cubic-bezier(0.22,1,0.36,1), transform 1s cubic-bezier(0.22,1,0.36,1);
+      }
+      .fade-in-section.is-visible { opacity: 1; transform: none; }
+      .gold-rule {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(200,152,64,0.5), transparent);
+      }
+      .card-border {
+        border: 1px solid rgba(200,152,64,0.18);
+        transition: border-color 0.3s ease;
+      }
+      .card-border:hover { border-color: rgba(200,152,64,0.45); }
+      .pull-q {
+        border-left: 2px solid #c89840;
+        padding-left: 1.5rem;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body class="bg-ink text-cream font-body antialiased">
+    <!-- Navigation -->
+    <nav-bar lang="en"></nav-bar>
+
+    <!-- Hero -->
+    <header class="relative bg-classical-dark text-cream py-20 px-6 text-center overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(200,152,64,0.055)_0%,transparent_70%)] pointer-events-none"></div>
+      <div class="absolute top-0 inset-x-0 gold-rule"></div>
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <p class="font-body text-gold/70 tracking-[0.35em] uppercase text-xs mb-4">
+          Edition 2026
+        </p>
+        <h1 class="text-4xl md:text-6xl font-display font-normal text-cream mb-4 tracking-wide">Artists</h1>
+        <p class="font-body text-cream-dim text-lg">
+          World-class musicians performing with Opus Formosa
+        </p>
+      </div>
+      <div class="absolute bottom-0 inset-x-0 gold-rule"></div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-10">
+      <!-- Steven Lin -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img
+              src="../assets/steven-lin-team.webp"
+              alt="Steven Lin"
+              class="w-full h-72 md:h-full object-cover object-top"
+            />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">
+              Piano · Artistic Director
+            </p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">
+              Steven Lin
+            </h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">林易</p>
+            <p class="text-cream-dim text-sm leading-relaxed mb-4 font-body">
+              Taiwanese-American pianist Steven Lin is the founder and Artistic
+              Director of Opus Formosa. Passionate about connecting Taiwanese
+              musicians across borders, he is dedicated to nurturing artists and
+              advancing classical music in Taiwan. Alongside his work as a
+              festival curator, he maintains an active international career as a
+              soloist, performing across North America, Europe, and Asia.
+            </p>
+            <a
+              href="https://www.stevenlinpiano.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block text-xs text-gold hover:underline tracking-wide font-body"
+              >stevenlinpiano.com ↗</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <p class="text-cream-dim/50 text-xs tracking-widest text-center py-2 font-body">— Listed alphabetically by last name —</p>
+
+      <!-- Boris Borgolotto -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/boris-borgolotto.jpg" alt="Boris Borgolotto" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Violin</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Boris Borgolotto</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">Violin</p>
+            <p class="text-cream-dim text-sm leading-relaxed font-body">A French violinist acclaimed for his vivid, expressive playing and commanding stage presence, Boris Borgolotto is the winner of the First Prize at the IBLA Foundation International Competition in New York. He has performed at Carnegie Hall, Philharmonie de Paris, Wigmore Hall, and the Amsterdam Concertgebouw, collaborating with world-class conductors including Myung-Whun Chung, Ton Koopman, and Joe Hisaishi.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sirena Huang -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/sirena-huang.jpg" alt="Sirena Huang 黃凱珉" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Violin</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Sirena Huang</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">黃凱珉</p>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p class="italic text-gold/90 text-xs">"Exquisitely performed." — The New York Times &nbsp;·&nbsp; "A musician's soul that transcends her years." — TED</p>
+              <p>Taiwanese-American violinist Sirena Huang is the First Prize winner of the 2022 International Violin Competition of Indianapolis, and previously won top prizes at the International Tchaikovsky Competition for Young Musicians (2009) and the Elmar Oliveira International Violin Competition (2017). She has performed with the New York Philharmonic, Cleveland Orchestra, and Shanghai Symphony Orchestra, and holds degrees from Juilliard (studying with Itzhak Perlman) and Yale University.</p>
+            </div>
+            <a href="https://www.sirenahuang.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">sirenahuang.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adrien La Marca -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/adrien-la-marca.jpg" alt="Adrien La Marca" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Viola</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Adrien La Marca</h2>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p class="italic text-gold/90 text-xs">"A genuinely pure talent." — Financial Times &nbsp;·&nbsp; "The new hero of the viola." — Le Monde</p>
+              <p>French violist born in Aix-en-Provence. First Prize winner at the William Primrose, Lionel Tertis, and Brahms international competitions, and in 2016 became the first classical musician to receive the French Fondation Lagardère Prize. He studied at the Paris Conservatoire, and in Leipzig and Berlin under Tatjana Masurenko and Tabea Zimmermann.</p>
+            </div>
+            <a href="https://www.adrienlamarca.org/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">adrienlamarca.org ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eugene Lin -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/eugene-lin.jpg" alt="Eugene Lin 林恩俊" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Cello</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Eugene Lin</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">林恩俊</p>
+            <p class="text-cream-dim text-sm leading-relaxed font-body">Second Prize winner at the Trondheim International Chamber Competition, and a semi-finalist at both the Queen Elisabeth Cello Competition and Geneva International Competition. Now a cellist with The Philadelphia Orchestra, he has substituted with the Chicago Symphony and Pittsburgh Symphony, and previously held principal cello positions with the Pacific Music Festival, American Youth Symphony, and Colburn Orchestra. A graduate of the Colburn Conservatory, he studied under cellist Clive Greensmith.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fumiaki Miura -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/fumiaki-miura.jpg" alt="Fumiaki Miura 三浦文彰" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Violin</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Fumiaki Miura</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">三浦文彰</p>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p>Japanese violinist born in Tokyo in 1993. He won First Prize at the 2009 Joseph Joachim International Violin Competition in Hannover — also earning the Music Critics' Prize and Audience Prize — becoming the youngest and most-awarded winner in the competition's history. He studied with Tsugio Tokunaga at Toho Gakuen School of Music, then with Pavel Vernikov and Julian Rachlin in Vienna, and has been mentored by Pinchas Zukerman since 2009. He has performed with the Mariinsky, Royal Philharmonic, Los Angeles Philharmonic, and NHK Symphony Orchestra under conductors including Valery Gergiev and Krzysztof Penderecki, and appeared at the Ravinia, Schleswig-Holstein Musik Festival, and Menuhin Festival Gstaad. He performs on the 1704 Stradivarius "Viotti" on loan from the Munetsugu Foundation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Edgar Moreau -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/edgar-moreau.jpg" alt="Edgar Moreau" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Cello</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Edgar Moreau</h2>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p>French cellist and Second Prize winner at the 2017 Queen Elisabeth Competition, where he was the most celebrated young artist of the competition. He trained under Philippe Muller at the Paris Conservatoire and Jens Peter Maintz at the Hanns Eisler School in Berlin. His performances at the Philharmonie de Paris, Berlin Philharmonie, and Vienna Konzerthaus are distinguished by his profound tone and deeply communicative artistry.</p>
+            </div>
+            <a href="https://edgarmoreau.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">edgarmoreau.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Belle Ting -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="../assets/belleting.jpg" alt="Belle Ting 丁章媛" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Violin</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Belle Ting</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">丁章媛</p>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p class="italic text-gold/90 text-xs">"When she plays, it seems as if every piece of music was written for her." — Ivry Gitlis</p>
+              <p>Belle Ting has won top prizes at major international competitions, including First Prize and Best Interpretation at the Belgian International Violin Competition, First Prize at the Cooper International Violin Competition, Second Prize and Special Interpretation Prize at the Brahms International Music Competition, and Third Prize with Audience Award at the Khachaturian International Violin Competition. She has performed as soloist with the Cleveland Orchestra, Danish Odense Symphony, Moscow Philharmonic, and Armenian National Symphony, appearing at the Vienna Goldener Saal and major international festivals including Verbier and Progetto Martha Argerich.</p>
+            </div>
+            <a href="https://www.belleting.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">belleting.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trio Seoul -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden">
+          <div class="px-8 pt-8 pb-4">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Piano Trio</p>
+            <h2 class="text-2xl font-display font-semibold text-cream">Trio Seoul</h2>
+          </div>
+          <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gold/10">
+            <div class="p-8 flex flex-col">
+              <img src="../assets/jinjoo-cho.jpg" alt="Jinjoo Cho" class="w-24 h-24 rounded-full object-cover object-top mb-4 flex-shrink-0" />
+              <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Violin</p>
+              <h3 class="text-lg font-display font-semibold text-cream mb-3">Jinjoo Cho</h3>
+              <p class="text-cream-dim text-sm leading-relaxed font-body">First prize winner at the Indianapolis, Montreal, and Buenos Aires international competitions. She has performed with the Cleveland, Montreal, and Seoul Philharmonics, appeared at Carnegie Hall and the Aspen Music Festival, and is Associate Professor of Violin at Northwestern University's Bienen School of Music.</p>
+            </div>
+            <div class="p-8 flex flex-col">
+              <img src="../assets/brannon-cho.jpg" alt="Brannon Cho" class="w-24 h-24 rounded-full object-cover object-top mb-4 flex-shrink-0" />
+              <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Cello</p>
+              <h3 class="text-lg font-display font-semibold text-cream mb-3">Brannon Cho</h3>
+              <p class="text-cream-dim text-sm leading-relaxed font-body">First Prize winner of the 6th International Paulo Cello Competition, and prize winner at the Queen Elisabeth, Naumburg, and Cassadó competitions. He has performed at Carnegie Hall and Wigmore Hall, and plays a rare 1668 Antonio Casini cello.</p>
+            </div>
+            <div class="p-8 flex flex-col">
+              <img src="../assets/kyu-yeon-kim.jpg" alt="Kyu Yeon Kim" class="w-24 h-24 rounded-full object-cover object-top mb-4 flex-shrink-0" />
+              <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">Piano</p>
+              <h3 class="text-lg font-display font-semibold text-cream mb-3">Kyu Yeon Kim</h3>
+              <p class="text-cream-dim text-sm leading-relaxed font-body">Prize winner at the Dublin, Queen Elisabeth, Cleveland, and Geneva international competitions. She has performed with the Philadelphia Orchestra, Cleveland Orchestra, and Seoul Philharmonic, and is Associate Professor of Piano at Seoul National University.</p>
+            </div>
+          </div>
+          <div class="px-8 pb-6 text-right">
+            <a href="https://trioseoul.com/about" target="_blank" rel="noopener noreferrer" class="text-xs text-gold hover:underline tracking-wide font-body">trioseoul.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Artists TBA -->
+      <section class="fade-in-section">
+        <div class="border border-gold/15 border-dashed p-12 text-center">
+          <div class="text-gold/30 font-display text-4xl mb-4">✦</div>
+          <h2 class="text-xl font-display font-normal text-cream-dim mb-2">
+            More Artists to be Announced
+          </h2>
+          <p class="text-cream-dim/60 text-sm font-body">更多藝術家即將公布</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="fade-in-section relative overflow-hidden bg-classical-dark p-10 md:p-14" style="border: 1px solid rgba(200,152,64,0.18);">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_20%,rgba(200,152,64,0.04)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="relative text-center">
+          <p class="font-body text-gold/70 tracking-[0.28em] uppercase text-xs mb-4">Festival</p>
+          <h2 class="text-2xl font-display font-normal text-cream mb-4">
+            Opus Formosa Festival — Edition 2026
+          </h2>
+          <p class="text-cream-dim mb-8 font-body">
+            September 4–16, 2026 · Taipei · Kaohsiung · Taichung
+          </p>
+          <a
+            href="festival2026.html"
+            class="inline-block border border-gold text-gold hover:bg-gold hover:text-ink font-body text-sm tracking-[0.2em] uppercase py-3 px-8 transition-all duration-300"
+            >View Programme &amp; Venues →</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer style="border-top:1px solid rgba(200,152,64,0.15)" class="bg-ink text-cream-dim py-12 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="font-display font-normal text-2xl text-cream mb-2">Opus Formosa</h2>
+        <p class="font-body text-sm mb-2">福爾摩沙藝響</p>
+        <p class="font-body text-sm mb-4">北市演藝團體第二一九二字號</p>
+        <div class="flex justify-center gap-5 mt-6 mb-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=61559731449701"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="text-cream-dim/40 hover:text-gold transition-colors duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/opus_formosa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="text-cream-dim/40 hover:text-gold transition-colors duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@OpusFormosa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="text-cream-dim/40 hover:text-gold transition-colors duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="w-10 h-px mx-auto mb-6" style="background:rgba(200,152,64,0.2)"></div>
+        <p class="font-body text-sm">&copy; 2025 Opus Formosa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("is-visible");
+                observer.unobserve(e.target);
+              }
+            });
+          },
+          { root: null, rootMargin: "0px", threshold: 0.1 },
+        );
+        document
+          .querySelectorAll(".fade-in-section")
+          .forEach((s) => observer.observe(s));
+      });
+    </script>
+    <script src="../assets/nav-toggle.js" defer></script>
+  </body>
+</html>

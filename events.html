@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="zh-TW" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Opus Formosa 活動時間軸 - 探索我們的音樂會、音樂節及藝術活動歷史與未來規劃。"
+    />
+    <meta
+      name="keywords"
+      content="Opus Formosa, 福爾摩沙藝響, 活動時間軸, 音樂會, 音樂節, 古典音樂活動"
+    />
+    <meta property="og:title" content="活動時間軸 - Opus Formosa" />
+    <meta
+      property="og:description"
+      content="探索 Opus Formosa 的音樂活動歷史與未來規劃。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opusformosa.org/events.html" />
+    <link rel="canonical" href="https://opusformosa.org/events.html" />
+    <link
+      rel="alternate"
+      hreflang="zh-TW"
+      href="https://opusformosa.org/events.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://opusformosa.org/en/events.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://opusformosa.org/events.html"
+    />
+    <meta
+      property="og:image"
+      content="https://opusformosa.org/images/opus-formosa-logo.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="活動時間軸 - Opus Formosa" />
+    <meta
+      name="twitter:description"
+      content="探索 Opus Formosa 的音樂活動歷史與未來規劃。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://opusformosa.org/images/opus-formosa-logo.png"
+    />
+    <link rel="icon" href="assets/opus_formosa_logo.png" type="image/png" />
+    <link rel="stylesheet" href="assets/nav-mobile.css" />
+    <script src="assets/nav-bar.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink:      '#0d0b09',
+              cream:    '#f0e8d8',
+              'cream-dim': '#9e9080',
+              gold:     '#c89840',
+              warm:     '#5a4f45',
+              classical: { gold: '#c89840', dark: '#0d0b09', paper: '#f0e8d8', soft: '#2a2520' },
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              serif:   ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              body:    ['"Crimson Pro"', 'Georgia', 'serif'],
+              sans:    ['"Crimson Pro"', 'Georgia', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>活動時間軸 - Opus Formosa</title>
+
+    <style>
+      /* Grain overlay */
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.032;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      /* Scroll fade */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 1s cubic-bezier(0.22,1,0.36,1), transform 1s cubic-bezier(0.22,1,0.36,1);
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* Gold rule */
+      .gold-rule {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(200,152,64,0.5), transparent);
+      }
+
+      /* Timeline styles */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background: #c89840;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+      }
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: -8px;
+        background-color: #c89840;
+        border: 2px solid #0d0b09;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .left {
+        left: 0;
+      }
+      .right {
+        left: 50%;
+      }
+      .right::after {
+        left: -8px;
+      }
+      .timeline-content {
+        padding: 20px 30px;
+        background-color: rgba(200,152,64,0.06);
+        border: 1px solid rgba(200,152,64,0.2);
+        color: #f0e8d8;
+        position: relative;
+        border-radius: 6px;
+      }
+      .timeline-content h3 {
+        color: #f0e8d8;
+      }
+      @media screen and (max-width: 600px) {
+        .timeline::after {
+          left: 31px;
+        }
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+        .timeline-item::before {
+          left: 60px;
+          border: medium solid rgba(200,152,64,0.2);
+          border-width: 10px 10px 10px 0;
+          border-color: transparent #c89840 transparent transparent;
+        }
+        .left::after,
+        .right::after {
+          left: 15px;
+        }
+        .right {
+          left: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-ink text-cream font-body antialiased">
+    <!-- Navigation -->
+    <nav-bar lang="zh"></nav-bar>
+
+    <!-- Header -->
+    <header class="relative bg-ink py-20 px-6 text-center overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(200,152,64,0.055)_0%,transparent_70%)] pointer-events-none"></div>
+      <div class="absolute top-0 inset-x-0 gold-rule"></div>
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <p class="font-body text-gold/70 tracking-[0.35em] uppercase text-xs mb-6">福爾摩沙藝響</p>
+        <h1 class="font-display font-normal text-4xl md:text-5xl text-cream mb-4 tracking-wide">
+          活動時間軸
+        </h1>
+        <div class="w-16 h-px bg-gold/40 mx-auto my-6"></div>
+        <p class="font-display font-normal italic text-cream-dim text-lg">
+          探索我們的音樂會、音樂節及藝術活動歷史與未來規劃
+        </p>
+      </div>
+      <div class="absolute bottom-0 inset-x-0 gold-rule"></div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+      <!-- Timeline Section -->
+      <section class="fade-in-section">
+        <div class="timeline">
+          <!-- Event 1: Foundation -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                組織成立
+              </h3>
+              <time class="text-gold font-semibold">2025年11月</time>
+              <p class="text-cream-dim mt-2">
+                Opus Formosa（福爾摩沙藝響）正式成立，致力於打造台灣古典音樂藝術平台。
+              </p>
+            </div>
+          </div>
+
+          <!-- 2025 Dec: 李鎮源院士紀念會 -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                「通識 e 學 101 影片發表會」暨「李鎮源院士 110 歲冥誕紀念會」
+              </h3>
+              <time class="text-gold font-semibold">2025年12月5日</time>
+              <p class="text-cream-dim mt-2">
+                國立臺灣大學醫學院。藝術總監林易應邀於紀念會中現場演奏鋼琴，透過音樂向李鎮源院士致敬。
+              </p>
+            </div>
+          </div>
+
+          <!-- 2025 Dec: 林易鋼琴分享會 -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                Opus Formosa 林易鋼琴分享會
+              </h3>
+              <time class="text-gold font-semibold">2025年12月7日</time>
+              <p class="text-cream-dim mt-2">
+                日新旺台樓旺台廳。藝術總監林易透過鋼琴演奏與現場解說，以平易近人的方式向大眾介紹古典音樂之美。
+              </p>
+            </div>
+          </div>
+
+          <!-- Event: Belle Ting Violin Recital (Taipei) -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                <a
+                  href="belle-ting-recital.html"
+                  class="text-cream hover:text-gold transition-colors duration-300"
+                  >丁章媛小提琴獨奏會《幻想與映象》</a
+                >
+              </h3>
+              <time class="text-gold font-semibold">2026年2月20日</time>
+              <p class="text-cream-dim mt-2">
+                Opus Formosa 與 Classics From the Other Side Festival (CFOS) 協辦。Belle Ting
+                丁章媛小提琴獨奏會，鋼琴合作嚴子晴，劉虹麟擔任小提琴。國家兩廳院演奏廳。
+              </p>
+              <p class="mt-2">
+                <a
+                  href="belle-ting-recital.html"
+                  class="text-gold hover:underline text-sm"
+                  >節目與購票資訊 →</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Event: 音樂、花、與初心的重逢 -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                音樂、花、與初心的重逢
+              </h3>
+              <time class="text-gold font-semibold">2026年4月5日（星期日）</time>
+              <p class="text-cream-dim mt-2">
+                林易、丁章媛受邀於台灣國際音樂家協會會員聚會中演奏。
+              </p>
+            </div>
+          </div>
+
+          <!-- Event: Basque Musikaste (Bilbao) -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                <a
+                  href="bilbao.html"
+                  class="text-cream hover:text-gold transition-colors duration-300"
+                  >畢爾包音樂週 Basque Musikaste</a
+                >
+              </h3>
+              <time class="text-gold font-semibold">2026年6月3日–9日</time>
+              <p class="text-cream-dim mt-2">
+                由 ABAO 畢爾包歌劇院與 Opus Formosa 共同呈獻的全新音樂節，世界級藝術家齊聚巴斯克。維多利亞‑加斯泰茲、聖塞巴斯提安、畢爾包（含古根漢美術館）多場演出。
+              </p>
+              <p class="mt-2">
+                <a
+                  href="bilbao.html"
+                  class="text-gold hover:underline text-sm"
+                  >了解更多 →</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Edition 2026 -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 class="text-xl font-display font-semibold mb-2">
+                <a href="festival2026.html" class="text-cream hover:text-gold transition-colors duration-300">Opus Formosa音樂節 — Edition 2026</a>
+              </h3>
+              <time class="text-gold font-semibold">2026年9月4日–16日</time>
+              <p class="text-cream-dim mt-2">
+                台北、高雄、台中三城巡演，管弦樂與室內樂系列共五場演出。
+              </p>
+              <p class="mt-2">
+                <a href="festival2026.html" class="text-gold hover:underline text-sm">場次與場地一覽 →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="border-top:1px solid rgba(200,152,64,0.15)" class="bg-ink py-12 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="font-display font-normal text-2xl text-cream mb-2">Opus Formosa</h2>
+        <p class="font-body text-cream-dim text-sm mb-2">福爾摩沙藝響</p>
+        <p class="font-body text-cream-dim text-sm mb-4">北市演藝團體第二一九二字號</p>
+        <div class="flex justify-center gap-5 mt-6 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61559731449701" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-cream-dim/40 hover:text-gold transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/opus_formosa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-cream-dim/40 hover:text-gold transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@OpusFormosa" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-cream-dim/40 hover:text-gold transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+        <div class="w-10 h-px mx-auto mb-6" style="background:rgba(200,152,64,0.2)"></div>
+        <p class="font-body text-[0.65rem]" style="color:rgba(158,144,128,0.7)">&copy; 2025 Opus Formosa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Animation Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll(".fade-in-section").forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+    <script src="assets/nav-toggle.js" defer></script>
+  </body>
+</html>

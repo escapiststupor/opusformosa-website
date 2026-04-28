@@ -1,0 +1,4 @@
+# 只排除臨時/系統檔案
+__pycache__/
+*.pyc
+.DS_Store

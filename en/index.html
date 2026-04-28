@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var pref;
+        try { pref = sessionStorage.getItem("opus-lang-pref") || localStorage.getItem("opus-lang-pref"); } catch (e) {}
+        if (pref === "zh") { window.location.replace("/"); return; }
+        if (pref === "en") return;
+        var lang = (navigator.language || "").toLowerCase();
+        if (lang.startsWith("zh")) window.location.replace("/");
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Opus Formosa is dedicated to creating a platform for classical music in Taiwan, fostering connections between artists and audiences through music festivals, concert series, and educational outreach programs."
+    />
+    <meta
+      name="keywords"
+      content="Opus Formosa, classical music, Taiwan arts, concerts, music education, cultural promotion"
+    />
+    <meta property="og:title" content="Opus Formosa - 福爾摩沙藝響" />
+    <meta
+      property="og:description"
+      content="Taiwan's classical music arts organization, fostering connections between artists and audiences through festivals and educational activities."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opusformosa.org/en/" />
+    <link rel="canonical" href="https://opusformosa.org/en/" />
+    <link rel="alternate" hreflang="zh-TW" href="https://opusformosa.org/" />
+    <link rel="alternate" hreflang="en" href="https://opusformosa.org/en/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://opusformosa.org/"
+    />
+    <meta
+      property="og:image"
+      content="https://opusformosa.org/images/opus-formosa-logo.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Opus Formosa - 福爾摩沙藝響" />
+    <meta
+      name="twitter:description"
+      content="Taiwan's classical music arts organization, fostering connections between artists and audiences through festivals and educational activities."
+    />
+    <meta
+      name="twitter:image"
+      content="https://opusformosa.org/images/opus-formosa-logo.png"
+    />
+    <link rel="icon" href="../assets/opus_formosa_logo.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/nav-mobile.css" />
+    <script src="../assets/nav-bar.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink:      '#0d0b09',
+              cream:    '#f0e8d8',
+              'cream-dim': '#9e9080',
+              gold:     '#c89840',
+              'gold-faint': 'rgba(200,152,64,0.12)',
+              warm:     '#5a4f45',
+              classical: { gold: '#c89840', dark: '#0d0b09', paper: '#f0e8d8', soft: '#2a2520' },
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              serif:   ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              body:    ['"Crimson Pro"', 'Georgia', 'serif'],
+              sans:    ['"Crimson Pro"', 'Georgia', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Opus Formosa",
+        "alternateName": "福爾摩沙藝響",
+        "url": "https://opusformosa.org",
+        "description": "Opus Formosa is dedicated to creating a platform for classical music in Taiwan, fostering connections between artists and audiences through music festivals, concert series, and educational outreach programs.",
+        "foundingDate": "2025",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "TW"
+        },
+        "sameAs": [
+          "https://www.facebook.com/opusformosa",
+          "https://www.instagram.com/opusformosa"
+        ],
+        "member": [
+          {
+            "@type": "Person",
+            "name": "Steven Lin",
+            "jobTitle": "Artistic Director"
+          },
+          {
+            "@type": "Person",
+            "name": "Canglah Micyang",
+            "jobTitle": "Secretary General"
+          },
+          {
+            "@type": "Person",
+            "name": "Jimmy Wang",
+            "jobTitle": "Development Director"
+          },
+          {
+            "@type": "Person",
+            "name": "Glandys Hiu Wai Or",
+            "jobTitle": "Executive Assistant"
+          }
+        ]
+      }
+    </script>
+    <title>Opus Formosa - 福爾摩沙藝響</title>
+
+    <style>
+      /* ── Grain overlay ── */
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.032;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      /* ── Scroll fade ── */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 1s cubic-bezier(0.22,1,0.36,1), transform 1s cubic-bezier(0.22,1,0.36,1);
+      }
+      .fade-in.is-visible { opacity: 1; transform: none; }
+
+      /* ── Marquee ── */
+      .marquee-wrap { overflow: hidden; }
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 32s linear infinite;
+      }
+      @keyframes marquee {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+
+      /* ── Scroll indicator pulse ── */
+      .scroll-line {
+        animation: spulse 2.4s ease-in-out infinite;
+      }
+      @keyframes spulse {
+        0%,100% { opacity: 0.1; transform: scaleY(0.6); }
+        50%      { opacity: 0.5; transform: scaleY(1); }
+      }
+
+      /* ── Letter paper ── */
+      .paper {
+        background: #f5ede0;
+        box-shadow: 0 0 0 1px rgba(200,152,64,0.08), 0 32px 80px rgba(0,0,0,0.5), 0 0 120px rgba(200,152,64,0.06);
+      }
+
+      /* ── Gold rule ── */
+      .gold-rule {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(200,152,64,0.5), transparent);
+      }
+
+      /* ── Card hover ── */
+      .card-border {
+        border: 1px solid rgba(200,152,64,0.18);
+        transition: border-color 0.3s ease;
+      }
+      .card-border:hover { border-color: rgba(200,152,64,0.45); }
+
+      /* ── Oversized section number ── */
+      .sec-num {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-weight: 300;
+        font-size: clamp(5rem, 12vw, 10rem);
+        line-height: 1;
+        color: rgba(200,152,64,0.08);
+        user-select: none;
+        letter-spacing: -0.02em;
+        flex-shrink: 0;
+      }
+
+      /* ── Pull quote bar ── */
+      .pull-q {
+        border-left: 2px solid #c89840;
+        padding-left: 1.5rem;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
+  <body class="bg-ink text-cream font-body antialiased">
+    <nav-bar lang="en"></nav-bar>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-ink">
+
+      <!-- Radial glow -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(200,152,64,0.055)_0%,transparent_70%)] pointer-events-none"></div>
+
+      <!-- Top rule -->
+      <div class="absolute top-0 inset-x-0 gold-rule"></div>
+
+      <div class="relative z-10 text-center px-6 fade-in is-visible">
+        <!-- Eyebrow -->
+        <p class="font-body text-gold/70 tracking-[0.35em] uppercase text-xs mb-10 md:mb-14">福爾摩沙藝響</p>
+
+        <!-- Logo -->
+        <img src="../opus_formosa_logo_white.png" alt="Opus Formosa"
+          class="mx-auto mb-8 w-56 md:w-72 h-auto opacity-90" fetchpriority="high" />
+
+        <!-- Display tagline -->
+        <h1 class="font-display font-normal text-cream/80 text-xl md:text-2xl tracking-[0.12em] mb-3">
+          Redefining the 21st-Century Artist
+        </h1>
+
+        <!-- Thin gold line -->
+        <div class="w-16 h-px bg-gold/40 mx-auto my-8"></div>
+
+        <!-- Subtitle -->
+        <p class="font-display font-normal italic text-cream-dim text-base md:text-lg tracking-wide">
+          Music · Connection · Taiwan
+        </p>
+      </div>
+
+      <!-- Marquee ticker -->
+      <div class="absolute bottom-20 inset-x-0 marquee-wrap border-t border-b border-gold/10 py-3">
+        <div class="marquee-track font-body text-gold/40 text-xs tracking-[0.22em] uppercase select-none">
+          <span class="px-10">Taiwan</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Bilbao</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">2026</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Classical Music</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Basque Musikaste</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Opus Formosa</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Taipei</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Taichung</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Kaohsiung</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Bilbao</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Taiwan</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Bilbao</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">2026</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Classical Music</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Basque Musikaste</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Opus Formosa</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Taipei</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Taichung</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Kaohsiung</span><span class="text-gold/15 px-2">·</span>
+          <span class="px-10">Bilbao</span><span class="text-gold/15 px-2">·</span>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+        <div class="w-px h-10 bg-gold/50 scroll-line origin-top"></div>
+      </div>
+
+      <!-- Bottom rule -->
+      <div class="absolute bottom-0 inset-x-0 gold-rule"></div>
+    </header>
+
+    <main>
+
+      <!-- ══ 1. Mission ══ -->
+      <section class="fade-in py-24 md:py-36 px-8">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="font-display font-normal text-xl md:text-[1.65rem] leading-[1.9] text-cream/75 tracking-wide">
+            Opus Formosa is a premier global platform redefining the role of culture in an automated world. We bridge the gap between technical virtuosity and real-world influence, educating the next generation of young artists to lead a movement of authentic human connection and social impact.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══ 2. Newsletter ══ -->
+      <section class="fade-in border-t border-b border-gold/12 py-14 px-6">
+        <div class="max-w-lg mx-auto text-center">
+          <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-4">Newsletter</p>
+          <h2 class="font-display font-normal text-2xl text-cream mb-2">Stay in the Loop</h2>
+          <p class="font-body text-cream-dim text-sm mb-8">Get the latest news and exclusive updates from Opus Formosa</p>
+          <form id="signup-form-en" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input type="email" name="entry.237650249" placeholder="Your email address" required
+              class="flex-1 px-4 py-3 bg-transparent border border-gold/25 text-cream placeholder-warm/70 text-sm font-body focus:outline-none focus:border-gold/60 transition-colors" />
+            <button type="submit"
+              class="border border-gold text-gold hover:bg-gold hover:text-ink font-body text-sm tracking-[0.2em] uppercase px-7 py-3 transition-all duration-300 whitespace-nowrap">
+              Subscribe
+            </button>
+          </form>
+          <p id="signup-msg-en" class="hidden mt-5 text-gold text-sm font-body">Thank you for subscribing! We'll be in touch.</p>
+          <script>
+            document.getElementById('signup-form-en').addEventListener('submit', function(e) {
+              e.preventDefault();
+              var form = this, btn = form.querySelector('button[type="submit"]');
+              btn.disabled = true; btn.textContent = 'Sending…';
+              fetch('https://docs.google.com/forms/d/e/1FAIpQLSeb32qB3wPkmiRd-OzUFUNwtPWSLjW6p6VuxGpav11nHXuKRg/formResponse', {
+                method: 'POST', mode: 'no-cors', body: new FormData(form)
+              }).then(function() {
+                form.style.display = 'none';
+                document.getElementById('signup-msg-en').classList.remove('hidden');
+              });
+            });
+          </script>
+        </div>
+      </section>
+
+      <!-- ══ 3. Letter from Artistic Director ══ -->
+      <section id="letter" class="fade-in py-20 md:py-28 px-6">
+        <div class="max-w-2xl mx-auto paper px-8 md:px-14 py-12 md:py-18">
+          <p class="font-body text-warm tracking-[0.22em] uppercase text-xs mb-6">Artistic Director's Note</p>
+          <h2 class="font-display font-semibold text-2xl md:text-3xl text-ink mb-10 leading-snug">
+            Why Opus Formosa
+          </h2>
+          <div class="space-y-5 font-body text-[1.08rem] leading-[1.85] text-ink/80">
+            <p>They say it takes 10,000 hours to master a craft. By my early thirties, I had spent more than 50,000 hours at the piano.</p>
+            <p>From my training at Juilliard and Curtis to performing over a thousand concerts, my existence was centered on the craftsmanship of the piano in the practice room and the energy of the stage. I studied theory and history, and I obsessed over historical recordings to learn from the past. I spent hours asking myself how to play from one note to the next, how to connect one phrase to another, and how to find the right balance in a single chord. I absolutely loved this process and was consumed by it; my passion for bringing these masterpieces to life made the loneliness of the practice room worthwhile.</p>
+            <p>Then, during the pandemic, the music stopped.</p>
+            <p>Without stages or audiences, I looked at those 50,000 hours and struggled to find their meaning. While other musicians posted videos online, I couldn't bring myself to do it. Without the life of a performer, I didn't know who I was. I felt lost.</p>
+            <p>In late 2023, I returned to the stage to perform for 4,500 people at the Rady Shell in San Diego. It was a major moment, but as I walked offstage, something was still missing. In the quiet of the wings, I had an epiphany:</p>
+            <blockquote class="pull-q text-xl md:text-2xl text-ink my-8 leading-[1.65]">
+              Without people, there is no music.
+            </blockquote>
+            <p>For decades, I was trained to serve the composer and the score. But I realized that music doesn't live in a manuscript or in the hammers of a piano. It lives in the community of listeners. It lives on the bridge between the performer and the person in the third row.</p>
+            <p>I grew up as an only child, constantly moving—from Los Angeles to Taipei, New Jersey, New York, and Philadelphia. Later, my career kept me a nomad, traveling from Little Rock and Savannah to Perth, Berlin, Bilbao, Shanghai, and Tokyo. Looking back, the most meaningful part of that journey wasn't the applause; it was the people who became my friends and family along the way.</p>
+            <p>That is why I started Opus Formosa.</p>
+            <p>The next phase of my career isn't about how perfectly I can play; it's about how well I can connect. Through new festivals in the Basque Country and Taiwan, I am using music as a platform to unite the people I've met. We support young artists and curate experiences through special programming—not just for the sake of art, but for the sake of human connection.</p>
+            <blockquote class="pull-q text-xl md:text-2xl my-8 leading-[1.65]" style="border-color:#c89840;color:#7a5220;">
+              I spent 50,000 hours learning how to play. Now, I'm spending my life learning how to listen—to the music, and to you.
+            </blockquote>
+          </div>
+          <p class="mt-10 font-display font-normal italic text-warm text-base">— Steven Lin, Artistic Director</p>
+        </div>
+      </section>
+
+      <!-- ══ 4. Photo Gallery ══ -->
+      <section class="fade-in px-6 pb-4 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1.5">
+          <div class="overflow-hidden group relative">
+            <div class="absolute inset-0 bg-ink/30 group-hover:bg-ink/0 transition-colors duration-700 z-10"></div>
+            <img src="../assets/steven-masterclass.jpg" alt="Masterclass in session"
+              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div class="overflow-hidden group relative">
+            <div class="absolute inset-0 bg-ink/30 group-hover:bg-ink/0 transition-colors duration-700 z-10"></div>
+            <img src="../assets/steven-lin-recital.jpg" alt="Salon concert performance"
+              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div class="overflow-hidden group relative">
+            <div class="absolute inset-0 bg-ink/30 group-hover:bg-ink/0 transition-colors duration-700 z-10"></div>
+            <img src="../assets/steven-lin-tso.jpg" alt="With Taipei Symphony Orchestra artists"
+              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ 5. Problem ══ -->
+      <section id="problem" class="fade-in py-24 md:py-32 px-6 max-w-5xl mx-auto">
+        <div class="flex items-start gap-4 md:gap-8 mb-14">
+          <span class="sec-num">01</span>
+          <div class="pt-3 md:pt-6">
+            <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-3">The Problem</p>
+            <h2 class="font-display font-semibold text-3xl md:text-5xl text-cream mb-4 leading-tight">The Dual Crisis</h2>
+            <p class="font-body text-cream-dim text-base leading-relaxed max-w-xl">
+              We are solving two of the most pressing socio-cultural challenges of the 21st century.
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 md:ml-[calc(clamp(5rem,12vw,10rem)+2rem)]">
+          <div class="card-border p-8 md:p-10">
+            <h3 class="font-display font-semibold text-xl text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">The Conservatory Gap</h3>
+            <p class="font-body text-cream-dim leading-relaxed">Traditional conservatories produce technically flawless musicians who are unprepared for the marketplace. They graduate with elite skills but lack the entrepreneurship, branding, and social intelligence required to build a sustainable livelihood.</p>
+          </div>
+          <div class="card-border p-8 md:p-10">
+            <h3 class="font-display font-semibold text-xl text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Societal Isolation</h3>
+            <p class="font-body text-cream-dim leading-relaxed">In an era of AI and digital saturation, society is increasingly "connected" yet deeply isolated. Communities are starved for the intimacy, depth, and shared experiences that only in-person cultural exchanges can provide.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gold divider -->
+      <div class="gold-rule max-w-5xl mx-auto px-6"></div>
+
+      <!-- ══ 6. Solution ══ -->
+      <section id="solution" class="fade-in py-24 md:py-32 px-6 max-w-5xl mx-auto">
+        <div class="flex items-start gap-4 md:gap-8 mb-14">
+          <span class="sec-num">02</span>
+          <div class="pt-3 md:pt-6">
+            <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-3">The Solution</p>
+            <h2 class="font-display font-semibold text-3xl md:text-5xl text-cream mb-4 leading-tight">The Salon Series</h2>
+            <p class="font-body text-cream-dim text-base leading-relaxed max-w-xl">
+              We move the stage from the distant concert hall into the heart of the community—Museums, Galleries, Wineries, Country Clubs, and Historical Venues.
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 md:ml-[calc(clamp(5rem,12vw,10rem)+2rem)]">
+          <div class="card-border p-8">
+            <h3 class="font-display font-semibold text-lg text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Applied Artist Development</h3>
+            <p class="font-body text-cream-dim text-sm leading-relaxed">Emerging artists receive hands-on education—through masterclasses and live settings—in communication, audience engagement, and networking. The Salon Series serves as their real-world incubator.</p>
+          </div>
+          <div class="card-border p-8">
+            <h3 class="font-display font-semibold text-lg text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Community Integration</h3>
+            <p class="font-body text-cream-dim text-sm leading-relaxed">We curate environments where business leaders, creatives, and local residents engage face-to-face, replacing screen time with high-value interpersonal connection.</p>
+          </div>
+          <div class="card-border p-8">
+            <h3 class="font-display font-semibold text-lg text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Barrier-Free Access</h3>
+            <p class="font-body text-cream-dim text-sm leading-relaxed">All Salon concerts are completely free for the community, democratizing access to excellence and re-establishing the artist as a vital social anchor.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gold divider -->
+      <div class="gold-rule max-w-5xl mx-auto px-6"></div>
+
+      <!-- ══ 7. Education ══ -->
+      <section id="education" class="fade-in py-24 md:py-32 px-6 max-w-5xl mx-auto">
+        <div class="flex items-start gap-4 md:gap-8 mb-14">
+          <span class="sec-num">03</span>
+          <div class="pt-3 md:pt-6">
+            <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-3">The Fellowship</p>
+            <h2 class="font-display font-semibold text-3xl md:text-5xl text-cream leading-tight">
+              Where Virtuosity<br/>Meets the World
+            </h2>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10 md:gap-14 md:ml-[calc(clamp(5rem,12vw,10rem)+2rem)] items-center">
+          <div class="overflow-hidden group relative">
+            <div class="absolute inset-0 bg-gold/5 group-hover:bg-transparent transition-colors duration-700 z-10 mix-blend-multiply"></div>
+            <img src="../assets/steven-masterclass.jpg" alt="Steven Lin conducting a masterclass"
+              class="w-full h-80 object-cover brightness-75 group-hover:brightness-90 group-hover:scale-[1.03] transition-all duration-700" />
+          </div>
+          <div>
+            <div class="space-y-4 font-body text-cream-dim leading-relaxed">
+              <p>The Opus Formosa Fellowship is an intensive residency for exceptional emerging artists—a rare space where technical mastery is only the beginning.</p>
+              <p>Modeled after the great American summer institutions—Marlboro, Aspen, Perlman—our program immerses young musicians in the full breadth of artistic life: side-by-side performance with established masters, rigorous mentorship in communication and audience engagement, and the entrepreneurial tools needed to sustain a meaningful career.</p>
+              <p>We believe in connection over competition. The most important skill an artist can develop is not in the practice room—but in the room.</p>
+            </div>
+            <ul class="mt-8 space-y-4 pt-8" style="border-top:1px solid rgba(200,152,64,0.15)">
+              <li class="flex items-center gap-4 font-body text-sm text-cream-dim">
+                <span class="w-5 h-px bg-gold/50 flex-shrink-0"></span>
+                Side-by-side performance with international masters
+              </li>
+              <li class="flex items-center gap-4 font-body text-sm text-cream-dim">
+                <span class="w-5 h-px bg-gold/50 flex-shrink-0"></span>
+                Masterclasses in communication, branding, and the business of music
+              </li>
+              <li class="flex items-center gap-4 font-body text-sm text-cream-dim">
+                <span class="w-5 h-px bg-gold/50 flex-shrink-0"></span>
+                A noncompetitive environment that safeguards each artist's individual voice
+              </li>
+              <li class="flex items-center gap-4 font-body text-sm text-cream-dim">
+                <span class="w-5 h-px bg-gold/50 flex-shrink-0"></span>
+                Real-world performance experience in intimate, high-stakes salon settings
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gold divider -->
+      <div class="gold-rule max-w-5xl mx-auto px-6"></div>
+
+      <!-- ══ 8. Global ══ -->
+      <section id="global" class="fade-in py-24 md:py-32 px-6 max-w-5xl mx-auto">
+        <div class="flex items-start gap-4 md:gap-8">
+          <span class="sec-num">04</span>
+          <div class="pt-3 md:pt-6">
+            <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-3">Global Footprint</p>
+            <h2 class="font-display font-semibold text-3xl md:text-5xl text-cream mb-6 leading-tight">Taiwan · Basque · World</h2>
+            <p class="font-body text-cream-dim text-lg leading-relaxed max-w-2xl">
+              Our flagship festivals in Basque Country and Taiwan serve as our ultimate proving grounds. In these key markets, our educational mission meets the public stage, demonstrating at scale that music is a powerful catalyst for human connection.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gold divider -->
+      <div class="gold-rule max-w-5xl mx-auto px-6"></div>
+
+      <!-- ══ 9. Support ══ -->
+      <section id="invest" class="fade-in py-24 md:py-32 px-6 max-w-5xl mx-auto">
+        <div class="flex items-start gap-4 md:gap-8 mb-14">
+          <span class="sec-num">05</span>
+          <div class="pt-3 md:pt-6">
+            <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-3">Supporting Our Mission</p>
+            <h2 class="font-display font-semibold text-3xl md:text-5xl text-cream mb-4 leading-tight">An Investment in Social Architecture</h2>
+            <p class="font-body text-cream-dim text-base max-w-xl">Your contribution delivers returns across three strategic pillars.</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4 md:ml-[calc(clamp(5rem,12vw,10rem)+2rem)]">
+          <div class="card-border p-8">
+            <h3 class="font-display font-semibold text-lg text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Artist Acceleration</h3>
+            <p class="font-body text-cream-dim text-sm leading-relaxed">An initiative made by musicians for musicians—directly funding stipends, travel, and business education to turn virtuosos into self-sustaining entrepreneurs.</p>
+          </div>
+          <div class="card-border p-8">
+            <h3 class="font-display font-semibold text-lg text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Quantifiable Impact</h3>
+            <p class="font-body text-cream-dim text-sm leading-relaxed">Measurable returns through attendance data, venue partnerships, and audience demographic growth.</p>
+          </div>
+          <div class="card-border p-8">
+            <h3 class="font-display font-semibold text-lg text-gold mb-4 pb-4" style="border-bottom:1px solid rgba(200,152,64,0.15)">Cultural Legacy</h3>
+            <p class="font-body text-cream-dim text-sm leading-relaxed">A visible leadership role in safeguarding human-centric art in an increasingly automated world.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ 10. Contact ══ -->
+      <section id="contact" class="fade-in py-24 px-6 text-center" style="border-top:1px solid rgba(200,152,64,0.1)">
+        <div class="max-w-lg mx-auto">
+          <p class="font-body text-gold/80 tracking-[0.28em] uppercase text-xs mb-4">Contact Us</p>
+          <h2 class="font-display font-normal text-3xl md:text-4xl text-cream mb-10">Let's Start a Conversation</h2>
+          <a href="mailto:info@opusformosa.org"
+            class="inline-block border border-gold/60 text-gold hover:bg-gold hover:text-ink font-body text-sm tracking-[0.2em] uppercase px-10 py-4 transition-all duration-300">
+            info@opusformosa.org
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer style="border-top:1px solid rgba(200,152,64,0.15)" class="py-16 px-6 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-display font-normal text-2xl text-cream mb-1">Opus Formosa</h2>
+        <p class="font-body text-cream-dim text-sm mb-1">福爾摩沙藝響</p>
+        <p class="font-body text-[0.65rem] tracking-wide mb-8" style="color:rgba(158,144,128,0.75)">Taipei Performing Arts Group No. 2192</p>
+        <div class="flex justify-center gap-6 mb-8">
+          <a href="https://www.facebook.com/profile.php?id=61559731449701" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="text-cream-dim/50 hover:text-gold transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/opus_formosa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="text-cream-dim/50 hover:text-gold transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@OpusFormosa" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="text-cream-dim/50 hover:text-gold transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+        <div class="w-10 h-px mx-auto mb-6" style="background:rgba(200,152,64,0.2)"></div>
+        <p class="font-body text-[0.65rem]" style="color:rgba(158,144,128,0.7)">&copy; 2025 Opus Formosa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../assets/nav-toggle.js" defer></script>
+    <script>
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.07 });
+      document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    </script>
+  </body>
+</html>

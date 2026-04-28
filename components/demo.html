@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component Demo - Opus Formosa</title>
+
+    <!-- Fonts: Playfair Display Only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        classical: {
+                            gold: '#b45309',
+                            dark: '#1c1917',
+                            paper: '#fafaf9',
+                            soft: '#e7e5e4',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Playfair Display"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Header Component -->
+    <script src="header.js"></script>
+
+    <style>
+        body {
+            background-color: #fafaf9;
+            font-family: 'Playfair Display', serif;
+        }
+        .demo-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+        }
+        .code-block {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.25rem;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="max-w-4xl mx-auto p-6">
+
+    <h1 class="text-3xl font-bold text-classical-dark mb-8">Opus Header Component Demo</h1>
+
+    <div class="demo-section">
+        <h2 class="text-xl font-semibold mb-4">Chinese Header (Home Page)</h2>
+        <p class="text-stone-600 mb-4">This shows the header for the Chinese home page with "首頁" highlighted.</p>
+        <div class="border border-stone-300 rounded">
+            <opus-header language="zh" current-page="home"></opus-header>
+        </div>
+        <div class="code-block">
+&lt;opus-header language="zh" current-page="home"&gt;&lt;/opus-header&gt;
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="text-xl font-semibold mb-4">English Header (Events Page)</h2>
+        <p class="text-stone-600 mb-4">This shows the header for the English events page with "Events" highlighted.</p>
+        <div class="border border-stone-300 rounded">
+            <opus-header language="en" current-page="events"></opus-header>
+        </div>
+        <div class="code-block">
+&lt;opus-header language="en" current-page="events"&gt;&lt;/opus-header&gt;
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="text-xl font-semibold mb-4">Supported Page Types</h2>
+        <ul class="list-disc list-inside text-stone-600 space-y-1">
+            <li><code>current-page="home"</code> - Highlights home link</li>
+            <li><code>current-page="events"</code> - Highlights events link</li>
+            <li><code>current-page="team"</code> - For team pages (when uncommented)</li>
+            <li><code>current-page="donors"</code> - For donor pages</li>
+            <li><code>current-page="partners"</code> - For partner pages</li>
+            <li><code>current-page="friends"</code> - For membership pages</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="text-xl font-semibold mb-4">Language Support</h2>
+        <ul class="list-disc list-inside text-stone-600 space-y-1">
+            <li><code>language="zh"</code> - Chinese text and links</li>
+            <li><code>language="en"</code> - English text and links</li>
+        </ul>
+        <p class="text-stone-600 mt-4">
+            The component automatically adjusts logo paths, menu text, and link destinations based on the language.
+        </p>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="text-xl font-semibold mb-4">Integration Instructions</h2>
+        <ol class="list-decimal list-inside text-stone-600 space-y-2">
+            <li>Include the header component script: <code>&lt;script src="components/header.js"&gt;&lt;/script&gt;</code></li>
+            <li>Replace your existing nav section with: <code>&lt;opus-header language="[zh|en]" current-page="[page-type]"&gt;&lt;/opus-header&gt;</code></li>
+            <li>The component handles all styling and interactions automatically</li>
+        </ol>
+    </div>
+
+    <div class="demo-section">
+        <h2 class="text-xl font-semibold mb-4">Benefits</h2>
+        <ul class="list-disc list-inside text-stone-600 space-y-1">
+            <li>✅ Consistent navigation across all pages</li>
+            <li>✅ Easy maintenance - update in one place</li>
+            <li>✅ Automatic language switching</li>
+            <li>✅ Responsive design built-in</li>
+            <li>✅ Shadow DOM isolation prevents style conflicts</li>
+            <li>✅ Easy to extend with new features</li>
+        </ul>
+    </div>
+
+</body>
+</html>

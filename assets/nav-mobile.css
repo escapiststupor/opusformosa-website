@@ -1,0 +1,35 @@
+html { font-size: 17px; }
+nav-bar { display: block; }
+body { padding-top: 64px; }
+
+nav-bar nav {
+  box-shadow: 0 2px 20px rgba(200, 152, 64, 0.15), 0 1px 0 rgba(200, 152, 64, 0.3);
+  position: relative;
+}
+nav-bar nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200, 152, 64, 0.55), transparent);
+  pointer-events: none;
+}
+
+/* Mobile nav: extend to screen edges and vertical stack when open */
+@media (max-width: 767px) {
+  /* Only apply when menu is visible (no .hidden) - don't override display so JS toggle works */
+  #nav-menu:not(.hidden) {
+    flex-direction: column;
+    width: auto;
+    box-sizing: border-box;
+  }
+  #nav-menu:not(.hidden) a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

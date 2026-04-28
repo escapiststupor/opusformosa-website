@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zh-TW" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Opus Formosa 藝術家陣容 - 認識參與 Opus Formosa 音樂節的世界級音樂家。"
+    />
+    <meta
+      name="keywords"
+      content="Opus Formosa, 藝術家, Steven Lin, Belle Ting, Boris Borgolotto, 古典音樂"
+    />
+    <meta property="og:title" content="藝術家 | Opus Formosa" />
+    <meta
+      property="og:description"
+      content="認識參與 Opus Formosa 音樂節的世界級音樂家陣容。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://opusformosa.org/artists.html" />
+    <link rel="canonical" href="https://opusformosa.org/artists.html" />
+    <link
+      rel="alternate"
+      hreflang="zh-TW"
+      href="https://opusformosa.org/artists.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://opusformosa.org/en/artists.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://opusformosa.org/artists.html"
+    />
+    <meta
+      property="og:image"
+      content="https://opusformosa.org/images/opus-formosa-logo.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="藝術家 | Opus Formosa" />
+    <link rel="icon" href="assets/opus_formosa_logo.png" type="image/png" />
+    <link rel="stylesheet" href="assets/nav-mobile.css" />
+    <script src="assets/nav-bar.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0d0b09',
+              cream: '#f0e8d8',
+              'cream-dim': '#9e9080',
+              gold: '#c89840',
+              warm: '#5a4f45',
+              classical: { gold: '#c89840', dark: '#0d0b09', paper: '#f0e8d8', soft: '#2a2520' },
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              body: ['"Crimson Pro"', 'Georgia', 'serif'],
+              sans: ['"Crimson Pro"', 'Georgia', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>藝術家 | Opus Formosa</title>
+
+    <style>
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.032;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 1s cubic-bezier(0.22,1,0.36,1), transform 1s cubic-bezier(0.22,1,0.36,1);
+      }
+      .fade-in-section.is-visible { opacity: 1; transform: none; }
+      .gold-rule {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(200,152,64,0.5), transparent);
+      }
+      .card-border {
+        border: 1px solid rgba(200,152,64,0.18);
+        transition: border-color 0.3s ease;
+      }
+      .card-border:hover { border-color: rgba(200,152,64,0.45); }
+      .pull-q {
+        border-left: 2px solid #c89840;
+        padding-left: 1.5rem;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+  <body class="bg-ink text-cream font-body antialiased">
+    <!-- Navigation -->
+    <nav-bar lang="zh"></nav-bar>
+
+    <!-- Hero -->
+    <header class="relative bg-classical-dark text-cream py-20 px-6 text-center overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(200,152,64,0.055)_0%,transparent_70%)] pointer-events-none"></div>
+      <div class="absolute top-0 inset-x-0 gold-rule"></div>
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <p class="font-body text-gold/70 tracking-[0.35em] uppercase text-xs mb-4">
+          Edition 2026
+        </p>
+        <h1 class="text-4xl md:text-6xl font-display font-normal text-cream mb-4 tracking-wide">藝術家</h1>
+        <p class="font-body text-cream-dim text-lg">
+          與 Opus Formosa 共同登台的世界級音樂家
+        </p>
+      </div>
+      <div class="absolute bottom-0 inset-x-0 gold-rule"></div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-10">
+      <!-- Steven Lin -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img
+              src="assets/steven-lin-team.webp"
+              alt="Steven Lin 林易"
+              class="w-full h-72 md:h-full object-cover"
+            />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">
+              鋼琴 · 藝術總監
+            </p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">
+              林易
+            </h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">Steven Lin</p>
+            <p class="text-cream-dim text-sm leading-relaxed mb-4 font-body">
+              台灣旅美鋼琴家林易是 Opus Formosa
+              的創辦人與藝術總監。他熱衷於連結跨國界的台灣音樂家，致力於培育藝術家並促進古典音樂在台灣的發展。在策劃音樂節的同時，他也持續以獨奏家身份活躍於國際舞台，足跡遍及北美、歐洲與亞洲。
+            </p>
+            <a
+              href="https://www.stevenlinpiano.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block text-xs text-gold hover:underline tracking-wide font-body"
+              >stevenlinpiano.com ↗</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <p class="text-cream-dim/50 text-xs tracking-widest text-center py-2 font-body">— 以下依姓名字母順序排列 —</p>
+
+      <!-- Boris Borgolotto -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/boris-borgolotto.jpg" alt="Boris Borgolotto" class="w-full h-72 md:h-full object-cover" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">小提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Boris Borgolotto</h2>
+            <p class="text-cream-dim text-sm leading-relaxed font-body">
+              法國小提琴家，以生動感性的詮釋與卓越舞台魅力廣受矚目，榮獲紐約 IBLA 基金會國際大賽首獎。足跡遍及卡內基音樂廳、巴黎愛樂廳、威格摩爾音樂廳與阿姆斯特丹音樂廳，曾與 Myung-Whun Chung、Ton Koopman 及 Joe Hisaishi 等世界級指揮合作演出。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sirena Huang -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/sirena-huang.jpg" alt="Sirena Huang 黃凱珉" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">小提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">黃凱珉</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">Sirena Huang</p>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p class="italic text-gold/90 text-xs">《紐約時報》盛讚其演奏「精緻入微」，TED 形容她擁有「超越年齡的音樂家靈魂」。</p>
+              <p>台裔美籍小提琴家黃凱珉榮獲 2022 年印第安納波利斯國際小提琴大賽首獎，並曾獲柴可夫斯基青少年國際大賽（2009）及 Elmar Oliveira 國際小提琴大賽（2017）首獎。她曾與紐約愛樂、克里夫蘭管弦樂團及上海交響樂團合作演出，師承伊扎克·帕爾曼，取得茱莉亞音樂學院學士及耶魯大學藝術家文憑。</p>
+            </div>
+            <a href="https://www.sirenahuang.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">sirenahuang.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adrien La Marca -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/adrien-la-marca.jpg" alt="Adrien La Marca" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">中提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Adrien La Marca</h2>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p class="italic text-gold/90 text-xs">「真正純粹的才華。」——《金融時報》　「中提琴界的新英雄。」——《世界報》</p>
+              <p>法國中提琴家，生於艾克斯普羅旺斯。曾獲威廉·普利姆羅斯、萊昂內爾·特第斯及布拉姆斯國際大賽首獎，並於 2016 年成為首位榮獲法國「Fondation Lagardère」大獎的古典音樂家。先後就讀巴黎音樂學院、萊比錫及柏林音樂學院，師承 Tatjana Masurenko 及 Tabea Zimmermann。</p>
+            </div>
+            <a href="https://www.adrienlamarca.org/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">adrienlamarca.org ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eugene Lin -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/eugene-lin.jpg" alt="Eugene Lin 林恩俊" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">大提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">林恩俊</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">Eugene Lin</p>
+            <p class="text-cream-dim text-sm leading-relaxed font-body">曾榮獲特隆赫姆國際室內樂大賽第二名，並入圍伊莉莎白女王大提琴大賽及日內瓦國際大賽。現任費城管弦樂團大提琴手，曾代演芝加哥交響樂團與匹茲堡交響樂團，並曾擔任太平洋音樂節、美國青年交響樂團及科爾本樂團首席大提琴。畢業於科爾本音樂學院，師承 Clive Greensmith。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fumiaki Miura -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/fumiaki-miura.jpg" alt="Fumiaki Miura 三浦文彰" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">小提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">三浦文彰</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">Fumiaki Miura</p>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p>日本小提琴家，1993 年生於東京。2009 年榮獲漢諾威約阿希姆國際小提琴大賽首獎，並同時獲得評論家獎與聽眾獎，成為該賽事史上最年輕且獲獎最多的得主。師承德倉嗣生（東京音樂大學），繼而赴維也納師從 Pavel Vernikov 與 Julian Rachlin，並自 2009 年起受 Pinchas Zukerman 指導。合作樂團涵蓋馬林斯基劇院、皇家愛樂、洛杉磯愛樂及 NHK 交響樂團，曾與 Valery Gergiev、Krzysztof Penderecki 等名指揮同台，並活躍於拉維尼亞、石勒蘇益格—霍爾斯泰因音樂節及 Menuhin Festival Gstaad 等舞台。以 Munetsugu 財團出借之 1704 年史特拉底瓦里「Viotti」演奏。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Edgar Moreau -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/edgar-moreau.jpg" alt="Edgar Moreau" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">大提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">Edgar Moreau</h2>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p>法國大提琴家，2017 年榮獲比利時伊莉莎白女王大賽第二名，為同屆最矚目的青年藝術家。師承 Philippe Muller 於巴黎音樂學院，及 Jens Peter Maintz 於柏林漢斯·艾斯勒音樂學院深造。演奏足跡遍及巴黎愛樂廳、柏林愛樂廳及維也納音樂廳，以音色深邃、表達直指人心著稱。</p>
+            </div>
+            <a href="https://edgarmoreau.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">edgarmoreau.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Belle Ting -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden flex flex-col md:flex-row">
+          <div class="md:w-64 flex-shrink-0">
+            <img src="assets/belleting.jpg" alt="Belle Ting 丁章媛" class="w-full h-72 md:h-full object-cover object-top" />
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">小提琴</p>
+            <h2 class="text-2xl font-display font-semibold text-cream mb-1">丁章媛</h2>
+            <p class="text-cream-dim/70 text-sm mb-4 italic font-body">Belle Ting</p>
+            <div class="text-cream-dim text-sm leading-relaxed space-y-3 font-body">
+              <p class="italic text-gold/90 text-xs">「當她拉奏時，彷彿每一首樂曲都是為她而寫。」—— Ivry Gitlis</p>
+              <p>丁章媛多次榮獲國際大賽殊榮，包括比利時國際小提琴大賽首獎與最佳詮釋獎、美國 Cooper 國際小提琴比賽首獎、布拉姆斯國際音樂比賽第二名及最佳詮釋特別獎、哈察度量國際小提琴比賽第三名及觀眾獎。她曾與克里夫蘭交響樂團、莫斯科愛樂及亞美尼亞國家交響樂團等合作演出，並登上維也納黃金廳等著名舞台。她是 Verbier Festival 及 Progetto Martha Argerich 等頂級音樂節的常客。</p>
+            </div>
+            <a href="https://www.belleting.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs text-gold hover:underline tracking-wide font-body">belleting.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trio Seoul -->
+      <section class="fade-in-section">
+        <div class="card-border rounded-none overflow-hidden">
+          <div class="px-8 pt-8 pb-4">
+            <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">室內樂三重奏</p>
+            <h2 class="text-2xl font-display font-semibold text-cream">Trio Seoul</h2>
+          </div>
+          <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gold/10">
+            <div class="p-8 flex flex-col">
+              <img src="assets/jinjoo-cho.jpg" alt="Jinjoo Cho" class="w-24 h-24 rounded-full object-cover object-top mb-4 flex-shrink-0" />
+              <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">小提琴</p>
+              <h3 class="text-lg font-display font-semibold text-cream mb-3">Jinjoo Cho</h3>
+              <p class="text-cream-dim text-sm leading-relaxed font-body">曾獲印第安納波利斯、蒙特婁、布宜諾斯艾利斯等國際大賽首獎，曾與克里夫蘭、蒙特婁及首爾愛樂等知名樂團合作演出，並活躍於卡內基音樂廳及阿斯本音樂節舞台。現任美國西北大學拜恩音樂學院副教授。</p>
+            </div>
+            <div class="p-8 flex flex-col">
+              <img src="assets/brannon-cho.jpg" alt="Brannon Cho" class="w-24 h-24 rounded-full object-cover object-top mb-4 flex-shrink-0" />
+              <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">大提琴</p>
+              <h3 class="text-lg font-display font-semibold text-cream mb-3">Brannon Cho</h3>
+              <p class="text-cream-dim text-sm leading-relaxed font-body">第六屆保羅國際大提琴大賽首獎得主，並榮獲伊莉莎白女王、瑙姆堡及卡薩多大賽殊榮。演奏足跡遍及卡內基音樂廳及威格摩爾音樂廳，所用琴為 1668 年 Antonio Casini 大提琴。</p>
+            </div>
+            <div class="p-8 flex flex-col">
+              <img src="assets/kyu-yeon-kim.jpg" alt="Kyu Yeon Kim" class="w-24 h-24 rounded-full object-cover object-top mb-4 flex-shrink-0" />
+              <p class="text-gold text-xs font-body tracking-widest uppercase mb-1">鋼琴</p>
+              <h3 class="text-lg font-display font-semibold text-cream mb-3">Kyu Yeon Kim</h3>
+              <p class="text-cream-dim text-sm leading-relaxed font-body">曾獲都柏林、伊莉莎白女王、克里夫蘭及日內瓦等國際鋼琴大賽大獎，曾與費城交響樂團、克里夫蘭管弦樂團及首爾愛樂合作演出。現任首爾國立大學鋼琴系副教授。</p>
+            </div>
+          </div>
+          <div class="px-8 pb-6 text-right">
+            <a href="https://trioseoul.com/about" target="_blank" rel="noopener noreferrer" class="text-xs text-gold hover:underline tracking-wide font-body">trioseoul.com ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- More Artists TBA -->
+      <section class="fade-in-section">
+        <div class="border border-gold/15 border-dashed p-12 text-center">
+          <div class="text-gold/30 font-display text-4xl mb-4">✦</div>
+          <h2 class="text-xl font-display font-normal text-cream-dim mb-2">
+            更多藝術家即將公布
+          </h2>
+          <p class="text-cream-dim/60 text-sm font-body">More Artists to be Announced</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="fade-in-section relative overflow-hidden bg-classical-dark p-10 md:p-14" style="border: 1px solid rgba(200,152,64,0.18);">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_20%,rgba(200,152,64,0.04)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="relative text-center">
+          <p class="font-body text-gold/70 tracking-[0.28em] uppercase text-xs mb-4">音樂節</p>
+          <h2 class="text-2xl font-display font-normal text-cream mb-4">
+            Opus Formosa音樂節 — Edition 2026
+          </h2>
+          <p class="text-cream-dim mb-8 font-body">
+            2026 年 9 月 4 日 – 16 日 · 台北 · 高雄 · 台中
+          </p>
+          <a
+            href="festival2026.html"
+            class="inline-block border border-gold text-gold hover:bg-gold hover:text-ink font-body text-sm tracking-[0.2em] uppercase py-3 px-8 transition-all duration-300"
+            >查看場次與場地 →</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer style="border-top:1px solid rgba(200,152,64,0.15)" class="bg-ink text-cream-dim py-12 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="font-display font-normal text-2xl text-cream mb-2">Opus Formosa</h2>
+        <p class="font-body text-sm mb-2">福爾摩沙藝響</p>
+        <p class="font-body text-sm mb-4">北市演藝團體第二一九二字號</p>
+        <div class="flex justify-center gap-5 mt-6 mb-4">
+          <a
+            href="https://www.facebook.com/profile.php?id=61559731449701"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="text-cream-dim/40 hover:text-gold transition-colors duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/opus_formosa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="text-cream-dim/40 hover:text-gold transition-colors duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@OpusFormosa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="text-cream-dim/40 hover:text-gold transition-colors duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="w-10 h-px mx-auto mb-6" style="background:rgba(200,152,64,0.2)"></div>
+        <p class="font-body text-sm">&copy; 2025 Opus Formosa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("is-visible");
+                observer.unobserve(e.target);
+              }
+            });
+          },
+          { root: null, rootMargin: "0px", threshold: 0.1 },
+        );
+        document
+          .querySelectorAll(".fade-in-section")
+          .forEach((s) => observer.observe(s));
+      });
+    </script>
+    <script src="assets/nav-toggle.js" defer></script>
+  </body>
+</html>

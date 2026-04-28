@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="丁章媛小提琴獨奏會《幻想與映象》- Belle Ting Violin Recital: Fantasies & Reflections">
+    <meta name="keywords" content="Belle Ting, 丁章媛, 小提琴獨奏會, Opus Formosa, 古典音樂, violin recital">
+    <meta property="og:title" content="丁章媛小提琴獨奏會《幻想與映象》- Opus Formosa">
+    <meta property="og:description" content="Belle Ting Violin Recital: Fantasies & Reflections. 2026/2/20 國家兩廳院演奏廳, 2026/2/27 臺中國家歌劇院小劇場">
+    <meta property="og:type" content="website">
+<meta property="og:url" content="https://opusformosa.org/belle-ting-recital.html">
+    <link rel="canonical" href="https://opusformosa.org/belle-ting-recital.html">
+<meta property="og:image" content="https://opusformosa.org/images/opus-formosa-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="丁章媛小提琴獨奏會《幻想與映象》">
+    <meta name="twitter:description" content="Belle Ting Violin Recital: Fantasies & Reflections">
+    <meta name="twitter:image" content="https://opusformosa.org/images/opus-formosa-logo.png">
+    <link rel="icon" href="assets/opus_formosa_logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/nav-mobile.css">
+    <script src="assets/nav-bar.js" defer></script>
+
+    <!-- Fonts: Cormorant Garamond + Crimson Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0d0b09',
+                        cream: '#f0e8d8',
+                        'cream-dim': '#9e9080',
+                        gold: '#c89840',
+                        warm: '#1a1612',
+                        classical: {
+                            gold: '#c89840',
+                            dark: '#0d0b09',
+                            paper: '#f0e8d8',
+                            soft: '#2a2420',
+                        },
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        body: ['"Crimson Pro"', 'serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Crimson Pro"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <title>丁章媛小提琴獨奏會《幻想與映象》 - Opus Formosa</title>
+
+    <style>
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.032;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1);
+            will-change: opacity, transform;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .gold-rule {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200,152,64,0.5), transparent);
+        }
+        .card-border {
+            border: 1px solid rgba(200,152,64,0.18);
+            transition: border-color 0.3s ease;
+        }
+        .card-border:hover {
+            border-color: rgba(200,152,64,0.35);
+        }
+        .program-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .program-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(200,152,64,0.15);
+            color: #f0e8d8;
+        }
+        .program-table tr:last-child td {
+            border-bottom: none;
+        }
+        .program-table .piece {
+            text-align: left;
+            font-size: 1rem;
+        }
+        .program-table .composer {
+            text-align: right;
+            color: #9e9080;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body class="bg-ink text-cream font-body antialiased selection:bg-gold/30 selection:text-cream">
+
+    <!-- Navigation -->
+    <nav-bar lang="zh"></nav-bar>
+
+    <!-- Header -->
+    <header class="relative py-20 px-6 text-center overflow-hidden" style="background: #0d0b09;">
+        <div class="gold-rule absolute top-0 inset-x-0"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,152,64,0.12) 0%, transparent 70%);"></div>
+        <div class="max-w-4xl mx-auto relative">
+            <p class="text-gold/70 tracking-[0.35em] text-xs font-body uppercase mb-6">Opus Formosa · 小提琴獨奏會</p>
+            <h1 class="font-display font-normal text-4xl md:text-5xl text-cream mb-3">丁章媛小提琴獨奏會</h1>
+            <h2 class="font-display font-normal italic text-2xl md:text-3xl text-gold/80 mb-4">《幻想與映象》</h2>
+            <div class="gold-rule w-24 mx-auto mb-4"></div>
+            <p class="text-cream-dim font-body italic text-lg mb-6">Fantasies &amp; Reflections: Belle Ting Violin Recital</p>
+            <p class="mb-6">
+                <a href="https://www.opentix.life/event/1983743373393326081" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline font-body">OPENTIX售票連結由此去</a>
+            </p>
+            <div class="space-y-2 text-cream-dim">
+                <p class="text-lg">小提琴：Hung-Lin Liu 劉虹麟</p>
+                <p class="text-lg">鋼琴合作：<a href="https://canglah-micyang.com/zh_tw/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">Canglah Micyang 嚴子晴</a></p>
+            </div>
+            <div class="mt-6 space-y-2 text-cream/80">
+                <p class="text-base">2026/2/20 (五) 19:30 國家兩廳院演奏廳</p>
+                <p class="text-base">2026/2/27 (五) 14:30 臺中國家歌劇院小劇場</p>
+            </div>
+            <div class="mt-4 text-cream-dim/60 text-sm">
+                <p>協辦：Opus Formosa・Classics From the Other Side Festival (CFOS)</p>
+            </div>
+        </div>
+        <div class="gold-rule absolute bottom-0 inset-x-0"></div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+
+
+        <!-- Program Section -->
+        <section class="fade-in-section mb-16">
+            <div class="card-border p-8">
+                <h3 class="text-2xl font-display font-normal text-gold mb-4">演出曲目</h3>
+
+                <table class="program-table">
+                    <tbody>
+                        <tr>
+                            <td class="piece">
+                                Aucassin and Nicolette, "Canzonetta medievale"<br>
+                                <span class="text-cream-dim/70">〈奧卡桑與妮可蕾特〉中世紀小歌</span>
+                            </td>
+                            <td class="composer">
+                                F. Kreisler<br>
+                                克萊斯勒
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                6 Romances op. 38, III Daisies<br>
+                                <span class="text-cream-dim/70">六首浪漫曲，作品38之3〈雛菊〉</span>
+                            </td>
+                            <td class="composer">
+                                Rachmaninov / arr. Heifetz<br>
+                                拉赫瑪尼諾夫 / 海飛茲改編
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                Après un rêve<br>
+                                <span class="text-cream-dim/70">夢後</span>
+                            </td>
+                            <td class="composer">
+                                G. Fauré<br>
+                                佛瑞
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                Caprice in the form of a waltz<br>
+                                <span class="text-cream-dim/70">圓舞曲風格隨想曲</span>
+                            </td>
+                            <td class="composer">
+                                Saint-Saëns / Ysaÿe<br>
+                                聖桑 / 易薩伊
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                Fantasy on Themes from Gounod's "Faust"<br>
+                                <span class="text-cream-dim/70">《浮士德》主題幻想曲（取材自古諾歌劇）</span>
+                            </td>
+                            <td class="composer">
+                                H. Wieniawski<br>
+                                維尼奧夫斯基
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="text-center my-8 py-4" style="border-top: 1px solid rgba(200,152,64,0.2); border-bottom: 1px solid rgba(200,152,64,0.2);">
+                    <p class="text-lg font-display font-normal text-gold/70 italic">Intermission · 中場休息</p>
+                </div>
+
+                <table class="program-table">
+                    <tbody>
+                        <tr>
+                            <td class="piece">
+                                Selections from five Pieces for two Violins and Piano<br>
+                                <span class="text-cream-dim/70">兩把小提琴與鋼琴的五首小品選段</span>
+                            </td>
+                            <td class="composer">
+                                D. Shostakovich<br>
+                                蕭士塔高維契
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                March from "The Love for Three Oranges"<br>
+                                <span class="text-cream-dim/70">〈進行曲〉，選自《三個橘子之戀》</span>
+                            </td>
+                            <td class="composer">
+                                Prokofiev / arr. Heifetz<br>
+                                普羅高菲夫 / 海飛茲改編
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                Ave Maria<br>
+                                <span class="text-cream-dim/70">聖母頌</span>
+                            </td>
+                            <td class="composer">
+                                A. Piazzolla<br>
+                                皮亞佐拉
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="piece">
+                                Fantasy on "Porgy and Bess"<br>
+                                <span class="text-cream-dim/70">《波吉與貝絲》主題幻想曲</span>
+                            </td>
+                            <td class="composer">
+                                Gershwin / arr. Frolov<br>
+                                蓋希文 / 弗羅洛夫改編
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Program Notes Section -->
+        <section class="fade-in-section mb-16">
+            <div class="card-border p-8">
+                <h3 class="text-2xl font-display font-normal text-gold mb-4">樂曲解說</h3>
+
+                <div class="space-y-6 text-cream-dim leading-relaxed">
+                    <div>
+                        <h4 class="font-body text-cream mb-2">克萊斯勒：〈奧卡桑與妮可蕾特〉中世紀小歌</h4>
+                        <p>這首曲子靈感來自中世紀法國故事〈奧卡桑與妮可蕾特〉，描寫一段因身分懸殊而備受阻撓的愛情。作品以克萊斯勒擅長的「仿古風」筆法寫成，模仿古代宮廷歌曲的旋律語彙與節奏模式。篇幅雖短，形式卻十分完整，是他以現代技法重塑中世紀情調的小品之一。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">拉赫瑪尼諾夫：六首浪漫曲，作品38之3〈雛菊〉</h4>
+                        <p>1916 年，拉赫瑪尼諾夫完成這組《六首浪漫曲》作品 38，也是他在離開俄國前最後一批藝術歌曲創作之一。〈雛菊〉取材自象徵派詩人伊戈爾．謝維禮亞寧（Igor Severyanin）的短詩，描寫夏日田野裡成片綻放的雛菊：詩人望見白花如星辰灑落在草地上，花瓣彷彿展翼的細羽，在陽光與微風中輕輕顫動，最後以對「雛菊」與「少女」一併傾訴的愛意作結，呈現單純而明亮的自然喜悅。樂曲旋律質地簡潔，和聲透明，是作曲家在晚期歌曲中較明亮一面的代表。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">佛瑞：夢後</h4>
+                        <p>〈夢後〉寫於 1870 年代中期，約在 1877 年完成，並於 1878 年與另外兩首歌曲一起以《三首歌曲》作品 7 的名義出版，是佛瑞早期最常被演唱的法文藝術歌曲之一。歌詞由詩人 Romain Bussine 改寫自一首匿名義大利詩，描寫夢者在睡夢裡與戀人一同飛離塵世、奔向光明，醒來後卻只能向黑夜祈求把這場甜美幻夢還給自己。他以簡練的鋼琴和聲與長線條的旋律，細膩刻畫在現實與夢境之間徘徊的渴望感，也預示了他往後在法國歌曲中內斂而精緻的風格。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">聖桑／易薩伊：圓舞曲風格隨想曲</h4>
+                        <p>比利時小提琴家易薩伊以聖桑為鋼琴所寫的〈圓舞曲風格練習曲〉作品 52 之 6 為基礎，改寫成這首《圓舞曲風格隨想曲》，把原本已相當炫技的鋼琴練習曲轉化為同樣耀眼的小提琴作品。曲中保留華爾滋的三拍律動與輕快主題，並透過重音、泛音、八度等技巧不斷變化，使同一旋律在不同音區與力度之間遊走。這類改編曲正是十九世紀末巴黎與布魯塞爾音樂沙龍常見的節目型態，既讓聽眾享受舞曲般的愉悅，也讓演奏家展示對樂器的掌握與創意。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">維尼奧夫斯基：《浮士德》主題幻想曲（取材自古諾歌劇）</h4>
+                        <p>這首幻想曲選用古諾歌劇《浮士德》裡多段重要旋律，包括瑪格麗特的詠嘆調與著名的華爾滋等主題，重新編排成一首結構清楚、層次分明的小提琴炫技作品。歌劇講述年老學者浮士德在絕望中與魔鬼梅菲斯特立下契約，以靈魂換取青春享樂，並在魔鬼推波助瀾下誘惑純真的少女瑪格麗特，最終釀成家庭悲劇與死亡；終幕中，瑪格麗特在牢獄中選擇向上帝懺悔而獲得救贖。幻想曲將這些充滿戲劇張力的旋律轉化為器樂語言，使演奏者在變奏、雙音與飛快跑句之間，像是把歌劇中的情感片段濃縮再現於舞台之上。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">蕭士塔高維契：兩把小提琴與鋼琴的五首小品選段</h4>
+                        <p>這組作品由作曲家好友阿托夫米安（Levon Atovmyan）從蕭士塔高維契多部電影與芭蕾配樂中挑選、改編而成，包括芭蕾《明朗的小溪》、舞台劇《人間喜劇》等作品中的樂段。在高度審查的蘇聯體制下，為戲劇與電影創作配樂既是作曲家重要的生活與官方委託來源，也比大型交響曲、歌劇等「嚴肅」作品相對安全，讓蕭士塔高維契得以在這些功能性任務中保留自己鮮明的節奏感與幽默筆觸。阿托夫米安將其中幾段重新編成兩把小提琴與鋼琴的五首小品，每首來自不同場景，從舞會、遊戲到靜謐歌唱，篇幅雖短，仍能聽見作曲家在輕快與感傷之間微妙拉扯的性格。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">普羅高菲夫：〈進行曲〉，選自《三個橘子之戀》</h4>
+                        <p>普羅高菲夫的歌劇《三個橘子之戀》改編自威尼斯劇作家卡洛．戈齊的童話戲劇，主角是一位因憂鬱而久病的王子，只有「笑」才能治好他的病。國王設法在宮廷宴會上逗他開懷，卻始終失敗，直到一名女妖在眾人面前滑倒，王子才第一次放聲大笑，卻因此惹怒女妖，遭到詛咒：必須踏上旅程去尋找並愛上「三個橘子」。旅程中，三顆橘子依序被打開，前兩顆橘子裡的公主因得不到水而死去，只有最後一位公主在王子的救助下倖存，最終與他成婚。劇中的〈進行曲〉原是第二幕場景轉換時王子與隨從出場的音樂，以極為規律的行進節奏與高聲部銅管的重複動機描繪隊伍行進，看似熱鬧輕快，卻因誇張、近乎機械的語法而帶著幾分諷刺與滑稽，成為普羅高菲夫「機械式幽默」風格的代表片段之一。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">皮亞佐拉：聖母頌</h4>
+                        <p>此曲原名〈Tanti anni prima〉（義大利文，意為「往昔歲月」），後來以〈聖母頌〉之名廣為人知，如今常以各種樂器版本在音樂會中單獨演出。旋律像一段低聲祈禱，緩緩在和聲之上展開，幾乎聽不到典型探戈的強烈節奏，而是以極細膩的動態起伏與長線條來累積張力。皮亞佐拉在這裡把探戈語彙徹底放慢、內化成一首冥想式的樂章，既保留情感的牽引，又帶著接近宗教音樂的寧靜。</p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-body text-cream mb-2">蓋希文／弗羅洛夫：《波吉與貝絲》主題幻想曲</h4>
+                        <p>小提琴家弗羅洛夫在這首幻想曲中，選取蓋希文歌劇《波吉與貝絲》的多首主題，將非裔美國音樂的爵士節奏感與古典炫技語法結合起來。蓋希文是二十世紀初最具代表性的美國作曲家之一，擅長把爵士、藍調、流行歌與古典樂融合。《波吉與貝絲》的故事以 1920 年代南方黑人社群為背景，描寫跛腳乞丐波吉與女子貝絲在賭博、暴力與毒品環境中相愛又分離的過程。弗羅洛夫的改編在小提琴上保留藍調式音程與即興感，使樂器模仿人聲的滑音與節奏律動，同時加入高難度的音階、雙音與快速裝飾音，讓這些原本屬於歌劇與爵士語境的旋律，以一種兼具炫技與歌唱性的形式重現在獨奏舞台上。</p>
+                    </div>
+                </div>
+                <p class="text-cream-dim/50 text-sm mt-6 text-right">撰文/Canglah Micyang</p>
+            </div>
+        </section>
+
+        <!-- Artist Biographies Section -->
+        <section class="fade-in-section mb-16">
+            <div class="card-border p-8">
+                <h3 class="text-2xl font-display font-normal text-gold mb-4">演出者介紹</h3>
+
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-xl font-display font-normal text-cream mb-3">小提琴 / <a href="https://www.belleting.com/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">Belle Ting 丁章媛</a></h4>
+                        <div class="text-cream-dim leading-relaxed space-y-3">
+                            <p class="italic text-gold/80">傳奇小提琴家 Ivry Gitlis 曾讚嘆她的演奏：「當她拉奏時，彷彿每一首樂曲都是為她而寫。」</p>
+                            <p class="italic text-gold/80">知名樂評 Cleveland Classical 形容其演奏「抒情而耀眼」，讚賞她細膩的琴音與充滿魅力的舞台風采， 被視為新世代最具光芒的小提琴家之一。</p>
+                            <p>小提琴家丁章媛多次在國際大賽中表現傑出，包括比利時國際小提琴大賽首獎與最佳詮釋獎、美國 Cooper 國際小提琴比賽首獎、布拉姆斯國際音樂比賽第二名及最佳詮釋特別獎、以及哈察度量國際小提琴比賽第三名、最佳詮釋獎和觀眾獎等。章媛曾作為獨奏家和國內外許多交響樂團共同演出，包括克里夫蘭交響樂團、國立臺灣交響樂團、長榮交響樂團、丹麥Odense交響樂團、莫斯科愛樂樂團、亞美尼亞國家交響樂團、波蘭波羅的海愛樂樂團、華沙交響樂團等。她曾多次在維也納音樂廳、維也納金色大廳、韋爾比耶教堂、柴可夫斯基音樂廳、及塞凡蘭音樂廳等著名音樂廳演出。章媛也是各大知名國際音樂節的座上嘉賓，其演奏足跡遍及 Verbier Festival、Festival Ravel、Progetto Martha Argerich、法國南特 La Folle Journée、荷蘭 Schiermonnikoog 音樂節等舞台。章媛的首張專輯《Impressions》專注於法國印象派作品。她的演出也曾在奧地利廣播電視台、IDAGIO、Classic FM 以及 medici.tv 等平台播出。章媛目前取得德國的德特莫德音樂學院演奏家最高文憑 (Konzertexamen)，師事 Eckhard Fischer。她在奧地利國立維也納音樂與表演藝術大學求學期間也接受 Ivry Gitlis 、Dora Schwarzberg、Anne Shih、胡乃元、Leonidas Kavakos，Pinchas Zukerman 等人指導。2024年章媛獲得比利時法蘭德斯歌劇芭蕾舞劇院二部首席的位置，成為最年輕的亞裔首席音樂家之一。</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-display font-normal text-cream mb-3">小提琴 / Hung-Lin Liu 劉虹麟</h4>
+                        <div class="text-cream-dim leading-relaxed space-y-3">
+                            <p>虹麟於2015秋季畢業於國立維也納音樂暨表演藝術大學（Universität für Musik und darstellende Kunst Wien）小提琴演奏科碩士班。習於名師 Dora Schwarzberg 與其助教 Lucia Hall 的門下。留奧期間，亦長期接受 Artis Quartett 以及華裔奧地利作曲家施捷的指導。過去曾獲獎項包含2003年行天宮菁音獎小提琴大賽少年組特優、2006年全國學生音樂比賽第一名、2006年8月入圍國際里斯本小提琴大賽半決賽、2012年24屆「奇美藝術獎」、2014年入圍國際布拉姆斯小提琴大賽半決賽，獲得評審一致認同「帕格尼尼最佳詮釋」，2015年獲選 Dr. Robert und Lina Thyll-Dürr 獎學金。在長達30年的習琴生涯中，同時有幸獲得 Zakhar Bron、曾耿元、林昭亮、Koichiro Harada、胡乃元、Ivry Gitlis 與 Maurice Sklar 等大師的公開指導。2019年與聖彼得堡芭蕾舞團合作擔任台中市交首席，演奏天鵝湖獨奏片段，獲得熱烈迴響。2023年主辦「Dora Schwarzberg 小提琴與室內樂大師班」，協同多位音樂家好友與台灣小提琴明日之星於樹德半山夢工廠舉行音樂會。2024起受邀加入由胡乃元老師領軍的 Taiwan Connection。</p>
+                            <p>近年亦從事珠寶與金工創作，關注材質、時間與手工之間的關係，並將音樂性的思考延伸至視覺藝術領域。</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-display font-normal text-cream mb-3">鋼琴 / <a href="https://canglah-micyang.com/zh_tw/" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">Canglah Micyang 嚴子晴</a></h4>
+                        <div class="text-cream-dim leading-relaxed space-y-3">
+                            <p>子晴熱愛與朋友演奏室內樂，曾經參與眾多室內樂音樂節的演出，包括交大室內樂集、韓國大山音樂節、美國 Kneisel Hall 音樂節、德國 Moritzburg 音樂節，維也納 Classics from the other side 音樂節，以及奏出福爾摩沙音樂協會的年度音樂會。2015年，她獲得紐約 Bard 音樂學院的全額獎學金，但最終決定放棄就學，選擇追求其他專業發展。除了音樂成就外，她擁有國立清華大學物理學士學位及天文碩士學位。她也是堅定的阿美族語推廣者，深信傳承瀕危母語的重要性。</p>
+                            <p>她畢業於國立陽明交通大學音樂研究所，曾與辛幸純教授學習鋼琴。目前她在台灣輝達擔任資深工程師。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-ink text-cream-dim py-12 text-center" style="border-top: 1px solid rgba(200,152,64,0.15);">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display font-normal text-2xl text-cream mb-2">Opus Formosa</h2>
+            <p class="text-sm mb-4">福爾摩沙藝響</p>
+            <p class="text-sm mb-2">北市演藝團體第二一九二字號</p>
+            <div class="flex justify-center gap-5 mt-6 mb-4">
+                <a href="https://www.facebook.com/profile.php?id=61559731449701" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-cream-dim/40 hover:text-gold transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/opus_formosa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-cream-dim/40 hover:text-gold transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@OpusFormosa" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="text-cream-dim/40 hover:text-gold transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+            <div class="w-10 h-px mx-auto mb-8" style="background: rgba(200,152,64,0.2);"></div>
+            <p style="font-family: 'Crimson Pro', serif; font-size: 0.65rem; color: rgba(158,144,128,0.7);">&copy; 2025 Opus Formosa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    <script src="assets/nav-toggle.js" defer></script>
+</body>
+</html>

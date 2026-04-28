@@ -1,0 +1,8 @@
+# Jekyll 設定
+# seatmap/_dev/ 裡面是開發工具（Python 腳本、Excel、文件），
+# 存在 git 供跨電腦使用，但不對外公開服務。
+exclude:
+  - seatmap/_dev/
+  - deploy.sh
+  - "**/*.py"
+  - "**/*.xlsx"
