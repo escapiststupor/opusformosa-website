@@ -53,7 +53,8 @@
       "WebFetch(domain:static.wixstatic.com)",
       "WebFetch(domain:www.kmsfund.org.tw)",
       "WebFetch(domain:archivio.armani.com)",
-      "WebFetch(domain:hksl.org)"
+      "WebFetch(domain:hksl.org)",
+      "WebFetch(domain:musikene.eus)"
     ]
   }
 }
