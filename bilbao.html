@@ -85,10 +85,21 @@
       <div class="absolute bottom-0 inset-x-0 gold-rule"></div>
 	    </header>
 	
-	    <!-- Photo Banner -->
-	    <section class="max-w-6xl mx-auto px-6 pt-12">
-	      <div class="overflow-hidden border border-gold/20">
-	        <img src="assets/bilbao-concert-banner-dom8010.jpeg" alt="ABAO Basque Musikaste chamber music performance in Bilbao" class="w-full aspect-[16/9] md:aspect-[21/9] object-cover object-[center_58%]" />
+	    <!-- Photo Carousel -->
+	    <section class="max-w-6xl mx-auto px-6 pt-12" data-photo-carousel>
+	      <div class="relative overflow-hidden border border-gold/20">
+	        <div class="relative aspect-[16/9] md:aspect-[21/9]">
+	          <img src="assets/bilbao-concert-banner-dom8010.jpeg" alt="ABAO Basque Musikaste chamber music performance in Bilbao" class="absolute inset-0 h-full w-full object-cover object-[center_58%] opacity-100 transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" data-carousel-slide />
+	          <img src="assets/bilbao-concert-carousel-dom7966.jpeg" alt="ABAO Basque Musikaste ensemble performing in Bilbao" class="absolute inset-0 h-full w-full object-cover object-[center_56%] opacity-0 transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" data-carousel-slide />
+	          <img src="assets/bilbao-concert-carousel-dom7942.jpeg" alt="ABAO Basque Musikaste guests in Bilbao" class="absolute inset-0 h-full w-full object-cover object-[center_50%] opacity-0 transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]" data-carousel-slide />
+	        </div>
+	        <button type="button" aria-label="上一張照片" class="absolute left-3 top-1/2 -translate-y-1/2 border border-gold/30 bg-ink/70 px-3 py-2 text-2xl leading-none text-gold transition-colors duration-300 hover:border-gold hover:bg-gold hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold active:scale-95" data-carousel-prev>&lsaquo;</button>
+	        <button type="button" aria-label="下一張照片" class="absolute right-3 top-1/2 -translate-y-1/2 border border-gold/30 bg-ink/70 px-3 py-2 text-2xl leading-none text-gold transition-colors duration-300 hover:border-gold hover:bg-gold hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold active:scale-95" data-carousel-next>&rsaquo;</button>
+	        <div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2" data-carousel-dots>
+	          <button type="button" aria-label="照片 1" class="h-2 w-2 rounded-full bg-gold transition-opacity duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold" data-carousel-dot></button>
+	          <button type="button" aria-label="照片 2" class="h-2 w-2 rounded-full bg-gold opacity-35 transition-opacity duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold" data-carousel-dot></button>
+	          <button type="button" aria-label="照片 3" class="h-2 w-2 rounded-full bg-gold opacity-35 transition-opacity duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold" data-carousel-dot></button>
+	        </div>
 	      </div>
 	    </section>
 	
@@ -322,6 +333,53 @@
           { root: null, rootMargin: "0px", threshold: 0.1 }
         );
         document.querySelectorAll(".fade-in-section").forEach((s) => observer.observe(s));
+
+        document.querySelectorAll("[data-photo-carousel]").forEach((carousel) => {
+          const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+          const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+          const prev = carousel.querySelector("[data-carousel-prev]");
+          const next = carousel.querySelector("[data-carousel-next]");
+          let current = 0;
+          let timer;
+
+          const show = (target) => {
+            current = (target + slides.length) % slides.length;
+            slides.forEach((slide, index) => {
+              slide.classList.toggle("opacity-100", index === current);
+              slide.classList.toggle("opacity-0", index !== current);
+            });
+            dots.forEach((dot, index) => {
+              dot.classList.toggle("opacity-35", index !== current);
+              dot.classList.toggle("opacity-100", index === current);
+            });
+          };
+
+          const start = () => {
+            timer = window.setInterval(() => show(current + 1), 6000);
+          };
+          const restart = () => {
+            window.clearInterval(timer);
+            start();
+          };
+
+          prev?.addEventListener("click", () => {
+            show(current - 1);
+            restart();
+          });
+          next?.addEventListener("click", () => {
+            show(current + 1);
+            restart();
+          });
+          dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+              show(index);
+              restart();
+            });
+          });
+          carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
+          carousel.addEventListener("mouseleave", start);
+          start();
+        });
       });
     </script>
     <script src="assets/nav-toggle.js" defer></script>
