@@ -54,7 +54,20 @@
       "WebFetch(domain:www.kmsfund.org.tw)",
       "WebFetch(domain:archivio.armani.com)",
       "WebFetch(domain:hksl.org)",
-      "WebFetch(domain:musikene.eus)"
+      "WebFetch(domain:musikene.eus)",
+      "Bash(magick '/Users/pyen/Downloads/Telegram Desktop/photo_2026-06-13_22-05-07.jpg' -crop 591x910+0+170 +repage -resize 1280x -quality 85 bilbao-concert-hall-vintage.jpeg)",
+      "Bash(magick '/Users/pyen/Downloads/Telegram Desktop/photo_2026-06-13_22-05-04.jpg' -resize 1280x -quality 85 bilbao-concert-modern-hall.jpeg)",
+      "Bash(magick '/Users/pyen/Downloads/Telegram Desktop/photo_2026-06-13_22-05-54.jpg' -resize 1600x -quality 85 bilbao-musicians-gathering.jpeg)",
+      "Bash(magick '/Users/pyen/Downloads/Telegram Desktop/photo_2026-06-13_22-05-09.jpg' -resize 1600x -quality 85 bilbao-abao-group.jpeg)",
+      "Bash(identify -format \"%f: %wx%h \\(%b\\)\\\\n\" bilbao-concert-hall-vintage.jpeg bilbao-concert-modern-hall.jpeg bilbao-musicians-gathering.jpeg bilbao-abao-group.jpeg)",
+      "Bash(awk NR>=88 && NR<=104 {for\\(i=1;i<=length\\($0\\);i++\\){c=substr\\($0,i,1\\); if\\(c==\" \"\\)printf\"S\"; else if\\(c==\"\\\\t\"\\)printf\"T\"; else{printf c; break}}; print \"\"} *)",
+      "Bash(identify '/Users/pyen/Library/CloudStorage/OneDrive-NVIDIACorporation/Desktop/Screenshot 2026-06-13 at 22.14.19.png')",
+      "Read(//Users/pyen/Library/CloudStorage/OneDrive-NVIDIACorporation/Desktop/**)",
+      "Bash(magick '/Users/pyen/Library/CloudStorage/OneDrive-NVIDIACorporation/Desktop/Screenshot 2026-06-13 at 22.14.19.png' -crop 754x540+0+0 +repage -quality 88 /Users/pyen/OpusFormosa/website/assets/musikene-poster.jpg)",
+      "Bash(identify /Users/pyen/OpusFormosa/website/assets/musikene-poster.jpg)",
+      "Bash(identify /Users/pyen/.claude/image-cache/6bfb8ac3-6cf3-437f-af43-e26c4c784b59/18.png)",
+      "Bash(magick /Users/pyen/.claude/image-cache/6bfb8ac3-6cf3-437f-af43-e26c4c784b59/18.png -resize 1600x -quality 88 /Users/pyen/OpusFormosa/website/assets/elcorreo-feature.jpg)",
+      "Bash(identify /Users/pyen/OpusFormosa/website/assets/elcorreo-feature.jpg)"
     ]
   }
 }
