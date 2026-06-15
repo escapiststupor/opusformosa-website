@@ -67,7 +67,14 @@
       "Bash(identify /Users/pyen/OpusFormosa/website/assets/musikene-poster.jpg)",
       "Bash(identify /Users/pyen/.claude/image-cache/6bfb8ac3-6cf3-437f-af43-e26c4c784b59/18.png)",
       "Bash(magick /Users/pyen/.claude/image-cache/6bfb8ac3-6cf3-437f-af43-e26c4c784b59/18.png -resize 1600x -quality 88 /Users/pyen/OpusFormosa/website/assets/elcorreo-feature.jpg)",
-      "Bash(identify /Users/pyen/OpusFormosa/website/assets/elcorreo-feature.jpg)"
+      "Bash(identify /Users/pyen/OpusFormosa/website/assets/elcorreo-feature.jpg)",
+      "WebFetch(domain:www.sophiewang.de)",
+      "WebFetch(domain:queenelisabethcompetition.be)",
+      "Bash(identify $SRC *)",
+      "Bash(magick /Users/pyen/.claude/image-cache/6bfb8ac3-6cf3-437f-af43-e26c4c784b59/20.png -crop 1136x1515+547+0 +repage -resize 800x1066 -quality 85 /Users/pyen/OpusFormosa/website/assets/sophie-wang.jpg)",
+      "Bash(identify /Users/pyen/OpusFormosa/website/assets/sophie-wang.jpg)",
+      "WebFetch(domain:www.kyuyeonkim.com)",
+      "WebFetch(domain:www.brannoncho.com)"
     ]
   }
 }
