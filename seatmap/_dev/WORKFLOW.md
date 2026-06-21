@@ -13,9 +13,9 @@ website/seatmap/
 │   │   ├── generate-editor.py     ← 產生 nch/editor-nch.html（定價工具）
 │   │   ├── apply-pricing.py       ← 用 CSV 更新 nch/nch.html 顏色
 │   │   └── update-excel.py        ← 用 CSV 在 Excel 新增定價工作表
-│   ├── nrh/  (同上結構)
-│   ├── tct/  (同上結構)
-│   └── wwy/  (同上結構)
+│   ├── nrh/  (同上結構，四個腳本全備)
+│   ├── tct/  (同上結構，四個腳本全備)
+│   └── wwy/  (同上結構，四個腳本全備)
 ├── nch/
 │   ├── nch.html                   ← 部署：觀眾瀏覽版
 │   └── editor-nch.html            ← 部署：助理定價工具
@@ -65,12 +65,13 @@ python3 apply-pricing.py NCH定價-2026-04-03.csv
 # → 更新 nch/nch.html，座位依實際票價上色
 ```
 
-### 步驟 5 — 用 CSV 更新 Excel（可選）
+### 步驟 5 — 用 CSV 更新 Excel，回傳票務系統
 
 ```bash
 cd website/seatmap/_dev/nch
 python3 update-excel.py NCH定價-2026-04-03.csv
-# → 在 Excel 新增「定價紀錄」與「票價摘要」工作表
+# → 在 Excel 新增「定價紀錄」與「票價摘要」工作表，輸出新檔（原檔不覆蓋）
+# → 把輸出的 xlsx 傳給票務系統
 ```
 
 ### 步驟 6 — 部署
@@ -122,22 +123,25 @@ section,row,seat,type,price
 
 **type 值一覽（不同場館支援的類型有所不同）：**
 
-| type | 中文 | 可定價 |
-|------|------|--------|
-| `regular` | 一般席 | ✓ |
-| `staff` | 工作席 | ✗ |
-| `recording` | 錄影席 | ✗ |
-| `recording_view_affected` | 錄影視線受影響席 | ✓ |
-| `pit` | 樂池席 | ✗ |
-| `vip_box` | 貴賓包廂 | ✓ |
-| `wheelchair` | 輪椅席 | ✓ |
-| `companion` | 輪椅陪同席 | ✓ |
-| `accessible` | 多元友善席 | ✓ |
-| `accessible_companion` | 多元友善陪同席 | ✓ |
-| `obstructed` | 視線不良席 | ✓ |
-| `organ_obstructed` | 管風琴視線不良席 | ✓ |
-| `uncomfortable_obstructed` | 座位不適・管風琴視線不良席 | ✓ |
-| `photography` | 攝影保留席 | ✗ |
+| type | 中文 | 可定價 | 場館 |
+|------|------|--------|------|
+| `regular` | 一般席 | ✓ | 全部 |
+| `staff` | 工作席 | ✗ | 全部 |
+| `recording` | 錄影席 | ✗ | TCT |
+| `recording_view_affected` | 錄影視線受影響席 | ✗ | TCT |
+| `pit` | 樂池席 | ✗ | TCT |
+| `vip_box` | 貴賓包廂 | ✓ | NCH |
+| `wheelchair` | 輪椅席 | ✓ | 全部 |
+| `companion` | 輪椅陪同席 | ✓ | 全部 |
+| `accessible` | 多元友善席 | ✓ | NCH、NRH、TCT |
+| `accessible_companion` | 多元友善陪同席 | ✓ | NCH、NRH、TCT |
+| `obstructed` | 視線不良席 | ✓ | 全部 |
+| `organ_obstructed` | 管風琴視線不良席 | ✓ | NCH |
+| `uncomfortable_obstructed` | 座位不適・管風琴視線不良席 | ✓ | NCH |
+| `photography` | 攝影保留席 | ✗ | NRH |
+| `console` | 控台區 | ✓ | WWY |
+| `chorus` | 合唱席 | ✗ | WWY |
+| `reserved` | 保留席 | ✗ | WWY |
 
 ---
 
@@ -196,15 +200,17 @@ section,row,seat,type,price
 
 ### WWY（衛武營音樂廳）
 
-| 類型 | 位置 | 席數 |
-|------|------|------|
-| 工作席 | 1樓9號門 8排1號 | 1 |
-| 攝影保留席 | 1樓1號門 10排1號；1樓13號門 1排1、2、5號；2樓5號門 17排1、2號；2樓6號門 17排1、2號 | 8 |
-| 輪椅席 | 2樓7號門 B3排1/3；2樓8號門 B3排2/4；2樓12號門 B4排64/66/68/70；3樓9號門 B2排1/3；3樓16號門 B2排2/4 | 13 |
-| 輪椅陪同席 | 2樓7號門 B3排5/7；2樓8號門 B3排6/8；2樓12號門 B4排72/74/76/78；3樓9號門 B2排5/7；3樓16號門 B2排6/8 | 13 |
-| 多元友善席 | 1樓1號門 9排1號、2樓5號門 1排1號、2樓6號門 1排1號 | 3 |
-| 多元友善陪同席 | 1樓1號門 9排3號、2樓5號門 1排3號、2樓6號門 1排3號 | 3 |
-| 視線不良席 | 1樓15號門 11排5/7/9；16號門 11排6/8/10 | 6 |
+WWY 使用的 type 與其他場館不同（無 accessible / photography；改為 console / chorus / reserved）。
+
+| 類型（type） | 中文 | 可定價 | 說明 |
+|-------------|------|--------|------|
+| `staff` | 工作席 | ✗ | 8席：1樓1/2號門4排、2樓3/4/7/8號門、3樓11號門 |
+| `console` | 控台區 | ✓ | 1樓11/12排、2樓A1排（約26席） |
+| `chorus` | 合唱席 | ✗ | 2樓3/4號門 F1-F7排（約120席，合唱席不販售） |
+| `reserved` | 保留席 | ✗ | 3樓9/10號門 C1排（約30席） |
+| `wheelchair` | 輪椅席 | ✓ | 2樓7/8號門 section（整區）；3樓12號門 B4排66/68號 |
+| `companion` | 輪椅陪同席 | ✓ | 2樓7/8號門 C1排；3樓10號門 C4排；3樓12號門 B3排 |
+| `obstructed` | 視線不良席 | ✓ | 2樓各門 D3/E3排外側；3樓11-16號門 B2/A2排端座 |
 
 ---
 

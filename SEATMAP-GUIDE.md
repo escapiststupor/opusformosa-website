@@ -8,12 +8,12 @@
 
 ### 定價工具（助理操作）
 
-| 場館 | 網址 |
-|------|------|
-| 國家兩廳院音樂廳 | `https://opusformosa.org/seatmap/nch/editor-nch.html` |
-| 國家兩廳院演奏廳 | `https://opusformosa.org/seatmap/nrh/editor-nrh.html` |
-| 衛武營音樂廳 | `https://opusformosa.org/seatmap/wwy/editor-wwy.html` |
-| 臺中國家歌劇院大劇場 | `https://opusformosa.org/seatmap/tct/editor-tct.html` |
+| 場館 | 代碼 | 網址 |
+|------|------|------|
+| 國家兩廳院音樂廳 | `nch` | `https://opusformosa.org/seatmap/nch/editor-nch.html` |
+| 國家兩廳院演奏廳 | `nrh` | `https://opusformosa.org/seatmap/nrh/editor-nrh.html` |
+| 衛武營音樂廳 | `wwy` | `https://opusformosa.org/seatmap/wwy/editor-wwy.html` |
+| 臺中國家歌劇院大劇場 | `tct` | `https://opusformosa.org/seatmap/tct/editor-tct.html` |
 
 ### 觀眾瀏覽版（對外公開）
 
@@ -46,18 +46,28 @@
 
 ### 第二步：更新觀眾版座位圖
 
-收到 CSV 後，在終端機執行：
+收到 CSV 後，在終端機執行（以 NCH 為例，其他場館替換目錄和 CSV 檔名）：
 
 ```bash
 cd /Users/pyen/OpusFormosa/website/seatmap/_dev/nch
 python3 apply-pricing.py NCH定價-2026-04-03.csv
 ```
 
-（替換為對應場館的目錄和 CSV 檔名）
-
 這會將 `nch/nch.html` 中的座位顏色和票價標籤更新為 CSV 中的定價。
 
-### 第三步：部署
+### 第三步：更新票務系統 Excel
+
+同一目錄下執行：
+
+```bash
+python3 update-excel.py NCH定價-2026-04-03.csv
+```
+
+這會在原始 Excel 裡新增「定價紀錄」和「票價摘要」工作表，輸出為新檔案（原檔不覆蓋）。把新 Excel 傳給票務系統即可。
+
+四個場館均已備齊 `apply-pricing.py` 與 `update-excel.py`。
+
+### 第四步：部署
 
 ```bash
 cd /Users/pyen/OpusFormosa/website
