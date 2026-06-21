@@ -355,8 +355,7 @@ function saveState() {
 }
 function loadState() {
   try {
-    const raw = localStorage.getItem(LS_KEY);
-    const d = raw !== null ? JSON.parse(raw) : SEED;
+    const d = JSON.parse(localStorage.getItem(LS_KEY) || '{}');
     Object.entries(d).forEach(([id, p]) => { if (seatEl[id]) seatPrice[id] = p; });
     paintAll(); renderPriceLegend(); renderStats();
   } catch(e) {}
@@ -550,7 +549,6 @@ def main():
 <div id="tip"></div>
 <script>
 {config_js}
-const SEED = {json.dumps(seed_data, ensure_ascii=False)};
 {JS}
 </script>
 </body></html>"""
