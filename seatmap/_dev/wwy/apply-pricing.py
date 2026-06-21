@@ -111,7 +111,11 @@ def main(csv_path):
         # 更新 data-price 與 fill
         tag = re.sub(r'\s+data-price="[^"]*"', '', tag)
         tag = tag.replace('class="seat"', f'class="seat" data-price="{label}"', 1)
-        tag = re.sub(r'(style="[^"]*fill:\s*)rgb\([^)]+\)', rf'\1{color}', tag)
+        new_tag = re.sub(r'(style="[^"]*fill:\s*)rgb\([^)]+\)', rf'\1{color}', tag)
+        if new_tag == tag:
+            # 無 inline style（如控台/視線不良席）— 直接替換 fill 屬性
+            new_tag = re.sub(r'\bfill="#[^"]*"', f'fill="{color}"', new_tag, count=1)
+        tag = new_tag
         return tag
 
     content = re.sub(r'<circle\b.*?</circle>', recolor, content, flags=re.DOTALL)
