@@ -37,7 +37,7 @@ TYPE_LABEL = {
 # 不販售席：固定顯示類型色，不接受票價
 NON_SALE    = {'staff', 'chorus', 'reserved'}
 # 固定色席：有票價也顯示類型色（不改為票價色）
-FIXED_COLOR = {'staff', 'chorus', 'reserved', 'wheelchair', 'companion'}
+FIXED_COLOR = {'staff', 'chorus', 'reserved', 'wheelchair', 'companion', 'console', 'obstructed'}
 
 # 票價自動配色（照票價由高到低）
 PRICE_PALETTE = [

@@ -44,6 +44,8 @@ PRICE_PALETTE = [
     '#ff922b','#74c0fc','#a9e34b','#cc5de8','#20c997',
 ]
 
+NON_SALE = {'staff'}
+
 def hex_to_rgb(h):
     h = h.lstrip('#')
     return f'rgb({int(h[0:2],16)}, {int(h[2:4],16)}, {int(h[4:6],16)})'
@@ -98,8 +100,8 @@ def main(csv_path):
             color = 'rgb(204, 204, 204)'  # 未定價灰
 
         # 票價標籤
-        if seat_type == 'staff':
-            label = '工作席（不販售）'
+        if seat_type in NON_SALE:
+            label = f'{TYPE_LABEL.get(seat_type, seat_type)}（不販售）'
         elif seat_type in TYPE_LABEL and seat_type != 'regular':
             label = f'{TYPE_LABEL[seat_type]}　NT${price:,}' if price else TYPE_LABEL[seat_type]
         elif price:

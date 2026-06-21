@@ -10,6 +10,8 @@
 
 import re
 import json
+import sys
+import csv as _csv
 
 # ─── 音樂會設定 ────────────────────────────────────────────────────────────────
 
@@ -133,6 +135,7 @@ const seatType  = {};   // id → type string
 const seatPrice = {};   // id → price (number)
 const selected  = new Set();
 const LS_KEY    = 'nrh_pricing_v1';
+const SEED      = {};
 
 // ─── Init ──────────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
@@ -352,7 +355,8 @@ function saveState() {
 }
 function loadState() {
   try {
-    const d = JSON.parse(localStorage.getItem(LS_KEY) || '{}');
+    const raw = localStorage.getItem(LS_KEY);
+    const d = raw !== null ? JSON.parse(raw) : SEED;
     Object.entries(d).forEach(([id, p]) => { if (seatEl[id]) seatPrice[id] = p; });
     paintAll(); renderPriceLegend(); renderStats();
   } catch(e) {}
@@ -477,6 +481,15 @@ def main():
     canvas_svg = re.sub(r'(<svg\b[^>]*id="canvas"[^>]*)height="[^"]*"', r'\1height="auto"', canvas_svg, count=1)
     canvas_svg = re.sub(r'\s+data-price="[^"]*"', '', canvas_svg)
 
+    # Seed pricing from CSV if provided
+    seed_data = {}
+    if len(sys.argv) > 1:
+        with open(sys.argv[1], encoding='utf-8-sig', newline='') as f:
+            for row in _csv.DictReader(l for l in f if not l.lstrip('﻿').startswith('#')):
+                price = row.get('price', '').strip()
+                if price:
+                    seed_data[f"{row['section']}-{row['row']}-{row['seat']}"] = int(price)
+
     # Config JS (embedded directly)
     config_js = f"""const CONFIG = {{
   venue: {json.dumps(CONCERT['venue'], ensure_ascii=False)},
@@ -537,6 +550,7 @@ def main():
 <div id="tip"></div>
 <script>
 {config_js}
+const SEED = {json.dumps(seed_data, ensure_ascii=False)};
 {JS}
 </script>
 </body></html>"""
