@@ -82,7 +82,9 @@
       "Bash(grep -o 'type,[^$]*' /Users/pyen/OpusFormosa/website/seatmap/_dev/nch/NCH定價-2026-06-21.csv)",
       "Bash(grep -o 'type,[^$]*' /Users/pyen/OpusFormosa/website/seatmap/_dev/nrh/NRH定價-2026-06-21.csv)",
       "Bash(grep -o 'type,[^$]*' /Users/pyen/OpusFormosa/website/seatmap/_dev/wwy/WWY定價-2026-06-21.csv)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)"
     ]
   }
 }
