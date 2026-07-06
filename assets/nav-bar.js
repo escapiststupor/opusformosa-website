@@ -46,7 +46,6 @@
     if (path === "artists.html") return "artists";
     if (path === "partners.html") return "partners";
     if (path === "friends.html") return "friends";
-    if (path === "2026-friends.html" || path === "2026-friends" || path === "2026-friends/") return "friends";
     return "index";
   }
 

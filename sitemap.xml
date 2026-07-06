@@ -75,14 +75,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://opusformosa.org/2026-friends</loc>
-    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://opusformosa.org/2026-friends" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://opusformosa.org/2026-friends" />
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://opusformosa.org/donors.html</loc>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://opusformosa.org/donors.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://opusformosa.org/en/donors.html" />
