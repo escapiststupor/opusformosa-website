@@ -11,6 +11,22 @@
     var triggers = Array.prototype.slice.call(document.querySelectorAll("[data-seatmap-dialog]"));
     if (!triggers.length) return;
 
+    var docLang = ((document.documentElement && document.documentElement.lang) || "").toLowerCase();
+    var isEn = docLang.indexOf("en") === 0;
+    var labels = isEn
+      ? {
+          open: "Open page",
+          close: "Close seat map",
+          frameTitle: "Seat map snapshot",
+          fallbackTitle: "Seat map snapshot",
+        }
+      : {
+          open: "另開頁面",
+          close: "關閉座位圖",
+          frameTitle: "座位圖快照",
+          fallbackTitle: "座位圖快照",
+        };
+
     var modal = document.createElement("div");
     modal.className = "seatmap-modal";
     modal.hidden = true;
@@ -22,10 +38,10 @@
       '      <p class="seatmap-modal__eyebrow">Seat map snapshot</p>',
       '      <h2 class="seatmap-modal__title" id="seatmap-modal-title"></h2>',
       "    </div>",
-      '    <a class="seatmap-modal__open" href="#" target="_blank" rel="noopener noreferrer">另開頁面</a>',
-      '    <button class="seatmap-modal__close" type="button" aria-label="關閉座位圖" data-seatmap-close>&times;</button>',
+      '    <a class="seatmap-modal__open" href="#" target="_blank" rel="noopener noreferrer">' + labels.open + "</a>",
+      '    <button class="seatmap-modal__close" type="button" aria-label="' + labels.close + '" data-seatmap-close>&times;</button>',
       "  </header>",
-      '  <iframe class="seatmap-modal__frame" title="座位圖快照" loading="lazy"></iframe>',
+      '  <iframe class="seatmap-modal__frame" title="' + labels.frameTitle + '" loading="lazy"></iframe>',
       "</section>",
     ].join("");
     document.body.appendChild(modal);
@@ -43,7 +59,7 @@
         var label = row.querySelector("span");
         if (label && label.textContent.trim()) return label.textContent.trim();
       }
-      return "座位圖快照";
+      return labels.fallbackTitle;
     }
 
     function openModal(trigger) {

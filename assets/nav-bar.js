@@ -27,22 +27,39 @@
     "bilbao.html",
     "donors.html",
     "festival2026.html",
+    "2026-friends.html",
     "artists.html",
     "friends.html",
     "partners.html",
   ];
 
-  function getCurrentId() {
+  function getCurrentPathWithoutLang() {
     var path =
       typeof window !== "undefined" && window.location
         ? window.location.pathname
         : "";
-    path = path.replace(/^\//, "").replace(/^en\/?/, "");
+    path = decodeURIComponent(path || "");
+    path = path.replace(/\\/g, "/");
+    var enIndex = path.indexOf("/en/");
+    if (enIndex !== -1) {
+      path = path.slice(enIndex + 4);
+    } else {
+      path = path.replace(/^\//, "");
+      if (path.indexOf("/") !== -1) {
+        path = path.split("/").pop();
+      }
+    }
+    return path || "index.html";
+  }
+
+  function getCurrentId() {
+    var path = getCurrentPathWithoutLang();
     if (!path || path === "index.html") return "index";
     if (path === "events.html") return "events";
     if (path === "team.html") return "team";
     if (path === "bilbao.html") return "bilbao";
     if (path === "festival2026.html") return "festival2026";
+    if (path === "2026-friends.html") return "2026-friends";
     if (path === "artists.html") return "artists";
     if (path === "partners.html") return "partners";
     if (path === "friends.html") return "friends";
@@ -50,12 +67,7 @@
   }
 
   function getCurrentPageFile() {
-    var path =
-      typeof window !== "undefined" && window.location
-        ? window.location.pathname
-        : "";
-    path = path.replace(/^\//, "").replace(/^en\/?/, "");
-    return path || "index.html";
+    return getCurrentPathWithoutLang();
   }
 
   function getLang(el) {

@@ -123,6 +123,21 @@
         outline-offset: 2px;
       }
 
+      .text-link {
+        color: var(--violet);
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+      }
+
+      .text-link:hover {
+        color: #302a78;
+      }
+
+      .text-link:focus-visible {
+        outline: 2px solid rgba(75, 69, 160, 0.55);
+        outline-offset: 2px;
+      }
+
       .email-sample {
         background: var(--soft);
         border: 1px solid rgba(75, 69, 160, 0.16);
@@ -132,6 +147,13 @@
       .tax-note {
         background: rgba(243, 240, 234, 0.7);
         border-left: 3px solid var(--teal);
+      }
+
+      .line-qr {
+        width: 8.5rem;
+        max-width: 100%;
+        border: 1px solid rgba(32, 31, 29, 0.12);
+        background: white;
       }
 
       .email-sample pre {
@@ -238,8 +260,8 @@
 
           <div class="grid gap-8 md:grid-cols-[1fr_1.6fr]">
             <div>
-              <h3 class="title mb-3 text-xl">室內樂與獨奏系列</h3>
-              <p class="mb-3 text-lg" style="color:var(--violet)">Chamber &amp; Recital Series</p>
+              <h3 class="title mb-3 text-xl">室內樂系列</h3>
+              <p class="mb-3 text-lg" style="color:var(--violet)">Chamber Music Series</p>
             </div>
             <ul class="space-y-3">
               <li class="grid gap-2 sm:grid-cols-[1fr_auto] sm:items-center">
@@ -263,14 +285,22 @@
           <h2 class="title mb-5 text-2xl">申請與確認流程</h2>
           <ol class="ml-6 list-decimal space-y-2">
             <li>先查看座位圖快照，整理您希望的場次、票區、張數與座位偏好。</li>
-            <li>請以 Email 或電話與 Opus Formosa 聯繫，由團隊確認可安排席位與金額。</li>
+            <li>
+              請以 Email 或
+              <a class="text-link" href="https://lin.ee/szmIKIQ" target="_blank" rel="noopener noreferrer">LINE（@opusformosa）</a>
+              與 Opus Formosa 聯繫，由團隊確認可安排席位與金額。
+            </li>
             <li>收到團隊確認後再完成轉帳，轉帳後補提供收據與付款確認所需資料。</li>
           </ol>
         </section>
 
         <section class="email-sample no-print mb-9 p-5 md:p-6" aria-labelledby="email-sample-title">
-          <h2 id="email-sample-title" class="title mb-4 text-2xl">Email 範例</h2>
-          <p class="mb-4 text-sm" style="color:var(--muted)">可依以下格式寄至 info@opusformosa.org，團隊會回覆可安排席位與後續轉帳資訊。</p>
+          <h2 id="email-sample-title" class="title mb-4 text-2xl">Email／LINE 範例</h2>
+          <p class="mb-4 text-sm" style="color:var(--muted)">
+            可依以下格式寄至 info@opusformosa.org，或透過
+            <a class="text-link" href="https://lin.ee/szmIKIQ" target="_blank" rel="noopener noreferrer">LINE（@opusformosa）</a>
+            傳送；團隊會回覆可安排席位與後續轉帳資訊。
+          </p>
           <pre class="text-sm leading-7">主旨：Friends of Opus Formosa 2026 VIP 席次預訂洽詢
 
 Opus Formosa 團隊您好：
@@ -281,30 +311,30 @@ Opus Formosa 團隊您好：
 2. 聯絡人姓名：
 3. 聯絡電話：
 4. Email：
-5. 欲列於官方節目冊之姓名或行號：
+5. LINE ID（如以 LINE 聯繫）：
 
 欲預訂席次：
 - 9 月 4 日 台北國家音樂廳：NT$5,000 VIP 保留席 ___ 張，偏好座位／排號：
-- 9 月 9 日 高雄衛武營音樂廳：NT$4,500 VIP 保留席 ___ 張，偏好座位／排號：
-- 9 月 10 日 台北國家演奏廳：NT$2,200 VIP 保留席 ___ 張，偏好座位／排號：
-- 9 月 12 日 台北國家演奏廳：NT$2,200 VIP 保留席 ___ 張，偏好座位／排號：
-- 9 月 14 日 台中國家歌劇院中劇院：NT$2,200 VIP 保留席 ___ 張，偏好座位／排號：
+- 9 月 9 日 高雄衛武營音樂廳：NT$4,500 VIP 保留席 ___ 張；NT$3,300 VIP 保留席 ___ 張，偏好座位／排號：
+- 9 月 10 日 台北國家演奏廳：NT$2,800 VIP 保留席 ___ 張，偏好座位／排號：
+- 9 月 12 日 台北國家演奏廳：NT$2,800 VIP 保留席 ___ 張，偏好座位／排號：
+- 9 月 14 日 台中國家歌劇院中劇院：NT$2,500 VIP 保留席 ___ 張，偏好座位／排號：
 - 其他公開票區需求：
 
 填寫範例：
 - 9 月 4 日 台北國家音樂廳：NT$5,000 VIP 保留席 6 張；NT$3,600 公開票區 10 張。
   座位偏好：希望公開票區為 8-10 排中間靠左，10 人連坐；若沒有可拆分為 4+2+4 人。
   預估小計：NT$66,000
-- 9 月 9 日 高雄衛武營音樂廳：NT$4,500 VIP 保留席 8 張；NT$2,500 公開票區 8 張。
-  座位偏好：VIP 席希望靠中央；公開票區希望同層相近區域，可接受分成 4+4 人。
-  預估小計：NT$56,000
-- 跨場次搭配：9 月 10 日 NT$2,200 VIP 保留席 12 張；9 月 12 日 NT$2,100 公開票區 12 張。
+- 9 月 9 日 高雄衛武營音樂廳：NT$4,500 VIP 保留席 6 張；NT$3,300 VIP 保留席 4 張；NT$2,500 公開票區 6 張。
+  座位偏好：4500 VIP 席希望第 6-8 排中央；3300 VIP 席可接受第 1-2 排或左右側；公開票區希望同層相近區域。
+  預估小計：NT$55,200
+- 跨場次搭配：9 月 10 日 NT$2,800 VIP 保留席 12 張；9 月 12 日 NT$1,800 公開票區 12 張。
   座位偏好：兩場皆希望中間偏左；若無法連坐，可優先保留每組至少 4 人相鄰。
-  預估小計：NT$51,600
+  預估小計：NT$55,200
 
 預估總金額：NT$________（可加總 VIP 保留席與公開票區）
 
-若以上席位可安排，我／我們將於收到確認後完成轉帳，並提供轉帳明細與捐款收據資料。</pre>
+若以上席位可安排，我／我們將於收到確認後完成轉帳，並提供轉帳明細、捐款收據與節目冊列名資料。</pre>
         </section>
 
         <section class="mb-9">
@@ -312,10 +342,9 @@ Opus Formosa 團隊您好：
             <div>
               <h2 class="title mb-5 text-2xl">洽詢時請先提供</h2>
               <ul class="ml-5 list-disc space-y-2">
-                <li>申請人／公司名稱、聯絡人、電話與 Email。</li>
+                <li>申請人／公司名稱、聯絡人、Email 或 LINE，及可聯絡電話。</li>
                 <li>欲申請的場次、票區、張數與座位偏好。</li>
                 <li>預估總金額。</li>
-                <li>官方節目冊致謝頁欲露出之姓名或行號。</li>
               </ul>
             </div>
             <div>
@@ -325,7 +354,7 @@ Opus Formosa 團隊您好：
                 <li>分行名稱：花蓮分行</li>
                 <li>總分支機構代碼：012-7451</li>
                 <li>帳號：82120000260082</li>
-                <li>戶名：福爾摩沙藝響</li>
+                <li>戶名：福爾摩沙藝響江月萱</li>
               </ul>
             </div>
             <div>
@@ -335,27 +364,36 @@ Opus Formosa 團隊您好：
                 <li>捐款收據抬頭：個人全名或公司抬頭。</li>
                 <li>稅務身分：身分證字號或公司統一編號。</li>
                 <li>收據郵寄地址。</li>
-                <li>如需提前寄送票券，請提供台灣郵寄收件地址與收件人。</li>
-                <li>若節目冊致謝名稱需調整，請一併告知。</li>
+                <li>官方節目冊致謝頁欲露出之姓名或行號。</li>
+                <li>現場取票人姓名；如需提前寄送票券，請提供台灣郵寄收件地址與收件人。</li>
               </ul>
             </div>
           </div>
           <div class="tax-note mt-7 p-4 text-sm leading-7">
-            <strong>票券領取：</strong>門票預設於音樂會當日現場取票桌領取（建議，可避免郵寄遺失風險）。若您需要提前收到票券，請聯絡我們並提供台灣郵寄收件地址與收件人；我們會在各場音樂會前兩週統一以掛號寄出。
+            <strong>票券領取：</strong>請於轉帳後提供現場取票人姓名。門票預設於音樂會當日現場取票桌領取（建議，可避免郵寄遺失風險）。若您需要提前收到票券，請聯絡我們並提供台灣郵寄收件地址與收件人；我們會在各場音樂會前兩週統一以掛號寄出。
           </div>
         </section>
 
         <section>
           <div class="rule mb-6"></div>
           <h2 class="title mb-5 text-2xl">聯絡我們</h2>
-          <div class="grid gap-5 md:grid-cols-2">
+          <div class="grid gap-5 md:grid-cols-[1fr_1fr_auto]">
             <div>
               <p>網站：https://opusformosa.org/</p>
               <p class="mt-4">聯絡電話：0920-921-779 秘書長 Phyllis（子晴）</p>
             </div>
             <div>
               <p>Email：info@opusformosa.org</p>
+              <p class="mt-4">LINE 官方帳號：<a class="text-link" href="https://lin.ee/szmIKIQ" target="_blank" rel="noopener noreferrer">@opusformosa</a></p>
               <p class="mt-4">0970-609-278 行政助理 Glandys（曉慧）</p>
+            </div>
+            <div class="flex items-start gap-4 md:justify-end">
+              <div>
+                <a href="https://lin.ee/szmIKIQ" target="_blank" rel="noopener noreferrer" aria-label="加入 Opus Formosa LINE 官方帳號">
+                  <img class="line-qr" src="assets/qr/qr-line.png" alt="Opus Formosa LINE 官方帳號 QR code" />
+                </a>
+                <p class="mt-2 text-center text-sm" style="color:var(--muted)">掃描加入 LINE</p>
+              </div>
             </div>
           </div>
           <p class="mt-9 text-center font-bold">
