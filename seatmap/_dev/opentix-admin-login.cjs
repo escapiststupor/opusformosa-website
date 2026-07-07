@@ -30,6 +30,63 @@ async function firstVisible(locator) {
   return null;
 }
 
+async function pageDiagnostic(page) {
+  return page.evaluate(() => ({
+    url: window.location.href,
+    title: document.title,
+    text: document.body.innerText.slice(0, 1200),
+    inputs: [...document.querySelectorAll("input")].map((input) => ({
+      type: input.type,
+      name: input.name,
+      placeholder: input.placeholder,
+      visible: Boolean(input.offsetWidth || input.offsetHeight || input.getClientRects().length),
+    })),
+    buttons: [...document.querySelectorAll("button")].map((button) => ({
+      text: button.innerText.trim(),
+      className: String(button.className || ""),
+      visible: Boolean(button.offsetWidth || button.offsetHeight || button.getClientRects().length),
+    })),
+    scripts: [...document.querySelectorAll("script[src]")].map((script) => script.src).slice(-12),
+  }));
+}
+
+function printDiagnostic(label, diagnostic, extras = {}) {
+  console.error(`[diagnostic] ${label}`);
+  console.error(
+    JSON.stringify(
+      {
+        ...extras,
+        ...diagnostic,
+      },
+      null,
+      2
+    )
+  );
+}
+
+async function waitForLoginForm(page, loginUrl, diagnostics) {
+  const usernameLocator = page.locator('input[name="username"], input[placeholder*="帳號"], input[type="email"], input[type="text"]').first();
+  const passwordLocator = page.locator('input[name="password"], input[type="password"], input[placeholder*="密碼"]').first();
+
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      await page.waitForLoadState("networkidle", { timeout: 30000 }).catch(() => {});
+      await usernameLocator.waitFor({ state: "visible", timeout: 60000 });
+      await passwordLocator.waitFor({ state: "visible", timeout: 60000 });
+      return { usernameInput: usernameLocator, passwordInput: passwordLocator };
+    } catch (error) {
+      diagnostics.formErrors.push(String(error.message || error));
+      const diagnostic = await pageDiagnostic(page).catch((diagError) => ({ diagnosticError: String(diagError.message || diagError) }));
+      printDiagnostic(`login form not ready, attempt ${attempt}`, diagnostic, { formErrors: diagnostics.formErrors });
+      if (attempt === 2) {
+        throw error;
+      }
+      await page.goto(loginUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+    }
+  }
+  throw new Error("Could not find OPENTIX login form.");
+}
+
 async function main() {
   const username = process.env.OPENTIX_ADMIN_USERNAME;
   const password = process.env.OPENTIX_ADMIN_PASSWORD;
@@ -55,13 +112,45 @@ async function main() {
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
     });
 
+    const diagnostics = {
+      consoleErrors: [],
+      failedRequests: [],
+      cognitoMessages: [],
+      formErrors: [],
+    };
+    page.on("console", (message) => {
+      if (["error", "warning"].includes(message.type())) {
+        diagnostics.consoleErrors.push(`${message.type()}: ${message.text()}`.slice(0, 500));
+      }
+    });
+    page.on("pageerror", (error) => {
+      diagnostics.consoleErrors.push(`pageerror: ${String(error.message || error).slice(0, 500)}`);
+    });
+    page.on("requestfailed", (request) => {
+      diagnostics.failedRequests.push(`${request.failure()?.errorText || "failed"} ${request.url()}`.slice(0, 500));
+    });
+
+    await page.goto(loginUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+
+    const { usernameInput, passwordInput } = await waitForLoginForm(page, loginUrl, diagnostics);
+
+    await usernameInput.fill(username);
+    await passwordInput.fill(password);
+
     const authPromise = new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error("Timed out waiting for Cognito AuthenticationResult.")), 90000);
+      const timeout = setTimeout(async () => {
+        const diagnostic = await pageDiagnostic(page).catch((error) => ({ diagnosticError: String(error.message || error) }));
+        printDiagnostic("timed out waiting for Cognito AuthenticationResult", diagnostic, diagnostics);
+        reject(new Error("Timed out waiting for Cognito AuthenticationResult."));
+      }, 90000);
       page.on("response", async (response) => {
         try {
           if (!response.url().includes("cognito-idp.ap-northeast-1.amazonaws.com")) return;
           if (response.request().method() !== "POST") return;
           const payload = await response.json();
+          if (payload && (payload.message || payload.__type)) {
+            diagnostics.cognitoMessages.push(`${payload.__type || "Cognito"}: ${payload.message || ""}`.slice(0, 500));
+          }
           if (payload && payload.AuthenticationResult && payload.AuthenticationResult.AccessToken) {
             clearTimeout(timeout);
             resolve(payload.AuthenticationResult);
@@ -72,23 +161,7 @@ async function main() {
       });
     });
 
-    await page.goto(loginUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
-
-    const passwordInput = page.locator('input[type="password"]').first();
-    await passwordInput.waitFor({ state: "visible", timeout: 60000 });
-
-    const usernameInput =
-      (await firstVisible(page.locator('input[name="username"], input[name="account"], input[type="text"], input[type="email"], input:not([type])'))) ||
-      (await firstVisible(page.locator("input").filter({ hasNot: passwordInput })));
-
-    if (!usernameInput) {
-      throw new Error("Could not find OPENTIX username input.");
-    }
-
-    await usernameInput.fill(username);
-    await passwordInput.fill(password);
-
-    const loginButton = await firstVisible(page.getByRole("button", { name: /登入|login/i }));
+    const loginButton = await firstVisible(page.getByRole("button", { name: /登\s*入|login/i }));
     if (loginButton) {
       await loginButton.click();
     } else {
