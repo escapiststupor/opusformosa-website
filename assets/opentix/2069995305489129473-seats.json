@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-07T18:43:06+08:00",
+  "generatedAt": "2026-07-07T18:47:06+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats."
@@ -34,9 +34,9 @@
       "price": 2800,
       "color": "#FAAE17",
       "kind": "vip-reserved",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "seatCount": 84,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。",
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
       "originalName": "貴賓席",
       "originalPrice": 0
     },
@@ -1081,11 +1081,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-2",
@@ -1106,11 +1106,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-3",
@@ -1131,11 +1131,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-4",
@@ -1156,11 +1156,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-5",
@@ -1181,11 +1181,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-6",
@@ -1206,11 +1206,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-7",
@@ -1231,11 +1231,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-8",
@@ -1256,11 +1256,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-9",
@@ -1281,11 +1281,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-10",
@@ -1306,11 +1306,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-11",
@@ -1331,11 +1331,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-12",
@@ -1356,11 +1356,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-13",
@@ -1381,11 +1381,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-14",
@@ -1427,11 +1427,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-16",
@@ -1578,11 +1578,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-2",
@@ -1603,11 +1603,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-3",
@@ -1628,11 +1628,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-4",
@@ -1653,11 +1653,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-5",
@@ -1678,11 +1678,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-6",
@@ -1703,11 +1703,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-7",
@@ -1728,11 +1728,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-8",
@@ -1753,11 +1753,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-9",
@@ -1778,11 +1778,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-10",
@@ -1803,11 +1803,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-11",
@@ -1828,11 +1828,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-12",
@@ -1853,11 +1853,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-13",
@@ -1878,11 +1878,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-14",
@@ -1924,11 +1924,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-16",
@@ -2075,11 +2075,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-2",
@@ -2100,11 +2100,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-3",
@@ -2125,11 +2125,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-4",
@@ -2150,11 +2150,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-5",
@@ -2175,11 +2175,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-6",
@@ -2200,11 +2200,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-7",
@@ -2225,11 +2225,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-8",
@@ -2250,11 +2250,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-9",
@@ -2275,11 +2275,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-10",
@@ -2300,11 +2300,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-11",
@@ -2325,11 +2325,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-12",
@@ -2350,11 +2350,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-13",
@@ -2375,11 +2375,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-14",
@@ -2421,11 +2421,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-16",
@@ -2593,11 +2593,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-2",
@@ -2618,11 +2618,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-3",
@@ -2643,11 +2643,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-4",
@@ -2668,11 +2668,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-5",
@@ -2693,11 +2693,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-6",
@@ -2718,11 +2718,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-7",
@@ -2743,11 +2743,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-8",
@@ -2768,11 +2768,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-9",
@@ -2793,11 +2793,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-10",
@@ -2818,11 +2818,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-11",
@@ -2843,11 +2843,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-12",
@@ -2868,11 +2868,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-13",
@@ -2893,11 +2893,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-14",
@@ -2939,11 +2939,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-16",
@@ -3111,11 +3111,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-2",
@@ -3136,11 +3136,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-3",
@@ -3161,11 +3161,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-4",
@@ -3186,11 +3186,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-5",
@@ -3211,11 +3211,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-6",
@@ -3236,11 +3236,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-7",
@@ -3261,11 +3261,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-8",
@@ -3286,11 +3286,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-9",
@@ -3311,11 +3311,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-10",
@@ -3336,11 +3336,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-11",
@@ -3361,11 +3361,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-12",
@@ -3386,11 +3386,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-13",
@@ -3411,11 +3411,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-14",
@@ -3457,11 +3457,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-16",
@@ -3608,11 +3608,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-2",
@@ -3633,11 +3633,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-3",
@@ -3658,11 +3658,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-4",
@@ -3683,11 +3683,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-5",
@@ -3708,11 +3708,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-6",
@@ -3733,11 +3733,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-7",
@@ -3758,11 +3758,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-8",
@@ -3783,11 +3783,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-9",
@@ -3808,11 +3808,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-10",
@@ -3833,11 +3833,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-11",
@@ -3858,11 +3858,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-12",
@@ -3883,11 +3883,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-13",
@@ -3908,11 +3908,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-14",
@@ -3954,11 +3954,11 @@
       "price": 2800,
       "kind": "vip-reserved",
       "color": "#FAAE17",
-      "source": "opus-vip-section-map",
+      "source": "opus-vip-seat-map",
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-16",

@@ -61,19 +61,47 @@
         {
           "id": "nch-vip-5000",
           "match": {
-            "sectionIds": [
-              "2070056769700352000"
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  3,
+                  5,
+                  7,
+                  9,
+                  11,
+                  13
+                ],
+                "numbers": [
+                  "1-21"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14
+                ],
+                "numbers": [
+                  "1-20"
+                ]
+              }
             ]
           },
           "display": {
+            "sectionId": "nch-vip-5000",
             "name": "5000元 VIP保留席",
             "kind": "vip-reserved",
             "price": 5000,
             "color": "#B8872B",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 5000 元正中央區，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
           },
-          "expectedSeatCount": 150
+          "expectedSeatCount": 246
         }
       ]
     },
@@ -88,37 +116,218 @@
         "venue": "高雄 衛武營音樂廳"
       },
       "sectionOverrides": [
-        {
-          "id": "wwy-vip-4500-center",
-          "match": {
-            "sectionIds": [
-              "2070020615125032960"
+                {
+                  "id": "wwy-vip-4500-center",
+                  "match": {
+            "seatSelectors": [
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  "3-10"
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9,
+                  11
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  3,
+                  5,
+                  7,
+                  9
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  4,
+                  6,
+                  8,
+                  10
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10
+                ]
+              }
             ]
           },
           "display": {
+            "sectionId": "wwy-vip-4500-center",
             "name": "4500元 VIP保留席",
             "kind": "vip-reserved",
             "price": 4500,
             "color": "#DDA43A",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 未公開之 1 樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 92
         },
         {
           "id": "wwy-vip-3300-side-and-front",
           "match": {
-            "sectionIds": [
-              "2072172813926539264"
+            "seatSelectors": [
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  1,
+                  2
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9,
+                  11,
+                  13,
+                  15,
+                  17,
+                  19
+                ]
+              },
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  "3-8"
+                ],
+                "numbers": [
+                  13,
+                  15,
+                  17,
+                  19
+                ]
+              },
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  9
+                ],
+                "numbers": [
+                  13,
+                  15,
+                  17
+                ]
+              },
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  10
+                ],
+                "numbers": [
+                  13
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  1
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  18,
+                  20
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  2
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  18
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  3,
+                  5,
+                  7
+                ],
+                "numbers": [
+                  14,
+                  16,
+                  18,
+                  20
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  4,
+                  6,
+                  8
+                ],
+                "numbers": [
+                  12,
+                  14,
+                  16,
+                  18
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  9
+                ],
+                "numbers": [
+                  14,
+                  16,
+                  18
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  10
+                ],
+                "numbers": [
+                  12
+                ]
+              }
             ]
           },
           "display": {
+            "sectionId": "wwy-vip-3300-side-and-front",
             "name": "3300元 VIP保留席",
             "kind": "vip-reserved",
             "price": 3300,
             "color": "#BA6FF8",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 未公開之 1 樓第 1 至 2 排與左右兩側區域，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 95
         }
@@ -157,8 +366,8 @@
             "kind": "vip-reserved",
             "price": 2800,
             "color": "#FAAE17",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 84
         }
@@ -197,8 +406,8 @@
             "kind": "vip-reserved",
             "price": 2800,
             "color": "#FAAE17",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 84
         }
@@ -218,36 +427,66 @@
         {
           "id": "ntt-vip-left-center",
           "match": {
-            "sectionIds": [
-              "2070072602073878528"
+            "seatSelectors": [
+              {
+                "floor": "二樓P21區",
+                "rows": [
+                  "8-12"
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9,
+                  11,
+                  13
+                ]
+              }
             ]
           },
           "display": {
+            "sectionId": "ntt-vip-2500",
             "name": "2500元 VIP保留席",
             "kind": "vip-reserved",
             "price": 2500,
             "color": "#FAAE17",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "二樓 P21／P22 第 8 至 12 排中央區，作為 Friends VIP 保留席顯示。"
           },
-          "expectedSeatCount": 33
+          "expectedSeatCount": 35
         },
         {
           "id": "ntt-vip-right-center",
           "match": {
-            "sectionIds": [
-              "2070072602079662080"
+            "seatSelectors": [
+              {
+                "floor": "二樓P22區",
+                "rows": [
+                  "8-12"
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14
+                ]
+              }
             ]
           },
           "display": {
+            "sectionId": "ntt-vip-2500",
             "name": "2500元 VIP保留席",
             "kind": "vip-reserved",
             "price": 2500,
             "color": "#FAAE17",
-            "source": "opus-vip-section-map",
-            "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。"
+            "source": "opus-vip-seat-map",
+            "note": "二樓 P21／P22 第 8 至 12 排中央區，作為 Friends VIP 保留席顯示。"
           },
-          "expectedSeatCount": 37
+          "expectedSeatCount": 35
         }
       ]
     }
