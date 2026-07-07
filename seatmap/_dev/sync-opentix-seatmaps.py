@@ -2,8 +2,9 @@
 """
 Regenerate public Friends of Opus Formosa OPENTIX seat-map snapshots.
 
-Preview codes are read from environment variables named in
-opentix-sync-rules.json. Never commit preview codes or URLs containing them.
+Admin credentials and tokens are read from environment variables or GitHub
+Actions secrets. Never commit OPENTIX credentials, refresh tokens, access
+tokens, HAR files, or browser storage snapshots.
 """
 
 from __future__ import annotations
@@ -13,6 +14,7 @@ import copy
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -35,6 +37,10 @@ class SyncError(RuntimeError):
     pass
 
 
+class Unauthorized(SyncError):
+    pass
+
+
 def load_json(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
@@ -53,36 +59,164 @@ def write_json(path: Path, payload: Any, dry_run: bool) -> None:
     write_text(path, content, dry_run)
 
 
-def request(url: str) -> bytes:
+def request(url: str, headers: dict[str, str] | None = None, data: bytes | None = None) -> bytes:
+    request_headers = {
+        "Accept": "application/json,text/plain,*/*",
+        "User-Agent": USER_AGENT,
+    }
+    if headers:
+        request_headers.update(headers)
     req = urllib.request.Request(
         url,
-        headers={
-            "Accept": "application/json,text/plain,*/*",
-            "User-Agent": USER_AGENT,
-        },
+        data=data,
+        headers=request_headers,
     )
     try:
         with urllib.request.urlopen(req, timeout=45) as response:
             return response.read()
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", "replace")[:500]
-        raise SyncError(f"HTTP {exc.code} while fetching {redact_preview_code(url)}: {body}") from exc
+        if exc.code == 401:
+            raise Unauthorized(f"HTTP 401 while fetching {redact_sensitive_url(url)}") from exc
+        raise SyncError(f"HTTP {exc.code} while fetching {redact_sensitive_url(url)}: {body}") from exc
     except urllib.error.URLError as exc:
-        raise SyncError(f"Failed to fetch {redact_preview_code(url)}: {exc}") from exc
-
-
-def fetch_json(url: str) -> Any:
-    return json.loads(request(url).decode("utf-8"))
+        raise SyncError(f"Failed to fetch {redact_sensitive_url(url)}: {exc}") from exc
 
 
 def fetch_text(url: str) -> str:
     return request(url).decode("utf-8")
 
 
-def redact_preview_code(url: str) -> str:
+class OpentixAuth:
+    def __init__(self, config: dict[str, Any]):
+        fetch_config = config["fetch"]
+        self.cognito_url = fetch_config["cognitoUrl"]
+        self.client_id = os.environ.get("OPENTIX_COGNITO_CLIENT_ID") or fetch_config["cognitoClientId"]
+        self.login_url = fetch_config["adminLoginUrl"]
+        self.access_token = os.environ.get("OPENTIX_ADMIN_ACCESS_TOKEN", "").strip()
+        authorization = os.environ.get("OPENTIX_ADMIN_AUTHORIZATION", "").strip()
+        if authorization.lower().startswith("bearer "):
+            self.access_token = authorization.split(" ", 1)[1].strip()
+        self.refresh_token = os.environ.get("OPENTIX_COGNITO_REFRESH_TOKEN", "").strip()
+
+    def authorization_header(self) -> str:
+        token = self.get_access_token()
+        return f"Bearer {token}"
+
+    def get_access_token(self) -> str:
+        if self.access_token:
+            return self.access_token
+        if self.refresh_token:
+            try:
+                self.refresh_access_token()
+                return self.access_token
+            except SyncError as exc:
+                print(f"[auth] refresh token failed; falling back to headless login ({exc})", file=sys.stderr)
+        self.login_with_playwright()
+        return self.access_token
+
+    def refresh_access_token(self) -> None:
+        if not self.refresh_token:
+            raise SyncError("OPENTIX_COGNITO_REFRESH_TOKEN is not set.")
+        payload = {
+            "AuthFlow": "REFRESH_TOKEN_AUTH",
+            "ClientId": self.client_id,
+            "AuthParameters": {
+                "REFRESH_TOKEN": self.refresh_token,
+            },
+        }
+        headers = {
+            "Content-Type": "application/x-amz-json-1.1",
+            "Origin": "https://opt.console.opentix.life",
+            "Referer": "https://opt.console.opentix.life/",
+            "X-Amz-Target": "AWSCognitoIdentityProviderService.InitiateAuth",
+            "X-Amz-User-Agent": "aws-amplify/0.1.x js",
+        }
+        try:
+            response = json.loads(request(self.cognito_url, headers=headers, data=json.dumps(payload).encode("utf-8")).decode("utf-8"))
+        except Unauthorized as exc:
+            raise SyncError("Cognito refresh was unauthorized.") from exc
+        except SyncError:
+            raise
+        except Exception as exc:
+            raise SyncError(f"Cognito refresh failed: {exc}") from exc
+        result = response.get("AuthenticationResult") or {}
+        access_token = result.get("AccessToken")
+        if not access_token:
+            raise SyncError("Cognito refresh response did not contain AccessToken.")
+        self.access_token = access_token
+        print("[auth] refreshed OPENTIX access token")
+
+    def login_with_playwright(self) -> None:
+        username = os.environ.get("OPENTIX_ADMIN_USERNAME")
+        password = os.environ.get("OPENTIX_ADMIN_PASSWORD")
+        if not username or not password:
+            raise SyncError(
+                "Missing OPENTIX auth. Set OPENTIX_COGNITO_REFRESH_TOKEN, or set both OPENTIX_ADMIN_USERNAME and OPENTIX_ADMIN_PASSWORD."
+            )
+        helper = ROOT / "seatmap" / "_dev" / "opentix-admin-login.cjs"
+        node = os.environ.get("OPENTIX_NODE_BIN") or "node"
+        env = os.environ.copy()
+        env["OPENTIX_ADMIN_LOGIN_URL"] = self.login_url
+        try:
+            result = subprocess.run(
+                [node, str(helper)],
+                cwd=str(ROOT),
+                env=env,
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=140,
+            )
+        except FileNotFoundError as exc:
+            raise SyncError("Node.js is required for OPENTIX headless login.") from exc
+        except subprocess.CalledProcessError as exc:
+            detail = (exc.stderr or exc.stdout or "").strip()
+            raise SyncError(f"OPENTIX headless login failed: {detail}") from exc
+        except subprocess.TimeoutExpired as exc:
+            raise SyncError("OPENTIX headless login timed out.") from exc
+        try:
+            payload = json.loads(result.stdout)
+        except json.JSONDecodeError as exc:
+            raise SyncError("OPENTIX headless login returned invalid JSON.") from exc
+        access_token = payload.get("accessToken")
+        if not access_token:
+            raise SyncError("OPENTIX headless login did not return accessToken.")
+        self.access_token = access_token
+        if payload.get("refreshToken"):
+            self.refresh_token = payload["refreshToken"]
+        print("[auth] logged in to OPENTIX admin with headless browser")
+
+    def force_refresh_or_login(self) -> None:
+        self.access_token = ""
+        if self.refresh_token:
+            try:
+                self.refresh_access_token()
+                return
+            except SyncError as exc:
+                print(f"[auth] refresh after 401 failed; falling back to headless login ({exc})", file=sys.stderr)
+        self.login_with_playwright()
+
+
+def fetch_admin_json(url: str, auth: OpentixAuth) -> Any:
+    headers = {
+        "Authorization": auth.authorization_header(),
+        "Content-Type": "application/json;charset=utf-8",
+        "Origin": "https://opt.console.opentix.life",
+        "Referer": "https://opt.console.opentix.life/",
+    }
+    try:
+        return json.loads(request(url, headers=headers).decode("utf-8"))
+    except Unauthorized:
+        auth.force_refresh_or_login()
+        headers["Authorization"] = auth.authorization_header()
+        return json.loads(request(url, headers=headers).decode("utf-8"))
+
+
+def redact_sensitive_url(url: str) -> str:
     parsed = urllib.parse.urlsplit(url)
     query = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
-    redacted = [(key, "***" if key.lower() == "code" else value) for key, value in query]
+    redacted = [(key, "***" if key.lower() in {"code", "token"} else value) for key, value in query]
     return urllib.parse.urlunsplit(parsed._replace(query=urllib.parse.urlencode(redacted)))
 
 
@@ -253,7 +387,7 @@ def normalize_seat(raw: dict[str, Any]) -> dict[str, Any]:
     svg_id = first_present(raw, ("svgId",), None)
     if not svg_id:
         svg_id = f"{floor}-{row}-{number}"
-    return {
+    seat = {
         "svgId": normalize_id(svg_id),
         "floorId": normalize_id(floor),
         "rowId": normalize_id(row),
@@ -261,22 +395,10 @@ def normalize_seat(raw: dict[str, Any]) -> dict[str, Any]:
         "sectionId": normalize_id(first_present(raw, ("sectionId", "priceSectionId", "section"), "")),
         "status": raw.get("status"),
     }
-
-
-def find_event(program_payload: Any, event_id: str) -> tuple[dict[str, Any], dict[str, Any]]:
-    program = unwrap_api_payload(program_payload)
-    if not isinstance(program, dict):
-        raise SyncError("OPENTIX program preview payload is not an object.")
-
-    venues = program.get("eventVenues") or program.get("venues") or []
-    if not venues and isinstance(program.get("program"), dict):
-        venues = program["program"].get("eventVenues") or []
-
-    for venue in venues:
-        for event in venue.get("events") or []:
-            if normalize_id(event.get("id")) == normalize_id(event_id):
-                return program, event
-    raise SyncError(f"Could not find event {event_id} in program preview payload.")
+    for key in ("eventId", "groupId", "rX", "rY", "autoSeatedOrderName", "autoSeatedOrderNumber", "parentSeatingChartId", "isConsecutive"):
+        if key in raw:
+            seat[key] = raw[key]
+    return seat
 
 
 def display_title_for_header(event_config: dict[str, Any], program: dict[str, Any]) -> str:
@@ -854,7 +976,7 @@ def build_snapshot(
         "source": {
             "publicEventUrl": public_event_url(event_config["programId"]),
             "seatSvgUrl": seat_svg_url,
-            "capturedFrom": "OPENTIX seat-map data snapshot.",
+            "capturedFrom": "OPENTIX admin seat-map data snapshot.",
         },
         "program": {
             "name": program.get("name"),
@@ -875,37 +997,66 @@ def build_snapshot(
         "generatedAt": datetime.now(TAIPEI).isoformat(timespec="seconds"),
         "notes": [
             "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
-            "OPENTIX is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
+            "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
         ],
         "sections": sections,
         "seats": seats,
     }
 
 
-def render_event(event_config: dict[str, Any], config: dict[str, Any], preview_code: str, dry_run: bool, strict_counts: bool) -> None:
+def fallback_program_and_event(event_config: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    labels = event_config.get("labels") or {}
+    title = labels.get("title") or "Opus 音樂節"
+    return (
+        {
+            "id": event_config["programId"],
+            "name": title,
+            "enUsName": None,
+        },
+        {
+            "id": event_config["eventId"],
+            "showSeatings": True,
+            "hideSeatsBeforeOnSale": False,
+        },
+    )
+
+
+def derive_svg_url(seat_meta: dict[str, Any], section_result: dict[str, Any]) -> str:
+    seat_svg_url = seat_meta.get("seatSvgUrl") or section_result.get("seatSvgUrl")
+    if seat_svg_url:
+        return seat_svg_url
+    seat_json_url = seat_meta.get("seatJsonUrl") or section_result.get("seatingMapUrl")
+    if seat_json_url:
+        return seat_json_url.replace("/jsonFile/", "/svgFile/").replace(".json", ".svg")
+    raise SyncError("OPENTIX admin response did not contain seatSvgUrl or seatingMapUrl.")
+
+
+def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: OpentixAuth, dry_run: bool, strict_counts: bool) -> None:
     program_id = event_config["programId"]
     event_id = event_config["eventId"]
-    program_url = config["fetch"]["programPreviewUrl"].format(
-        programId=urllib.parse.quote(program_id),
-        previewCode=urllib.parse.quote(preview_code),
+    parent_seating_chart_id = str(event_config["parentSeatingChartId"])
+    seat_json_url = config["fetch"]["adminSeatJsonUrl"].format(eventId=urllib.parse.quote(event_id))
+    section_seats_url = config["fetch"]["adminSectionSeatsUrl"].format(
+        eventId=urllib.parse.quote(event_id),
+        parentSeatingChartId=urllib.parse.quote(parent_seating_chart_id),
     )
-    seats_url = config["fetch"]["eventSeatsUrl"].format(eventId=urllib.parse.quote(event_id))
 
     print(f"[sync] {event_id} {event_config.get('labels', {}).get('date', '')} {event_config.get('labels', {}).get('title', '')}")
-    program_payload = fetch_json(program_url)
-    program, event = find_event(program_payload, event_id)
-    seat_svg_url = event.get("seatSvgUrl")
-    if not seat_svg_url:
-        raise SyncError(f"Event {event_id} has no seatSvgUrl.")
+    program, event = fallback_program_and_event(event_config)
 
-    seat_payload = fetch_json(seats_url)
-    raw_seats = extract_seat_entries(seat_payload)
+    seat_meta = unwrap_api_payload(fetch_admin_json(seat_json_url, auth))
+    section_result = unwrap_api_payload(fetch_admin_json(section_seats_url, auth))
+    if not isinstance(seat_meta, dict) or not isinstance(section_result, dict):
+        raise SyncError(f"Unexpected OPENTIX admin response shape for event {event_id}.")
+    seat_svg_url = derive_svg_url(seat_meta, section_result)
+
+    raw_seats = extract_seat_entries(section_result)
     normalized_seats = [normalize_seat(item) for item in raw_seats]
     normalized_seats = [seat for seat in normalized_seats if seat["svgId"] and seat["floorId"] and seat["rowId"] and seat["number"]]
     if not normalized_seats:
         raise SyncError(f"Event {event_id} has no usable seats.")
 
-    raw_sections = flatten_group_sections(event.get("groupSections"))
+    raw_sections = section_result.get("section") or []
     official_sections: OrderedDict[str, dict[str, Any]] = OrderedDict()
     for raw_section in raw_sections:
         section = section_from_opentix(raw_section)
@@ -949,7 +1100,7 @@ def validate_config(config: dict[str, Any]) -> None:
         if key not in config:
             raise SyncError(f"Rules file missing {key}.")
     for event in config["events"]:
-        for key in ("programId", "eventId", "previewCodeSecret", "sectionOverrides"):
+        for key in ("programId", "eventId", "parentSeatingChartId", "sectionOverrides"):
             if key not in event:
                 raise SyncError(f"Event rule missing {key}: {event}")
         for rule in event["sectionOverrides"]:
@@ -963,7 +1114,6 @@ def main() -> int:
     parser.add_argument("--rules", default=str(DEFAULT_RULES), help="Path to opentix-sync-rules.json")
     parser.add_argument("--event", action="append", default=[], help="Limit to one eventId, programId, or slug. May be repeated.")
     parser.add_argument("--dry-run", action="store_true", help="Fetch and render without writing files.")
-    parser.add_argument("--allow-missing-secrets", action="store_true", help="Skip events whose preview-code env var is not set.")
     parser.add_argument("--no-strict-counts", action="store_true", help="Warn instead of failing when expected VIP seat counts do not match.")
     parser.add_argument("--validate-rules", action="store_true", help="Validate the rules file and exit without fetching OPENTIX.")
     args = parser.parse_args()
@@ -978,21 +1128,9 @@ def main() -> int:
         if not events:
             raise SyncError("No events selected.")
 
-        missing_secret_events: list[str] = []
+        auth = OpentixAuth(config)
         for event in events:
-            secret_name = event["previewCodeSecret"]
-            preview_code = os.environ.get(secret_name)
-            if not preview_code:
-                if args.allow_missing_secrets:
-                    missing_secret_events.append(f"{event['eventId']} ({secret_name})")
-                    continue
-                raise SyncError(f"Missing preview-code environment variable: {secret_name}")
-            render_event(copy.deepcopy(event), config, preview_code, args.dry_run, not args.no_strict_counts)
-
-        for item in missing_secret_events:
-            print(f"[skip] missing preview code for {item}")
-        if missing_secret_events and len(missing_secret_events) == len(events):
-            print("[skip] no events rendered because all preview-code env vars were missing.")
+            render_event(copy.deepcopy(event), config, auth, args.dry_run, not args.no_strict_counts)
         return 0
     except SyncError as exc:
         print(f"error: {exc}", file=sys.stderr)

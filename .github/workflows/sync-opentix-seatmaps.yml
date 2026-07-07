@@ -16,11 +16,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     env:
-      OPENTIX_PREVIEW_CODE_2070047377542205440: ${{ secrets.OPENTIX_PREVIEW_CODE_2070047377542205440 }}
-      OPENTIX_PREVIEW_CODE_2069997578138800129: ${{ secrets.OPENTIX_PREVIEW_CODE_2069997578138800129 }}
-      OPENTIX_PREVIEW_CODE_2069995304227835904: ${{ secrets.OPENTIX_PREVIEW_CODE_2069995304227835904 }}
-      OPENTIX_PREVIEW_CODE_2069988929396269056: ${{ secrets.OPENTIX_PREVIEW_CODE_2069988929396269056 }}
-      OPENTIX_PREVIEW_CODE_2070072136511918080: ${{ secrets.OPENTIX_PREVIEW_CODE_2070072136511918080 }}
+      OPENTIX_ADMIN_USERNAME: ${{ secrets.OPENTIX_ADMIN_USERNAME }}
+      OPENTIX_ADMIN_PASSWORD: ${{ secrets.OPENTIX_ADMIN_PASSWORD }}
+      OPENTIX_COGNITO_REFRESH_TOKEN: ${{ secrets.OPENTIX_COGNITO_REFRESH_TOKEN }}
+      NODE_PATH: /tmp/opentix-sync-node/node_modules
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -29,6 +28,19 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright
+        run: |
+          mkdir -p /tmp/opentix-sync-node
+          cd /tmp/opentix-sync-node
+          npm init -y >/dev/null
+          npm install playwright
+          npx playwright install --with-deps chromium
 
       - name: Sync seat maps
         run: python3 seatmap/_dev/sync-opentix-seatmaps.py

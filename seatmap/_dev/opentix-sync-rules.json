@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "description": "Rules for regenerating Friends of Opus Formosa static OPENTIX seat maps. OPENTIX remains the source of truth for seats that are not matched by Friends VIP rules. Friends VIP rules have highest priority and override any OPENTIX section, price, status, youth, reserved, unavailable, or excluded-seat data. Do not store OPENTIX preview codes in this file; use GitHub Actions secrets named in previewCodeSecret.",
+  "description": "Rules for regenerating Friends of Opus Formosa static OPENTIX seat maps. OPENTIX admin seat data remains the source of truth for seats that are not matched by Friends VIP rules. Friends VIP rules have highest priority and override any OPENTIX section, price, status, youth, reserved, unavailable, or excluded-seat data. Do not store OPENTIX credentials or tokens in this file; use local environment variables or GitHub Actions secrets.",
   "rulePrecedence": [
     {
       "order": 1,
@@ -15,9 +15,11 @@
     }
   ],
   "fetch": {
-    "programPreviewUrl": "https://csm.api.opentix.life/programs/{programId}/preview?code={previewCode}",
-    "eventSeatsUrl": "https://csm.api.opentix.life/events/{eventId}/seats",
-    "svgUrlSource": "programPreview.eventVenues[0].events[].seatSvgUrl"
+    "adminSeatJsonUrl": "https://opt.api.opentix.life/seats/seatjsonurl?eventId={eventId}&disableShowError=true",
+    "adminSectionSeatsUrl": "https://opt.api.opentix.life/sections/seats?eventId={eventId}&parentSeatingChartId={parentSeatingChartId}&disableShowError=true",
+    "cognitoUrl": "https://cognito-idp.ap-northeast-1.amazonaws.com/",
+    "cognitoClientId": "18gl53c4lq4a2tcp76il3ghqft",
+    "adminLoginUrl": "https://opt.console.opentix.life/organizer/index.html#/login"
   },
   "output": {
     "json": "assets/opentix/{eventId}-seats.json",
@@ -49,7 +51,7 @@
       "slug": "2026-09-04-taipei-national-concert-hall",
       "programId": "2070047377542205440",
       "eventId": "2070048441140207616",
-      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2070047377542205440",
+      "parentSeatingChartId": 423,
       "labels": {
         "date": "9 月 4 日",
         "title": "開幕之夜：林易與朋友們",
@@ -79,7 +81,7 @@
       "slug": "2026-09-09-kaohsiung-weiwuying-concert-hall",
       "programId": "2069997578138800129",
       "eventId": "2069998010554765313",
-      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2069997578138800129",
+      "parentSeatingChartId": 21,
       "labels": {
         "date": "9 月 9 日",
         "title": "跨世代的樂聲：三重奏到協奏曲",
@@ -126,7 +128,7 @@
       "slug": "2026-09-10-taipei-national-recital-hall",
       "programId": "2069995304227835904",
       "eventId": "2069995305489129473",
-      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2069995304227835904",
+      "parentSeatingChartId": 422,
       "labels": {
         "date": "9 月 10 日",
         "title": "歐陸夜曲",
@@ -166,7 +168,7 @@
       "slug": "2026-09-12-taipei-national-recital-hall",
       "programId": "2069988929396269056",
       "eventId": "2069989384551358465",
-      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2069988929396269056",
+      "parentSeatingChartId": 422,
       "labels": {
         "date": "9 月 12 日",
         "title": "異鄉之憶",
@@ -206,7 +208,7 @@
       "slug": "2026-09-14-taichung-national-theater-playhouse",
       "programId": "2070072136511918080",
       "eventId": "2070072493401051137",
-      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2070072136511918080",
+      "parentSeatingChartId": 530,
       "labels": {
         "date": "9 月 14 日",
         "title": "弦間絮語",
@@ -251,7 +253,7 @@
     }
   ],
   "sourceOfTruth": {
-    "opentix": [
+    "opentixAdmin": [
       "nonVipPublicSections",
       "nonVipYouthSections",
       "nonVipReservedOrUnavailableSeats",
