@@ -25,10 +25,11 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-07T00:47:07+08:00",
+  "generatedAt": "2026-07-07T10:53:25+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
-    "Regenerate this file if OPENTIX changes the seat map, price plan, or reserved sections."
+    "Regenerate this file if OPENTIX changes the seat map, price plan, or reserved sections.",
+    "OPENTIX local update: row 17 seats 10, 12, 14, 16, 18, 19, 21, 23, 25, 27 changed from 1000元區 to 青年席位300元（原價1000）."
   ],
   "sections": [
     {
@@ -77,7 +78,18 @@
       "color": "#BA6FF8",
       "kind": "public",
       "source": "opentix-price-section",
-      "seatCount": 73
+      "seatCount": 63
+    },
+    {
+      "id": "opus-youth-300-original-1000",
+      "name": "青年席位300元（原價1000）",
+      "price": 300,
+      "originalPrice": 1000,
+      "color": "#C27BA0",
+      "kind": "public",
+      "source": "opus-local-youth-section",
+      "seatCount": 10,
+      "pricePlanName": "青年席位專屬優惠"
     },
     {
       "id": "2069995306614280192",
@@ -1947,11 +1959,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "10",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -1971,11 +1983,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "12",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -1995,11 +2007,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "14",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2019,11 +2031,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "16",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2043,11 +2055,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "18",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2055,11 +2067,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "19",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2079,11 +2091,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "21",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2091,11 +2103,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "23",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2103,11 +2115,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "25",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {
@@ -2115,11 +2127,11 @@
       "floorId": "地下樓BF",
       "rowId": "17",
       "number": "27",
-      "sectionId": "2069995306603945986",
-      "sectionName": "1000元區",
-      "price": 1000,
+      "sectionId": "opus-youth-300-original-1000",
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 300,
       "kind": "public",
-      "color": "#BA6FF8",
+      "color": "#C27BA0",
       "status": 0
     },
     {

@@ -4,7 +4,7 @@
   "source": {
     "publicEventUrl": "https://www.opentix.life/event/2070072136511918080",
     "seatSvgUrl": "https://s3.resource.opentix.life/upload/sectionwithseat/svgFile/SeatingMap2070072493401051137.svg",
-    "capturedFrom": "OPENTIX seat-map data snapshot."
+    "capturedFrom": "OPENTIX seat-map data snapshot; preview token omitted."
   },
   "program": {
     "name": "Opus 室內樂系列 III《弦間絮語》",
@@ -20,14 +20,15 @@
     "endDateTime": 1789392600,
     "quantity": {
       "unlimited": false,
-      "remainingQuantity": 600
+      "remainingQuantity": 615
     },
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-07T00:47:07+08:00",
+  "generatedAt": "2026-07-07T11:15:43+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
+    "OPENTIX orchestra-pit section 2070072602060824577 is excluded because those seats are not sold.",
     "Regenerate this file if OPENTIX changes the seat map, price plan, or reserved sections."
   ],
   "sections": [
@@ -38,10 +39,8 @@
       "color": "#FAAE17",
       "kind": "vip-reserved",
       "source": "opus-vip-section-map",
-      "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。",
-      "originalName": null,
-      "originalPrice": null,
-      "seatCount": 33
+      "seatCount": 33,
+      "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "id": "2070072602079662080",
@@ -50,10 +49,8 @@
       "color": "#FAAE17",
       "kind": "vip-reserved",
       "source": "opus-vip-section-map",
-      "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。",
-      "originalName": null,
-      "originalPrice": null,
-      "seatCount": 37
+      "seatCount": 37,
+      "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "id": "2070073395567091712",
@@ -71,7 +68,7 @@
       "color": "#ADB72B",
       "kind": "public",
       "source": "opentix-price-section",
-      "seatCount": 153
+      "seatCount": 159
     },
     {
       "id": "2070072601981132800",
@@ -98,7 +95,7 @@
       "color": "#00A797",
       "kind": "public",
       "source": "opentix-price-section",
-      "seatCount": 150
+      "seatCount": 159
     },
     {
       "id": "2070073587659821056",
@@ -112,41 +109,42 @@
     {
       "id": "2074060670449098752",
       "name": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "color": "#A64D79",
       "kind": "public",
       "source": "opentix-price-section",
-      "seatCount": 20
-    },
-    {
-      "id": "2070072601918689280",
-      "name": "保留席／不可公開銷售",
-      "price": null,
-      "color": "#c8c2b6",
-      "kind": "reserved-unknown",
-      "source": "opentix-seats-only",
-      "note": "Seat appears in OPENTIX seats API but not in public price sections and is not marked as Friends VIP.",
-      "seatCount": 22
+      "seatCount": 20,
+      "originalPrice": 1000
     },
     {
       "id": "2070072602060824576",
-      "name": "保留席／不可公開銷售",
+      "name": "錄影席／不可公開銷售",
       "price": null,
-      "color": "#c8c2b6",
-      "kind": "reserved-unknown",
+      "color": "#6B8E3D",
+      "kind": "recording-reserved",
       "source": "opentix-seats-only",
-      "note": "Seat appears in OPENTIX seats API but not in public price sections and is not marked as Friends VIP.",
-      "seatCount": 6
+      "seatCount": 6,
+      "note": "OPENTIX seats API 中不屬於公開販售票區；依主辦確認為錄影保留席。"
+    },
+    {
+      "id": "2070072601918689280",
+      "name": "錄影視線受影響保留席／不可公開銷售",
+      "price": null,
+      "color": "#A9C98D",
+      "kind": "recording-obstructed",
+      "source": "opentix-seats-only",
+      "seatCount": 7,
+      "note": "OPENTIX seats API 中不屬於公開販售票區；依主辦確認為錄影相關保留席。"
     },
     {
       "id": "2072142353317539840",
-      "name": "保留席／不可公開銷售",
+      "name": "其他保留／不可公開銷售",
       "price": null,
       "color": "#c8c2b6",
       "kind": "reserved-unknown",
       "source": "opentix-seats-only",
-      "note": "Seat appears in OPENTIX seats API but not in public price sections and is not marked as Friends VIP.",
-      "seatCount": 2
+      "seatCount": 2,
+      "note": "Seat appears in OPENTIX seats API but not in public price sections and is not marked as Friends VIP."
     }
   ],
   "seats": [
@@ -576,10 +574,10 @@
       "rowId": "11",
       "number": "39",
       "sectionId": "2070072602060824576",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-reserved",
+      "color": "#6B8E3D",
       "status": 0
     },
     {
@@ -1992,10 +1990,10 @@
       "rowId": "11",
       "number": "38",
       "sectionId": "2070072602060824576",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-reserved",
+      "color": "#6B8E3D",
       "status": 0
     },
     {
@@ -3084,7 +3082,7 @@
       "rowId": "13",
       "number": "25",
       "sectionId": "2072142353317539840",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "其他保留／不可公開銷售",
       "price": null,
       "kind": "reserved-unknown",
       "color": "#c8c2b6",
@@ -3995,11 +3993,11 @@
       "floorId": "二樓P23區",
       "rowId": "17",
       "number": "1",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073441276616704",
+      "sectionName": "1800元區",
+      "price": 1800,
+      "kind": "public",
+      "color": "#ADB72B",
       "status": 0
     },
     {
@@ -4127,11 +4125,11 @@
       "floorId": "二樓P23區",
       "rowId": "17",
       "number": "3",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073441276616704",
+      "sectionName": "1800元區",
+      "price": 1800,
+      "kind": "public",
+      "color": "#ADB72B",
       "status": 0
     },
     {
@@ -4223,11 +4221,11 @@
       "floorId": "二樓P23區",
       "rowId": "17",
       "number": "5",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073441276616704",
+      "sectionName": "1800元區",
+      "price": 1800,
+      "kind": "public",
+      "color": "#ADB72B",
       "status": 0
     },
     {
@@ -4260,10 +4258,10 @@
       "rowId": "18",
       "number": "1",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -4392,10 +4390,10 @@
       "rowId": "18",
       "number": "3",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -4499,11 +4497,11 @@
       "floorId": "二樓P23區",
       "rowId": "18",
       "number": "5",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -4536,10 +4534,10 @@
       "rowId": "19",
       "number": "1",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -4668,10 +4666,10 @@
       "rowId": "19",
       "number": "3",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -4764,10 +4762,10 @@
       "rowId": "19",
       "number": "45",
       "sectionId": "2070072602060824576",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-reserved",
+      "color": "#6B8E3D",
       "status": 0
     },
     {
@@ -4775,11 +4773,11 @@
       "floorId": "二樓P23區",
       "rowId": "19",
       "number": "5",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -4787,11 +4785,11 @@
       "floorId": "二樓P23區",
       "rowId": "19",
       "number": "7",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -4799,11 +4797,11 @@
       "floorId": "二樓P23區",
       "rowId": "19",
       "number": "9",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -4908,7 +4906,7 @@
       "rowId": "13",
       "number": "24",
       "sectionId": "2072142353317539840",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "其他保留／不可公開銷售",
       "price": null,
       "kind": "reserved-unknown",
       "color": "#c8c2b6",
@@ -5881,10 +5879,11 @@
       "number": "50",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "二樓P24區-16-6",
@@ -5975,11 +5974,11 @@
       "floorId": "二樓P24區",
       "rowId": "17",
       "number": "2",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073441276616704",
+      "sectionName": "1800元區",
+      "price": 1800,
+      "kind": "public",
+      "color": "#ADB72B",
       "status": 0
     },
     {
@@ -6107,11 +6106,11 @@
       "floorId": "二樓P24區",
       "rowId": "17",
       "number": "4",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073441276616704",
+      "sectionName": "1800元區",
+      "price": 1800,
+      "kind": "public",
+      "color": "#ADB72B",
       "status": 0
     },
     {
@@ -6167,11 +6166,11 @@
       "floorId": "二樓P24區",
       "rowId": "17",
       "number": "6",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073441276616704",
+      "sectionName": "1800元區",
+      "price": 1800,
+      "kind": "public",
+      "color": "#ADB72B",
       "status": 0
     },
     {
@@ -6252,10 +6251,10 @@
       "rowId": "18",
       "number": "2",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -6383,11 +6382,11 @@
       "floorId": "二樓P24區",
       "rowId": "18",
       "number": "4",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -6421,10 +6420,11 @@
       "number": "44",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "二樓P24區-18-46",
@@ -6433,21 +6433,22 @@
       "number": "46",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "二樓P24區-18-6",
       "floorId": "二樓P24區",
       "rowId": "18",
       "number": "6",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -6467,11 +6468,11 @@
       "floorId": "二樓P24區",
       "rowId": "19",
       "number": "10",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -6528,10 +6529,10 @@
       "rowId": "19",
       "number": "2",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -6660,10 +6661,10 @@
       "rowId": "19",
       "number": "4",
       "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影視線受影響保留席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-obstructed",
+      "color": "#A9C98D",
       "status": 0
     },
     {
@@ -6708,10 +6709,10 @@
       "rowId": "19",
       "number": "46",
       "sectionId": "2070072602060824576",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-reserved",
+      "color": "#6B8E3D",
       "status": 0
     },
     {
@@ -6719,11 +6720,11 @@
       "floorId": "二樓P24區",
       "rowId": "19",
       "number": "6",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -6731,11 +6732,11 @@
       "floorId": "二樓P24區",
       "rowId": "19",
       "number": "8",
-      "sectionId": "2070072601918689280",
-      "sectionName": "保留席／不可公開銷售",
-      "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "sectionId": "2070073511573151744",
+      "sectionName": "1500元區",
+      "price": 1500,
+      "kind": "public",
+      "color": "#00A797",
       "status": 0
     },
     {
@@ -7416,10 +7417,10 @@
       "rowId": "3",
       "number": "39",
       "sectionId": "2070072602060824576",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-reserved",
+      "color": "#6B8E3D",
       "status": 0
     },
     {
@@ -7465,10 +7466,11 @@
       "number": "1",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-11",
@@ -7477,10 +7479,11 @@
       "number": "11",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-13",
@@ -7489,10 +7492,11 @@
       "number": "13",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-15",
@@ -7501,10 +7505,11 @@
       "number": "15",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-17",
@@ -7513,10 +7518,11 @@
       "number": "17",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-3",
@@ -7525,10 +7531,11 @@
       "number": "3",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-5",
@@ -7537,10 +7544,11 @@
       "number": "5",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-7",
@@ -7549,10 +7557,11 @@
       "number": "7",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4-9",
@@ -7561,10 +7570,11 @@
       "number": "9",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P41區-4L-1",
@@ -8352,10 +8362,10 @@
       "rowId": "3",
       "number": "42",
       "sectionId": "2070072602060824576",
-      "sectionName": "保留席／不可公開銷售",
+      "sectionName": "錄影席／不可公開銷售",
       "price": null,
-      "kind": "reserved-unknown",
-      "color": "#c8c2b6",
+      "kind": "recording-reserved",
+      "color": "#6B8E3D",
       "status": 0
     },
     {
@@ -8389,10 +8399,11 @@
       "number": "10",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-12",
@@ -8401,10 +8412,11 @@
       "number": "12",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-14",
@@ -8413,10 +8425,11 @@
       "number": "14",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-16",
@@ -8425,10 +8438,11 @@
       "number": "16",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-2",
@@ -8437,10 +8451,11 @@
       "number": "2",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-4",
@@ -8449,10 +8464,11 @@
       "number": "4",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-6",
@@ -8461,10 +8477,11 @@
       "number": "6",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4-8",
@@ -8473,10 +8490,11 @@
       "number": "8",
       "sectionId": "2074060670449098752",
       "sectionName": "青年席位300元（原價1000）",
-      "price": 1000,
+      "price": 300,
       "kind": "public",
       "color": "#A64D79",
-      "status": 0
+      "status": 0,
+      "originalPrice": 1000
     },
     {
       "svgId": "四樓P42區-4R-10",
