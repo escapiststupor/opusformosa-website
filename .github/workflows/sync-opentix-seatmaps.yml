@@ -1,0 +1,46 @@
+name: Sync OPENTIX seat maps
+
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: opentix-seatmap-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      OPENTIX_PREVIEW_CODE_2070047377542205440: ${{ secrets.OPENTIX_PREVIEW_CODE_2070047377542205440 }}
+      OPENTIX_PREVIEW_CODE_2069997578138800129: ${{ secrets.OPENTIX_PREVIEW_CODE_2069997578138800129 }}
+      OPENTIX_PREVIEW_CODE_2069995304227835904: ${{ secrets.OPENTIX_PREVIEW_CODE_2069995304227835904 }}
+      OPENTIX_PREVIEW_CODE_2069988929396269056: ${{ secrets.OPENTIX_PREVIEW_CODE_2069988929396269056 }}
+      OPENTIX_PREVIEW_CODE_2070072136511918080: ${{ secrets.OPENTIX_PREVIEW_CODE_2070072136511918080 }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Sync seat maps
+        run: python3 seatmap/_dev/sync-opentix-seatmaps.py
+
+      - name: Commit updated snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/opentix seatmap/opentix
+          if git diff --cached --quiet; then
+            echo "No OPENTIX seat-map changes."
+            exit 0
+          fi
+          git commit -m "Update OPENTIX seat map snapshots"
+          git push

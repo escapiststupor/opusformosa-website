@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "description": "Rules for regenerating Friends of Opus Formosa static OPENTIX seat maps. OPENTIX remains the source of truth for seats that are not matched by Friends VIP rules. Friends VIP rules have highest priority and override any OPENTIX section, price, status, youth, reserved, unavailable, or excluded-seat data. Do not store OPENTIX preview codes in this file; use GitHub Actions secrets named in previewCodeSecret.",
+  "rulePrecedence": [
+    {
+      "order": 1,
+      "source": "OPENTIX",
+      "appliesTo": "all fetched seats, sections, prices, youth seats, reserved seats, unavailable seats, and excluded seats"
+    },
+    {
+      "order": 2,
+      "source": "Friends VIP overrides",
+      "appliesTo": "any seat matched by sectionOverrides.match.sectionIds or sectionOverrides.match.seatSelectors",
+      "effect": "override OPENTIX data with the rule display name, kind, price, color, and source"
+    }
+  ],
+  "fetch": {
+    "programPreviewUrl": "https://csm.api.opentix.life/programs/{programId}/preview?code={previewCode}",
+    "eventSeatsUrl": "https://csm.api.opentix.life/events/{eventId}/seats",
+    "svgUrlSource": "programPreview.eventVenues[0].events[].seatSvgUrl"
+  },
+  "output": {
+    "json": "assets/opentix/{eventId}-seats.json",
+    "svg": "assets/opentix/{eventId}-seatmap.svg",
+    "html": "seatmap/opentix/{eventId}.html"
+  },
+  "displayDefaults": {
+    "vipStroke": "#5c420d",
+    "reservedStroke": "#766f66",
+    "publicStroke": "#333333",
+    "reservedUnknownColor": "#c8c2b6"
+  },
+  "fallbacks": {
+    "seatsOnlySection": {
+      "name": "保留席／不可公開銷售",
+      "kind": "reserved-unknown",
+      "price": null,
+      "color": "#c8c2b6",
+      "source": "opentix-seats-only"
+    }
+  },
+  "githubActions": {
+    "schedule": "*/20 * * * *",
+    "failureMode": "keep-last-generated-files",
+    "commitMessage": "Update OPENTIX seat map snapshots"
+  },
+  "events": [
+    {
+      "slug": "2026-09-04-taipei-national-concert-hall",
+      "programId": "2070047377542205440",
+      "eventId": "2070048441140207616",
+      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2070047377542205440",
+      "labels": {
+        "date": "9 月 4 日",
+        "title": "開幕之夜：林易與朋友們",
+        "venue": "台北 國家音樂廳"
+      },
+      "sectionOverrides": [
+        {
+          "id": "nch-vip-5000",
+          "match": {
+            "sectionIds": [
+              "2070056769700352000"
+            ]
+          },
+          "display": {
+            "name": "5000元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 5000,
+            "color": "#B8872B",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 5000 元正中央區，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 246
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-09-kaohsiung-weiwuying-concert-hall",
+      "programId": "2069997578138800129",
+      "eventId": "2069998010554765313",
+      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2069997578138800129",
+      "labels": {
+        "date": "9 月 9 日",
+        "title": "跨世代的樂聲：三重奏到協奏曲",
+        "venue": "高雄 衛武營音樂廳"
+      },
+      "sectionOverrides": [
+        {
+          "id": "wwy-vip-4500-center",
+          "match": {
+            "sectionIds": [
+              "2070020615125032960"
+            ]
+          },
+          "display": {
+            "name": "4500元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 4500,
+            "color": "#DDA43A",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 未公開之 1 樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 92
+        },
+        {
+          "id": "wwy-vip-3300-side-and-front",
+          "match": {
+            "sectionIds": [
+              "2072172813926539264"
+            ]
+          },
+          "display": {
+            "name": "3300元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 3300,
+            "color": "#BA6FF8",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 未公開之 1 樓第 1 至 2 排與左右兩側區域，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 95
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-10-taipei-national-recital-hall",
+      "programId": "2069995304227835904",
+      "eventId": "2069995305489129473",
+      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2069995304227835904",
+      "labels": {
+        "date": "9 月 10 日",
+        "title": "歐陸夜曲",
+        "venue": "台北 國家演奏廳"
+      },
+      "sectionOverrides": [
+        {
+          "id": "nrh-0910-vip-2800",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "地下樓BF",
+                "rows": [
+                  "3-8"
+                ],
+                "numbers": [
+                  "1-13",
+                  15
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "2069995306608611328",
+            "name": "2800元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2800,
+            "color": "#FAAE17",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 84
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-12-taipei-national-recital-hall",
+      "programId": "2069988929396269056",
+      "eventId": "2069989384551358465",
+      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2069988929396269056",
+      "labels": {
+        "date": "9 月 12 日",
+        "title": "異鄉之憶",
+        "venue": "台北 國家演奏廳"
+      },
+      "sectionOverrides": [
+        {
+          "id": "nrh-0912-vip-2800",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "地下樓BF",
+                "rows": [
+                  "3-8"
+                ],
+                "numbers": [
+                  "1-13",
+                  15
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "2069990342159491072",
+            "name": "2800元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2800,
+            "color": "#FAAE17",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 未公開之地下樓中央區，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 84
+        }
+      ]
+    },
+    {
+      "slug": "2026-09-14-taichung-national-theater-playhouse",
+      "programId": "2070072136511918080",
+      "eventId": "2070072493401051137",
+      "previewCodeSecret": "OPENTIX_PREVIEW_CODE_2070072136511918080",
+      "labels": {
+        "date": "9 月 14 日",
+        "title": "弦間絮語",
+        "venue": "台中 國家歌劇院中劇院"
+      },
+      "sectionOverrides": [
+        {
+          "id": "ntt-vip-left-center",
+          "match": {
+            "sectionIds": [
+              "2070072602073878528"
+            ]
+          },
+          "display": {
+            "name": "2500元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2500,
+            "color": "#FAAE17",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 33
+        },
+        {
+          "id": "ntt-vip-right-center",
+          "match": {
+            "sectionIds": [
+              "2070072602079662080"
+            ]
+          },
+          "display": {
+            "name": "2500元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2500,
+            "color": "#FAAE17",
+            "source": "opus-vip-section-map",
+            "note": "OPENTIX 未公開之二樓中央區，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 37
+        }
+      ]
+    }
+  ],
+  "sourceOfTruth": {
+    "opentix": [
+      "nonVipPublicSections",
+      "nonVipYouthSections",
+      "nonVipReservedOrUnavailableSeats",
+      "nonVipExcludedSeats"
+    ],
+    "opusRules": [
+      "friendsVipSectionsHighestPriority"
+    ]
+  }
+}
