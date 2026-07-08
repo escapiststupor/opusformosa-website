@@ -84,7 +84,12 @@
       "Bash(grep -o 'type,[^$]*' /Users/pyen/OpusFormosa/website/seatmap/_dev/wwy/WWY定價-2026-06-21.csv)",
       "Bash(git push *)",
       "Bash(git pull *)",
-      "Bash(git stash *)"
+      "Bash(git stash *)",
+      "Read(//Users/pyen/OpusFormosa/festival_planning/音樂家資料/aimi-kobayashi_presskit/**)",
+      "Bash(identify \"/Users/pyen/OpusFormosa/festival_planning/音樂家資料/aimi-kobayashi_presskit/PHOTO_Portrait/Aimi Kobayashi_\\(c\\)HOSOO CO., LTD..jpg\")",
+      "Bash(magick '/Users/pyen/OpusFormosa/festival_planning/音樂家資料/aimi-kobayashi_presskit/PHOTO_Portrait/Aimi Kobayashi_\\(c\\)HOSOO CO., LTD..jpg' -crop 2000x2667+350+0 +repage -resize 800x1066 -quality 85 /Users/pyen/OpusFormosa/website/assets/aimi-kobayashi.jpg)",
+      "Bash(identify /Users/pyen/OpusFormosa/website/assets/aimi-kobayashi.jpg)",
+      "Bash(magick $SRC *)"
     ]
   }
 }
