@@ -19,7 +19,7 @@
       .map-wrap { overflow: hidden; padding: clamp(14px, 2.4vw, 28px); background: #f7f5f0; cursor: grab; overscroll-behavior: contain; touch-action: none; user-select: none; }
       .map-wrap.is-dragging { cursor: grabbing; }
       .map-wrap.is-dragging circle.seat { cursor: grabbing; }
-      .map-inner { width: max(960px, 150%); max-width: none; margin: 0; transform: translate3d(var(--pan-x, 0px), var(--pan-y, 0px), 0); will-change: transform; }
+      .map-inner { width: max(960px, 150%); max-width: none; margin: 0; transform: translate3d(var(--pan-x, 0px), var(--pan-y, 0px), 0) scale(var(--zoom, 1)); transform-origin: 0 0; will-change: transform; }
       svg { display: block; width: 100%; height: auto; }
       circle.seat { cursor: help; transition: opacity .16s ease, stroke-width .16s ease; }
       circle.seat:hover, circle.seat.is-active { opacity: .72; stroke-width: 3; }
@@ -142,7 +142,7 @@
           </li>
           </ul>
           <div class="panel">
-            <p><strong>使用方式：</strong>拖曳座位圖可移動視角；點擊或移到座位上可查看座席、票區與票價，再點同一座位可關閉。申請時請提供場次、票區、張數與座位偏好，團隊會再確認實際可安排席位。</p>
+            <p><strong>使用方式：</strong>拖曳座位圖可移動視角，使用滑鼠滾輪可縮放；點擊或移到座位上可查看座席、票區與票價，再點同一座位可關閉。申請時請提供場次、票區、張數與座位偏好，團隊會再確認實際可安排席位。</p>
           </div>
         </aside>
       </main>
@@ -156,10 +156,13 @@
       let dragState = null;
       let panX = 0;
       let panY = 0;
+      let zoom = 1;
       let activeSeat = null;
       let tipPinned = false;
       let suppressSeatClick = false;
       const dragThreshold = 6;
+      const minZoom = 0.65;
+      const maxZoom = 3.5;
       const formatPrice = (value) => value ? 'NT$' + Number(value).toLocaleString('zh-TW') : '未公開定價';
 
       function normalizeSvgViewBox() {
@@ -184,6 +187,30 @@
         panY = y;
         mapInner.style.setProperty('--pan-x', panX + 'px');
         mapInner.style.setProperty('--pan-y', panY + 'px');
+      }
+
+      function zoomAt(clientX, clientY, nextZoom) {
+        const clampedZoom = Math.min(maxZoom, Math.max(minZoom, nextZoom));
+        if (clampedZoom === zoom) return;
+        const wrapRect = mapWrap.getBoundingClientRect();
+        const pointerX = clientX - wrapRect.left;
+        const pointerY = clientY - wrapRect.top;
+        const mapX = (pointerX - panX) / zoom;
+        const mapY = (pointerY - panY) / zoom;
+        zoom = clampedZoom;
+        mapInner.style.setProperty('--zoom', zoom);
+        setPan(pointerX - mapX * zoom, pointerY - mapY * zoom);
+      }
+
+      function handleWheel(event) {
+        event.preventDefault();
+        const delta = event.deltaMode === 1
+          ? event.deltaY * 16
+          : event.deltaMode === 2
+            ? event.deltaY * mapWrap.clientHeight
+            : event.deltaY;
+        zoomAt(event.clientX, event.clientY, zoom * Math.exp(-delta * 0.0015));
+        clearTip();
       }
 
       function setActiveSeat(seat) {
@@ -354,6 +381,7 @@
       mapWrap.addEventListener('pointerup', endPan);
       mapWrap.addEventListener('pointercancel', endPan);
       mapWrap.addEventListener('lostpointercapture', endPan);
+      mapWrap.addEventListener('wheel', handleWheel, { passive: false });
       window.addEventListener('load', () => requestAnimationFrame(centerVipArea));
       window.addEventListener('resize', () => requestAnimationFrame(centerVipArea));
       setTimeout(centerVipArea, 200);
