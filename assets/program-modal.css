@@ -1,0 +1,189 @@
+/* Program modal */
+.program-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.program-modal[hidden] { display: none; }
+.program-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.program-modal-panel {
+  position: relative;
+  background: #0d0b09;
+  border: 1px solid rgba(200, 152, 64, 0.32);
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 3rem 2.25rem 2.5rem;
+  animation: program-modal-in 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes program-modal-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 640px) {
+  .program-modal { padding: 0; align-items: stretch; }
+  .program-modal-panel {
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    padding: 4rem 1.25rem 2.5rem;
+    border: 0;
+    animation: program-modal-in-mobile 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+@keyframes program-modal-in-mobile {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.program-modal-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(200, 152, 64, 0.28);
+  color: rgba(200, 152, 64, 0.8);
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.program-modal-close:hover {
+  background: rgba(200, 152, 64, 0.14);
+  color: #c89840;
+  border-color: rgba(200, 152, 64, 0.55);
+}
+.program-modal-eyebrow {
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: rgba(200, 152, 64, 0.75);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-bottom: 0.7rem;
+}
+.program-modal-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  color: #f0e8d8;
+  font-size: 1.55rem;
+  line-height: 1.25;
+  margin-bottom: 0.55rem;
+}
+.program-modal-venue {
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: rgba(240, 232, 216, 0.62);
+  font-size: 0.92rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(200, 152, 64, 0.15);
+  margin-bottom: 1.75rem;
+}
+.program-modal-pieces {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.program-piece {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  gap: 0.5rem 1rem;
+  align-items: start;
+}
+.program-piece-number {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: rgba(200, 152, 64, 0.55);
+  font-size: 1.1rem;
+  font-style: italic;
+  padding-top: 0.15rem;
+}
+.program-piece-body { min-width: 0; }
+.program-piece-composer {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  color: #f0e8d8;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+.program-piece-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  color: rgba(240, 232, 216, 0.85);
+  margin-top: 0.15rem;
+  line-height: 1.4;
+  font-size: 0.98rem;
+}
+.program-piece-title-alt {
+  color: rgba(240, 232, 216, 0.5);
+  font-size: 0.82rem;
+  font-style: normal;
+  margin-top: 0.15rem;
+  line-height: 1.4;
+}
+.program-piece-performers {
+  margin-top: 0.65rem;
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: rgba(240, 232, 216, 0.7);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.program-piece-performers .perf-role {
+  color: rgba(200, 152, 64, 0.72);
+  display: inline-block;
+  min-width: 3.5em;
+  margin-right: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+.program-intermission {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: rgba(200, 152, 64, 0.55);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  letter-spacing: 0.06em;
+}
+.program-intermission::before,
+.program-intermission::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(200, 152, 64, 0.25), transparent);
+}
+
+/* Trigger button styling — matches existing row-info buttons */
+.program-trigger {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: rgba(200, 152, 64, 0.8);
+  border: 1px solid rgba(200, 152, 64, 0.3);
+  padding: 0.25rem 0.75rem;
+  font-family: 'Crimson Pro', Georgia, serif;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  background: transparent;
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+.program-trigger:hover {
+  color: #c89840;
+  border-color: rgba(200, 152, 64, 0.6);
+}
+
+body.program-modal-open { overflow: hidden; }
