@@ -92,15 +92,15 @@
   function renderFestivalSupportLink() {
     if (currentId !== "friends" && currentId !== "festival2026") return "";
 
-    var href = pageHref("2026-friends", isEn ? "en" : "zh");
-    var eyebrow = isEn ? "2026 Festival" : "2026 音樂節";
+    var href = isEn ? "/en/2026-friends.html" : "/2026-friends.html";
+    var eyebrow = isEn ? "Friends of Opus Formosa" : "2026 音樂節之友";
     var title = isEn
-      ? "Support the 2026 Opus Festival"
-      : "支持 2026 Opus 音樂節";
+      ? "Join Friends of Opus Formosa 2026"
+      : "加入「2026 Opus 音樂節之友」";
     var detail = isEn
-      ? "Reserve VIP seats not released for public sale on OPENTIX."
-      : "預訂 OPENTIX 未公開販售之 VIP 保留席。";
-    var cta = isEn ? "View Friends of Opus Formosa" : "查看 Friends of Opus Formosa";
+      ? "Reserve VIP seats not released for public sale on OPENTIX with a total request of NT$50,000+."
+      : "單筆購票總額 NT$50,000 以上，可預訂 OPENTIX 未公開販售之正中央 VIP 保留席。";
+    var cta = isEn ? "Learn how to reserve" : "了解預訂方式";
 
     return (
       '<style>' +
