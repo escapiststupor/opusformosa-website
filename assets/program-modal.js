@@ -95,7 +95,7 @@
           { composer: '拉赫瑪尼諾夫', composerAlt: 'Sergei Rachmaninoff',
             title: 'g 小調第一號《輓歌三重奏》', titleAlt: 'Trio élégiaque No. 1 in G minor',
             performers: [
-              { role: '小提琴', name: '趙珍珠' },
+              { role: '小提琴', name: 'Jinjoo Cho' },
               { role: '大提琴', name: 'Edgar Moreau' },
               { role: '鋼琴', name: '林易' }
             ] },
@@ -162,14 +162,14 @@
           { composer: '多納尼', composerAlt: 'Ernő Dohnányi',
             title: 'C 大調弦樂三重奏小夜曲，作品 10', titleAlt: 'Serenade in C major for String Trio, Op. 10',
             performers: [
-              { role: '小提琴', name: 'Belle Ting' },
+              { role: '小提琴', name: '丁章媛' },
               { role: '中提琴', name: 'Adrien La Marca' },
               { role: '大提琴', name: 'Brannon Cho' }
             ] },
           { composer: '拉威爾', composerAlt: 'Maurice Ravel',
             title: 'a 小調鋼琴三重奏', titleAlt: 'Piano Trio in A minor',
             performers: [
-              { role: '小提琴', name: '趙珍珠' },
+              { role: '小提琴', name: 'Jinjoo Cho' },
               { role: '大提琴', name: 'Brannon Cho' },
               { role: '鋼琴', name: 'Kyu Yeon Kim' }
             ] },
@@ -177,7 +177,7 @@
           { composer: '德弗札克', composerAlt: 'Antonín Dvořák',
             title: 'A 大調鋼琴五重奏，作品 81', titleAlt: 'Piano Quintet in A major, Op. 81',
             performers: [
-              { role: '小提琴', name: 'Belle Ting' },
+              { role: '小提琴', name: '丁章媛' },
               { role: '小提琴', name: 'Boris Borgolotto' },
               { role: '中提琴', name: 'Adrien La Marca' },
               { role: '大提琴', name: 'Edgar Moreau' },
@@ -244,7 +244,7 @@
           { composer: '柴可夫斯基', composerAlt: 'Pyotr Ilyich Tchaikovsky',
             title: 'd 小調弦樂六重奏《佛羅倫斯的回憶》，作品 70', titleAlt: 'String Sextet "Souvenir de Florence" in D minor, Op. 70',
             performers: [
-              { role: '小提琴', name: '趙珍珠' },
+              { role: '小提琴', name: 'Jinjoo Cho' },
               { role: '小提琴', name: '黃凱珉' },
               { role: '中提琴', name: 'Adrien La Marca' },
               { role: '中提琴', name: '陳志達' },
@@ -298,7 +298,7 @@
           { composer: '莫札特', composerAlt: 'Wolfgang Amadeus Mozart',
             title: '降 E 大調小提琴與中提琴二重奏，K. 423', titleAlt: 'Duo for Violin and Viola in E-flat major, K. 423',
             performers: [
-              { role: '小提琴', name: 'Belle Ting' },
+              { role: '小提琴', name: '丁章媛' },
               { role: '中提琴', name: '陳志達' }
             ] },
           { composer: '葛拉納多斯', composerAlt: 'Enrique Granados',
@@ -317,7 +317,7 @@
               { role: '小提琴', name: '黃凱珉' },
               { role: '小提琴', name: 'Boris Borgolotto' },
               { role: '中提琴', name: '陳志達' },
-              { role: '中提琴', name: 'Canglah Micyang' },
+              { role: '中提琴', name: '嚴子晴' },
               { role: '大提琴', name: 'Edgar Moreau' },
               { role: '大提琴', name: '林恩俊' }
             ] }
@@ -367,13 +367,13 @@
           { composer: '康果爾德', composerAlt: 'Erich Wolfgang Korngold',
             title: '《無事生非》', titleAlt: 'Much Ado About Nothing',
             performers: [
-              { role: '小提琴', name: 'Belle Ting' },
+              { role: '小提琴', name: '丁章媛' },
               { role: '鋼琴', name: '林易' }
             ] },
           { composer: '拉赫瑪尼諾夫', composerAlt: 'Sergei Rachmaninoff',
             title: 'g 小調第一號《輓歌三重奏》', titleAlt: 'Trio élégiaque No. 1 in G minor',
             performers: [
-              { role: '小提琴', name: 'Belle Ting' },
+              { role: '小提琴', name: '丁章媛' },
               { role: '大提琴', name: 'Edgar Moreau' },
               { role: '鋼琴', name: '林易' }
             ] },
