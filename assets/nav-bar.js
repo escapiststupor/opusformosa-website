@@ -4,33 +4,33 @@
   var currentId = "index";
 
   var items = [
-    { id: "index", href: "index.html", labelZh: "首頁", labelEn: "Home" },
+    { id: "index", page: "", labelZh: "首頁", labelEn: "Home" },
     {
       id: "events",
-      href: "events.html",
+      page: "events",
       labelZh: "活動時間軸",
       labelEn: "Events",
     },
-    { id: "team", href: "team.html", labelZh: "團隊介紹", labelEn: "Team" },
-    { id: "bilbao", href: "bilbao.html", labelZh: "畢爾包", labelEn: "Bilbao" },
-    { id: "festival2026", href: "festival2026.html", labelZh: "Edition 2026", labelEn: "Edition 2026" },
-    { id: "artists", href: "artists.html", labelZh: "藝術家", labelEn: "Artists" },
-    { id: "partners", href: "partners.html", labelZh: "贊助夥伴", labelEn: "Partners" },
-    { id: "friends", href: "friends.html", labelZh: "支持我們", labelEn: "Support Us" },
+    { id: "team", page: "team", labelZh: "團隊介紹", labelEn: "Team" },
+    { id: "bilbao", page: "bilbao", labelZh: "畢爾包", labelEn: "Bilbao" },
+    { id: "festival2026", page: "festival2026", labelZh: "Edition 2026", labelEn: "Edition 2026" },
+    { id: "artists", page: "artists", labelZh: "藝術家", labelEn: "Artists" },
+    { id: "partners", page: "partners", labelZh: "贊助夥伴", labelEn: "Partners" },
+    { id: "friends", page: "friends", labelZh: "支持我們", labelEn: "Support Us" },
   ];
 
   /** Pages that exist in both zh and en; language switch goes to same page. Others go to index. */
   var pagesWithBothLangs = [
-    "index.html",
-    "events.html",
-    "team.html",
-    "bilbao.html",
-    "donors.html",
-    "festival2026.html",
-    "2026-friends.html",
-    "artists.html",
-    "friends.html",
-    "partners.html",
+    "",
+    "events",
+    "team",
+    "bilbao",
+    "donors",
+    "festival2026",
+    "2026-friends",
+    "artists",
+    "friends",
+    "partners",
   ];
 
   function getCurrentPathWithoutLang() {
@@ -40,29 +40,30 @@
         : "";
     path = decodeURIComponent(path || "");
     path = path.replace(/\\/g, "/");
-    var enIndex = path.indexOf("/en/");
-    if (enIndex !== -1) {
-      path = path.slice(enIndex + 4);
-    } else {
-      path = path.replace(/^\//, "");
-      if (path.indexOf("/") !== -1) {
-        path = path.split("/").pop();
-      }
+    path = path.replace(/^\/+/, "").replace(/\/+$/, "");
+    if (path === "en") {
+      path = "";
+    } else if (path.indexOf("en/") === 0) {
+      path = path.slice(3);
     }
-    return path || "index.html";
+    if (path.indexOf("/") !== -1) {
+      path = path.split("/").pop();
+    }
+    path = path.replace(/\.html$/, "");
+    return path === "index" ? "" : path;
   }
 
   function getCurrentId() {
     var path = getCurrentPathWithoutLang();
-    if (!path || path === "index.html") return "index";
-    if (path === "events.html") return "events";
-    if (path === "team.html") return "team";
-    if (path === "bilbao.html") return "bilbao";
-    if (path === "festival2026.html") return "festival2026";
-    if (path === "2026-friends.html") return "2026-friends";
-    if (path === "artists.html") return "artists";
-    if (path === "partners.html") return "partners";
-    if (path === "friends.html") return "friends";
+    if (!path) return "index";
+    if (path === "events") return "events";
+    if (path === "team") return "team";
+    if (path === "bilbao") return "bilbao";
+    if (path === "festival2026") return "festival2026";
+    if (path === "2026-friends") return "2026-friends";
+    if (path === "artists") return "artists";
+    if (path === "partners") return "partners";
+    if (path === "friends") return "friends";
     return "index";
   }
 
@@ -80,6 +81,12 @@
       if (docLang.startsWith("en")) return "en";
     }
     return "zh";
+  }
+
+  function pageHref(page, lang) {
+    page = page || "";
+    if (lang === "en") return page ? "/en/" + page : "/en/";
+    return page ? "/" + page : "/";
   }
 
   var fbSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>';
@@ -101,7 +108,7 @@
       .map(function (item) {
         var isActive = item.id === currentId;
         var cls = isActive ? activeClass : linkClass;
-        var href = item.href;
+        var href = pageHref(item.page, isEn ? "en" : "zh");
         var label = isEn ? item.labelEn : item.labelZh;
         return '<a href="' + href + '" class="' + cls + '">' + label + "</a>";
       })
@@ -111,15 +118,15 @@
     var hasCounterpart = pagesWithBothLangs.indexOf(currentPage) !== -1;
     var langHref;
     if (isEn) {
-      langHref = hasCounterpart ? base + currentPage : base + "index.html";
+      langHref = pageHref(hasCounterpart ? currentPage : "", "zh");
     } else {
-      langHref = hasCounterpart ? "en/" + currentPage : "en/index.html";
+      langHref = pageHref(hasCounterpart ? currentPage : "", "en");
     }
     var langLabel = isEn ? "中文" : "EN";
     var targetLang = isEn ? "zh" : "en";
     var langOnClick = 'onclick="try{sessionStorage.setItem(\'opus-lang-pref\',\'' + targetLang + '\');localStorage.setItem(\'opus-lang-pref\',\'' + targetLang + '\');}catch(e){}"';
 
-    var logoHref = "index.html";
+    var logoHref = pageHref("", isEn ? "en" : "zh");
     var logoSrc = base + "opus_formosa_logo_white.png";
 
     return (
