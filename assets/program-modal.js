@@ -296,7 +296,7 @@
         title: 'Opus 室內樂系列 III《弦間絮語》',
         pieces: [
           { composer: '莫札特', composerAlt: 'Wolfgang Amadeus Mozart',
-            title: '降 E 大調小提琴與中提琴二重奏，K. 423', titleAlt: 'Duo for Violin and Viola in E-flat major, K. 423',
+            title: 'G 大調小提琴與中提琴二重奏，K. 423', titleAlt: 'Duo for Violin and Viola in G major, K. 423',
             performers: [
               { role: '小提琴', name: '丁章媛' },
               { role: '中提琴', name: '陳志達' }
@@ -329,7 +329,7 @@
         title: 'Opus Music Festival — Whispers Between Strings',
         pieces: [
           { composer: 'Wolfgang Amadeus Mozart', composerAlt: '莫札特',
-            title: 'Duo for Violin and Viola in E-flat major, K. 423', titleAlt: '降 E 大調小提琴與中提琴二重奏，K. 423',
+            title: 'Duo for Violin and Viola in G major, K. 423', titleAlt: 'G 大調小提琴與中提琴二重奏，K. 423',
             performers: [
               { role: 'Violin', name: 'Belle Ting' },
               { role: 'Viola', name: 'Chih-Ta Chen' }
