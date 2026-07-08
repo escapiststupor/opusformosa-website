@@ -104,7 +104,7 @@
 
     return (
       '<style>' +
-      "nav-bar .festival-support-strip{display:block;background:#0d0b09;padding:72px 24px 0;}" +
+      "nav-bar .festival-support-strip{display:block;background:#0d0b09;padding:0 24px;}" +
       "nav-bar .festival-support-strip__link{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1152px;margin:0 auto;padding:13px 18px;border-top:1px solid rgba(200,152,64,.22);border-bottom:1px solid rgba(200,152,64,.22);color:#f0e8d8;text-decoration:none;background:rgba(200,152,64,.045);transition:background-color .25s ease,border-color .25s ease,color .25s ease;}" +
       "nav-bar .festival-support-strip__link:hover,nav-bar .festival-support-strip__link:focus-visible{background:rgba(200,152,64,.09);border-color:rgba(200,152,64,.45);outline:none;}" +
       "nav-bar .festival-support-strip__eyebrow{flex:0 0 auto;font-family:'Crimson Pro',Georgia,serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(200,152,64,.75);}" +
@@ -112,7 +112,7 @@
       "nav-bar .festival-support-strip__title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.06rem;font-weight:600;color:#f0e8d8;white-space:nowrap;}" +
       "nav-bar .festival-support-strip__detail{font-family:'Crimson Pro',Georgia,serif;font-size:.92rem;color:rgba(240,232,216,.66);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}" +
       "nav-bar .festival-support-strip__cta{flex:0 0 auto;font-family:'Crimson Pro',Georgia,serif;font-size:.82rem;color:#c89840;white-space:nowrap;}" +
-      "@media (max-width:760px){nav-bar .festival-support-strip{padding:70px 18px 0;}nav-bar .festival-support-strip__link{align-items:flex-start;flex-direction:column;gap:7px;padding:12px 14px;}nav-bar .festival-support-strip__copy{display:block;}nav-bar .festival-support-strip__title,nav-bar .festival-support-strip__detail{display:block;white-space:normal;}nav-bar .festival-support-strip__detail{margin-top:2px;}nav-bar .festival-support-strip__cta{font-size:.86rem;}}" +
+      "@media (max-width:760px){nav-bar .festival-support-strip{padding:0 18px;}nav-bar .festival-support-strip__link{align-items:flex-start;flex-direction:column;gap:7px;padding:12px 14px;}nav-bar .festival-support-strip__copy{display:block;}nav-bar .festival-support-strip__title,nav-bar .festival-support-strip__detail{display:block;white-space:normal;}nav-bar .festival-support-strip__detail{margin-top:2px;}nav-bar .festival-support-strip__cta{font-size:.86rem;}}" +
       "</style>" +
       '<div class="festival-support-strip">' +
       '<a class="festival-support-strip__link" href="' + href + '">' +
