@@ -96,17 +96,7 @@
   gap: 1.5rem;
 }
 .program-piece {
-  display: grid;
-  grid-template-columns: 1.75rem 1fr;
-  gap: 0.5rem 1rem;
-  align-items: start;
-}
-.program-piece-number {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  color: rgba(200, 152, 64, 0.55);
-  font-size: 1.1rem;
-  font-style: italic;
-  padding-top: 0.15rem;
+  display: block;
 }
 .program-piece-body { min-width: 0; }
 .program-piece-composer {

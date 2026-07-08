@@ -461,19 +461,16 @@
   }
 
   function renderPieces(pieces) {
-    var counter = 0;
     return pieces.map(function (p) {
       if (p.intermission) {
         return '<div class="program-intermission">' + escapeHtml(LABELS[lang].intermission) + '</div>';
       }
-      counter += 1;
       var perfHtml = p.performers.map(function (person) {
         return '<div><span class="perf-role">' + escapeHtml(person.role) + '</span>' + escapeHtml(person.name) + '</div>';
       }).join('');
       var altHtml = p.titleAlt ? '<div class="program-piece-title-alt">' + escapeHtml(p.titleAlt) + '</div>' : '';
       var composerAlt = p.composerAlt ? ' <span style="color:rgba(200,152,64,0.55);font-weight:400;font-size:0.9rem;">· ' + escapeHtml(p.composerAlt) + '</span>' : '';
       return '<div class="program-piece">' +
-        '<div class="program-piece-number">' + counter + '</div>' +
         '<div class="program-piece-body">' +
         '<div class="program-piece-composer">' + escapeHtml(p.composer) + composerAlt + '</div>' +
         '<div class="program-piece-title">' + escapeHtml(p.title) + '</div>' +
