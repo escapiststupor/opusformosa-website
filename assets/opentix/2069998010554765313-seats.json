@@ -22,11 +22,12 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-10T10:59:47+08:00",
+  "generatedAt": "2026-07-10T11:03:40+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
-    "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker."
+    "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
+    "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out."
   ],
   "takenSeatCount": 0,
   "sections": [

@@ -215,7 +215,7 @@
 
       function setTipContent(seat) {
         const taken = seat.dataset.taken === 'true'
-          ? '<br><span class="taken">已預訂</span>'
+          ? '<br><span class="taken">' + (seat.dataset.takenLabel || '已預訂') + '</span>'
           : '';
         tip.innerHTML = '<strong>' + seat.dataset.sectionName + '</strong><br>' +
           seat.dataset.floor + ' 第 ' + seat.dataset.row + ' 排 ' + seat.dataset.number + ' 號<br>' +
