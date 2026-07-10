@@ -433,7 +433,16 @@ def override_matches(rule: dict[str, Any], seat: dict[str, Any]) -> bool:
     return False
 
 
-STATUS_FIELDS = ("taken", "availability", "takenLabel", "takenSource", "takenNote")
+STATUS_FIELDS = ("taken", "availability", "takenLabel", "takenSource", "takenNote", "takenRuleType")
+
+
+def normalize_status(value: Any) -> str:
+    return normalize_id(value).lower()
+
+
+def status_matches(value: Any, statuses: list[Any]) -> bool:
+    normalized = normalize_status(value)
+    return any(normalized == normalize_status(status) for status in statuses)
 
 
 def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict[str, Any]) -> list[str]:
@@ -455,6 +464,7 @@ def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict
                 seat["availability"] = "taken"
                 seat["takenLabel"] = display.get("label") or "已預訂"
                 seat["takenSource"] = display.get("source") or "opus-vip-taken-seat-map"
+                seat["takenRuleType"] = "manual-seat-status-override"
                 if display.get("note"):
                     seat["takenNote"] = display["note"]
             break
@@ -468,6 +478,39 @@ def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict
         if actual != expected:
             errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} taken seats, matched {actual}")
     return errors
+
+
+def apply_opentix_availability_markers(final_seats: list[dict[str, Any]], config: dict[str, Any]) -> int:
+    policy = config.get("opentixAvailabilityMarkers") or {}
+    if not policy.get("enabled", False):
+        return 0
+
+    applies_to_kinds = {normalize_id(kind) for kind in policy.get("appliesToKinds") or ["public"]}
+    available_statuses = policy.get("availableStatuses") or [0, "0"]
+    unknown_status_means_available = bool(policy.get("unknownStatusMeansAvailable", True))
+    display = policy.get("display") or {}
+    count = 0
+
+    for seat in final_seats:
+        if normalize_id(seat.get("kind")) not in applies_to_kinds:
+            continue
+        raw_status = seat.get("status")
+        if raw_status is None or normalize_id(raw_status) == "":
+            if unknown_status_means_available:
+                continue
+        elif status_matches(raw_status, available_statuses):
+            continue
+
+        seat["taken"] = True
+        seat["availability"] = "taken"
+        seat["takenLabel"] = display.get("label") or "OPENTIX 已售出／不可售"
+        seat["takenSource"] = display.get("source") or "opentix-availability-marker"
+        seat["takenRuleType"] = "opentix-availability-marker"
+        if display.get("note"):
+            seat["takenNote"] = display["note"]
+        count += 1
+
+    return count
 
 
 def apply_rules(
@@ -534,6 +577,7 @@ def apply_rules(
         if actual != expected:
             errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} VIP seats, matched {actual}")
     errors.extend(apply_status_overrides(final, event_config))
+    apply_opentix_availability_markers(final, config)
     if errors and strict_counts:
         raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
     for error in errors:
@@ -663,7 +707,7 @@ def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, 
     svg = re.sub(r'<line\b(?=[^>]*\bclass="seat-taken-mark")[^>]*></line>', "", svg)
 
     remove_attrs = re.compile(
-        r'\s(?:class|stroke-width|stroke|fill|data-seat-id|data-floor|data-row|data-number|data-section-id|data-section-name|data-price|data-kind|data-taken|data-availability)="[^"]*"'
+        r'\s(?:class|stroke-width|stroke|fill|data-seat-id|data-floor|data-row|data-number|data-section-id|data-section-name|data-price|data-kind|data-taken|data-availability|data-taken-label|data-taken-source)="[^"]*"'
     )
     circle_re = re.compile(r"<circle\b(?=[^>]*\sid=\"([^\"]+)\")[^>]*>", re.DOTALL)
 
@@ -698,7 +742,12 @@ def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, 
             f' data-kind="{html_attr(kind)}"'
         )
         if seat.get("taken"):
-            attrs += ' data-taken="true" data-availability="taken"'
+            attrs += (
+                ' data-taken="true"'
+                ' data-availability="taken"'
+                f' data-taken-label="{html_attr(seat.get("takenLabel") or "已預訂")}"'
+                f' data-taken-source="{html_attr(seat.get("takenSource") or "")}"'
+            )
         if tag.endswith("/>"):
             circle_tag = tag[:-2] + attrs + "/>"
         else:
@@ -733,7 +782,7 @@ def build_note(sections: list[dict[str, Any]], final_seats: list[dict[str, Any]]
             parts.append(f"{label}，共 {count} 席")
         vip_text = "；".join(parts)
     taken_count = sum(1 for seat in final_seats if seat.get("taken"))
-    taken_text = f"打叉座位為已預訂席次（{taken_count} 席）；" if taken_count else ""
+    taken_text = f"打叉座位為已預訂或 OPENTIX 已不可售席次（{taken_count} 席）；" if taken_count else ""
     return (
         "此頁由 OPENTIX 最新座位資料同步製作，用於 Friends of Opus Formosa 洽詢席位。"
         f"深色外框標示為 {vip_text}；{taken_text}其餘票區與不可售狀態依 OPENTIX 最新資料顯示；"
@@ -927,7 +976,7 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
 
       function setTipContent(seat) {{
         const taken = seat.dataset.taken === 'true'
-          ? '<br><span class="taken">已預訂</span>'
+          ? '<br><span class="taken">' + (seat.dataset.takenLabel || '已預訂') + '</span>'
           : '';
         tip.innerHTML = '<strong>' + seat.dataset.sectionName + '</strong><br>' +
           seat.dataset.floor + ' 第 ' + seat.dataset.row + ' 排 ' + seat.dataset.number + ' 號<br>' +
@@ -1136,6 +1185,7 @@ def build_snapshot(
             "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
             "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
             "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
+            "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
         ],
         "takenSeatCount": sum(1 for seat in seats if seat.get("taken")),
         "sections": sections,
@@ -1247,6 +1297,7 @@ def render_event_from_existing_snapshot(event_config: dict[str, Any], config: di
     if not final_seats:
         raise SyncError(f"Existing snapshot has no seats for event {event_id}.")
     errors = apply_status_overrides(final_seats, event_config)
+    apply_opentix_availability_markers(final_seats, config)
     if errors and strict_counts:
         raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
     for error in errors:
@@ -1267,6 +1318,10 @@ def render_event_from_existing_snapshot(event_config: dict[str, Any], config: di
     snapshot["notes"] = append_unique_note(
         snapshot.get("notes") or [],
         "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
+    )
+    snapshot["notes"] = append_unique_note(
+        snapshot.get("notes") or [],
+        "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     )
     snapshot["takenSeatCount"] = sum(1 for seat in final_seats if seat.get("taken"))
     snapshot["sections"] = sections
@@ -1309,6 +1364,12 @@ def validate_config(config: dict[str, Any]) -> None:
         for rule in event.get("seatStatusOverrides") or []:
             if "id" not in rule or "match" not in rule or "status" not in rule:
                 raise SyncError(f"Invalid seat status override in event {event['eventId']}: {rule}")
+    policy = config.get("opentixAvailabilityMarkers") or {}
+    if policy.get("enabled", False):
+        if not isinstance(policy.get("availableStatuses"), list) or not policy.get("availableStatuses"):
+            raise SyncError("opentixAvailabilityMarkers.availableStatuses must be a non-empty list.")
+        if not isinstance(policy.get("appliesToKinds"), list) or not policy.get("appliesToKinds"):
+            raise SyncError("opentixAvailabilityMarkers.appliesToKinds must be a non-empty list.")
     print(f"[validate] {len(config['events'])} events in rules file.")
 
 

@@ -18,6 +18,12 @@
       "source": "Friends taken seat markers",
       "appliesTo": "any Friends VIP seat matched by seatStatusOverrides.match.seatSelectors",
       "effect": "keep the Friends VIP style and add a taken marker so the seat is visibly crossed out"
+    },
+    {
+      "order": 4,
+      "source": "OPENTIX availability markers",
+      "appliesTo": "public OPENTIX seats only",
+      "effect": "if a public seat's OPENTIX status is no longer available, keep its public ticket-section style and add a taken marker"
     }
   ],
   "fetch": {
@@ -52,6 +58,22 @@
     "schedule": "*/20 * * * *",
     "failureMode": "keep-last-generated-files",
     "commitMessage": "Update OPENTIX seat map snapshots"
+  },
+  "opentixAvailabilityMarkers": {
+    "enabled": true,
+    "appliesToKinds": [
+      "public"
+    ],
+    "availableStatuses": [
+      0,
+      "0"
+    ],
+    "unknownStatusMeansAvailable": true,
+    "display": {
+      "label": "OPENTIX 已售出／不可售",
+      "source": "opentix-availability-marker",
+      "note": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+    }
   },
   "events": [
     {
