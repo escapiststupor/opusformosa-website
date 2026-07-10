@@ -709,7 +709,7 @@ def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, 
     remove_attrs = re.compile(
         r'\s(?:class|stroke-width|stroke|fill|data-seat-id|data-floor|data-row|data-number|data-section-id|data-section-name|data-price|data-kind|data-taken|data-availability|data-taken-label|data-taken-source)="[^"]*"'
     )
-    circle_re = re.compile(r"<circle\b(?=[^>]*\sid=\"([^\"]+)\")[^>]*>", re.DOTALL)
+    circle_re = re.compile(r"<circle\b(?=[^>]*\sid=\"([^\"]+)\")[^>]*(?:/>|></circle>)", re.DOTALL)
 
     def replacement(match: re.Match[str]) -> str:
         seat_id = match.group(1)
@@ -750,6 +750,9 @@ def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, 
             )
         if tag.endswith("/>"):
             circle_tag = tag[:-2] + attrs + "/>"
+        elif tag.endswith("</circle>"):
+            opening_tag = tag[: -len("</circle>")]
+            circle_tag = opening_tag[:-1] + attrs + "></circle>"
         else:
             circle_tag = tag[:-1] + attrs + ">"
         if seat.get("taken"):
