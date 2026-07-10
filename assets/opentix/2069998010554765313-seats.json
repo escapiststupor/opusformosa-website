@@ -22,14 +22,14 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-10T11:41:04+08:00",
+  "generatedAt": "2026-07-10T12:20:17+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
     "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out."
   ],
-  "takenSeatCount": 1,
+  "takenSeatCount": 7,
   "sections": [
     {
       "id": "wwy-vip-4500-center",
@@ -41,7 +41,8 @@
       "seatCount": 92,
       "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。",
       "originalName": "4500元區",
-      "originalPrice": 4500
+      "originalPrice": 4500,
+      "takenSeatCount": 2
     },
     {
       "id": "wwy-vip-3300-side-and-front",
@@ -53,7 +54,8 @@
       "seatCount": 95,
       "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。",
       "originalName": "3300元區",
-      "originalPrice": 3300
+      "originalPrice": 3300,
+      "takenSeatCount": 4
     },
     {
       "id": "2070020714943471616",
@@ -1462,7 +1464,13 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "1樓1號門-4-11",
@@ -1487,7 +1495,13 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "1樓1號門-4-13",
@@ -1512,7 +1526,13 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
+      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "1樓1號門-4-15",
@@ -1537,7 +1557,13 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
+      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "1樓1號門-4-17",
@@ -1562,7 +1588,13 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
+      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "1樓1號門-4-19",
@@ -1587,7 +1619,13 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
+      "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "1樓1號門-4-21",

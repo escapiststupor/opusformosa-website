@@ -170,7 +170,8 @@
                   3,
                   5,
                   7,
-                  9
+                  9,
+                  "11-21"
                 ]
               },
               {
@@ -190,6 +191,17 @@
                   17,
                   19,
                   21
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  13
+                ],
+                "numbers": [
+                  7,
+                  9,
+                  11
                 ]
               },
               {
@@ -218,7 +230,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 136
+          "expectedSeatCount": 150
         }
       ]
     },
@@ -447,6 +459,37 @@
             "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 95
+        }
+      ],
+      "seatStatusOverrides": [
+        {
+          "id": "wwy-vip-taken-2026-09-09",
+          "status": "taken",
+          "vipOnly": true,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  4
+                ],
+                "numbers": [
+                  9,
+                  11,
+                  13,
+                  15,
+                  17,
+                  19
+                ]
+              }
+            ]
+          },
+          "display": {
+            "label": "已預訂",
+            "source": "opus-vip-taken-seat-map",
+            "note": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
+          },
+          "expectedSeatCount": 6
         }
       ]
     },
