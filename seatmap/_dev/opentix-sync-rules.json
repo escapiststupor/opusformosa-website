@@ -29,6 +29,7 @@
   "fetch": {
     "adminSeatJsonUrl": "https://opt.api.opentix.life/seats/seatjsonurl?eventId={eventId}&disableShowError=true",
     "adminSectionSeatsUrl": "https://opt.api.opentix.life/sections/seats?eventId={eventId}&parentSeatingChartId={parentSeatingChartId}&disableShowError=true",
+    "publicSeatStatusUrl": "https://csm.api.opentix.life/events/{eventId}/seats?parentSeatingChartId={parentSeatingChartId}",
     "cognitoUrl": "https://cognito-idp.ap-northeast-1.amazonaws.com/",
     "cognitoClientId": "18gl53c4lq4a2tcp76il3ghqft",
     "adminLoginUrl": "https://opt.console.opentix.life/organizer/index.html#/login"
@@ -58,6 +59,11 @@
     "schedule": "*/20 * * * *",
     "failureMode": "keep-last-generated-files",
     "commitMessage": "Update OPENTIX seat map snapshots"
+  },
+  "publicSeatStatusOverlay": {
+    "enabled": true,
+    "source": "OPENTIX public seats API",
+    "effect": "Use public OPENTIX seat status as the availability source because it updates sold/unavailable seats more reliably than the admin sections/seats response. Seat sections, prices, and SVG still come from the admin API."
   },
   "opentixAvailabilityMarkers": {
     "enabled": true,

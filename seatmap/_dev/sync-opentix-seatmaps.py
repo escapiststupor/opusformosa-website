@@ -401,6 +401,58 @@ def normalize_seat(raw: dict[str, Any]) -> dict[str, Any]:
     return seat
 
 
+def seat_lookup_key(seat: dict[str, Any]) -> tuple[str, str, str]:
+    return (
+        normalize_id(seat.get("floorId")),
+        normalize_id(seat.get("rowId")),
+        normalize_id(seat.get("number")),
+    )
+
+
+def fetch_public_seat_statuses(event_config: dict[str, Any], config: dict[str, Any]) -> dict[tuple[str, str, str], Any]:
+    overlay_config = config.get("publicSeatStatusOverlay") or {}
+    if not overlay_config.get("enabled", False):
+        return {}
+
+    fetch_config = config["fetch"]
+    url_template = fetch_config.get("publicSeatStatusUrl")
+    if not url_template:
+        return {}
+
+    event_id = event_config["eventId"]
+    parent_seating_chart_id = str(event_config["parentSeatingChartId"])
+    url = url_template.format(
+        eventId=urllib.parse.quote(event_id),
+        parentSeatingChartId=urllib.parse.quote(parent_seating_chart_id),
+    )
+    payload = json.loads(request(url).decode("utf-8"))
+    entries = extract_seat_entries(payload)
+    statuses: dict[tuple[str, str, str], Any] = {}
+    for item in entries:
+        seat = normalize_seat(item)
+        key = seat_lookup_key(seat)
+        if all(key):
+            statuses[key] = seat.get("status")
+    return statuses
+
+
+def overlay_public_statuses(seats: list[dict[str, Any]], public_statuses: dict[tuple[str, str, str], Any]) -> int:
+    if not public_statuses:
+        return 0
+    updated = 0
+    for seat in seats:
+        key = seat_lookup_key(seat)
+        if key not in public_statuses:
+            continue
+        public_status = public_statuses[key]
+        if seat.get("status") != public_status:
+            seat["adminStatus"] = seat.get("status")
+            seat["status"] = public_status
+            updated += 1
+        seat["statusSource"] = "opentix-public-seats-api"
+    return updated
+
+
 def display_title_for_header(event_config: dict[str, Any], program: dict[str, Any]) -> str:
     labels = event_config.get("labels") or {}
     title = labels.get("title") or program.get("name") or "Opus 音樂節"
@@ -1189,6 +1241,7 @@ def build_snapshot(
             "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
             "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
             "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
+            "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG.",
         ],
         "takenSeatCount": sum(1 for seat in seats if seat.get("taken")),
         "sections": sections,
@@ -1263,6 +1316,13 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
     normalized_seats = [seat for seat in normalized_seats if seat["svgId"] and seat["floorId"] and seat["rowId"] and seat["number"]]
     if not normalized_seats:
         raise SyncError(f"Event {event_id} has no usable seats.")
+    try:
+        public_statuses = fetch_public_seat_statuses(event_config, config)
+        updated_count = overlay_public_statuses(normalized_seats, public_statuses)
+        if public_statuses:
+            print(f"[sync] {event_id}: overlaid public OPENTIX status for {len(public_statuses)} seats ({updated_count} changed from admin status)")
+    except SyncError as exc:
+        print(f"[warning] {event_id}: public OPENTIX status overlay failed; using admin status ({exc})", file=sys.stderr)
 
     raw_sections = section_result.get("section") or []
     official_sections: OrderedDict[str, dict[str, Any]] = OrderedDict()
@@ -1286,7 +1346,13 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
     print(f"[sync] {event_id}: {len(final_seats)} seats, {sum(1 for seat in final_seats if seat.get('kind') == 'vip-reserved')} Friends VIP seats")
 
 
-def render_event_from_existing_snapshot(event_config: dict[str, Any], config: dict[str, Any], dry_run: bool, strict_counts: bool) -> None:
+def render_event_from_existing_snapshot(
+    event_config: dict[str, Any],
+    config: dict[str, Any],
+    dry_run: bool,
+    strict_counts: bool,
+    refresh_public_status: bool,
+) -> None:
     event_id = event_config["eventId"]
     output = config["output"]
     snapshot_path = ROOT / output["json"].format(eventId=event_id)
@@ -1299,6 +1365,11 @@ def render_event_from_existing_snapshot(event_config: dict[str, Any], config: di
     final_seats = copy.deepcopy(snapshot.get("seats") or [])
     if not final_seats:
         raise SyncError(f"Existing snapshot has no seats for event {event_id}.")
+    if refresh_public_status:
+        public_statuses = fetch_public_seat_statuses(event_config, config)
+        updated_count = overlay_public_statuses(final_seats, public_statuses)
+        if public_statuses:
+            print(f"[sync:local] {event_id}: refreshed public OPENTIX status for {len(public_statuses)} seats ({updated_count} changed)")
     errors = apply_status_overrides(final_seats, event_config)
     apply_opentix_availability_markers(final_seats, config)
     if errors and strict_counts:
@@ -1326,6 +1397,10 @@ def render_event_from_existing_snapshot(event_config: dict[str, Any], config: di
         snapshot.get("notes") or [],
         "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     )
+    snapshot["notes"] = append_unique_note(
+        snapshot.get("notes") or [],
+        "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG.",
+    )
     snapshot["takenSeatCount"] = sum(1 for seat in final_seats if seat.get("taken"))
     snapshot["sections"] = sections
     snapshot["seats"] = final_seats
@@ -1333,7 +1408,7 @@ def render_event_from_existing_snapshot(event_config: dict[str, Any], config: di
     write_json(snapshot_path, snapshot, dry_run)
     write_text(svg_path, annotated_svg, dry_run)
     write_text(ROOT / output["html"].format(eventId=event_id), html, dry_run)
-    print(f"[sync:local] {event_id}: {len(final_seats)} seats, {snapshot['takenSeatCount']} taken Friends VIP seats")
+    print(f"[sync:local] {event_id}: {len(final_seats)} seats, {snapshot['takenSeatCount']} taken/unavailable seats")
 
 
 def selected_events(config: dict[str, Any], filters: list[str]) -> list[dict[str, Any]]:
@@ -1373,6 +1448,9 @@ def validate_config(config: dict[str, Any]) -> None:
             raise SyncError("opentixAvailabilityMarkers.availableStatuses must be a non-empty list.")
         if not isinstance(policy.get("appliesToKinds"), list) or not policy.get("appliesToKinds"):
             raise SyncError("opentixAvailabilityMarkers.appliesToKinds must be a non-empty list.")
+    overlay_config = config.get("publicSeatStatusOverlay") or {}
+    if overlay_config.get("enabled", False) and "publicSeatStatusUrl" not in config.get("fetch", {}):
+        raise SyncError("publicSeatStatusOverlay is enabled, but fetch.publicSeatStatusUrl is missing.")
     print(f"[validate] {len(config['events'])} events in rules file.")
 
 
@@ -1382,6 +1460,7 @@ def main() -> int:
     parser.add_argument("--event", action="append", default=[], help="Limit to one eventId, programId, or slug. May be repeated.")
     parser.add_argument("--dry-run", action="store_true", help="Fetch and render without writing files.")
     parser.add_argument("--from-existing-snapshot", action="store_true", help="Re-render local generated files without fetching OPENTIX.")
+    parser.add_argument("--refresh-public-status", action="store_true", help="With --from-existing-snapshot, refresh seat availability status from the public OPENTIX seats API.")
     parser.add_argument("--no-strict-counts", action="store_true", help="Warn instead of failing when expected VIP seat counts do not match.")
     parser.add_argument("--validate-rules", action="store_true", help="Validate the rules file and exit without fetching OPENTIX.")
     args = parser.parse_args()
@@ -1398,7 +1477,7 @@ def main() -> int:
 
         if args.from_existing_snapshot:
             for event in events:
-                render_event_from_existing_snapshot(copy.deepcopy(event), config, args.dry_run, not args.no_strict_counts)
+                render_event_from_existing_snapshot(copy.deepcopy(event), config, args.dry_run, not args.no_strict_counts, args.refresh_public_status)
         else:
             auth = OpentixAuth(config)
             for event in events:
