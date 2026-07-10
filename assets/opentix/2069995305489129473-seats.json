@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-10T16:51:31+08:00",
+  "generatedAt": "2026-07-10T16:53:06+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 15,
+  "takenSeatCount": 13,
   "sections": [
     {
       "id": "2069995306608611328",
@@ -72,7 +72,7 @@
       "kind": "public",
       "source": "opentix-price-section",
       "seatCount": 43,
-      "takenSeatCount": 5
+      "takenSeatCount": 3
     },
     {
       "id": "2069995306603945986",
@@ -183,12 +183,12 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-2",
@@ -205,12 +205,12 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-3",
@@ -227,12 +227,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-4",
@@ -249,12 +249,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-5",
@@ -271,12 +271,12 @@
       "autoSeatedOrderNumber": 6,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -299,12 +299,12 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-7",
@@ -321,12 +321,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-8",
@@ -343,12 +343,12 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-9",
@@ -365,12 +365,12 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-10",
@@ -387,12 +387,12 @@
       "autoSeatedOrderNumber": 14,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-11",
@@ -409,12 +409,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-12",
@@ -431,12 +431,12 @@
       "autoSeatedOrderNumber": 15,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-13",
@@ -453,12 +453,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-14",
@@ -475,12 +475,12 @@
       "autoSeatedOrderNumber": 6,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-15",
@@ -497,12 +497,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-16",
@@ -519,12 +519,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-17",
@@ -541,12 +541,12 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-18",
@@ -563,12 +563,12 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-19",
@@ -585,12 +585,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-21",
@@ -607,12 +607,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-1-23",
@@ -629,12 +629,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-1",
@@ -651,12 +651,12 @@
       "autoSeatedOrderNumber": 24,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-2",
@@ -673,12 +673,12 @@
       "autoSeatedOrderNumber": 26,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-3",
@@ -695,12 +695,12 @@
       "autoSeatedOrderNumber": 23,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-4",
@@ -717,12 +717,12 @@
       "autoSeatedOrderNumber": 27,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-5",
@@ -739,12 +739,12 @@
       "autoSeatedOrderNumber": 22,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-6",
@@ -761,12 +761,12 @@
       "autoSeatedOrderNumber": 28,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-7",
@@ -783,12 +783,12 @@
       "autoSeatedOrderNumber": 21,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-8",
@@ -805,12 +805,12 @@
       "autoSeatedOrderNumber": 29,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-9",
@@ -827,12 +827,12 @@
       "autoSeatedOrderNumber": 20,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-10",
@@ -849,12 +849,12 @@
       "autoSeatedOrderNumber": 30,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-11",
@@ -871,12 +871,12 @@
       "autoSeatedOrderNumber": 19,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-12",
@@ -893,12 +893,12 @@
       "autoSeatedOrderNumber": 31,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-13",
@@ -915,12 +915,12 @@
       "autoSeatedOrderNumber": 18,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-14",
@@ -937,12 +937,12 @@
       "autoSeatedOrderNumber": 15,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-15",
@@ -959,12 +959,12 @@
       "autoSeatedOrderNumber": 17,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-16",
@@ -981,12 +981,12 @@
       "autoSeatedOrderNumber": 16,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-17",
@@ -1003,12 +1003,12 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-18",
@@ -1025,12 +1025,12 @@
       "autoSeatedOrderNumber": 17,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-19",
@@ -1047,12 +1047,12 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-20",
@@ -1069,12 +1069,12 @@
       "autoSeatedOrderNumber": 18,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-21",
@@ -1091,12 +1091,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-2-23",
@@ -1113,12 +1113,12 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-1",
@@ -1135,6 +1135,7 @@
       "autoSeatedOrderNumber": 6,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1143,8 +1144,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-2",
@@ -1161,6 +1161,7 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1169,8 +1170,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-3",
@@ -1187,6 +1187,7 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1195,8 +1196,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-4",
@@ -1213,6 +1213,7 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1221,8 +1222,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-5",
@@ -1239,6 +1239,7 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1247,8 +1248,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-6",
@@ -1265,6 +1265,7 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1273,8 +1274,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-7",
@@ -1291,6 +1291,7 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1299,8 +1300,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-8",
@@ -1317,6 +1317,7 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1325,8 +1326,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-9",
@@ -1343,6 +1343,7 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1351,8 +1352,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-10",
@@ -1369,6 +1369,7 @@
       "autoSeatedOrderNumber": 6,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1377,8 +1378,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-11",
@@ -1395,6 +1395,7 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1403,8 +1404,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-12",
@@ -1421,6 +1421,7 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1429,8 +1430,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-13",
@@ -1447,6 +1447,7 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1455,8 +1456,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-14",
@@ -1473,12 +1473,12 @@
       "autoSeatedOrderNumber": 25,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-15",
@@ -1495,6 +1495,7 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1503,8 +1504,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-3-16",
@@ -1521,12 +1521,12 @@
       "autoSeatedOrderNumber": 26,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-17",
@@ -1543,12 +1543,12 @@
       "autoSeatedOrderNumber": 23,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-18",
@@ -1565,12 +1565,12 @@
       "autoSeatedOrderNumber": 27,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-19",
@@ -1587,12 +1587,12 @@
       "autoSeatedOrderNumber": 22,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-21",
@@ -1609,12 +1609,12 @@
       "autoSeatedOrderNumber": 21,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-3-23",
@@ -1631,12 +1631,12 @@
       "autoSeatedOrderNumber": 20,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-1",
@@ -1653,6 +1653,7 @@
       "autoSeatedOrderNumber": 16,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1661,8 +1662,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-2",
@@ -1679,6 +1679,7 @@
       "autoSeatedOrderNumber": 18,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1687,8 +1688,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-3",
@@ -1705,6 +1705,7 @@
       "autoSeatedOrderNumber": 15,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1713,8 +1714,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-4",
@@ -1731,6 +1731,7 @@
       "autoSeatedOrderNumber": 19,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1739,8 +1740,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-5",
@@ -1757,6 +1757,7 @@
       "autoSeatedOrderNumber": 14,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1765,8 +1766,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-6",
@@ -1783,6 +1783,7 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1791,8 +1792,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-7",
@@ -1809,6 +1809,7 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1817,8 +1818,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-8",
@@ -1835,6 +1835,7 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1843,8 +1844,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-9",
@@ -1861,6 +1861,7 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1869,8 +1870,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-10",
@@ -1887,6 +1887,7 @@
       "autoSeatedOrderNumber": 14,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1895,8 +1896,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-11",
@@ -1913,6 +1913,7 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1921,8 +1922,7 @@
       "originalSectionId": "2069995306610810880",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-12",
@@ -1939,6 +1939,7 @@
       "autoSeatedOrderNumber": 15,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1947,8 +1948,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-13",
@@ -1965,6 +1965,7 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -1973,8 +1974,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-14",
@@ -1991,12 +1991,12 @@
       "autoSeatedOrderNumber": 33,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-15",
@@ -2013,6 +2013,7 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2021,8 +2022,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-4-16",
@@ -2039,12 +2039,12 @@
       "autoSeatedOrderNumber": 34,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-17",
@@ -2061,12 +2061,12 @@
       "autoSeatedOrderNumber": 31,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-18",
@@ -2083,12 +2083,12 @@
       "autoSeatedOrderNumber": 35,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-19",
@@ -2105,12 +2105,12 @@
       "autoSeatedOrderNumber": 30,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-20",
@@ -2127,12 +2127,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-4-21",
@@ -2149,12 +2149,12 @@
       "autoSeatedOrderNumber": 29,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-1",
@@ -2171,6 +2171,7 @@
       "autoSeatedOrderNumber": 24,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2179,8 +2180,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-2",
@@ -2197,6 +2197,7 @@
       "autoSeatedOrderNumber": 26,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2205,8 +2206,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-3",
@@ -2223,6 +2223,7 @@
       "autoSeatedOrderNumber": 23,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2231,8 +2232,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-4",
@@ -2249,6 +2249,7 @@
       "autoSeatedOrderNumber": 27,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2257,8 +2258,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-5",
@@ -2275,6 +2275,7 @@
       "autoSeatedOrderNumber": 22,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2283,8 +2284,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-6",
@@ -2301,6 +2301,7 @@
       "autoSeatedOrderNumber": 28,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2309,8 +2310,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-7",
@@ -2327,6 +2327,7 @@
       "autoSeatedOrderNumber": 21,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2335,8 +2336,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-8",
@@ -2353,6 +2353,7 @@
       "autoSeatedOrderNumber": 29,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2361,8 +2362,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-9",
@@ -2379,6 +2379,7 @@
       "autoSeatedOrderNumber": 20,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2387,8 +2388,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-10",
@@ -2405,6 +2405,7 @@
       "autoSeatedOrderNumber": 30,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2413,8 +2414,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-11",
@@ -2431,6 +2431,7 @@
       "autoSeatedOrderNumber": 19,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2439,8 +2440,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-12",
@@ -2457,6 +2457,7 @@
       "autoSeatedOrderNumber": 31,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2465,8 +2466,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-13",
@@ -2483,6 +2483,7 @@
       "autoSeatedOrderNumber": 18,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2491,8 +2492,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-14",
@@ -2509,12 +2509,12 @@
       "autoSeatedOrderNumber": 42,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-15",
@@ -2531,6 +2531,7 @@
       "autoSeatedOrderNumber": 17,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2539,8 +2540,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-5-16",
@@ -2557,12 +2557,12 @@
       "autoSeatedOrderNumber": 43,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-17",
@@ -2579,12 +2579,12 @@
       "autoSeatedOrderNumber": 40,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-18",
@@ -2601,12 +2601,12 @@
       "autoSeatedOrderNumber": 44,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-19",
@@ -2623,12 +2623,12 @@
       "autoSeatedOrderNumber": 39,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-20",
@@ -2645,12 +2645,12 @@
       "autoSeatedOrderNumber": 45,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-21",
@@ -2667,12 +2667,12 @@
       "autoSeatedOrderNumber": 38,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-5-23",
@@ -2689,12 +2689,12 @@
       "autoSeatedOrderNumber": 37,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-1",
@@ -2711,6 +2711,7 @@
       "autoSeatedOrderNumber": 40,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2719,8 +2720,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-2",
@@ -2737,6 +2737,7 @@
       "autoSeatedOrderNumber": 42,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2745,8 +2746,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-3",
@@ -2763,6 +2763,7 @@
       "autoSeatedOrderNumber": 39,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2771,8 +2772,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-4",
@@ -2789,6 +2789,7 @@
       "autoSeatedOrderNumber": 43,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2797,8 +2798,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-5",
@@ -2815,6 +2815,7 @@
       "autoSeatedOrderNumber": 38,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2823,8 +2824,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-6",
@@ -2841,6 +2841,7 @@
       "autoSeatedOrderNumber": 44,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2849,8 +2850,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-7",
@@ -2867,6 +2867,7 @@
       "autoSeatedOrderNumber": 37,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2875,8 +2876,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-8",
@@ -2893,6 +2893,7 @@
       "autoSeatedOrderNumber": 45,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2901,8 +2902,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-9",
@@ -2919,6 +2919,7 @@
       "autoSeatedOrderNumber": 36,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2927,8 +2928,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-10",
@@ -2945,6 +2945,7 @@
       "autoSeatedOrderNumber": 46,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2953,8 +2954,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-11",
@@ -2971,6 +2971,7 @@
       "autoSeatedOrderNumber": 35,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -2979,8 +2980,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-12",
@@ -2997,6 +2997,7 @@
       "autoSeatedOrderNumber": 47,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3005,8 +3006,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-13",
@@ -3023,6 +3023,7 @@
       "autoSeatedOrderNumber": 34,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3031,8 +3032,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-14",
@@ -3049,12 +3049,12 @@
       "autoSeatedOrderNumber": 51,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-15",
@@ -3071,6 +3071,7 @@
       "autoSeatedOrderNumber": 33,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3079,8 +3080,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-6-16",
@@ -3097,12 +3097,12 @@
       "autoSeatedOrderNumber": 52,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-17",
@@ -3119,12 +3119,12 @@
       "autoSeatedOrderNumber": 49,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-18",
@@ -3141,12 +3141,12 @@
       "autoSeatedOrderNumber": 53,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-19",
@@ -3163,12 +3163,12 @@
       "autoSeatedOrderNumber": 48,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-20",
@@ -3185,12 +3185,12 @@
       "autoSeatedOrderNumber": 54,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-21",
@@ -3207,12 +3207,12 @@
       "autoSeatedOrderNumber": 47,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-6-23",
@@ -3229,12 +3229,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "館方工作席",
       "price": 10,
       "kind": "public",
       "color": "#FDFF00",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-1",
@@ -3251,6 +3251,7 @@
       "autoSeatedOrderNumber": 56,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3259,8 +3260,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-2",
@@ -3277,6 +3277,7 @@
       "autoSeatedOrderNumber": 58,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3285,8 +3286,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-3",
@@ -3303,6 +3303,7 @@
       "autoSeatedOrderNumber": 55,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3311,8 +3312,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-4",
@@ -3329,6 +3329,7 @@
       "autoSeatedOrderNumber": 59,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3337,8 +3338,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-5",
@@ -3355,6 +3355,7 @@
       "autoSeatedOrderNumber": 54,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3363,8 +3364,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-6",
@@ -3381,6 +3381,7 @@
       "autoSeatedOrderNumber": 60,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3389,8 +3390,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-7",
@@ -3407,6 +3407,7 @@
       "autoSeatedOrderNumber": 53,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3415,8 +3416,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-8",
@@ -3433,6 +3433,7 @@
       "autoSeatedOrderNumber": 61,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3441,8 +3442,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-9",
@@ -3459,6 +3459,7 @@
       "autoSeatedOrderNumber": 52,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3467,8 +3468,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-10",
@@ -3485,6 +3485,7 @@
       "autoSeatedOrderNumber": 62,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3493,8 +3494,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-11",
@@ -3511,6 +3511,7 @@
       "autoSeatedOrderNumber": 51,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3519,8 +3520,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-12",
@@ -3537,6 +3537,7 @@
       "autoSeatedOrderNumber": 63,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3545,8 +3546,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-13",
@@ -3563,6 +3563,7 @@
       "autoSeatedOrderNumber": 50,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3571,8 +3572,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-14",
@@ -3589,12 +3589,12 @@
       "autoSeatedOrderNumber": 61,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-15",
@@ -3611,6 +3611,7 @@
       "autoSeatedOrderNumber": 49,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3619,8 +3620,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-7-16",
@@ -3637,12 +3637,12 @@
       "autoSeatedOrderNumber": 62,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-17",
@@ -3659,12 +3659,12 @@
       "autoSeatedOrderNumber": 59,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-18",
@@ -3681,12 +3681,12 @@
       "autoSeatedOrderNumber": 63,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-19",
@@ -3703,12 +3703,12 @@
       "autoSeatedOrderNumber": 58,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-21",
@@ -3725,12 +3725,12 @@
       "autoSeatedOrderNumber": 57,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-7-23",
@@ -3747,12 +3747,12 @@
       "autoSeatedOrderNumber": 56,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-8-1",
@@ -3769,6 +3769,7 @@
       "autoSeatedOrderNumber": 72,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3777,8 +3778,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-2",
@@ -3795,6 +3795,7 @@
       "autoSeatedOrderNumber": 74,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3803,8 +3804,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-3",
@@ -3821,6 +3821,7 @@
       "autoSeatedOrderNumber": 71,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3829,8 +3830,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-4",
@@ -3847,6 +3847,7 @@
       "autoSeatedOrderNumber": 75,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3855,8 +3856,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-5",
@@ -3873,6 +3873,7 @@
       "autoSeatedOrderNumber": 70,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3881,8 +3882,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-6",
@@ -3899,6 +3899,7 @@
       "autoSeatedOrderNumber": 76,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3907,8 +3908,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-7",
@@ -3925,6 +3925,7 @@
       "autoSeatedOrderNumber": 69,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3933,8 +3934,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-8",
@@ -3951,6 +3951,7 @@
       "autoSeatedOrderNumber": 77,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3959,8 +3960,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-9",
@@ -3977,6 +3977,7 @@
       "autoSeatedOrderNumber": 68,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -3985,8 +3986,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-10",
@@ -4003,6 +4003,7 @@
       "autoSeatedOrderNumber": 78,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -4011,8 +4012,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-11",
@@ -4029,6 +4029,7 @@
       "autoSeatedOrderNumber": 67,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -4037,8 +4038,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-12",
@@ -4055,6 +4055,7 @@
       "autoSeatedOrderNumber": 79,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -4063,8 +4064,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-13",
@@ -4081,6 +4081,7 @@
       "autoSeatedOrderNumber": 66,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -4089,8 +4090,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-14",
@@ -4107,12 +4107,12 @@
       "autoSeatedOrderNumber": 69,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -4135,6 +4135,7 @@
       "autoSeatedOrderNumber": 65,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2800元 VIP保留席",
       "price": 2800,
       "kind": "vip-reserved",
@@ -4143,8 +4144,7 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
-      "statusSource": "opentix-public-seats-api"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
     },
     {
       "svgId": "地下樓BF-8-16",
@@ -4161,12 +4161,12 @@
       "autoSeatedOrderNumber": 70,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -4189,12 +4189,12 @@
       "autoSeatedOrderNumber": 67,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-8-18",
@@ -4211,12 +4211,12 @@
       "autoSeatedOrderNumber": 71,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-8-19",
@@ -4233,12 +4233,12 @@
       "autoSeatedOrderNumber": 66,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-8-20",
@@ -4255,12 +4255,12 @@
       "autoSeatedOrderNumber": 72,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-8-21",
@@ -4277,12 +4277,12 @@
       "autoSeatedOrderNumber": 65,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-8-23",
@@ -4299,12 +4299,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-1",
@@ -4321,12 +4321,12 @@
       "autoSeatedOrderNumber": 41,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-2",
@@ -4343,12 +4343,12 @@
       "autoSeatedOrderNumber": 43,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-3",
@@ -4365,12 +4365,12 @@
       "autoSeatedOrderNumber": 40,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-4",
@@ -4387,12 +4387,12 @@
       "autoSeatedOrderNumber": 44,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-5",
@@ -4409,12 +4409,12 @@
       "autoSeatedOrderNumber": 39,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-6",
@@ -4431,12 +4431,12 @@
       "autoSeatedOrderNumber": 45,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-7",
@@ -4453,12 +4453,12 @@
       "autoSeatedOrderNumber": 38,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-8",
@@ -4475,12 +4475,12 @@
       "autoSeatedOrderNumber": 46,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-9",
@@ -4497,12 +4497,12 @@
       "autoSeatedOrderNumber": 37,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-10",
@@ -4519,12 +4519,12 @@
       "autoSeatedOrderNumber": 47,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-11",
@@ -4541,12 +4541,12 @@
       "autoSeatedOrderNumber": 36,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-12",
@@ -4563,12 +4563,12 @@
       "autoSeatedOrderNumber": 48,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-13",
@@ -4585,12 +4585,12 @@
       "autoSeatedOrderNumber": 35,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-14",
@@ -4607,12 +4607,12 @@
       "autoSeatedOrderNumber": 77,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-15",
@@ -4629,12 +4629,12 @@
       "autoSeatedOrderNumber": 34,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-16",
@@ -4651,12 +4651,12 @@
       "autoSeatedOrderNumber": 78,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-17",
@@ -4673,12 +4673,12 @@
       "autoSeatedOrderNumber": 33,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-18",
@@ -4695,12 +4695,12 @@
       "autoSeatedOrderNumber": 79,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-19",
@@ -4717,12 +4717,12 @@
       "autoSeatedOrderNumber": 75,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-20",
@@ -4739,12 +4739,12 @@
       "autoSeatedOrderNumber": 80,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-21",
@@ -4761,12 +4761,12 @@
       "autoSeatedOrderNumber": 74,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-23",
@@ -4783,12 +4783,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "評鑑席",
       "price": 10,
       "kind": "public",
       "color": "#006274",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-9-25",
@@ -4805,12 +4805,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-1",
@@ -4827,12 +4827,12 @@
       "autoSeatedOrderNumber": 54,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-2",
@@ -4849,12 +4849,12 @@
       "autoSeatedOrderNumber": 56,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-3",
@@ -4871,12 +4871,12 @@
       "autoSeatedOrderNumber": 53,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-4",
@@ -4893,12 +4893,12 @@
       "autoSeatedOrderNumber": 57,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-5",
@@ -4915,12 +4915,12 @@
       "autoSeatedOrderNumber": 52,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-6",
@@ -4937,12 +4937,12 @@
       "autoSeatedOrderNumber": 58,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-7",
@@ -4959,12 +4959,12 @@
       "autoSeatedOrderNumber": 51,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-8",
@@ -4981,12 +4981,12 @@
       "autoSeatedOrderNumber": 59,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-9",
@@ -5003,12 +5003,12 @@
       "autoSeatedOrderNumber": 50,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-10",
@@ -5025,12 +5025,12 @@
       "autoSeatedOrderNumber": 60,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-12",
@@ -5047,12 +5047,12 @@
       "autoSeatedOrderNumber": 61,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "2200元區",
       "price": 2200,
       "kind": "public",
       "color": "#FF6464",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-14",
@@ -5069,12 +5069,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "評鑑席",
       "price": 10,
       "kind": "public",
       "color": "#006274",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-16",
@@ -5091,12 +5091,12 @@
       "autoSeatedOrderNumber": 82,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-18",
@@ -5113,12 +5113,12 @@
       "autoSeatedOrderNumber": 83,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1800元區",
       "price": 1800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-10-20",
@@ -5135,12 +5135,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-1",
@@ -5148,7 +5148,7 @@
       "rowId": "11",
       "number": "1",
       "sectionId": "2069995306610085889",
-      "status": 1,
+      "status": 0,
       "eventId": "2069995305489129473",
       "groupId": "3945292943",
       "rX": 756,
@@ -5157,19 +5157,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "adminStatus": 0,
-      "statusSource": "opentix-public-seats-api",
-      "taken": true,
-      "availability": "taken",
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-2",
@@ -5186,12 +5179,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-3",
@@ -5199,7 +5192,7 @@
       "rowId": "11",
       "number": "3",
       "sectionId": "2069995306610085889",
-      "status": 1,
+      "status": 0,
       "eventId": "2069995305489129473",
       "groupId": "3945292943",
       "rX": 736,
@@ -5208,19 +5201,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "adminStatus": 0,
-      "statusSource": "opentix-public-seats-api",
-      "taken": true,
-      "availability": "taken",
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-4",
@@ -5237,12 +5223,12 @@
       "autoSeatedOrderNumber": 6,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-5",
@@ -5259,12 +5245,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-6",
@@ -5281,12 +5267,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-8",
@@ -5303,12 +5289,12 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-10",
@@ -5325,12 +5311,12 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-12",
@@ -5347,12 +5333,12 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-14",
@@ -5369,12 +5355,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-16",
@@ -5391,12 +5377,12 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-11-18",
@@ -5413,12 +5399,12 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-1",
@@ -5435,12 +5421,12 @@
       "autoSeatedOrderNumber": 20,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-2",
@@ -5457,12 +5443,12 @@
       "autoSeatedOrderNumber": 22,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-3",
@@ -5479,12 +5465,12 @@
       "autoSeatedOrderNumber": 19,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-4",
@@ -5501,12 +5487,12 @@
       "autoSeatedOrderNumber": 23,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-5",
@@ -5523,12 +5509,12 @@
       "autoSeatedOrderNumber": 18,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-6",
@@ -5545,12 +5531,12 @@
       "autoSeatedOrderNumber": 24,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-7",
@@ -5567,12 +5553,12 @@
       "autoSeatedOrderNumber": 17,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-8",
@@ -5589,12 +5575,12 @@
       "autoSeatedOrderNumber": 25,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-9",
@@ -5611,12 +5597,12 @@
       "autoSeatedOrderNumber": 16,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-10",
@@ -5633,12 +5619,12 @@
       "autoSeatedOrderNumber": 26,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-11",
@@ -5655,12 +5641,12 @@
       "autoSeatedOrderNumber": 15,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-12",
@@ -5677,12 +5663,12 @@
       "autoSeatedOrderNumber": 27,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-14",
@@ -5699,12 +5685,12 @@
       "autoSeatedOrderNumber": 28,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-16",
@@ -5721,12 +5707,12 @@
       "autoSeatedOrderNumber": 29,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-18",
@@ -5743,12 +5729,12 @@
       "autoSeatedOrderNumber": 30,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-12-20",
@@ -5765,12 +5751,12 @@
       "autoSeatedOrderNumber": 31,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-1",
@@ -5787,12 +5773,12 @@
       "autoSeatedOrderNumber": 38,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -5815,12 +5801,12 @@
       "autoSeatedOrderNumber": 40,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-3",
@@ -5837,12 +5823,12 @@
       "autoSeatedOrderNumber": 37,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -5865,12 +5851,12 @@
       "autoSeatedOrderNumber": 41,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-5",
@@ -5887,12 +5873,12 @@
       "autoSeatedOrderNumber": 36,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -5915,12 +5901,12 @@
       "autoSeatedOrderNumber": 42,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-7",
@@ -5937,12 +5923,12 @@
       "autoSeatedOrderNumber": 35,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-8",
@@ -5959,12 +5945,12 @@
       "autoSeatedOrderNumber": 43,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-9",
@@ -5981,12 +5967,12 @@
       "autoSeatedOrderNumber": 34,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-10",
@@ -6003,12 +5989,12 @@
       "autoSeatedOrderNumber": 44,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-11",
@@ -6025,12 +6011,12 @@
       "autoSeatedOrderNumber": 33,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-12",
@@ -6047,12 +6033,12 @@
       "autoSeatedOrderNumber": 45,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-13",
@@ -6069,12 +6055,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-14",
@@ -6091,12 +6077,12 @@
       "autoSeatedOrderNumber": 46,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-15",
@@ -6113,12 +6099,12 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-16",
@@ -6135,12 +6121,12 @@
       "autoSeatedOrderNumber": 47,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-17",
@@ -6157,12 +6143,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-18",
@@ -6179,12 +6165,12 @@
       "autoSeatedOrderNumber": 48,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1500元區",
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-19",
@@ -6201,12 +6187,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-13-21",
@@ -6223,12 +6209,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-1",
@@ -6245,12 +6231,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -6273,12 +6259,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -6301,13 +6287,12 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
       "source": "opentix-price-section",
-      "adminStatus": 0,
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -6330,12 +6315,12 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-5",
@@ -6352,12 +6337,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-6",
@@ -6374,12 +6359,12 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-7",
@@ -6396,12 +6381,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-8",
@@ -6418,12 +6403,12 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-9",
@@ -6440,12 +6425,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-10",
@@ -6462,12 +6447,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-11",
@@ -6484,12 +6469,12 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-12",
@@ -6506,12 +6491,12 @@
       "autoSeatedOrderNumber": 12,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-13",
@@ -6528,12 +6513,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-14",
@@ -6550,12 +6535,12 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-15",
@@ -6572,12 +6557,12 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-16",
@@ -6594,12 +6579,12 @@
       "autoSeatedOrderNumber": 14,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-17",
@@ -6616,12 +6601,12 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-18",
@@ -6638,12 +6623,12 @@
       "autoSeatedOrderNumber": 15,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-19",
@@ -6660,12 +6645,12 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-20",
@@ -6682,12 +6667,12 @@
       "autoSeatedOrderNumber": 16,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-14-21",
@@ -6704,12 +6689,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "視線不良區",
       "price": 1000,
       "kind": "public",
       "color": "#00A797",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-1",
@@ -6726,12 +6711,12 @@
       "autoSeatedOrderNumber": 29,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -6754,12 +6739,12 @@
       "autoSeatedOrderNumber": 31,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-3",
@@ -6776,12 +6761,12 @@
       "autoSeatedOrderNumber": 28,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-4",
@@ -6798,12 +6783,12 @@
       "autoSeatedOrderNumber": 32,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-5",
@@ -6820,12 +6805,12 @@
       "autoSeatedOrderNumber": 27,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-6",
@@ -6842,12 +6827,12 @@
       "autoSeatedOrderNumber": 33,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-7",
@@ -6864,12 +6849,12 @@
       "autoSeatedOrderNumber": 26,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-8",
@@ -6886,12 +6871,12 @@
       "autoSeatedOrderNumber": 34,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-9",
@@ -6908,12 +6893,12 @@
       "autoSeatedOrderNumber": 25,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-10",
@@ -6930,12 +6915,12 @@
       "autoSeatedOrderNumber": 35,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-11",
@@ -6952,12 +6937,12 @@
       "autoSeatedOrderNumber": 24,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-12",
@@ -6974,12 +6959,12 @@
       "autoSeatedOrderNumber": 36,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-13",
@@ -6996,12 +6981,12 @@
       "autoSeatedOrderNumber": 23,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-14",
@@ -7018,12 +7003,12 @@
       "autoSeatedOrderNumber": 37,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-15",
@@ -7040,12 +7025,12 @@
       "autoSeatedOrderNumber": 22,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-16",
@@ -7062,12 +7047,12 @@
       "autoSeatedOrderNumber": 38,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-17",
@@ -7084,12 +7069,12 @@
       "autoSeatedOrderNumber": 21,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-19",
@@ -7106,12 +7091,12 @@
       "autoSeatedOrderNumber": 20,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-21",
@@ -7128,12 +7113,12 @@
       "autoSeatedOrderNumber": 19,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-23",
@@ -7150,12 +7135,12 @@
       "autoSeatedOrderNumber": 18,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-15-25",
@@ -7172,12 +7157,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "館方工作席",
       "price": 10,
       "kind": "public",
       "color": "#FDFF00",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-1",
@@ -7194,12 +7179,12 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-2",
@@ -7216,12 +7201,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-3",
@@ -7238,12 +7223,12 @@
       "autoSeatedOrderNumber": 50,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-4",
@@ -7260,12 +7245,12 @@
       "autoSeatedOrderNumber": 52,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-5",
@@ -7282,12 +7267,12 @@
       "autoSeatedOrderNumber": 49,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-6",
@@ -7304,12 +7289,12 @@
       "autoSeatedOrderNumber": 53,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-7",
@@ -7326,12 +7311,12 @@
       "autoSeatedOrderNumber": 48,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-8",
@@ -7348,12 +7333,12 @@
       "autoSeatedOrderNumber": 54,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-9",
@@ -7370,12 +7355,12 @@
       "autoSeatedOrderNumber": 47,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-10",
@@ -7392,12 +7377,12 @@
       "autoSeatedOrderNumber": 55,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-11",
@@ -7414,12 +7399,12 @@
       "autoSeatedOrderNumber": 46,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-12",
@@ -7436,12 +7421,12 @@
       "autoSeatedOrderNumber": 56,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-13",
@@ -7458,12 +7443,12 @@
       "autoSeatedOrderNumber": 45,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-14",
@@ -7480,12 +7465,12 @@
       "autoSeatedOrderNumber": 57,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-15",
@@ -7502,12 +7487,12 @@
       "autoSeatedOrderNumber": 44,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-16",
@@ -7524,12 +7509,12 @@
       "autoSeatedOrderNumber": 58,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-17",
@@ -7546,12 +7531,12 @@
       "autoSeatedOrderNumber": 43,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-18",
@@ -7568,12 +7553,12 @@
       "autoSeatedOrderNumber": 59,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-19",
@@ -7590,12 +7575,12 @@
       "autoSeatedOrderNumber": 42,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-21",
@@ -7612,12 +7597,12 @@
       "autoSeatedOrderNumber": 41,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-16-23",
@@ -7634,12 +7619,12 @@
       "autoSeatedOrderNumber": 40,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-1",
@@ -7656,12 +7641,12 @@
       "autoSeatedOrderNumber": 14,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-2",
@@ -7678,12 +7663,12 @@
       "autoSeatedOrderNumber": 16,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-3",
@@ -7700,12 +7685,12 @@
       "autoSeatedOrderNumber": 13,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-4",
@@ -7722,12 +7707,12 @@
       "autoSeatedOrderNumber": 17,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "技術保留席",
       "price": 10,
       "kind": "public",
       "color": "#171717",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-5",
@@ -7744,12 +7729,12 @@
       "autoSeatedOrderNumber": 67,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-6",
@@ -7766,12 +7751,12 @@
       "autoSeatedOrderNumber": 69,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-7",
@@ -7788,12 +7773,12 @@
       "autoSeatedOrderNumber": 66,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-8",
@@ -7810,12 +7795,12 @@
       "autoSeatedOrderNumber": 70,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-9",
@@ -7832,12 +7817,12 @@
       "autoSeatedOrderNumber": 65,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-10",
@@ -7854,12 +7839,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -7882,12 +7867,12 @@
       "autoSeatedOrderNumber": 64,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-12",
@@ -7904,12 +7889,12 @@
       "autoSeatedOrderNumber": 8,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-13",
@@ -7926,12 +7911,12 @@
       "autoSeatedOrderNumber": 63,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-14",
@@ -7948,12 +7933,12 @@
       "autoSeatedOrderNumber": 9,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-15",
@@ -7970,12 +7955,12 @@
       "autoSeatedOrderNumber": 62,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-16",
@@ -7992,12 +7977,12 @@
       "autoSeatedOrderNumber": 10,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-17",
@@ -8014,12 +7999,12 @@
       "autoSeatedOrderNumber": 61,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "1000元區",
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-18",
@@ -8036,12 +8021,12 @@
       "autoSeatedOrderNumber": 11,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -8064,12 +8049,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
       "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api",
       "taken": true,
       "availability": "taken",
       "takenLabel": "OPENTIX 已售出／不可售",
@@ -8092,12 +8077,12 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-23",
@@ -8114,12 +8099,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-25",
@@ -8136,12 +8121,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF-17-27",
@@ -8158,12 +8143,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "青年席位300元（原價1000）",
       "price": 1000,
       "kind": "public",
       "color": "#C27BA0",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF友善席-11-9",
@@ -8180,12 +8165,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "多元友善席：移動式扶手椅",
       "price": 1000,
       "kind": "public",
       "color": "#F514DB",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF友陪席-11-7",
@@ -8202,12 +8187,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "多元友善陪同席",
       "price": 1000,
       "kind": "public",
       "color": "#D18063",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪椅席-10-11",
@@ -8224,12 +8209,12 @@
       "autoSeatedOrderNumber": 7,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅席",
       "price": 1000,
       "kind": "public",
       "color": "#A7C9EB",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪椅席-10-13",
@@ -8246,12 +8231,12 @@
       "autoSeatedOrderNumber": 5,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅席",
       "price": 1000,
       "kind": "public",
       "color": "#A7C9EB",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪椅席-10-15",
@@ -8268,12 +8253,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅席",
       "price": 1000,
       "kind": "public",
       "color": "#A7C9EB",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪椅席-10-17",
@@ -8290,12 +8275,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅席",
       "price": 1000,
       "kind": "public",
       "color": "#A7C9EB",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪陪席-12-13",
@@ -8312,12 +8297,12 @@
       "autoSeatedOrderNumber": 4,
       "parentSeatingChartId": 422,
       "isConsecutive": false,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅陪同席",
       "price": 1000,
       "kind": "public",
       "color": "#FF99CC",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪陪席-12-15",
@@ -8334,12 +8319,12 @@
       "autoSeatedOrderNumber": 3,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅陪同席",
       "price": 1000,
       "kind": "public",
       "color": "#FF99CC",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪陪席-12-17",
@@ -8356,12 +8341,12 @@
       "autoSeatedOrderNumber": 2,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅陪同席",
       "price": 1000,
       "kind": "public",
       "color": "#FF99CC",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "地下樓BF輪陪席-12-19",
@@ -8378,12 +8363,12 @@
       "autoSeatedOrderNumber": 1,
       "parentSeatingChartId": 422,
       "isConsecutive": true,
+      "statusSource": "opentix-public-seats-api",
       "sectionName": "輪椅陪同席",
       "price": 1000,
       "kind": "public",
       "color": "#FF99CC",
-      "source": "opentix-price-section",
-      "statusSource": "opentix-public-seats-api"
+      "source": "opentix-price-section"
     }
   ]
 }
