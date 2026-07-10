@@ -433,6 +433,43 @@ def override_matches(rule: dict[str, Any], seat: dict[str, Any]) -> bool:
     return False
 
 
+STATUS_FIELDS = ("taken", "availability", "takenLabel", "takenSource", "takenNote")
+
+
+def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict[str, Any]) -> list[str]:
+    status_counts: Counter[str] = Counter()
+    for seat in final_seats:
+        for key in STATUS_FIELDS:
+            seat.pop(key, None)
+
+        for rule in event_config.get("seatStatusOverrides") or []:
+            if not override_matches(rule, seat):
+                continue
+            if rule.get("vipOnly", True) and seat.get("kind") != "vip-reserved":
+                continue
+            status_counts[rule["id"]] += 1
+            status = rule.get("status") or "taken"
+            if status == "taken":
+                display = rule.get("display") or {}
+                seat["taken"] = True
+                seat["availability"] = "taken"
+                seat["takenLabel"] = display.get("label") or "已預訂"
+                seat["takenSource"] = display.get("source") or "opus-vip-taken-seat-map"
+                if display.get("note"):
+                    seat["takenNote"] = display["note"]
+            break
+
+    errors: list[str] = []
+    for rule in event_config.get("seatStatusOverrides") or []:
+        expected = rule.get("expectedSeatCount")
+        if expected is None:
+            continue
+        actual = status_counts[rule["id"]]
+        if actual != expected:
+            errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} taken seats, matched {actual}")
+    return errors
+
+
 def apply_rules(
     seats: list[dict[str, Any]],
     official_sections: OrderedDict[str, dict[str, Any]],
@@ -496,6 +533,7 @@ def apply_rules(
         actual = override_counts[rule["id"]]
         if actual != expected:
             errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} VIP seats, matched {actual}")
+    errors.extend(apply_status_overrides(final, event_config))
     if errors and strict_counts:
         raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
     for error in errors:
@@ -518,6 +556,7 @@ def build_sections(
     config: dict[str, Any],
 ) -> list[dict[str, Any]]:
     counts = Counter(seat["sectionId"] for seat in final_seats)
+    taken_counts = Counter(seat["sectionId"] for seat in final_seats if seat.get("taken"))
     sample_by_section: dict[str, dict[str, Any]] = {}
     for seat in final_seats:
         sample_by_section.setdefault(seat["sectionId"], seat)
@@ -561,18 +600,72 @@ def build_sections(
                     section[key] = official[key]
         if sample.get("source") == config["fallbacks"]["seatsOnlySection"]["source"] and "note" not in section:
             section["note"] = "Seat appears in OPENTIX seats API but not in public price sections and is not marked as Friends VIP."
+        if taken_counts[section_id]:
+            section["takenSeatCount"] = taken_counts[section_id]
         sections.append(section)
     return sections
+
+
+def tag_attr(tag: str, name: str) -> str | None:
+    match = re.search(rf'(?:^|\s){re.escape(name)}="([^"]*)"', tag)
+    if not match:
+        return None
+    return match.group(1)
+
+
+def number_attr(tag: str, name: str) -> float | None:
+    value = tag_attr(tag, name)
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except ValueError:
+        return None
+
+
+def fmt_svg_number(value: float) -> str:
+    if value.is_integer():
+        return str(int(value))
+    return f"{value:.3f}".rstrip("0").rstrip(".")
+
+
+def taken_mark_for_circle(circle_tag: str, seat: dict[str, Any], config: dict[str, Any]) -> str:
+    cx = number_attr(circle_tag, "cx")
+    cy = number_attr(circle_tag, "cy")
+    radius = number_attr(circle_tag, "r")
+    if cx is None or cy is None or radius is None:
+        return ""
+    delta = radius * 0.78
+    transform = tag_attr(circle_tag, "transform")
+    transform_attr = f' transform="{html_attr(transform)}"' if transform else ""
+    stroke = html_attr(config["displayDefaults"].get("takenMarkStroke") or "#2f2417")
+    stroke_width = fmt_svg_number(max(2.2, radius * 0.28))
+    seat_id = html_attr(seat.get("svgId"))
+    x1 = fmt_svg_number(cx - delta)
+    y1 = fmt_svg_number(cy - delta)
+    x2 = fmt_svg_number(cx + delta)
+    y2 = fmt_svg_number(cy + delta)
+    x3 = fmt_svg_number(cx - delta)
+    y3 = fmt_svg_number(cy + delta)
+    x4 = fmt_svg_number(cx + delta)
+    y4 = fmt_svg_number(cy - delta)
+    return (
+        f'<line class="seat-taken-mark" data-seat-id="{seat_id}" x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}"'
+        f'{transform_attr} stroke="{stroke}" stroke-width="{stroke_width}" stroke-linecap="round" opacity="0.92" pointer-events="none"></line>'
+        f'<line class="seat-taken-mark" data-seat-id="{seat_id}" x1="{x3}" y1="{y3}" x2="{x4}" y2="{y4}"'
+        f'{transform_attr} stroke="{stroke}" stroke-width="{stroke_width}" stroke-linecap="round" opacity="0.92" pointer-events="none"></line>'
+    )
 
 
 def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, Any]) -> str:
     defaults = config["displayDefaults"]
     seat_by_svg_id = {seat["svgId"]: seat for seat in final_seats}
+    svg = re.sub(r'<line\b(?=[^>]*\bclass="seat-taken-mark")[^>]*></line>', "", svg)
 
     remove_attrs = re.compile(
-        r'\s(?:class|stroke-width|stroke|fill|data-seat-id|data-floor|data-row|data-number|data-section-id|data-section-name|data-price|data-kind)="[^"]*"'
+        r'\s(?:class|stroke-width|stroke|fill|data-seat-id|data-floor|data-row|data-number|data-section-id|data-section-name|data-price|data-kind|data-taken|data-availability)="[^"]*"'
     )
-    circle_re = re.compile(r"<circle\b[^>]*\bid=\"([^\"]+)\"[^>]*>", re.DOTALL)
+    circle_re = re.compile(r"<circle\b(?=[^>]*\sid=\"([^\"]+)\")[^>]*>", re.DOTALL)
 
     def replacement(match: re.Match[str]) -> str:
         seat_id = match.group(1)
@@ -591,7 +684,7 @@ def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, 
             stroke = defaults["reservedStroke"]
             stroke_width = "1"
         attrs = (
-            f' class="seat seat-{html_attr(slug_kind(kind))}"'
+            f' class="seat seat-{html_attr(slug_kind(kind))}{" seat-taken" if seat.get("taken") else ""}"'
             f' stroke-width="{stroke_width}"'
             f' stroke="{html_attr(stroke)}"'
             f' fill="{html_attr(seat.get("color"))}"'
@@ -604,9 +697,15 @@ def annotate_svg(svg: str, final_seats: list[dict[str, Any]], config: dict[str, 
             f' data-price="{html_attr(seat.get("price"))}"'
             f' data-kind="{html_attr(kind)}"'
         )
+        if seat.get("taken"):
+            attrs += ' data-taken="true" data-availability="taken"'
         if tag.endswith("/>"):
-            return tag[:-2] + attrs + "/>"
-        return tag[:-1] + attrs + ">"
+            circle_tag = tag[:-2] + attrs + "/>"
+        else:
+            circle_tag = tag[:-1] + attrs + ">"
+        if seat.get("taken"):
+            return circle_tag + taken_mark_for_circle(circle_tag, seat, config)
+        return circle_tag
 
     return circle_re.sub(replacement, svg)
 
@@ -617,7 +716,7 @@ def format_money(value: int | None) -> str:
     return f"NT${value:,}"
 
 
-def build_note(sections: list[dict[str, Any]]) -> str:
+def build_note(sections: list[dict[str, Any]], final_seats: list[dict[str, Any]]) -> str:
     vip_summary: OrderedDict[tuple[str, int | None], int] = OrderedDict()
     for section in sections:
         if section.get("kind") != "vip-reserved":
@@ -633,9 +732,11 @@ def build_note(sections: list[dict[str, Any]]) -> str:
             label = f"{format_money(price)} VIP 保留席" if price is not None else str(name)
             parts.append(f"{label}，共 {count} 席")
         vip_text = "；".join(parts)
+    taken_count = sum(1 for seat in final_seats if seat.get("taken"))
+    taken_text = f"打叉座位為已預訂席次（{taken_count} 席）；" if taken_count else ""
     return (
         "此頁由 OPENTIX 最新座位資料同步製作，用於 Friends of Opus Formosa 洽詢席位。"
-        f"深色外框標示為 {vip_text}；其餘票區與不可售狀態依 OPENTIX 最新資料顯示；"
+        f"深色外框標示為 {vip_text}；{taken_text}其餘票區與不可售狀態依 OPENTIX 最新資料顯示；"
         "實際可安排座位仍以 Opus Formosa 團隊回覆為準。"
     )
 
@@ -643,27 +744,30 @@ def build_note(sections: list[dict[str, Any]]) -> str:
 def build_legend(sections: list[dict[str, Any]]) -> str:
     rows = []
     for section in sections:
+        count_text = f"{section.get('seatCount')} 席"
+        if section.get("takenSeatCount"):
+            count_text += f"／已預訂 {section.get('takenSeatCount')} 席"
         rows.append(
             "          <li class=\"legend-item\" data-kind=\"{kind}\">\n"
             "            <span class=\"swatch\" style=\"background:{color}\"></span>\n"
             "            <span class=\"legend-name\">{name}</span>\n"
-            "            <span class=\"legend-count\">{count} 席</span>\n"
+            "            <span class=\"legend-count\">{count}</span>\n"
             "          </li>".format(
                 kind=html_attr(section.get("kind")),
                 color=html_attr(section.get("color")),
                 name=escape(str(section.get("name") or "")),
-                count=html_attr(section.get("seatCount")),
+                count=html_attr(count_text),
             )
         )
     return "\n".join(rows)
 
 
-def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, sections: list[dict[str, Any]]) -> str:
+def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, sections: list[dict[str, Any]], final_seats: list[dict[str, Any]]) -> str:
     labels = event_config.get("labels") or {}
     header_title = display_title_for_header(event_config, program)
     page_title = f"{header_title} — Friends VIP 座位圖快照"
     meta = f"{labels.get('date', '')}｜{labels.get('venue', '')}".strip("｜")
-    note = build_note(sections)
+    note = build_note(sections, final_seats)
     legend = build_legend(sections)
     return f"""<!DOCTYPE html>
 <html lang="zh-TW">
@@ -690,6 +794,7 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
       svg {{ display: block; width: 100%; height: auto; }}
       circle.seat {{ cursor: help; transition: opacity .16s ease, stroke-width .16s ease; }}
       circle.seat:hover, circle.seat.is-active {{ opacity: .72; stroke-width: 3; }}
+      line.seat-taken-mark {{ pointer-events: none; }}
       text.seat {{ pointer-events: none; }}
       aside {{ background: #fbfaf7; border-left: 1px solid rgba(75, 69, 160, 0.16); padding: 22px 18px; overflow: auto; }}
       h2 {{ margin: 0 0 14px; color: #4b45a0; font-size: 18px; }}
@@ -702,6 +807,7 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
       .panel strong {{ color: #201f1d; }}
       .tip {{ position: fixed; left: 0; top: 0; z-index: 20; display: none; max-width: 280px; padding: 10px 12px; border-radius: 8px; background: rgba(32, 31, 29, .94); color: #fff; font-size: 13px; line-height: 1.65; pointer-events: none; box-shadow: 0 16px 36px rgba(32,31,29,.22); }}
       .tip strong {{ color: #FAAE17; }}
+      .tip .taken {{ color: #ffd27a; font-weight: 700; }}
       @media (min-width: 901px) {{
         .page {{ height: 100vh; overflow: hidden; }}
         main {{ overflow: hidden; }}
@@ -740,7 +846,7 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
 {legend}
           </ul>
           <div class="panel">
-            <p><strong>使用方式：</strong>拖曳座位圖可移動視角，使用滑鼠滾輪可縮放；點擊或移到座位上可查看座席、票區與票價，再點同一座位可關閉。申請時請提供場次、票區、張數與座位偏好，團隊會再確認實際可安排席位。</p>
+            <p><strong>使用方式：</strong>拖曳座位圖可移動視角，使用滑鼠滾輪可縮放；點擊或移到座位上可查看座席、票區與票價，再點同一座位可關閉。座位若有叉叉，表示已預訂。申請時請提供場次、張數與座位偏好，團隊會再確認實際可安排席位。</p>
           </div>
         </aside>
       </main>
@@ -820,9 +926,12 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
       }}
 
       function setTipContent(seat) {{
+        const taken = seat.dataset.taken === 'true'
+          ? '<br><span class="taken">已預訂</span>'
+          : '';
         tip.innerHTML = '<strong>' + seat.dataset.sectionName + '</strong><br>' +
           seat.dataset.floor + ' 第 ' + seat.dataset.row + ' 排 ' + seat.dataset.number + ' 號<br>' +
-          formatPrice(seat.dataset.price);
+          formatPrice(seat.dataset.price) + taken;
       }}
 
       function positionTip(clientX, clientY) {{
@@ -1026,10 +1135,28 @@ def build_snapshot(
         "notes": [
             "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
             "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
+            "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
         ],
+        "takenSeatCount": sum(1 for seat in seats if seat.get("taken")),
         "sections": sections,
         "seats": seats,
     }
+
+
+def refresh_taken_counts_in_sections(sections: list[dict[str, Any]], seats: list[dict[str, Any]]) -> None:
+    taken_counts = Counter(seat["sectionId"] for seat in seats if seat.get("taken"))
+    for section in sections:
+        section_id = section.get("id")
+        section.pop("takenSeatCount", None)
+        if taken_counts[section_id]:
+            section["takenSeatCount"] = taken_counts[section_id]
+
+
+def append_unique_note(notes: list[Any], note: str) -> list[str]:
+    cleaned = [str(item) for item in notes if item is not None]
+    if note not in cleaned:
+        cleaned.append(note)
+    return cleaned
 
 
 def fallback_program_and_event(event_config: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
@@ -1097,13 +1224,58 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
     raw_svg = fetch_text(seat_svg_url)
     annotated_svg = annotate_svg(raw_svg, final_seats, config)
     snapshot = build_snapshot(event_config, program, event, sections, final_seats, seat_svg_url)
-    html = build_html(event_config, program, annotated_svg, sections)
+    html = build_html(event_config, program, annotated_svg, sections, final_seats)
 
     output = config["output"]
     write_json(ROOT / output["json"].format(eventId=event_id), snapshot, dry_run)
     write_text(ROOT / output["svg"].format(eventId=event_id), annotated_svg, dry_run)
     write_text(ROOT / output["html"].format(eventId=event_id), html, dry_run)
     print(f"[sync] {event_id}: {len(final_seats)} seats, {sum(1 for seat in final_seats if seat.get('kind') == 'vip-reserved')} Friends VIP seats")
+
+
+def render_event_from_existing_snapshot(event_config: dict[str, Any], config: dict[str, Any], dry_run: bool, strict_counts: bool) -> None:
+    event_id = event_config["eventId"]
+    output = config["output"]
+    snapshot_path = ROOT / output["json"].format(eventId=event_id)
+    svg_path = ROOT / output["svg"].format(eventId=event_id)
+    if not snapshot_path.exists() or not svg_path.exists():
+        raise SyncError(f"Existing generated files not found for event {event_id}.")
+
+    print(f"[sync:local] {event_id} {event_config.get('labels', {}).get('date', '')} {event_config.get('labels', {}).get('title', '')}")
+    snapshot = load_json(snapshot_path)
+    final_seats = copy.deepcopy(snapshot.get("seats") or [])
+    if not final_seats:
+        raise SyncError(f"Existing snapshot has no seats for event {event_id}.")
+    errors = apply_status_overrides(final_seats, event_config)
+    if errors and strict_counts:
+        raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
+    for error in errors:
+        print(f"[warning] {error}", file=sys.stderr)
+
+    sections = copy.deepcopy(snapshot.get("sections") or [])
+    if sections:
+        refresh_taken_counts_in_sections(sections, final_seats)
+    else:
+        sections = build_sections(final_seats, OrderedDict(), event_config, config)
+
+    raw_svg = svg_path.read_text(encoding="utf-8")
+    annotated_svg = annotate_svg(raw_svg, final_seats, config)
+    program = snapshot.get("program") or fallback_program_and_event(event_config)[0]
+    html = build_html(event_config, program, annotated_svg, sections, final_seats)
+
+    snapshot["generatedAt"] = datetime.now(TAIPEI).isoformat(timespec="seconds")
+    snapshot["notes"] = append_unique_note(
+        snapshot.get("notes") or [],
+        "Seats with taken=true are Friends VIP seats already held; they keep their VIP styling and display an X marker.",
+    )
+    snapshot["takenSeatCount"] = sum(1 for seat in final_seats if seat.get("taken"))
+    snapshot["sections"] = sections
+    snapshot["seats"] = final_seats
+
+    write_json(snapshot_path, snapshot, dry_run)
+    write_text(svg_path, annotated_svg, dry_run)
+    write_text(ROOT / output["html"].format(eventId=event_id), html, dry_run)
+    print(f"[sync:local] {event_id}: {len(final_seats)} seats, {snapshot['takenSeatCount']} taken Friends VIP seats")
 
 
 def selected_events(config: dict[str, Any], filters: list[str]) -> list[dict[str, Any]]:
@@ -1134,6 +1306,9 @@ def validate_config(config: dict[str, Any]) -> None:
         for rule in event["sectionOverrides"]:
             if "id" not in rule or "match" not in rule or "display" not in rule:
                 raise SyncError(f"Invalid section override in event {event['eventId']}: {rule}")
+        for rule in event.get("seatStatusOverrides") or []:
+            if "id" not in rule or "match" not in rule or "status" not in rule:
+                raise SyncError(f"Invalid seat status override in event {event['eventId']}: {rule}")
     print(f"[validate] {len(config['events'])} events in rules file.")
 
 
@@ -1142,6 +1317,7 @@ def main() -> int:
     parser.add_argument("--rules", default=str(DEFAULT_RULES), help="Path to opentix-sync-rules.json")
     parser.add_argument("--event", action="append", default=[], help="Limit to one eventId, programId, or slug. May be repeated.")
     parser.add_argument("--dry-run", action="store_true", help="Fetch and render without writing files.")
+    parser.add_argument("--from-existing-snapshot", action="store_true", help="Re-render local generated files without fetching OPENTIX.")
     parser.add_argument("--no-strict-counts", action="store_true", help="Warn instead of failing when expected VIP seat counts do not match.")
     parser.add_argument("--validate-rules", action="store_true", help="Validate the rules file and exit without fetching OPENTIX.")
     args = parser.parse_args()
@@ -1156,9 +1332,13 @@ def main() -> int:
         if not events:
             raise SyncError("No events selected.")
 
-        auth = OpentixAuth(config)
-        for event in events:
-            render_event(copy.deepcopy(event), config, auth, args.dry_run, not args.no_strict_counts)
+        if args.from_existing_snapshot:
+            for event in events:
+                render_event_from_existing_snapshot(copy.deepcopy(event), config, args.dry_run, not args.no_strict_counts)
+        else:
+            auth = OpentixAuth(config)
+            for event in events:
+                render_event(copy.deepcopy(event), config, auth, args.dry_run, not args.no_strict_counts)
         return 0
     except SyncError as exc:
         print(f"error: {exc}", file=sys.stderr)
