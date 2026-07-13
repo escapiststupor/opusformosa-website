@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-13T21:14:31+08:00",
+  "generatedAt": "2026-07-14T00:00:24+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 13,
+  "takenSeatCount": 16,
   "sections": [
     {
       "id": "wwy-vip-4500-center",
@@ -123,7 +123,7 @@
       "kind": "public",
       "source": "opentix-price-section",
       "seatCount": 403,
-      "takenSeatCount": 1
+      "takenSeatCount": 4
     },
     {
       "id": "2069998401389875200",
@@ -40445,7 +40445,7 @@
       "rowId": "A2",
       "number": "5",
       "sectionId": "2069998401402572800",
-      "status": 1,
+      "status": 0,
       "eventId": "2069998010554765313",
       "groupId": "4395371216",
       "rX": 1091,
@@ -40459,13 +40459,7 @@
       "price": 640,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section",
-      "taken": true,
-      "availability": "taken",
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "source": "opentix-price-section"
     },
     {
       "svgId": "3樓15號門-A2-7",
@@ -40957,7 +40951,7 @@
       "rowId": "A3",
       "number": "1",
       "sectionId": "2069998401402572800",
-      "status": 0,
+      "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "4615960147",
       "rX": 1123,
@@ -40971,7 +40965,13 @@
       "price": 640,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓15號門-A3-3",
@@ -40979,7 +40979,7 @@
       "rowId": "A3",
       "number": "3",
       "sectionId": "2069998401402572800",
-      "status": 0,
+      "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "4615960147",
       "rX": 1102,
@@ -40993,7 +40993,13 @@
       "price": 640,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓15號門-A3-5",
@@ -42717,7 +42723,7 @@
       "rowId": "A3",
       "number": "2",
       "sectionId": "2069998401402572800",
-      "status": 0,
+      "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "8188899943",
       "rX": 1146,
@@ -42731,7 +42737,13 @@
       "price": 640,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓16號門-A3-4",
@@ -42739,7 +42751,7 @@
       "rowId": "A3",
       "number": "4",
       "sectionId": "2069998401402572800",
-      "status": 0,
+      "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "8188899943",
       "rX": 1167,
@@ -42753,7 +42765,13 @@
       "price": 640,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓16號門-A3-6",
