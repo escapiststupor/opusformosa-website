@@ -91,7 +91,10 @@
       "Bash(identify /Users/pyen/OpusFormosa/website/assets/aimi-kobayashi.jpg)",
       "Bash(magick $SRC *)",
       "WebFetch(domain:jh-zou.com)",
-      "Bash(fc-list)"
+      "Bash(fc-list)",
+      "WebFetch(domain:ocacnews.net)",
+      "WebFetch(domain:today.line.me)",
+      "WebFetch(domain:www.ocacnews.net)"
     ]
   }
 }
