@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-16T14:04:37+08:00",
+  "generatedAt": "2026-07-16T16:01:08+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 209,
+  "takenSeatCount": 219,
   "sections": [
     {
       "id": "nch-vip-5000",
@@ -43,7 +43,7 @@
       "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
       "originalName": "貴賓席",
       "originalPrice": 0,
-      "takenSeatCount": 150
+      "takenSeatCount": 160
     },
     {
       "id": "2070056819110727680",
@@ -5835,7 +5835,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-2",
@@ -5861,7 +5867,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-3",
@@ -5887,7 +5899,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-4",
@@ -5939,7 +5957,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-6",
@@ -5991,7 +6015,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-8",
@@ -6043,7 +6073,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-10",
@@ -6095,7 +6131,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-12",
@@ -6147,7 +6189,13 @@
       "originalSectionId": "2070048764764315648",
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-14",
@@ -6199,7 +6247,13 @@
       "originalSectionId": "2070056769700352000",
       "originalSectionName": "5000元區",
       "originalPrice": 5000,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-16",
@@ -6251,7 +6305,13 @@
       "originalSectionId": "2070056769700352000",
       "originalSectionName": "5000元區",
       "originalPrice": 5000,
-      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓-7-18",
