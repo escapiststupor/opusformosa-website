@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-19T11:57:46+08:00",
+  "generatedAt": "2026-07-19T14:28:47+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 9,
+  "takenSeatCount": 11,
   "sections": [
     {
       "id": "ntt-vip-2500",
@@ -52,7 +52,7 @@
       "kind": "public",
       "source": "opentix-price-section",
       "seatCount": 75,
-      "takenSeatCount": 1
+      "takenSeatCount": 3
     },
     {
       "id": "2070073441276616704",
@@ -1189,7 +1189,7 @@
       "rowId": "6",
       "number": "1",
       "sectionId": "2070073395567091712",
-      "status": 0,
+      "status": 2,
       "eventId": "2070072493401051137",
       "groupId": "7412542599",
       "rX": 992,
@@ -1203,7 +1203,13 @@
       "price": 2200,
       "kind": "public",
       "color": "#FAAE17",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "二樓P21區-6-3",
@@ -4999,7 +5005,7 @@
       "rowId": "6",
       "number": "2",
       "sectionId": "2070073395567091712",
-      "status": 0,
+      "status": 2,
       "eventId": "2070072493401051137",
       "groupId": "384123353",
       "rX": 1016,
@@ -5013,7 +5019,13 @@
       "price": 2200,
       "kind": "public",
       "color": "#FAAE17",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "二樓P22區-6-4",
