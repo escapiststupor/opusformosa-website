@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-07-19T16:56:46+08:00",
+  "generatedAt": "2026-07-19T18:23:41+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 232,
+  "takenSeatCount": 233,
   "sections": [
     {
       "id": "nch-vip-5000",
@@ -63,7 +63,7 @@
       "kind": "public",
       "source": "opentix-price-section",
       "seatCount": 158,
-      "takenSeatCount": 13
+      "takenSeatCount": 14
     },
     {
       "id": "2070056925736849408",
@@ -28974,7 +28974,7 @@
       "rowId": "4",
       "number": "11",
       "sectionId": "2070056871965872128",
-      "status": 0,
+      "status": 2,
       "eventId": "2070048441140207616",
       "groupId": "2074531042",
       "rX": 871,
@@ -28988,7 +28988,13 @@
       "price": 2800,
       "kind": "public",
       "color": "#6F98F8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓-4-12",
@@ -29018,7 +29024,7 @@
       "rowId": "4",
       "number": "13",
       "sectionId": "2070056871965872128",
-      "status": 1,
+      "status": 2,
       "eventId": "2070048441140207616",
       "groupId": "2074531042",
       "rX": 850,
@@ -29068,7 +29074,7 @@
       "rowId": "4",
       "number": "15",
       "sectionId": "2070056871965872128",
-      "status": 1,
+      "status": 2,
       "eventId": "2070048441140207616",
       "groupId": "2074531042",
       "rX": 829,
@@ -29118,7 +29124,7 @@
       "rowId": "4",
       "number": "17",
       "sectionId": "2070056871965872128",
-      "status": 1,
+      "status": 2,
       "eventId": "2070048441140207616",
       "groupId": "2074531042",
       "rX": 808,
