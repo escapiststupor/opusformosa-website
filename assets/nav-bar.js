@@ -98,8 +98,8 @@
       ? "Join Friends of Opus Formosa 2026"
       : "加入「2026 Opus 音樂節之友」";
     var detail = isEn
-      ? "Reserve OPENTIX unreleased VIP seats from NT$50,000, with Kindred, Platinum, and Legacy Friend tiers."
-      : "單筆 NT$50,000 起，可預訂 OPENTIX 未公開販售 VIP 席，列名知音、白金或典藏之友。";
+      ? "Reserve OPENTIX unreleased VIP seats from NT$50,000, with Kindred, Platinum, Legacy, and Laureate Friend tiers."
+      : "單筆 NT$50,000 起，可預訂 OPENTIX 未公開販售 VIP 席，列名知音、白金、典藏或桂冠之友。";
     var cta = isEn ? "Learn how to reserve" : "了解預訂方式";
 
     return (
