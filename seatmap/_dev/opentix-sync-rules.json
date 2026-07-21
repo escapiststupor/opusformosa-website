@@ -183,6 +183,15 @@
               {
                 "floor": "2樓",
                 "rows": [
+                  6
+                ],
+                "numbers": [
+                  3
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
                   7
                 ],
                 "numbers": [
@@ -254,7 +263,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 160
+          "expectedSeatCount": 161
         }
       ]
     },
