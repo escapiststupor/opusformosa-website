@@ -6,7 +6,7 @@
     <meta name="robots" content="noindex,nofollow" />
     <meta
       name="description"
-      content="Friends of Opus Formosa 2026。單筆直接支持 2026 Opus 音樂節達 NT$50,000（含）以上，即可列名官方節目冊。"
+      content="Friends of Opus Formosa 2026。單筆直接支持 2026 Opus 音樂節達 NT$50,000、NT$100,000 或 NT$200,000（含）以上，可列入官方節目冊知音之友、白金之友或典藏之友。"
     />
     <meta
       name="keywords"
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Friends of Opus Formosa 2026" />
     <meta
       property="og:description"
-      content="可跨場次預訂 OPENTIX 未公開販售之 VIP 保留席，滿 NT$50,000 即符合 Friends of Opus Formosa 資格。"
+      content="可跨場次預訂 OPENTIX 未公開販售之 VIP 保留席，依單筆支持總額列入知音之友、白金之友或典藏之友。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://opusformosa.org/images/opus-formosa-logo.png" />
@@ -150,6 +150,27 @@
         border-left: 3px solid var(--teal);
       }
 
+      .tier-card {
+        border: 1px solid rgba(75, 69, 160, 0.18);
+        border-radius: 8px;
+        background: #fffdf9;
+      }
+
+      .tier-label {
+        color: var(--muted);
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .tier-amount {
+        color: var(--violet);
+        font-family: "Cormorant Garamond", "Noto Serif TC", serif;
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
       .line-qr {
         width: 8.5rem;
         max-width: 100%;
@@ -193,16 +214,40 @@
           <p class="max-w-4xl text-base md:text-lg">
             為感謝協助推廣音樂的朋友，不論您是個人、組織或企業，只要透過 Opus Formosa
             直接支持 2026 Opus 音樂節，單筆票券組合／捐款贈票金額達
-            <strong>NT$50,000（含）以上</strong>，即可列名官方節目冊，榮譽呈現為「2026 Opus 音樂節之友」，並受邀出席 Opus Formosa 全年舉辦之沙龍音樂會與其他不對外開放的專屬活動。
+            <strong>NT$50,000（含）以上</strong>，即可依金額列名官方節目冊「知音之友」、「白金之友」或「典藏之友」。各等級皆受邀出席 Opus Formosa 全年舉辦之沙龍音樂會與其他不對外開放的專屬活動。
           </p>
         </header>
+
+        <section class="mb-8">
+          <h2 class="title mb-4 text-2xl">支持等級</h2>
+          <div class="grid gap-3 md:grid-cols-3">
+            <article class="tier-card p-4">
+              <p class="tier-label mb-2">NT$50,000+</p>
+              <p class="tier-amount mb-3">知音之友</p>
+              <p class="text-sm leading-7">列名官方節目冊「知音之友」。</p>
+            </article>
+            <article class="tier-card p-4">
+              <p class="tier-label mb-2">NT$100,000+</p>
+              <p class="tier-amount mb-3">白金之友</p>
+              <p class="text-sm leading-7">列名官方節目冊「白金之友」。</p>
+            </article>
+            <article class="tier-card p-4">
+              <p class="tier-label mb-2">NT$200,000+</p>
+              <p class="tier-amount mb-3">典藏之友</p>
+              <p class="text-sm leading-7">列名官方節目冊「典藏之友」。</p>
+            </article>
+          </div>
+          <p class="mt-3 text-sm leading-7" style="color:var(--muted)">
+            將依單筆最終確認金額列入最高符合之等級；實際列名文字以節目冊截稿前確認資料為準。
+          </p>
+        </section>
 
         <section class="mb-8">
           <h2 class="title mb-4 text-2xl">專屬禮遇</h2>
           <ol class="ml-6 list-decimal space-y-2">
             <li>
               <strong>自由組合：</strong>
-              可跨場次自由搭配 Opus Formosa 保留 VIP 席，總額達標即可。
+              可跨場次自由搭配 Opus Formosa 保留 VIP 席，總額達任一支持等級即可。
             </li>
             <li>
               <strong>專屬保留席：</strong>
@@ -232,7 +277,7 @@
             <strong>節目冊列名：</strong>需於印刷截稿日前完成付款及資料確認，逾期恕無法列入本屆節目冊。
             <strong>不另折扣：</strong>本方案不與 OPENTIX 其他優惠疊加。
             <strong>貴賓券處理：</strong>票券為捐款贈票之貴賓券，非一般票券。
-            <strong>請先確認：</strong>若希望金額納入 Friends 資格與捐款收據，請先與團隊確認席位，勿自行於 OPENTIX 結帳。
+            <strong>請先確認：</strong>若希望金額納入 Friends 等級與捐款收據，請先與團隊確認席位，勿自行於 OPENTIX 結帳。
           </p>
         </section>
 
@@ -336,7 +381,8 @@
 - 9 月 4 日 台北國家音樂廳：NT$5,000 VIP 保留席 6 張，偏好座位／排號：（如：希望連坐）
 - 9 月 9 日 高雄衛武營音樂廳：NT$4,500 VIP 保留席 4 張；NT$3,300 VIP 保留席 2 張，偏好座位／排號：（如：希望在8排左右）
 
-預估總金額：NT$54,600</pre>
+預估總金額：NT$54,600
+預計支持等級：知音之友（可由團隊依最終金額確認）</pre>
         </section>
 
         <section class="mb-9">
