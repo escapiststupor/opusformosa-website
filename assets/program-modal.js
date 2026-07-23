@@ -75,7 +75,7 @@
             performers: [
               { role: 'Piano', name: 'Steven Lin' },
               { role: 'Trumpet', name: 'Chuan-An Hou' },
-              { role: 'Conductor', name: 'Jia-Hung Zou' },
+              { role: 'Conductor', name: 'Jiahung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] }
         ]
@@ -142,7 +142,7 @@
             title: 'Cello Concerto No. 1 in C major', titleAlt: 'C 大調第一號大提琴協奏曲',
             performers: [
               { role: 'Cello', name: 'Edgar Moreau' },
-              { role: 'Conductor', name: 'Jia-Hung Zou' },
+              { role: 'Conductor', name: 'Jiahung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] },
           { composer: 'Dmitri Shostakovich', composerAlt: '蕭士塔高維契',
@@ -150,7 +150,7 @@
             performers: [
               { role: 'Piano', name: 'Steven Lin' },
               { role: 'Trumpet', name: 'Chuan-An Hou' },
-              { role: 'Conductor', name: 'Jia-Hung Zou' },
+              { role: 'Conductor', name: 'Jiahung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] }
         ]
@@ -422,7 +422,7 @@
             title: 'Cello Concerto No. 1 in C major', titleAlt: 'C 大調第一號大提琴協奏曲',
             performers: [
               { role: 'Cello', name: 'Edgar Moreau' },
-              { role: 'Conductor', name: 'Jia-Hung Zou' },
+              { role: 'Conductor', name: 'Jiahung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] },
           { composer: 'Dmitri Shostakovich', composerAlt: '蕭士塔高維契',
@@ -430,7 +430,7 @@
             performers: [
               { role: 'Piano', name: 'Steven Lin' },
               { role: 'Trumpet', name: 'Chuan-An Hou' },
-              { role: 'Conductor', name: 'Jia-Hung Zou' },
+              { role: 'Conductor', name: 'Jiahung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] }
         ]
