@@ -568,6 +568,34 @@
           },
           "expectedSeatCount": 84
         }
+      ],
+      "seatStatusOverrides": [
+        {
+          "id": "nrh-0910-vip-taken-front-28",
+          "status": "taken",
+          "vipOnly": true,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "地下樓BF",
+                "rows": [
+                  3,
+                  4
+                ],
+                "numbers": [
+                  "1-13",
+                  15
+                ]
+              }
+            ]
+          },
+          "display": {
+            "label": "已預訂",
+            "source": "opus-vip-taken-seat-map",
+            "note": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
+          },
+          "expectedSeatCount": 28
+        }
       ]
     },
     {
