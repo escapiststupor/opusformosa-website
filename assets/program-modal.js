@@ -35,9 +35,10 @@
             title: '《歌謠集》與前奏曲選段', titleAlt: 'Song-Book Selections & Preludes',
             performers: [{ role: '鋼琴', name: '林易' }] },
           { composer: '蕭士塔高維契', composerAlt: 'Dmitri Shostakovich',
-            title: 'c 小調第一號鋼琴協奏曲，作品 35', titleAlt: 'Piano Concerto No. 1 in C minor, Op. 35',
+            title: 'c 小調第一號鋼琴、小號與弦樂團協奏曲，作品 35', titleAlt: 'Concerto No. 1 for Piano, Trumpet and Strings in C minor, Op. 35',
             performers: [
               { role: '鋼琴', name: '林易' },
+              { role: '小號', name: '侯傳安' },
               { role: '指揮', name: '鄒佳宏' },
               { role: '樂團', name: '藝響室內樂團' }
             ] }
@@ -70,9 +71,10 @@
             title: 'Song-Book Selections & Preludes', titleAlt: '《歌謠集》與前奏曲選段',
             performers: [{ role: 'Piano', name: 'Steven Lin' }] },
           { composer: 'Dmitri Shostakovich', composerAlt: '蕭士塔高維契',
-            title: 'Piano Concerto No. 1 in C minor, Op. 35', titleAlt: 'c 小調第一號鋼琴協奏曲，作品 35',
+            title: 'Concerto No. 1 for Piano, Trumpet and Strings in C minor, Op. 35', titleAlt: 'c 小調第一號鋼琴、小號與弦樂團協奏曲，作品 35',
             performers: [
               { role: 'Piano', name: 'Steven Lin' },
+              { role: 'Trumpet', name: 'Chuan-An Hou' },
               { role: 'Conductor', name: 'Jia-Hung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] }
@@ -108,9 +110,10 @@
               { role: '樂團', name: '藝響室內樂團' }
             ] },
           { composer: '蕭士塔高維契', composerAlt: 'Dmitri Shostakovich',
-            title: 'c 小調第一號鋼琴協奏曲，作品 35', titleAlt: 'Piano Concerto No. 1 in C minor, Op. 35',
+            title: 'c 小調第一號鋼琴、小號與弦樂團協奏曲，作品 35', titleAlt: 'Concerto No. 1 for Piano, Trumpet and Strings in C minor, Op. 35',
             performers: [
               { role: '鋼琴', name: '林易' },
+              { role: '小號', name: '侯傳安' },
               { role: '指揮', name: '鄒佳宏' },
               { role: '樂團', name: '藝響室內樂團' }
             ] }
@@ -143,9 +146,10 @@
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] },
           { composer: 'Dmitri Shostakovich', composerAlt: '蕭士塔高維契',
-            title: 'Piano Concerto No. 1 in C minor, Op. 35', titleAlt: 'c 小調第一號鋼琴協奏曲，作品 35',
+            title: 'Concerto No. 1 for Piano, Trumpet and Strings in C minor, Op. 35', titleAlt: 'c 小調第一號鋼琴、小號與弦樂團協奏曲，作品 35',
             performers: [
               { role: 'Piano', name: 'Steven Lin' },
+              { role: 'Trumpet', name: 'Chuan-An Hou' },
               { role: 'Conductor', name: 'Jia-Hung Zou' },
               { role: 'Orchestra', name: 'Opus Chamber Orchestra' }
             ] }
@@ -389,7 +393,7 @@
             title: 'c 小調第一號鋼琴、小號與弦樂團協奏曲，作品 35', titleAlt: 'Concerto No. 1 for Piano, Trumpet and Strings in C minor, Op. 35',
             performers: [
               { role: '鋼琴', name: '林易' },
-              { role: '小號', name: '侯傅安' },
+              { role: '小號', name: '侯傳安' },
               { role: '指揮', name: '鄒佳宏' },
               { role: '樂團', name: '藝響室內樂團' }
             ] }
