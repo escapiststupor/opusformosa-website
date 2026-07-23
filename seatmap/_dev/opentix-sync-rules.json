@@ -186,7 +186,11 @@
                   6
                 ],
                 "numbers": [
-                  3
+                  3,
+                  5,
+                  7,
+                  9,
+                  11
                 ]
               },
               {
@@ -263,7 +267,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 161
+          "expectedSeatCount": 165
         }
       ]
     },
