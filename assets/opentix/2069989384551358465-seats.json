@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-03T16:22:44+08:00",
+  "generatedAt": "2026-08-03T20:00:28+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 15,
+  "takenSeatCount": 16,
   "sections": [
     {
       "id": "2069990342159491072",
@@ -81,7 +81,7 @@
       "kind": "public",
       "source": "opentix-price-section",
       "seatCount": 63,
-      "takenSeatCount": 4
+      "takenSeatCount": 5
     },
     {
       "id": "2069989646688964608",
@@ -6318,7 +6318,7 @@
       "rowId": "14",
       "number": "4",
       "sectionId": "2069989646770855936",
-      "status": 0,
+      "status": 1,
       "eventId": "2069989384551358465",
       "groupId": "3445626791",
       "rX": 883,
@@ -6332,7 +6332,13 @@
       "price": 1000,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-14-5",
