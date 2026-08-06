@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-06T15:54:48+08:00",
+  "generatedAt": "2026-08-06T17:40:03+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 65,
+  "takenSeatCount": 105,
   "sections": [
     {
       "id": "2069995306608611328",
@@ -43,7 +43,7 @@
       "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
       "originalName": "貴賓席",
       "originalPrice": 0,
-      "takenSeatCount": 28
+      "takenSeatCount": 68
     },
     {
       "id": "2069995306615005184",
@@ -2617,7 +2617,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-5-12",
@@ -2643,7 +2649,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-5-13",
@@ -2669,7 +2681,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-5-14",
@@ -2717,7 +2735,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-5-16",
@@ -2897,7 +2921,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-2",
@@ -2923,7 +2953,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-3",
@@ -2949,7 +2985,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-4",
@@ -2975,7 +3017,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-5",
@@ -3001,7 +3049,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-6",
@@ -3027,7 +3081,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-7",
@@ -3053,7 +3113,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-8",
@@ -3079,7 +3145,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-9",
@@ -3105,7 +3177,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-10",
@@ -3131,7 +3209,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-11",
@@ -3157,7 +3241,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-12",
@@ -3183,7 +3273,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-6-13",
@@ -3437,7 +3533,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-2",
@@ -3463,7 +3565,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-3",
@@ -3489,7 +3597,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-4",
@@ -3515,7 +3629,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-5",
@@ -3541,7 +3661,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-6",
@@ -3567,7 +3693,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-7",
@@ -3593,7 +3725,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-8",
@@ -3619,7 +3757,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-9",
@@ -3645,7 +3789,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-10",
@@ -3697,7 +3847,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-12",
@@ -3749,7 +3905,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-14",
@@ -3797,7 +3959,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-7-16",
@@ -3955,7 +4123,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-2",
@@ -3981,7 +4155,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-3",
@@ -4007,7 +4187,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-4",
@@ -4033,7 +4219,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-5",
@@ -4059,7 +4251,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-6",
@@ -4085,7 +4283,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-7",
@@ -4111,7 +4315,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-8",
@@ -4137,7 +4347,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-9",
@@ -4163,7 +4379,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-10",
@@ -4189,7 +4411,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-11",
@@ -4215,7 +4443,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-12",
@@ -4241,7 +4475,13 @@
       "originalSectionId": "2069995306608611328",
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
-      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
+      "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/10 Friends VIP 前排保留席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-8-13",
