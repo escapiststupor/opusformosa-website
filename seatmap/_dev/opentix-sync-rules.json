@@ -347,6 +347,31 @@
             "note": "9/4 第 15 排指定座位已預訂，座位圖以叉叉標示。"
           },
           "expectedSeatCount": 2
+        },
+        {
+          "id": "nch-held-2026-09-04-row-10-public",
+          "status": "taken",
+          "vipOnly": false,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  10
+                ],
+                "numbers": [
+                  26,
+                  28
+                ]
+              }
+            ]
+          },
+          "display": {
+            "label": "已預訂",
+            "source": "opus-manual-held-seat-map",
+            "note": "9/4 第 10 排指定座位已預訂，座位圖以叉叉標示。"
+          },
+          "expectedSeatCount": 2
         }
       ]
     },
