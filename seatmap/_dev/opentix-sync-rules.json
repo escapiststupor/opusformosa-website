@@ -880,6 +880,81 @@
           },
           "expectedSeatCount": 14
         }
+      ],
+      "seatStatusOverrides": [
+        {
+          "id": "ntt-grand-2026-09-16-manual-held-rows-3-10",
+          "vipOnly": false,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "3-5"
+                ],
+                "numbers": [
+                  "1-17"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  3,
+                  5
+                ],
+                "numbers": [
+                  "2-16"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  4
+                ],
+                "numbers": [
+                  "2-18"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "6-10"
+                ],
+                "numbers": [
+                  "1-19"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  6,
+                  8,
+                  10
+                ],
+                "numbers": [
+                  "2-20"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  7,
+                  9
+                ],
+                "numbers": [
+                  "2-18"
+                ]
+              }
+            ]
+          },
+          "status": "taken",
+          "display": {
+            "label": "已預訂",
+            "source": "opus-manual-held-seat-map",
+            "note": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
+          },
+          "expectedSeatCount": 150
+        }
       ]
     }
   ],

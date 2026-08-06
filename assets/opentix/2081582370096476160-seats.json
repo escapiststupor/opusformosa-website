@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-06T15:54:57+08:00",
+  "generatedAt": "2026-08-06T17:33:51+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 11,
+  "takenSeatCount": 159,
   "sections": [
     {
       "id": "ntt-grand-vip-4200-center",
@@ -42,7 +42,8 @@
       "seatCount": 119,
       "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
       "originalName": "4200元區",
-      "originalPrice": 4200
+      "originalPrice": 4200,
+      "takenSeatCount": 52
     },
     {
       "id": "ntt-grand-vip-3700-side",
@@ -64,7 +65,7 @@
       "kind": "public",
       "source": "opentix-price-section",
       "seatCount": 132,
-      "takenSeatCount": 2
+      "takenSeatCount": 98
     },
     {
       "id": "2081627737660387328",
@@ -893,7 +894,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-3",
@@ -919,7 +926,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-5",
@@ -945,7 +958,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-7",
@@ -971,7 +990,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-9",
@@ -997,7 +1022,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-11",
@@ -1023,7 +1054,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-13",
@@ -1049,7 +1086,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-15",
@@ -1075,7 +1118,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-17",
@@ -1101,7 +1150,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-3-19",
@@ -1283,7 +1338,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-3",
@@ -1309,7 +1370,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-5",
@@ -1335,7 +1402,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-7",
@@ -1361,7 +1434,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-9",
@@ -1387,7 +1466,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-11",
@@ -1413,7 +1498,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-13",
@@ -1439,7 +1530,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-15",
@@ -1465,7 +1562,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-17",
@@ -1491,7 +1594,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-4-19",
@@ -1673,7 +1782,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-3",
@@ -1699,7 +1814,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-5",
@@ -1725,7 +1846,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-7",
@@ -1751,7 +1878,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-9",
@@ -1777,7 +1910,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-11",
@@ -1803,7 +1942,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-13",
@@ -1829,7 +1974,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-15",
@@ -1855,7 +2006,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-17",
@@ -1881,7 +2038,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-5-19",
@@ -2059,7 +2222,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-3",
@@ -2081,7 +2250,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-5",
@@ -2103,7 +2278,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-7",
@@ -2128,10 +2309,10 @@
       "source": "opentix-price-section",
       "taken": true,
       "availability": "taken",
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-9",
@@ -2156,10 +2337,10 @@
       "source": "opentix-price-section",
       "taken": true,
       "availability": "taken",
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-11",
@@ -2181,7 +2362,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-13",
@@ -2203,7 +2390,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-15",
@@ -2225,7 +2418,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-17",
@@ -2247,7 +2446,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-19",
@@ -2269,7 +2474,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-6-21",
@@ -2445,7 +2656,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-3",
@@ -2467,7 +2684,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-5",
@@ -2489,7 +2712,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-7",
@@ -2511,7 +2740,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-9",
@@ -2533,7 +2768,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-11",
@@ -2555,7 +2796,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-13",
@@ -2577,7 +2824,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-15",
@@ -2599,7 +2852,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-17",
@@ -2621,7 +2880,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-19",
@@ -2643,7 +2908,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-7-21",
@@ -2841,7 +3112,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-3",
@@ -2863,7 +3140,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-5",
@@ -2885,7 +3168,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-7",
@@ -2907,7 +3196,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-9",
@@ -2929,7 +3224,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-11",
@@ -2951,7 +3252,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-13",
@@ -2973,7 +3280,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-15",
@@ -2995,7 +3308,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-17",
@@ -3017,7 +3336,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-19",
@@ -3039,7 +3364,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-8-21",
@@ -3259,7 +3590,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-3",
@@ -3281,7 +3618,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-5",
@@ -3303,7 +3646,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-7",
@@ -3325,7 +3674,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-9",
@@ -3347,7 +3702,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-11",
@@ -3369,7 +3730,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-13",
@@ -3391,7 +3758,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-15",
@@ -3413,7 +3786,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-17",
@@ -3435,7 +3814,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-19",
@@ -3457,7 +3842,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-9-21",
@@ -3699,7 +4090,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-3",
@@ -3721,7 +4118,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-5",
@@ -3743,7 +4146,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-7",
@@ -3765,7 +4174,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-9",
@@ -3787,7 +4202,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-11",
@@ -3809,7 +4230,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-13",
@@ -3831,7 +4258,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-15",
@@ -3853,7 +4286,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-17",
@@ -3875,7 +4314,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-19",
@@ -3897,7 +4342,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G21區-10-21",
@@ -10173,7 +10624,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-4",
@@ -10199,7 +10656,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-6",
@@ -10225,7 +10688,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-8",
@@ -10251,7 +10720,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-10",
@@ -10277,7 +10752,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-12",
@@ -10303,7 +10784,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-14",
@@ -10329,7 +10816,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-16",
@@ -10355,7 +10848,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-3-18",
@@ -10537,7 +11036,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-4",
@@ -10563,7 +11068,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-6",
@@ -10589,7 +11100,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-8",
@@ -10615,7 +11132,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-10",
@@ -10641,7 +11164,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-12",
@@ -10667,7 +11196,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-14",
@@ -10693,7 +11228,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-16",
@@ -10719,7 +11260,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-18",
@@ -10745,7 +11292,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-4-20",
@@ -10927,7 +11480,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-4",
@@ -10953,7 +11512,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-6",
@@ -10979,7 +11544,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-8",
@@ -11005,7 +11576,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-10",
@@ -11031,7 +11608,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-12",
@@ -11057,7 +11640,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-14",
@@ -11083,7 +11672,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-16",
@@ -11109,7 +11704,13 @@
       "originalSectionId": "2081627579291656192",
       "originalSectionName": "4200元區",
       "originalPrice": 4200,
-      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+      "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-5-18",
@@ -11287,7 +11888,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-4",
@@ -11309,7 +11916,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-6",
@@ -11331,7 +11944,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-8",
@@ -11353,7 +11972,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-10",
@@ -11375,7 +12000,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-12",
@@ -11397,7 +12028,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-14",
@@ -11419,7 +12056,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-16",
@@ -11441,7 +12084,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-18",
@@ -11463,7 +12112,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-20",
@@ -11485,7 +12140,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-6-22",
@@ -11661,7 +12322,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-4",
@@ -11683,7 +12350,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-6",
@@ -11705,7 +12378,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-8",
@@ -11727,7 +12406,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-10",
@@ -11749,7 +12434,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-12",
@@ -11771,7 +12462,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-14",
@@ -11793,7 +12490,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-16",
@@ -11815,7 +12518,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-18",
@@ -11837,7 +12546,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-7-20",
@@ -12035,7 +12750,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-4",
@@ -12057,7 +12778,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-6",
@@ -12079,7 +12806,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-8",
@@ -12101,7 +12834,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-10",
@@ -12123,7 +12862,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-12",
@@ -12145,7 +12890,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-14",
@@ -12167,7 +12918,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-16",
@@ -12189,7 +12946,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-18",
@@ -12211,7 +12974,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-20",
@@ -12233,7 +13002,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-8-22",
@@ -12453,7 +13228,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-4",
@@ -12475,7 +13256,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-6",
@@ -12497,7 +13284,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-8",
@@ -12519,7 +13312,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-10",
@@ -12541,7 +13340,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-12",
@@ -12563,7 +13368,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-14",
@@ -12585,7 +13396,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-16",
@@ -12607,7 +13424,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-18",
@@ -12629,7 +13452,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-9-20",
@@ -12871,7 +13700,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-4",
@@ -12893,7 +13728,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-6",
@@ -12915,7 +13756,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-8",
@@ -12937,7 +13784,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-10",
@@ -12959,7 +13812,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-12",
@@ -12981,7 +13840,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-14",
@@ -13003,7 +13868,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-16",
@@ -13025,7 +13896,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-18",
@@ -13047,7 +13924,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-20",
@@ -13069,7 +13952,13 @@
       "price": 3700,
       "kind": "public",
       "color": "#BA6FF8",
-      "source": "opentix-price-section"
+      "source": "opentix-price-section",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-manual-held-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/16 大劇院第 3 至 10 排指定座位已由 Friends 訂走，座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-10-22",

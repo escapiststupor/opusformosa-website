@@ -544,6 +544,8 @@ def apply_opentix_availability_markers(final_seats: list[dict[str, Any]], config
     count = 0
 
     for seat in final_seats:
+        if seat.get("taken"):
+            continue
         if normalize_id(seat.get("kind")) not in applies_to_kinds:
             continue
         raw_status = seat.get("status")
