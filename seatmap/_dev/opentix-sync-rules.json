@@ -738,6 +738,149 @@
           "expectedSeatCount": 35
         }
       ]
+    },
+    {
+      "slug": "2026-09-16-taichung-national-theater-grand-theater",
+      "programId": "2081581856561176577",
+      "eventId": "2081582370096476160",
+      "parentSeatingChartId": 531,
+      "labels": {
+        "date": "9 月 16 日",
+        "title": "閉幕之夜：林易與朋友們",
+        "venue": "台中 國家歌劇院大劇院"
+      },
+      "sectionOverrides": [
+        {
+          "id": "ntt-grand-vip-4200-center",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  1
+                ],
+                "numbers": [
+                  "1-17"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "2-5"
+                ],
+                "numbers": [
+                  "1-25"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  1
+                ],
+                "numbers": [
+                  "2-16"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  2,
+                  4
+                ],
+                "numbers": [
+                  "2-26"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  3,
+                  5
+                ],
+                "numbers": [
+                  "2-24"
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "ntt-grand-vip-4200-center",
+            "name": "4200元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 4200,
+            "color": "#DDA43A",
+            "source": "opus-vip-seat-map",
+            "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 119
+        },
+        {
+          "id": "ntt-grand-vip-3700-side",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  2
+                ],
+                "numbers": [
+                  27
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "3-5"
+                ],
+                "numbers": [
+                  27,
+                  29
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  2
+                ],
+                "numbers": [
+                  28
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  3,
+                  5
+                ],
+                "numbers": [
+                  26,
+                  28
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  4
+                ],
+                "numbers": [
+                  28,
+                  30
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "ntt-grand-vip-3700-side",
+            "name": "3700元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 3700,
+            "color": "#FAAE17",
+            "source": "opus-vip-seat-map",
+            "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 2 至 5 排邊側座位，作為 Friends VIP 保留席顯示。"
+          },
+          "expectedSeatCount": 14
+        }
+      ]
     }
   ],
   "sourceOfTruth": {
