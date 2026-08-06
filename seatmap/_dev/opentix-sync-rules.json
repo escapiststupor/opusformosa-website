@@ -818,6 +818,43 @@
           },
           "expectedSeatCount": 84
         }
+      ],
+      "seatStatusOverrides": [
+        {
+          "id": "nrh-0912-vip-taken-row-6",
+          "status": "taken",
+          "vipOnly": true,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "地下樓BF",
+                "rows": [
+                  6
+                ],
+                "numbers": [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  11,
+                  13,
+                  15
+                ]
+              }
+            ]
+          },
+          "display": {
+            "label": "已預訂",
+            "source": "opus-vip-taken-seat-map",
+            "note": "9/12 Friends VIP 第 6 排已預訂席次，維持 VIP 樣式並以叉叉標示。"
+          },
+          "expectedSeatCount": 12
+        }
       ]
     },
     {
