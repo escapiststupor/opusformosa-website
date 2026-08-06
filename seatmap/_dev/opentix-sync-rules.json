@@ -572,6 +572,84 @@
                   17,
                   19
                 ]
+              },
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  5
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  5
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12
+                ]
+              },
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  6
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  6
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10
+                ]
+              },
+              {
+                "floor": "1樓1號門",
+                "rows": [
+                  7
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7
+                ]
+              },
+              {
+                "floor": "1樓2號門",
+                "rows": [
+                  7
+                ],
+                "numbers": [
+                  2,
+                  4,
+                  6,
+                  8,
+                  10
+                ]
               }
             ]
           },
@@ -580,7 +658,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 6
+          "expectedSeatCount": 36
         }
       ]
     },
