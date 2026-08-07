@@ -1911,6 +1911,35 @@
             "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 2 至 5 排邊側座位，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 14
+        },
+        {
+          "id": "ntt-grand-2026-09-16-4f-closed-reserved",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "4樓G41區"
+              },
+              {
+                "floor": "4樓G42區"
+              },
+              {
+                "floor": "4樓G43區"
+              },
+              {
+                "floor": "4樓G44區"
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "ntt-grand-4f-closed-reserved",
+            "name": "四樓未開放販售",
+            "kind": "reserved-unknown",
+            "price": null,
+            "color": "#c8c2b6",
+            "source": "opus-closed-seat-map",
+            "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
+          },
+          "expectedSeatCount": 455
         }
       ],
       "seatStatusOverrides": [
