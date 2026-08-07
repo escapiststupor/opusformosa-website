@@ -1732,6 +1732,43 @@
           },
           "expectedSeatCount": 35
         }
+      ],
+      "seatStatusOverrides": [
+        {
+          "id": "ntt-playhouse-0914-vip-taken-rows-9-12-center-left",
+          "status": "taken",
+          "vipOnly": true,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "二樓P21區",
+                "rows": [
+                  9
+                ],
+                "numbers": [
+                  13
+                ]
+              },
+              {
+                "floor": "二樓P21區",
+                "rows": [
+                  "10-12"
+                ],
+                "numbers": [
+                  9,
+                  11,
+                  13
+                ]
+              }
+            ]
+          },
+          "display": {
+            "label": "已預訂",
+            "source": "opus-vip-taken-seat-map",
+            "note": "9/14 Friends VIP 已保留給貴賓席次，維持 VIP 樣式並以叉叉標示。"
+          },
+          "expectedSeatCount": 10
+        }
       ]
     },
     {
