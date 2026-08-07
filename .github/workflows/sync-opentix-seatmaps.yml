@@ -49,7 +49,21 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Sync seat maps
-        run: python3 seatmap/_dev/sync-opentix-seatmaps.py
+        run: |
+          set +e
+          python3 seatmap/_dev/sync-opentix-seatmaps.py 2>&1 | tee /tmp/opentix-admin-sync.log
+          sync_status=${PIPESTATUS[0]}
+          set -e
+
+          if [ "$sync_status" -ne 0 ]; then
+            if grep -Eqi 'OPENTIX headless login failed|refresh token failed|NotAuthorizedException|HTTP (401|403|5[0-9][0-9])|升級維護|服務暫停' /tmp/opentix-admin-sync.log; then
+              echo "::warning::Full OPENTIX admin sync failed because OPENTIX auth/admin is unavailable. Falling back to existing snapshots with public availability refresh."
+              python3 seatmap/_dev/sync-opentix-seatmaps.py --from-existing-snapshot --refresh-public-status || \
+                python3 seatmap/_dev/sync-opentix-seatmaps.py --from-existing-snapshot
+            else
+              exit "$sync_status"
+            fi
+          fi
 
       - name: Commit updated snapshots
         run: |

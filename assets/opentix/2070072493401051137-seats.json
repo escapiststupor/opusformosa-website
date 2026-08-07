@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-06T15:54:53+08:00",
+  "generatedAt": "2026-08-07T12:30:36+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -45,6 +45,15 @@
       "originalPrice": 0
     },
     {
+      "id": "2070072602060824577",
+      "name": "樂池區",
+      "price": 10,
+      "color": "#979797",
+      "kind": "public",
+      "source": "opentix-price-section",
+      "seatCount": 94
+    },
+    {
       "id": "2070073395567091712",
       "name": "2200元區",
       "price": 2200,
@@ -65,6 +74,43 @@
       "takenSeatCount": 5
     },
     {
+      "id": "2070073587659821056",
+      "name": "1000元區",
+      "price": 1000,
+      "color": "#BA6FF8",
+      "kind": "public",
+      "source": "opentix-price-section",
+      "seatCount": 175,
+      "takenSeatCount": 5
+    },
+    {
+      "id": "2070072601918689280",
+      "name": "技術保留席",
+      "price": 10,
+      "color": "#171717",
+      "kind": "public",
+      "source": "opentix-price-section",
+      "seatCount": 20
+    },
+    {
+      "id": "2070072602060824576",
+      "name": "館方工作席",
+      "price": 10,
+      "color": "#FDFF00",
+      "kind": "public",
+      "source": "opentix-price-section",
+      "seatCount": 6
+    },
+    {
+      "id": "2070073511573151744",
+      "name": "1500元區",
+      "price": 1500,
+      "color": "#00A797",
+      "kind": "public",
+      "source": "opentix-price-section",
+      "seatCount": 159
+    },
+    {
       "id": "2070072601981132800",
       "name": "輪椅席",
       "price": 1800,
@@ -83,23 +129,13 @@
       "seatCount": 8
     },
     {
-      "id": "2070073511573151744",
-      "name": "1500元區",
-      "price": 1500,
-      "color": "#00A797",
+      "id": "2072142353317539840",
+      "name": "評鑑席",
+      "price": 10,
+      "color": "#1900A7",
       "kind": "public",
       "source": "opentix-price-section",
-      "seatCount": 159
-    },
-    {
-      "id": "2070073587659821056",
-      "name": "1000元區",
-      "price": 1000,
-      "color": "#BA6FF8",
-      "kind": "public",
-      "source": "opentix-price-section",
-      "seatCount": 175,
-      "takenSeatCount": 5
+      "seatCount": 2
     },
     {
       "id": "2074060670449098752",
@@ -110,42 +146,6 @@
       "source": "opentix-price-section",
       "seatCount": 20,
       "takenSeatCount": 2
-    },
-    {
-      "id": "2070072601918689280",
-      "name": "技術保留席",
-      "price": 10,
-      "color": "#171717",
-      "kind": "public",
-      "source": "opentix-price-section",
-      "seatCount": 20
-    },
-    {
-      "id": "2070072602060824577",
-      "name": "樂池區",
-      "price": 10,
-      "color": "#979797",
-      "kind": "public",
-      "source": "opentix-price-section",
-      "seatCount": 94
-    },
-    {
-      "id": "2072142353317539840",
-      "name": "評鑑席",
-      "price": 10,
-      "color": "#1900A7",
-      "kind": "public",
-      "source": "opentix-price-section",
-      "seatCount": 2
-    },
-    {
-      "id": "2070072602060824576",
-      "name": "館方工作席",
-      "price": 10,
-      "color": "#FDFF00",
-      "kind": "public",
-      "source": "opentix-price-section",
-      "seatCount": 6
     }
   ],
   "seats": [
