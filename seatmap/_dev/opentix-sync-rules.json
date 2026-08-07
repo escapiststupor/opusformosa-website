@@ -137,6 +137,755 @@
             "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
           },
           "expectedSeatCount": 246
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-640",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "4樓",
+                "rows": [
+                  "7"
+                ],
+                "numbers": [
+                  "19-21",
+                  "23-27",
+                  29,
+                  39,
+                  41
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "9"
+                ],
+                "numbers": [
+                  19,
+                  21,
+                  23
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-640",
+            "name": "640元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 640,
+            "color": "#6FCEF8",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 14
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-sightline-limited-640",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "3樓",
+                "rows": [
+                  "1"
+                ],
+                "numbers": [
+                  9
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "2E"
+                ],
+                "numbers": [
+                  "1-3",
+                  5,
+                  "7-10"
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-sightline-limited-640",
+            "name": "640元 VIP保留席（視線不良）",
+            "kind": "vip-reserved",
+            "price": 640,
+            "color": "#AE00C1",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 9
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-obstructed-640",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "27"
+                ],
+                "numbers": [
+                  25,
+                  27,
+                  37
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-obstructed-640",
+            "name": "640元 VIP保留席（視線受阻）",
+            "kind": "vip-reserved",
+            "price": 640,
+            "color": "#A64D79",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 3
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-former-youth-640",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "4樓",
+                "rows": [
+                  "11"
+                ],
+                "numbers": [
+                  35
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "12"
+                ],
+                "numbers": [
+                  21
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-former-youth-640",
+            "name": "640元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 640,
+            "color": "#C27BA0",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 2
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-790",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "4樓",
+                "rows": [
+                  "5"
+                ],
+                "numbers": [
+                  "19-21",
+                  23,
+                  25,
+                  27
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "6"
+                ],
+                "numbers": [
+                  19
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "7"
+                ],
+                "numbers": [
+                  "1-4",
+                  6
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "8"
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "12"
+                ],
+                "numbers": [
+                  3
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-790",
+            "name": "790元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 790,
+            "color": "#8269DC",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 16
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-1200",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "3樓",
+                "rows": [
+                  "11"
+                ],
+                "numbers": [
+                  1
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "5"
+                ],
+                "numbers": [
+                  7,
+                  9,
+                  18
+                ]
+              },
+              {
+                "floor": "4樓",
+                "rows": [
+                  "2B"
+                ],
+                "numbers": [
+                  1,
+                  2,
+                  4
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-1200",
+            "name": "1200元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 1200,
+            "color": "#ADB72B",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 7
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-1500",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "4"
+                ],
+                "numbers": [
+                  37,
+                  38
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "9"
+                ],
+                "numbers": [
+                  39
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "29"
+                ],
+                "numbers": [
+                  23,
+                  25
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-1500",
+            "name": "1500元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 1500,
+            "color": "#3A8FB7",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 5
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-1800",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "9"
+                ],
+                "numbers": [
+                  35,
+                  37
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "19"
+                ],
+                "numbers": [
+                  31,
+                  33,
+                  35
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "20"
+                ],
+                "numbers": [
+                  29,
+                  31
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "28"
+                ],
+                "numbers": [
+                  7
+                ]
+              },
+              {
+                "floor": "3樓",
+                "rows": [
+                  "1"
+                ],
+                "numbers": [
+                  1
+                ]
+              },
+              {
+                "floor": "3樓",
+                "rows": [
+                  "2"
+                ],
+                "numbers": [
+                  1
+                ]
+              },
+              {
+                "floor": "3樓",
+                "rows": [
+                  "3"
+                ],
+                "numbers": [
+                  1
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-1800",
+            "name": "1800元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 1800,
+            "color": "#B32605",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 11
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-2100",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "1"
+                ],
+                "numbers": [
+                  "22-28"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "2"
+                ],
+                "numbers": [
+                  "21-24",
+                  26,
+                  28
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "12"
+                ],
+                "numbers": [
+                  29
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "18"
+                ],
+                "numbers": [
+                  25,
+                  27
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "19"
+                ],
+                "numbers": [
+                  27,
+                  29
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "25"
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  21
+                ]
+              },
+              {
+                "floor": "3樓",
+                "rows": [
+                  "1B"
+                ],
+                "numbers": [
+                  10,
+                  12
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-2100",
+            "name": "2100元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2100,
+            "color": "#BA6FF8",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 23
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-2500",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "4"
+                ],
+                "numbers": [
+                  21
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "6"
+                ],
+                "numbers": [
+                  25
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "10"
+                ],
+                "numbers": [
+                  26,
+                  28
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "19"
+                ],
+                "numbers": [
+                  23
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "23"
+                ],
+                "numbers": [
+                  23
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-2500",
+            "name": "2500元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2500,
+            "color": "#0AD219",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 6
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-2800",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "5"
+                ],
+                "numbers": [
+                  23,
+                  25
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "17"
+                ],
+                "numbers": [
+                  7,
+                  9,
+                  13,
+                  15,
+                  17,
+                  18,
+                  20,
+                  21
+                ]
+              },
+              {
+                "floor": "3樓",
+                "rows": [
+                  "4"
+                ],
+                "numbers": [
+                  "1-5",
+                  7,
+                  9,
+                  11,
+                  13,
+                  15,
+                  17
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-2800",
+            "name": "2800元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 2800,
+            "color": "#6F98F8",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 21
+        },
+        {
+          "id": "nch-internal-vip-2026-09-04-3600",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  "1"
+                ],
+                "numbers": [
+                  "1-21"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "2"
+                ],
+                "numbers": [
+                  "1-20"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "5"
+                ],
+                "numbers": [
+                  22,
+                  24
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "6"
+                ],
+                "numbers": [
+                  "21-24"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "7"
+                ],
+                "numbers": [
+                  "22-25"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "8"
+                ],
+                "numbers": [
+                  "21-24"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "9"
+                ],
+                "numbers": [
+                  "22-25"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "10"
+                ],
+                "numbers": [
+                  "21-24"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "11"
+                ],
+                "numbers": [
+                  "22-25"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "12"
+                ],
+                "numbers": [
+                  "21-24"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "13"
+                ],
+                "numbers": [
+                  "22-25"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "14"
+                ],
+                "numbers": [
+                  "21-24"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "15"
+                ],
+                "numbers": [
+                  "1-25"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "16"
+                ],
+                "numbers": [
+                  "1-24"
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  "17"
+                ],
+                "numbers": [
+                  23,
+                  25
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "nch-internal-vip-3600",
+            "name": "3600元 VIP保留席",
+            "kind": "vip-reserved",
+            "price": 3600,
+            "color": "#FAAE17",
+            "source": "opus-internal-vip-seat-map",
+            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+          },
+          "expectedSeatCount": 130
         }
       ],
       "seatStatusOverrides": [
@@ -387,9 +1136,9 @@
         "venue": "高雄 衛武營音樂廳"
       },
       "sectionOverrides": [
-                {
-                  "id": "wwy-vip-4500-center",
-                  "match": {
+        {
+          "id": "wwy-vip-4500-center",
+          "match": {
             "seatSelectors": [
               {
                 "floor": "1樓1號門",

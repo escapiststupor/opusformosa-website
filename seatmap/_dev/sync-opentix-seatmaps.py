@@ -640,6 +640,41 @@ def apply_rules(
     return sorted(final, key=lambda seat: (seat.get("floorId", ""), natural_key(seat.get("rowId", "")), natural_key(seat.get("number", ""))))
 
 
+def apply_section_overrides_to_existing(final_seats: list[dict[str, Any]], event_config: dict[str, Any]) -> list[str]:
+    override_counts: Counter[str] = Counter()
+    for seat in final_seats:
+        for rule in event_config.get("sectionOverrides") or []:
+            if not override_matches(rule, seat):
+                continue
+            display = rule["display"]
+            override_counts[rule["id"]] += 1
+            if "originalSectionId" not in seat:
+                seat["originalSectionId"] = seat.get("sectionId") or "opentix-unsectioned"
+            if "originalSectionName" not in seat and seat.get("sectionName"):
+                seat["originalSectionName"] = seat.get("sectionName")
+            if "originalPrice" not in seat and seat.get("price") is not None:
+                seat["originalPrice"] = seat.get("price")
+            seat["sectionId"] = normalize_id(display.get("sectionId") or seat.get("originalSectionId") or rule["id"])
+            seat["sectionName"] = display["name"]
+            seat["price"] = display.get("price")
+            seat["kind"] = display.get("kind", "vip-reserved")
+            seat["color"] = display.get("color") or "#FAAE17"
+            seat["source"] = display.get("source", "opus-vip-section-map")
+            if display.get("note"):
+                seat["note"] = display["note"]
+            break
+
+    errors: list[str] = []
+    for rule in event_config.get("sectionOverrides") or []:
+        expected = rule.get("expectedSeatCount")
+        if expected is None:
+            continue
+        actual = override_counts[rule["id"]]
+        if actual != expected:
+            errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} VIP seats, matched {actual}")
+    return errors
+
+
 def natural_key(value: Any) -> tuple[int, Any]:
     text = normalize_id(value)
     if re.fullmatch(r"-?\d+", text):
@@ -839,7 +874,13 @@ def build_note(sections: list[dict[str, Any]], final_seats: list[dict[str, Any]]
             parts.append(f"{label}，共 {count} 席")
         vip_text = "；".join(parts)
     taken_count = sum(1 for seat in final_seats if seat.get("taken"))
-    taken_text = f"打叉座位為已預訂或 OPENTIX 已不可售席次（{taken_count} 席）；" if taken_count else ""
+    opentix_taken_count = sum(1 for seat in final_seats if seat.get("takenSource") == "opentix-availability-marker")
+    if taken_count and opentix_taken_count:
+        taken_text = f"打叉座位為已預訂或 OPENTIX 已不可售席次（{taken_count} 席）；"
+    elif taken_count:
+        taken_text = f"打叉座位為已預訂席次（{taken_count} 席）；"
+    else:
+        taken_text = ""
     return (
         "此頁由 OPENTIX 最新座位資料同步製作，用於 Friends of Opus Formosa 洽詢席位。"
         f"深色外框標示為 {vip_text}；{taken_text}其餘票區與不可售狀態依 OPENTIX 最新資料顯示；"
@@ -1372,18 +1413,15 @@ def render_event_from_existing_snapshot(
         updated_count = overlay_public_statuses(final_seats, public_statuses)
         if public_statuses:
             print(f"[sync:local] {event_id}: refreshed public OPENTIX status for {len(public_statuses)} seats ({updated_count} changed)")
-    errors = apply_status_overrides(final_seats, event_config)
+    errors = apply_section_overrides_to_existing(final_seats, event_config)
+    errors.extend(apply_status_overrides(final_seats, event_config))
     apply_opentix_availability_markers(final_seats, config)
     if errors and strict_counts:
         raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
     for error in errors:
         print(f"[warning] {error}", file=sys.stderr)
 
-    sections = copy.deepcopy(snapshot.get("sections") or [])
-    if sections:
-        refresh_taken_counts_in_sections(sections, final_seats)
-    else:
-        sections = build_sections(final_seats, OrderedDict(), event_config, config)
+    sections = build_sections(final_seats, OrderedDict(), event_config, config)
 
     raw_svg = svg_path.read_text(encoding="utf-8")
     annotated_svg = annotate_svg(raw_svg, final_seats, config)
