@@ -336,7 +336,8 @@
                 ],
                 "numbers": [
                   9,
-                  11
+                  11,
+                  13
                 ]
               }
             ]
@@ -346,7 +347,7 @@
             "source": "opus-manual-held-seat-map",
             "note": "9/4 第 15 排指定座位已預訂，座位圖以叉叉標示。"
           },
-          "expectedSeatCount": 2
+          "expectedSeatCount": 3
         },
         {
           "id": "nch-held-2026-09-04-row-10-public",
