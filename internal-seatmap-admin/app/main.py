@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import secrets
 import urllib.parse
 from contextlib import asynccontextmanager
 from sqlite3 import Connection
@@ -25,6 +26,8 @@ from .config import (
     dev_admin_email,
     google_client_id,
     google_client_secret,
+    opentix_assets_dir,
+    seatmap_sync_token,
 )
 from .db import get_db, init_db, row_to_dict, rows_to_dicts
 
@@ -177,7 +180,8 @@ def effective_status(row: dict[str, Any]) -> str:
     if row.get("admin_status"):
         if row["admin_status"] == "taken":
             return "pulled"
-        return row["admin_status"]
+        if row["admin_status"] in {"pulled", "vip_assigned"}:
+            return row["admin_status"]
     if row.get("kind") == "vip-reserved":
         return "vip_available"
     if is_system_closed_section(row.get("section_name")):
@@ -210,7 +214,7 @@ def effective_status_sql() -> str:
         COALESCE(
           CASE
             WHEN o.admin_status = 'taken' THEN 'pulled'
-            ELSE o.admin_status
+            WHEN o.admin_status IN ('pulled', 'vip_assigned') THEN o.admin_status
           END,
           {computed_status_sql()}
         )
@@ -222,6 +226,101 @@ def event_or_404(db: Connection, event_id: str) -> dict[str, Any]:
     if not event:
         raise HTTPException(status_code=404, detail="Event not found.")
     return event
+
+
+def require_sync_token(request: Request) -> None:
+    expected = seatmap_sync_token()
+    if not expected:
+        raise HTTPException(status_code=503, detail="Seatmap sync token is not configured.")
+
+    authorization = request.headers.get("authorization", "")
+    supplied = ""
+    if authorization.lower().startswith("bearer "):
+        supplied = authorization.split(" ", 1)[1].strip()
+    if not supplied:
+        supplied = request.headers.get("x-seatmap-sync-token", "").strip()
+
+    if not supplied or not secrets.compare_digest(supplied, expected):
+        raise HTTPException(status_code=403, detail="Invalid seatmap sync token.")
+
+
+def upsert_event_from_snapshot(db: Connection, event_id: str, payload: dict[str, Any]) -> None:
+    program = payload.get("program") if isinstance(payload.get("program"), dict) else {}
+    current = event_or_404(db, event_id)
+    db.execute(
+        """
+        UPDATE events
+        SET
+          program_id = COALESCE(?, program_id),
+          date_label = COALESCE(?, date_label),
+          title = COALESCE(?, title),
+          venue = COALESCE(?, venue),
+          updated_at = CURRENT_TIMESTAMP
+        WHERE event_id = ?
+        """,
+        (
+            payload.get("programId"),
+            program.get("dateLabel"),
+            program.get("name") or program.get("displayTitle"),
+            program.get("venueLabel"),
+            current["event_id"],
+        ),
+    )
+
+
+def upsert_seat_from_snapshot(db: Connection, event_id: str, seat: dict[str, Any]) -> None:
+    db.execute(
+        """
+        INSERT INTO seats (
+          event_id, floor_id, row_id, seat_number, svg_id,
+          section_id, section_name, price, kind, color,
+          opentix_status, taken, taken_source, r_x, r_y, raw_json, updated_at
+        )
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+        ON CONFLICT(event_id, floor_id, row_id, seat_number) DO UPDATE SET
+          svg_id = excluded.svg_id,
+          section_id = excluded.section_id,
+          section_name = excluded.section_name,
+          price = excluded.price,
+          kind = excluded.kind,
+          color = excluded.color,
+          opentix_status = excluded.opentix_status,
+          taken = excluded.taken,
+          taken_source = excluded.taken_source,
+          r_x = excluded.r_x,
+          r_y = excluded.r_y,
+          raw_json = excluded.raw_json,
+          updated_at = CURRENT_TIMESTAMP
+        """,
+        (
+            event_id,
+            str(seat["floorId"]),
+            str(seat["rowId"]),
+            str(seat["number"]),
+            seat.get("svgId"),
+            seat.get("sectionId"),
+            seat.get("sectionName"),
+            seat.get("price"),
+            seat.get("kind"),
+            seat.get("color"),
+            None if seat.get("status") is None else str(seat.get("status")),
+            1 if seat.get("taken") else 0,
+            seat.get("takenSource"),
+            seat.get("rX"),
+            seat.get("rY"),
+            json.dumps(seat, ensure_ascii=False),
+        ),
+    )
+
+
+def store_synced_svg(event_id: str, svg: str) -> None:
+    if not svg.strip():
+        return
+    if "<svg" not in svg[:500].lower():
+        raise HTTPException(status_code=400, detail="Seatmap SVG payload does not look like SVG.")
+    path = opentix_assets_dir() / f"{event_id}-seatmap.svg"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(svg, encoding="utf-8")
 
 
 def status_reason(row: dict[str, Any], status: str) -> str:
@@ -488,6 +587,72 @@ def public_seatmap(event_id: str, db: Connection = Depends(get_db)) -> dict[str,
     }
 
 
+@app.post("/internal/opentix-sync/events/{event_id}")
+async def internal_opentix_sync_event(
+    request: Request,
+    event_id: str,
+    db: Connection = Depends(get_db),
+    _: None = Depends(require_sync_token),
+) -> dict[str, Any]:
+    payload = await request.json()
+    seats_payload = payload.get("seatsPayload") if isinstance(payload.get("seatsPayload"), dict) else payload
+    if not isinstance(seats_payload, dict):
+        raise HTTPException(status_code=400, detail="seatsPayload must be an object.")
+
+    payload_event_id = str(seats_payload.get("eventId") or "").strip()
+    if payload_event_id != event_id:
+        raise HTTPException(status_code=400, detail="Snapshot eventId does not match URL eventId.")
+
+    seats = seats_payload.get("seats")
+    if not isinstance(seats, list) or not seats:
+        raise HTTPException(status_code=400, detail="Snapshot must contain seats.")
+
+    try:
+        upsert_event_from_snapshot(db, event_id, seats_payload)
+        for seat in seats:
+            if not isinstance(seat, dict):
+                raise HTTPException(status_code=400, detail="Seat item must be an object.")
+            upsert_seat_from_snapshot(db, event_id, seat)
+
+        cleanup = db.execute(
+            """
+            DELETE FROM seat_overrides
+            WHERE event_id = ?
+              AND admin_status IN ('public_sold', 'closed')
+              AND COALESCE(source, '') IN ('opentix-availability-marker', 'generated-seat-json')
+            """,
+            (event_id,),
+        ).rowcount
+        preserved_overrides = db.execute(
+            """
+            SELECT COUNT(*) FROM seat_overrides
+            WHERE event_id = ?
+              AND admin_status IN ('pulled', 'vip_assigned', 'taken')
+            """,
+            (event_id,),
+        ).fetchone()[0]
+        db.commit()
+    except HTTPException:
+        db.rollback()
+        raise
+    except Exception:
+        db.rollback()
+        raise
+
+    svg = payload.get("svg")
+    if isinstance(svg, str) and svg.strip():
+        store_synced_svg(event_id, svg)
+
+    return {
+        "eventId": event_id,
+        "seatCount": len(seats),
+        "preservedInternalOverrides": preserved_overrides,
+        "removedGeneratedOverrides": cleanup,
+        "storedSvg": isinstance(svg, str) and bool(svg.strip()),
+        "commitSha": payload.get("commitSha") or "",
+    }
+
+
 @app.get("/admin", response_class=HTMLResponse)
 def admin_events(
     request: Request,
@@ -586,7 +751,8 @@ def admin_event_seatmap_svg(
     _: str = Depends(require_admin),
 ) -> Response:
     event_or_404(db, event_id)
-    svg_path = REPO_ROOT / "assets" / "opentix" / f"{event_id}-seatmap.svg"
+    synced_svg_path = opentix_assets_dir() / f"{event_id}-seatmap.svg"
+    svg_path = synced_svg_path if synced_svg_path.exists() else REPO_ROOT / "assets" / "opentix" / f"{event_id}-seatmap.svg"
     if not svg_path.exists():
         raise HTTPException(status_code=404, detail="找不到座位圖 SVG。")
     return Response(svg_path.read_text(encoding="utf-8"), media_type="image/svg+xml")

@@ -64,6 +64,7 @@ Make sure the generated `fly.toml` contains:
   ADMIN_AUTH_MODE = "google"
   BASE_URL = "https://api.opusformosa.org"
   CORS_ORIGINS = "https://opusformosa.org,https://www.opusformosa.org"
+  OPENTIX_ASSETS_DIR = "/data/opentix"
 
 [mounts]
   source = "seatmap_data"
@@ -82,6 +83,7 @@ Set secrets:
 ```bash
 flyctl secrets set --app opus-seatmap-admin \
   SESSION_SECRET="$(openssl rand -hex 32)" \
+  SEATMAP_SYNC_TOKEN="$(openssl rand -hex 32)" \
   ADMIN_ALLOWED_EMAILS="owner@example.com,assistant@example.com" \
   GOOGLE_CLIENT_ID="..." \
   GOOGLE_CLIENT_SECRET="..."
@@ -109,6 +111,30 @@ After uploading the DB, restart the app:
 ```bash
 flyctl machine restart --app opus-seatmap-admin
 ```
+
+### GitHub Actions OPENTIX Sync
+
+The GitHub cron still generates the static OPENTIX snapshots in
+`assets/opentix/` and `seatmap/opentix/`. It can also update the production
+SQLite DB by POSTing each generated `*-seats.json` and `*-seatmap.svg` to:
+
+```text
+https://api.opusformosa.org/internal/opentix-sync/events/:eventId
+```
+
+Create the same random token in both places:
+
+```bash
+TOKEN="$(openssl rand -hex 32)"
+flyctl secrets set --app opus-seatmap-admin SEATMAP_SYNC_TOKEN="$TOKEN"
+gh secret set SEATMAP_ADMIN_SYNC_TOKEN --body "$TOKEN"
+```
+
+The sync endpoint updates only official OPENTIX seat fields and synced SVGs.
+It preserves internal `pulled` and `vip_assigned` overrides made by staff in
+the admin UI. Generated `public_sold` overrides from the old static import are
+removed because public sold status is now derived from the latest OPENTIX
+snapshot.
 
 ### Custom Domain
 

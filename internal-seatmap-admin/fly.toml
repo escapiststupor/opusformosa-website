@@ -13,6 +13,7 @@ primary_region = 'nrt'
   BASE_URL = 'https://api.opusformosa.org'
   CORS_ORIGINS = 'https://opusformosa.org,https://www.opusformosa.org'
   DATABASE_PATH = '/data/seatmap.db'
+  OPENTIX_ASSETS_DIR = '/data/opentix'
 
 [mounts]
   source = 'seatmap_data'

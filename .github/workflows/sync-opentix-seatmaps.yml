@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/sync-opentix-seatmaps.yml"
       - "seatmap/_dev/**"
+      - "internal-seatmap-admin/**"
   schedule:
     - cron: "*/20 * * * *"
   workflow_dispatch:
@@ -25,6 +26,8 @@ jobs:
       OPENTIX_ADMIN_USERNAME: ${{ secrets.OPENTIX_ADMIN_USERNAME }}
       OPENTIX_ADMIN_PASSWORD: ${{ secrets.OPENTIX_ADMIN_PASSWORD }}
       OPENTIX_COGNITO_REFRESH_TOKEN: ${{ secrets.OPENTIX_COGNITO_REFRESH_TOKEN }}
+      SEATMAP_ADMIN_SYNC_TOKEN: ${{ secrets.SEATMAP_ADMIN_SYNC_TOKEN }}
+      SEATMAP_ADMIN_SYNC_URL: https://api.opusformosa.org
       NODE_PATH: /tmp/opentix-sync-node/node_modules
     steps:
       - name: Check out repository
@@ -64,6 +67,14 @@ jobs:
               exit "$sync_status"
             fi
           fi
+
+      - name: Push snapshots to internal admin DB
+        if: ${{ env.SEATMAP_ADMIN_SYNC_TOKEN != '' }}
+        run: |
+          python3 seatmap/_dev/push-seatmaps-to-admin.py \
+            --api-base "$SEATMAP_ADMIN_SYNC_URL" \
+            --token "$SEATMAP_ADMIN_SYNC_TOKEN" \
+            --commit-sha "$GITHUB_SHA"
 
       - name: Commit updated snapshots
         run: |

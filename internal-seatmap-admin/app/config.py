@@ -22,6 +22,16 @@ def database_path() -> Path:
     return path
 
 
+def opentix_assets_dir() -> Path:
+    raw = os.environ.get("OPENTIX_ASSETS_DIR", "").strip()
+    if raw:
+        path = Path(raw)
+        if not path.is_absolute():
+            path = APP_ROOT / path
+        return path
+    return database_path().parent / "opentix"
+
+
 def allowed_admin_emails() -> set[str]:
     raw = os.environ.get("ADMIN_ALLOWED_EMAILS", "")
     return {email.strip().lower() for email in raw.split(",") if email.strip()}
@@ -53,3 +63,7 @@ def auth_mode() -> str:
 
 def dev_admin_email() -> str:
     return os.environ.get("ADMIN_DEV_EMAIL", "local-admin@opusformosa.org").strip().lower()
+
+
+def seatmap_sync_token() -> str:
+    return os.environ.get("SEATMAP_SYNC_TOKEN", "").strip()
