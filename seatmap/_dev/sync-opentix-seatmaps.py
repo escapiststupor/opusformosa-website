@@ -246,7 +246,12 @@ def first_present(obj: dict[str, Any], keys: tuple[str, ...], default: Any = Non
 
 
 def normalize_id(value: Any) -> str:
-    return str(value).strip()
+    if value is None:
+        return ""
+    text = str(value).strip()
+    if text.lower() in {"none", "null", "undefined"}:
+        return ""
+    return text
 
 
 def normalize_price(value: Any) -> int | None:
@@ -642,12 +647,21 @@ def apply_pulled_seat_overrides(
                 seat["originalSectionName"] = seat.get("sectionName")
             if "originalPrice" not in seat and seat.get("price") is not None:
                 seat["originalPrice"] = seat.get("price")
+            if "originalColor" not in seat and seat.get("color"):
+                seat["originalColor"] = seat.get("color")
             section_id = display.get("sectionId") or record.get("ruleId") or record["id"]
             seat["sectionId"] = normalize_id(section_id)
             seat["sectionName"] = display.get("name") or record.get("label") or "Friends VIP 保留席"
             seat["price"] = display.get("price", record.get("price"))
             seat["kind"] = display.get("kind", "vip-reserved")
-            seat["color"] = display.get("color") or "#FAAE17"
+            original_price = normalize_price(seat.get("originalPrice"))
+            has_ticket_price_color = bool(seat.get("originalColor")) and (
+                bool(original_price and original_price > 0) or seat["price"] is None
+            )
+            if has_ticket_price_color:
+                seat["color"] = seat["originalColor"]
+            else:
+                seat["color"] = display.get("color") or seat.get("originalColor") or "#FAAE17"
             seat["source"] = display.get("source", "opus-pulled-seat-map")
             seat["pulledRecordId"] = record["id"]
             if display.get("note") or record.get("note"):
@@ -665,12 +679,63 @@ def apply_pulled_seat_overrides(
     return errors
 
 
+def restore_stable_display_from_existing_snapshot(
+    final_seats: list[dict[str, Any]],
+    existing_snapshot: dict[str, Any] | None,
+) -> None:
+    if not existing_snapshot:
+        return
+
+    previous_seats = existing_snapshot.get("seats") or []
+    previous_by_key = {seat_lookup_key(seat): seat for seat in previous_seats if all(seat_lookup_key(seat))}
+    sections_by_id = {
+        normalize_id(section.get("id")): section
+        for section in existing_snapshot.get("sections") or []
+        if section.get("id")
+    }
+
+    for seat in final_seats:
+        previous = previous_by_key.get(seat_lookup_key(seat))
+        if not previous:
+            continue
+
+        original_section_id = normalize_id(previous.get("originalSectionId"))
+        if original_section_id:
+            original_section = sections_by_id.get(original_section_id)
+            seat["originalSectionId"] = original_section_id
+            seat["originalSectionName"] = (
+                original_section.get("name")
+                if original_section
+                else previous.get("originalSectionName")
+            )
+            seat["originalPrice"] = (
+                original_section.get("price")
+                if original_section and original_section.get("price") is not None
+                else previous.get("originalPrice")
+            )
+            seat["originalColor"] = (
+                original_section.get("color")
+                if original_section and original_section.get("color")
+                else previous.get("originalColor") or previous.get("color")
+            )
+
+        if normalize_id(seat.get("source")).startswith("opus-"):
+            continue
+        if normalize_id(previous.get("kind")) != "public":
+            continue
+
+        for field in ("sectionId", "sectionName", "price", "color", "kind", "source"):
+            if previous.get(field) is not None:
+                seat[field] = previous[field]
+
+
 def apply_rules(
     seats: list[dict[str, Any]],
     official_sections: OrderedDict[str, dict[str, Any]],
     event_config: dict[str, Any],
     config: dict[str, Any],
     strict_counts: bool,
+    existing_snapshot: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     fallback = config["fallbacks"]["seatsOnlySection"]
     defaults = config["displayDefaults"]
@@ -723,6 +788,8 @@ def apply_rules(
                 break
 
         final.append(seat)
+
+    restore_stable_display_from_existing_snapshot(final, existing_snapshot)
 
     errors: list[str] = []
     for rule in event_config.get("sectionOverrides") or []:
@@ -831,17 +898,42 @@ def natural_key(value: Any) -> tuple[int, Any]:
     return (1, text)
 
 
+def seat_section_bucket_id(seat: dict[str, Any]) -> str:
+    if normalize_id(seat.get("kind")) == "public":
+        return "|".join(
+            [
+                "generated-section",
+                "public",
+                normalize_id(seat.get("sectionName")) or "未命名票區",
+                normalize_id(seat.get("price")),
+                normalize_id(seat.get("color")),
+            ]
+        )
+    section_id = normalize_id(seat.get("sectionId"))
+    if section_id:
+        return section_id
+    return "|".join(
+        [
+            "generated-section",
+            normalize_id(seat.get("kind")) or "unknown",
+            normalize_id(seat.get("sectionName")) or "未命名票區",
+            normalize_id(seat.get("price")),
+            normalize_id(seat.get("color")),
+        ]
+    )
+
+
 def build_sections(
     final_seats: list[dict[str, Any]],
     official_sections: OrderedDict[str, dict[str, Any]],
     event_config: dict[str, Any],
     config: dict[str, Any],
 ) -> list[dict[str, Any]]:
-    counts = Counter(seat["sectionId"] for seat in final_seats)
-    taken_counts = Counter(seat["sectionId"] for seat in final_seats if seat.get("taken"))
+    counts = Counter(seat_section_bucket_id(seat) for seat in final_seats)
+    taken_counts = Counter(seat_section_bucket_id(seat) for seat in final_seats if seat.get("taken"))
     sample_by_section: dict[str, dict[str, Any]] = {}
     for seat in final_seats:
-        sample_by_section.setdefault(seat["sectionId"], seat)
+        sample_by_section.setdefault(seat_section_bucket_id(seat), seat)
 
     ordered_ids: list[str] = []
     for record in pulled_records_for_event(config, event_config["eventId"]):
@@ -858,7 +950,7 @@ def build_sections(
         if section_id in counts and section_id not in ordered_ids:
             ordered_ids.append(section_id)
     for seat in final_seats:
-        section_id = seat["sectionId"]
+        section_id = seat_section_bucket_id(seat)
         if section_id not in ordered_ids:
             ordered_ids.append(section_id)
 
@@ -880,7 +972,7 @@ def build_sections(
             section["originalName"] = sample.get("originalSectionName")
         if sample.get("originalPrice") is not None:
             section["originalPrice"] = sample.get("originalPrice")
-        official = official_sections.get(section_id)
+        official = official_sections.get(normalize_id(sample.get("sectionId")))
         if official:
             for key in ("originalPrice", "pricePlanName"):
                 if key in official and key not in section:
@@ -1501,6 +1593,9 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
 
     print(f"[sync] {event_id} {event_config.get('labels', {}).get('date', '')} {event_config.get('labels', {}).get('title', '')}")
     program, event = fallback_program_and_event(event_config)
+    output = config["output"]
+    snapshot_path = ROOT / output["json"].format(eventId=event_id)
+    existing_snapshot = load_json(snapshot_path) if snapshot_path.exists() else None
 
     seat_meta = unwrap_api_payload(fetch_admin_json(seat_json_url, auth))
     section_result = unwrap_api_payload(fetch_admin_json(section_seats_url, auth))
@@ -1528,7 +1623,7 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
         if section["id"]:
             official_sections[section["id"]] = section
 
-    final_seats = apply_rules(normalized_seats, official_sections, event_config, config, strict_counts)
+    final_seats = apply_rules(normalized_seats, official_sections, event_config, config, strict_counts, existing_snapshot)
     sections = build_sections(final_seats, official_sections, event_config, config)
 
     raw_svg = fetch_text(seat_svg_url)
@@ -1536,7 +1631,6 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
     snapshot = build_snapshot(event_config, program, event, sections, final_seats, seat_svg_url)
     html = build_html(event_config, program, annotated_svg, sections, final_seats)
 
-    output = config["output"]
     write_json(ROOT / output["json"].format(eventId=event_id), snapshot, dry_run)
     write_text(ROOT / output["svg"].format(eventId=event_id), annotated_svg, dry_run)
     write_text(ROOT / output["html"].format(eventId=event_id), html, dry_run)

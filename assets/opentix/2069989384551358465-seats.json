@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-10T21:36:25+08:00",
+  "generatedAt": "2026-08-10T22:35:31+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 32,
+  "takenSeatCount": 33,
   "sections": [
     {
       "id": "2069990342159491072",
@@ -46,14 +46,126 @@
       "takenSeatCount": 12
     },
     {
-      "id": "None",
+      "id": "generated-section|public|2200元區|2200|#FF6464",
       "name": "2200元區",
       "price": 2200,
       "color": "#FF6464",
       "kind": "public",
       "source": "opentix-price-section-restored",
-      "seatCount": 270,
-      "takenSeatCount": 20
+      "seatCount": 54,
+      "takenSeatCount": 6
+    },
+    {
+      "id": "generated-section|public|1800元區|1800|#6F98F8",
+      "name": "1800元區",
+      "price": 1800,
+      "color": "#6F98F8",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 65
+    },
+    {
+      "id": "generated-section|public|技術保留席|10|#171717",
+      "name": "技術保留席",
+      "price": 10,
+      "color": "#171717",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 10
+    },
+    {
+      "id": "generated-section|public|館方工作席|10|#FDFF00",
+      "name": "館方工作席",
+      "price": 10,
+      "color": "#FDFF00",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 2
+    },
+    {
+      "id": "generated-section|public|評鑑席|10|#006274",
+      "name": "評鑑席",
+      "price": 10,
+      "color": "#006274",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 2
+    },
+    {
+      "id": "generated-section|public|1500元區|1500|#86C166",
+      "name": "1500元區",
+      "price": 1500,
+      "color": "#86C166",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 43,
+      "takenSeatCount": 4
+    },
+    {
+      "id": "generated-section|public|視線不良區|1000|#00A797",
+      "name": "視線不良區",
+      "price": 1000,
+      "color": "#00A797",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 11,
+      "takenSeatCount": 1
+    },
+    {
+      "id": "generated-section|public|1000元區|1000|#BA6FF8",
+      "name": "1000元區",
+      "price": 1000,
+      "color": "#BA6FF8",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 63,
+      "takenSeatCount": 7
+    },
+    {
+      "id": "generated-section|public|青年席位300元（原價1000）|1000|#C27BA0",
+      "name": "青年席位300元（原價1000）",
+      "price": 1000,
+      "color": "#C27BA0",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 10,
+      "takenSeatCount": 3
+    },
+    {
+      "id": "generated-section|public|多元友善席：移動式扶手椅|1000|#F514DB",
+      "name": "多元友善席：移動式扶手椅",
+      "price": 1000,
+      "color": "#F514DB",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 1
+    },
+    {
+      "id": "generated-section|public|多元友善陪同席|1000|#D18063",
+      "name": "多元友善陪同席",
+      "price": 1000,
+      "color": "#D18063",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 1
+    },
+    {
+      "id": "generated-section|public|輪椅席|1000|#A7C9EB",
+      "name": "輪椅席",
+      "price": 1000,
+      "color": "#A7C9EB",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 4
+    },
+    {
+      "id": "generated-section|public|輪椅陪同席|1000|#FF99CC",
+      "name": "輪椅陪同席",
+      "price": 1000,
+      "color": "#FF99CC",
+      "kind": "public",
+      "source": "opentix-price-section-restored",
+      "seatCount": 4
     }
   ],
   "seats": [
@@ -359,10 +471,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -403,10 +515,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -425,10 +537,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -447,10 +559,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -469,10 +581,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -491,10 +603,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -513,10 +625,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -856,10 +968,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -900,10 +1012,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -922,10 +1034,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -944,10 +1056,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -966,10 +1078,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -988,10 +1100,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1010,10 +1122,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1032,10 +1144,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1063,6 +1175,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1090,6 +1203,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1117,6 +1231,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1144,6 +1259,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1171,6 +1287,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1198,6 +1315,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1225,6 +1343,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1252,6 +1371,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1279,6 +1399,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1306,6 +1427,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1333,6 +1455,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1360,6 +1483,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1387,6 +1511,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1405,10 +1530,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1436,6 +1561,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1454,10 +1580,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1476,10 +1602,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1498,10 +1624,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1520,10 +1646,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1542,10 +1668,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1564,10 +1690,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1595,6 +1721,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1622,6 +1749,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1649,6 +1777,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1676,6 +1805,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1703,6 +1833,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1730,6 +1861,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1757,6 +1889,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1784,6 +1917,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1811,6 +1945,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1838,6 +1973,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1865,6 +2001,7 @@
       "originalSectionName": "貴賓席",
       "originalPrice": 0,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1892,6 +2029,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1919,6 +2057,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1937,10 +2076,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -1968,6 +2107,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -1986,10 +2126,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2008,10 +2148,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2030,10 +2170,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2052,10 +2192,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2074,10 +2214,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2096,10 +2236,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2127,6 +2267,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2154,6 +2295,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2181,6 +2323,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2208,6 +2351,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2235,6 +2379,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2262,6 +2407,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2289,6 +2435,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2316,6 +2463,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2343,6 +2491,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2370,6 +2519,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2397,6 +2547,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2424,6 +2575,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2451,6 +2603,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2469,10 +2622,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2500,6 +2653,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -2518,10 +2672,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2540,10 +2694,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2562,10 +2716,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2584,10 +2738,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2606,10 +2760,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2628,10 +2782,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2650,10 +2804,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -2681,6 +2835,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2714,6 +2869,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2747,6 +2903,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2780,6 +2937,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2813,6 +2971,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2846,6 +3005,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2879,6 +3039,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2912,6 +3073,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2945,6 +3107,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2978,6 +3141,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3005,6 +3169,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3038,6 +3203,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3065,6 +3231,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3089,10 +3256,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3120,6 +3287,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3144,10 +3312,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3166,10 +3334,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3188,10 +3356,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3210,10 +3378,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3232,10 +3400,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3254,10 +3422,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3276,10 +3444,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "館方工作席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#FDFF00",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3307,6 +3475,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3334,6 +3503,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3361,6 +3531,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3388,6 +3559,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3415,6 +3587,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3442,6 +3615,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3469,6 +3643,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3496,6 +3671,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3523,6 +3699,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3550,6 +3727,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3577,6 +3755,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3604,6 +3783,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3631,6 +3811,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3649,10 +3830,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3680,6 +3861,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3698,10 +3880,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3720,10 +3902,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3742,10 +3924,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3764,10 +3946,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3786,10 +3968,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3808,10 +3990,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -3839,6 +4021,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3866,6 +4049,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3893,6 +4077,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3920,6 +4105,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3947,6 +4133,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -3974,6 +4161,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4001,6 +4189,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4028,6 +4217,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4055,6 +4245,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4082,6 +4273,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4109,6 +4301,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4136,6 +4329,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4163,6 +4357,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4181,10 +4376,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4212,6 +4407,7 @@
       "originalSectionName": "2800元區",
       "originalPrice": 2800,
       "pulledRecordId": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "originalColor": "#FAAE17",
       "note": "已確認調票至內部控管的 2800元 VIP保留席。"
     },
     {
@@ -4230,10 +4426,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4252,10 +4448,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4274,10 +4470,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4296,10 +4492,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4318,10 +4514,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4340,10 +4536,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4362,10 +4558,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4677,10 +4873,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4721,10 +4917,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4765,10 +4961,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4787,10 +4983,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4809,10 +5005,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4831,10 +5027,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4853,10 +5049,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "評鑑席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#006274",
       "source": "opentix-price-section-restored"
     },
     {
@@ -4875,10 +5071,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5139,10 +5335,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "評鑑席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#006274",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5161,10 +5357,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5183,10 +5379,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1800元區",
+      "price": 1800,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#6F98F8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5205,10 +5401,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5227,10 +5423,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5249,10 +5445,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -5278,10 +5474,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5300,10 +5496,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -5329,10 +5525,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5351,10 +5547,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5373,10 +5569,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5395,10 +5591,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5417,10 +5613,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5439,10 +5635,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5461,10 +5657,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5483,10 +5679,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5505,10 +5701,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -5534,10 +5730,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5556,10 +5752,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5578,10 +5774,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5600,10 +5796,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5622,10 +5818,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5644,10 +5840,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5666,10 +5862,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5688,10 +5884,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5710,10 +5906,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5732,10 +5928,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5754,10 +5950,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5776,10 +5972,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5798,10 +5994,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5820,10 +6016,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5842,10 +6038,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5864,10 +6060,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored",
       "adminStatus": 0,
       "taken": true,
@@ -5894,10 +6090,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5916,10 +6112,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5938,10 +6134,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5960,10 +6156,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -5982,10 +6178,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6004,10 +6200,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6026,10 +6222,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6048,10 +6244,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6070,10 +6266,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6092,10 +6288,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6114,10 +6310,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6136,10 +6332,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -6165,10 +6361,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6187,10 +6383,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6209,10 +6405,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6231,10 +6427,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6253,10 +6449,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1500元區",
+      "price": 1500,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#86C166",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6275,10 +6471,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6297,10 +6493,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6319,10 +6515,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -6348,10 +6544,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -6377,10 +6573,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -6406,10 +6602,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -6435,10 +6631,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6457,10 +6653,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6479,10 +6675,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6501,10 +6697,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6523,10 +6719,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6545,10 +6741,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
       "adminStatus": 0,
       "taken": true,
@@ -6575,10 +6771,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6597,10 +6793,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6619,10 +6815,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6641,10 +6837,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6663,10 +6859,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6685,10 +6881,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6707,10 +6903,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6729,10 +6925,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6751,10 +6947,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6773,10 +6969,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6795,10 +6991,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "視線不良區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#00A797",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6817,10 +7013,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -6836,7 +7032,7 @@
       "rowId": "15",
       "number": "2",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2069989384551358465",
       "groupId": "4483744853",
       "rX": 863,
@@ -6846,12 +7042,19 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored",
-      "adminStatus": 1
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-15-3",
@@ -6869,10 +7072,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6891,10 +7094,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6913,10 +7116,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6935,10 +7138,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6957,10 +7160,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -6979,10 +7182,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7001,10 +7204,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7023,10 +7226,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7045,10 +7248,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7067,10 +7270,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7089,10 +7292,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7111,10 +7314,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7133,10 +7336,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7155,10 +7358,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7177,10 +7380,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7199,10 +7402,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7221,10 +7424,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7243,10 +7446,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7265,10 +7468,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "館方工作席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#FDFF00",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7287,10 +7490,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7309,10 +7512,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7331,10 +7534,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7353,10 +7556,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7375,10 +7578,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7397,10 +7600,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7419,10 +7622,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7441,10 +7644,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7463,10 +7666,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7485,10 +7688,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7507,10 +7710,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7529,10 +7732,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7551,10 +7754,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7573,10 +7776,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7595,10 +7798,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7617,10 +7820,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7639,10 +7842,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7661,10 +7864,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7683,10 +7886,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7705,10 +7908,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7727,10 +7930,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7749,10 +7952,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7771,10 +7974,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7793,10 +7996,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7815,10 +8018,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "技術保留席",
+      "price": 10,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#171717",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7837,10 +8040,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7859,10 +8062,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7881,10 +8084,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7903,10 +8106,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7925,10 +8128,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7947,10 +8150,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -7976,10 +8179,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -7998,10 +8201,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -8027,10 +8230,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8049,10 +8252,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8071,10 +8274,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8093,10 +8296,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8115,10 +8318,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "1000元區",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#BA6FF8",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8137,10 +8340,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8159,10 +8362,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored",
       "taken": true,
       "availability": "public_sold",
@@ -8188,10 +8391,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8210,10 +8413,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8232,10 +8435,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8254,10 +8457,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "青年席位300元（原價1000）",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#C27BA0",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8276,10 +8479,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "多元友善席：移動式扶手椅",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#F514DB",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8298,10 +8501,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "多元友善陪同席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#D18063",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8320,10 +8523,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#A7C9EB",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8342,10 +8545,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#A7C9EB",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8364,10 +8567,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#A7C9EB",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8386,10 +8589,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#A7C9EB",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8408,10 +8611,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅陪同席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#FF99CC",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8430,10 +8633,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅陪同席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#FF99CC",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8452,10 +8655,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅陪同席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#FF99CC",
       "source": "opentix-price-section-restored"
     },
     {
@@ -8474,10 +8677,10 @@
       "parentSeatingChartId": 422,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2200元區",
-      "price": 2200,
+      "sectionName": "輪椅陪同席",
+      "price": 1000,
       "kind": "public",
-      "color": "#FF6464",
+      "color": "#FF99CC",
       "source": "opentix-price-section-restored"
     }
   ]
