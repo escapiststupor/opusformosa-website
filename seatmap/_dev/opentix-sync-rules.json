@@ -396,7 +396,519 @@
   ],
   "assignmentRecords": [
     {
-      "id": "assignment-2026-09-04-row-8-kuo-auntie",
+      "id": "assignment-2026-09-04-amber",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Amber"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            14
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ]
+        }
+      ],
+      "expectedSeatCount": 8,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AF24",
+          "AG24",
+          "AH24",
+          "AI24",
+          "AJ24",
+          "AK24",
+          "AL24",
+          "AM24"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 8 席分配給Amber。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-armani",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Armani"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            12
+          ],
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            13
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            14
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        }
+      ],
+      "expectedSeatCount": 50,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AD22",
+          "AE22",
+          "AF22",
+          "AG22",
+          "AH22",
+          "AI22",
+          "AJ22",
+          "AK22",
+          "AL22",
+          "AM22",
+          "AN18",
+          "AN22",
+          "AN23",
+          "AN24",
+          "AO18",
+          "AO22",
+          "AO23",
+          "AO24",
+          "AP18",
+          "AP22",
+          "AP23",
+          "AP24",
+          "AQ18",
+          "AQ22",
+          "AQ23",
+          "AQ24",
+          "AR18",
+          "AR22",
+          "AR23",
+          "AR24",
+          "AS18",
+          "AS22",
+          "AS23",
+          "AS24",
+          "AT18",
+          "AT22",
+          "AT23",
+          "AT24",
+          "AU18",
+          "AU22",
+          "AU23",
+          "AU24",
+          "AV18",
+          "AV22",
+          "AV23",
+          "AV24",
+          "AW18",
+          "AW22",
+          "AW23",
+          "AW24"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 50 席分配給Armani。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-chien-hsiu-chih",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "簡秀枝"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            3
+          ]
+        }
+      ],
+      "expectedSeatCount": 1,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AL16"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 1 席分配給簡秀枝。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-chiu",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "邱"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      ],
+      "expectedSeatCount": 21,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AC21",
+          "AD21",
+          "AE21",
+          "AF21",
+          "AG21",
+          "AH21",
+          "AI21",
+          "AJ21",
+          "AK21",
+          "AL21",
+          "AM21",
+          "AN21",
+          "AO21",
+          "AP21",
+          "AQ21",
+          "AR21",
+          "AS21",
+          "AT21",
+          "AU21",
+          "AV21",
+          "AW21"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 21 席分配給邱。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-cm",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "CM"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            13
+          ],
+          "numbers": [
+            7
+          ]
+        }
+      ],
+      "expectedSeatCount": 1,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AJ23"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 1 席分配給CM。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-emme",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Emme"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            3,
+            5,
+            7
+          ]
+        }
+      ],
+      "expectedSeatCount": 3,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AJ13",
+          "AK13",
+          "AL13"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 3 席分配給Emme。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-glandys",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Glandys"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            13
+          ],
+          "numbers": [
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AH23",
+          "AI23"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 2 席分配給Glandys。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-jackson",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Jackson"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            5,
+            7,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 4,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AH16",
+          "AI16",
+          "AJ16",
+          "AK16"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 4 席分配給Jackson。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-jenny",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Jenny"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        }
+      ],
+      "expectedSeatCount": 10,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AE17",
+          "AF17",
+          "AG17",
+          "AH17",
+          "AI17",
+          "AJ17",
+          "AK17",
+          "AL17",
+          "AM17",
+          "AN17"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 10 席分配給Jenny。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-kuo",
       "type": "vip_assignment",
       "eventId": "2070048441140207616",
       "date": "2026-09-04",
@@ -411,20 +923,303 @@
         {
           "floor": "2樓",
           "rows": [
-            8
+            9
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            10
           ],
           "numbers": [
             1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      ],
+      "expectedSeatCount": 25,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AD20",
+          "AE20",
+          "AF20",
+          "AG20",
+          "AH20",
+          "AI20",
+          "AJ20",
+          "AK20",
+          "AL20",
+          "AM20",
+          "AN19",
+          "AN20",
+          "AO19",
+          "AO20",
+          "AP19",
+          "AP20",
+          "AQ19",
+          "AQ20",
+          "AR19",
+          "AR20",
+          "AS20",
+          "AT20",
+          "AU20",
+          "AV20",
+          "AW20"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 25 席分配給郭阿姨。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-lee-vice-commissioner",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "李副委員"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            1,
+            2
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AM15",
+          "AN15"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 2 席分配給李副委員。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-lin-reporter",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "林記者"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-held-2026-09-04-row-10-public",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            26,
+            28
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "BB20",
+          "BC20"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 2 席分配給林記者。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-lin-ruo-qiao",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "林若喬"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            4,
+            6
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AO15",
+          "AP15"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 2 席分配給林若喬。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-linda",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Linda"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
             3,
             5,
             7,
-            9,
+            9
+          ]
+        }
+      ],
+      "expectedSeatCount": 4,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AI15",
+          "AJ15",
+          "AK15",
+          "AL15"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 4 席分配給Linda。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-n",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "N"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            13,
+            15,
+            17,
+            19,
+            21
+          ]
+        }
+      ],
+      "expectedSeatCount": 5,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AC15",
+          "AD15",
+          "AE15",
+          "AF15",
+          "AG15"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 5 席分配給N。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-nicole",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Nicole"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
             11
           ]
         }
       ],
-      "expectedSeatCount": 6,
-      "note": "9/4 台北國家音樂廳 2樓 8排 1、3、5、7、9、11 號分配給郭阿姨。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+      "expectedSeatCount": 1,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AH15"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 1 席分配給Nicole。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     },
     {
       "id": "assignment-2026-09-04-row-16-jun-markl",
@@ -452,6 +1247,1400 @@
       ],
       "expectedSeatCount": 2,
       "note": "9/4 台北國家音樂廳 2樓 16排 1、3 號分配給 Jun Markl。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-tsai",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Tsai"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            3,
+            5,
+            7,
+            9
+          ]
+        }
+      ],
+      "expectedSeatCount": 4,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AI14",
+          "AJ14",
+          "AK14",
+          "AL14"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 4 席分配給Tsai。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-tsai-guests",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "蔡的客人"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      ],
+      "expectedSeatCount": 16,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AD14",
+          "AE14",
+          "AF14",
+          "AG14",
+          "AH14",
+          "AM14",
+          "AN14",
+          "AO14",
+          "AP14",
+          "AQ14",
+          "AR14",
+          "AS14",
+          "AT14",
+          "AU14",
+          "AV14",
+          "AW14"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 16 席分配給蔡的客人。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-tsai-pei-chen",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "蔡佩真"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        }
+      ],
+      "expectedSeatCount": 10,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AN13",
+          "AO13",
+          "AP13",
+          "AQ13",
+          "AR13",
+          "AS13",
+          "AT13",
+          "AU13",
+          "AV13",
+          "AW13"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 10 席分配給蔡佩真。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-wan-hai",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "萬海"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21
+          ]
+        }
+      ],
+      "expectedSeatCount": 21,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AC19",
+          "AD18",
+          "AD19",
+          "AE18",
+          "AE19",
+          "AF18",
+          "AF19",
+          "AG18",
+          "AG19",
+          "AH18",
+          "AH19",
+          "AI18",
+          "AI19",
+          "AJ18",
+          "AJ19",
+          "AK18",
+          "AK19",
+          "AL18",
+          "AL19",
+          "AM18",
+          "AM19"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 21 席分配給萬海。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-wayne",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Wayne"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            4,
+            6,
+            8,
+            10
+          ]
+        }
+      ],
+      "expectedSeatCount": 4,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0904VIP.xlsx",
+        "sheet": "國家音樂廳空白圖",
+        "cells": [
+          "AO17",
+          "AP17",
+          "AQ17",
+          "AR17"
+        ]
+      },
+      "note": "9/4 台北國家音樂廳 4 席分配給Wayne。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-09-dr-c",
+      "type": "vip_assignment",
+      "eventId": "2069998010554765313",
+      "date": "2026-09-09",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Dr. C"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "wwy-vip-taken-2026-09-09",
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        }
+      ],
+      "expectedSeatCount": 20,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0909VIP.xlsx",
+        "sheet": "衛武營音樂廳",
+        "cells": [
+          "AX49",
+          "AY49",
+          "AY50",
+          "AZ49",
+          "AZ50",
+          "BA49",
+          "BA50",
+          "BB49",
+          "BB50",
+          "BC49",
+          "BC50",
+          "BD49",
+          "BD50",
+          "BE49",
+          "BE50",
+          "BF49",
+          "BF50",
+          "BG49",
+          "BG50",
+          "BH50"
+        ]
+      },
+      "note": "9/9 衛武營音樂廳 20 席分配給Dr. C。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-09-lin-ruo-qiao",
+      "type": "vip_assignment",
+      "eventId": "2069998010554765313",
+      "date": "2026-09-09",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "林若蕎"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "wwy-vip-taken-2026-09-09",
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        }
+      ],
+      "expectedSeatCount": 10,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0909VIP.xlsx",
+        "sheet": "衛武營音樂廳",
+        "cells": [
+          "AY48",
+          "AZ48",
+          "BA48",
+          "BB48",
+          "BC48",
+          "BD48",
+          "BE48",
+          "BF48",
+          "BG48",
+          "BH48"
+        ]
+      },
+      "note": "9/9 衛武營音樂廳 10 席分配給林若蕎。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-09-n",
+      "type": "vip_assignment",
+      "eventId": "2069998010554765313",
+      "date": "2026-09-09",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "N"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "wwy-vip-taken-2026-09-09",
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0909VIP.xlsx",
+        "sheet": "衛武營音樂廳",
+        "cells": [
+          "AW47",
+          "AX47"
+        ]
+      },
+      "note": "9/9 衛武營音樂廳 2 席分配給N。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-k",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "K"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        },
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        }
+      ],
+      "expectedSeatCount": 12,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "S12",
+          "S14",
+          "T12",
+          "T14",
+          "U12",
+          "U14",
+          "V12",
+          "V14",
+          "W12",
+          "W14",
+          "X12",
+          "X14"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 12 席分配給K。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-lai",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Lai"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 6,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "J10",
+          "K10",
+          "L10",
+          "M10",
+          "N10",
+          "O10"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 6 席分配給Lai。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-lin-ruo-qiao",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "林若喬"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            13,
+            15
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "H13",
+          "I13"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 2 席分配給林若喬。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-sophie",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Sophie"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            13,
+            15
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "H9",
+          "I9"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 2 席分配給Sophie。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-tsai-ching-chun",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "蔡青純"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            13,
+            15
+          ]
+        },
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            13,
+            15
+          ]
+        }
+      ],
+      "expectedSeatCount": 4,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "H10",
+          "H11",
+          "I10",
+          "I11"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 4 席分配給蔡青純。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-tsai-pei-chen",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "蔡佩真"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 10,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "J13",
+          "K13",
+          "L13",
+          "M13",
+          "N13",
+          "O13",
+          "S13",
+          "T13",
+          "U13",
+          "V13"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 10 席分配給蔡佩真。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-tseng-couple",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "曾伉儷"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        },
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        }
+      ],
+      "expectedSeatCount": 12,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "S9",
+          "S10",
+          "T9",
+          "T10",
+          "U9",
+          "U10",
+          "V9",
+          "V10",
+          "W9",
+          "W10",
+          "X9",
+          "X10"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 12 席分配給曾伉儷。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-ypc",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "YPC"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 6,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "J9",
+          "K9",
+          "L9",
+          "M9",
+          "N9",
+          "O9"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 6 席分配給YPC。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-10-yvonne",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Yvonne"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        },
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 12,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "J12",
+          "J14",
+          "K12",
+          "K14",
+          "L12",
+          "L14",
+          "M12",
+          "M14",
+          "N12",
+          "N14",
+          "O12",
+          "O14"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 12 席分配給Yvonne。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-12-lin-ruo-qiao",
+      "type": "vip_assignment",
+      "eventId": "2069989384551358465",
+      "date": "2026-09-12",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "林若喬"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0912-vip-taken-row-6",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            13,
+            15
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0912VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "H12",
+          "I12"
+        ]
+      },
+      "note": "9/12 台北國家演奏廳 2 席分配給林若喬。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-12-tsai-pei-chen",
+      "type": "vip_assignment",
+      "eventId": "2069989384551358465",
+      "date": "2026-09-12",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "蔡佩真"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nrh-0912-vip-taken-row-6",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 10,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0912VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "J12",
+          "K12",
+          "L12",
+          "M12",
+          "N12",
+          "O12",
+          "S12",
+          "T12",
+          "U12",
+          "V12"
+        ]
+      },
+      "note": "9/12 台北國家演奏廳 10 席分配給蔡佩真。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-14-lin-ruo-qiao",
+      "type": "vip_assignment",
+      "eventId": "2070072493401051137",
+      "date": "2026-09-14",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "林若蕎"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "ntt-playhouse-0914-vip-taken-rows-9-12-center-left",
+      "seatSelectors": [
+        {
+          "floor": "二樓P21區",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            13
+          ]
+        },
+        {
+          "floor": "二樓P21區",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            9,
+            11,
+            13
+          ]
+        },
+        {
+          "floor": "二樓P21區",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            9,
+            11,
+            13
+          ]
+        },
+        {
+          "floor": "二樓P21區",
+          "rows": [
+            12
+          ],
+          "numbers": [
+            9,
+            11,
+            13
+          ]
+        }
+      ],
+      "expectedSeatCount": 10,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0914VIP.xlsx",
+        "sheet": "外租中劇院 票圖(空白)",
+        "cells": [
+          "X20",
+          "X21",
+          "X22",
+          "X23",
+          "Y21",
+          "Y22",
+          "Y23",
+          "Z21",
+          "Z22",
+          "Z23"
+        ]
+      },
+      "note": "9/14 台中國家歌劇院中劇院 10 席分配給林若蕎。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-16-you-ju",
+      "type": "vip_assignment",
+      "eventId": "2081582370096476160",
+      "date": "2026-09-16",
+      "assignedAt": "2026-08-06T17:00:00+08:00",
+      "assignedAtPrecision": "hour",
+      "assignee": {
+        "displayName": "由鉅"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "ntt-grand-2026-09-16-manual-held-rows-3-10",
+      "seatSelectors": [
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            1,
+            3
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        }
+      ],
+      "expectedSeatCount": 150,
+      "source": {
+        "type": "user_confirmation",
+        "confirmedAt": "2026-08-10",
+        "note": "使用既有 8/6 17:00 調票 150 席 taken rule；使用者確認此批分配給由鉅。"
+      },
+      "note": "9/16 台中國家歌劇院大劇院 150 席分配給由鉅。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     }
   ],
   "opentixAvailabilityMarkers": {
@@ -1381,9 +3570,13 @@
                   1,
                   2,
                   3,
+                  4,
                   5,
+                  6,
                   7,
+                  8,
                   9,
+                  10,
                   11,
                   13,
                   15,
@@ -1451,6 +3644,22 @@
                   18,
                   20
                 ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  14
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  7,
+                  9,
+                  11,
+                  13,
+                  15
+                ]
               }
             ]
           },
@@ -1459,7 +3668,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 187
+          "expectedSeatCount": 199
         },
         {
           "id": "nch-held-2026-09-04-row-15-public",
@@ -1862,7 +4071,8 @@
                   4,
                   6,
                   8,
-                  10
+                  10,
+                  12
                 ]
               }
             ]
@@ -1872,7 +4082,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 36
+          "expectedSeatCount": 37
         }
       ]
     },
