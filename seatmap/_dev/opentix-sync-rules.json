@@ -425,6 +425,33 @@
       ],
       "expectedSeatCount": 6,
       "note": "9/4 台北國家音樂廳 2樓 8排 1、3、5、7、9、11 號分配給郭阿姨。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
+      "id": "assignment-2026-09-04-row-16-jun-markl",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Jun Markl"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-held-2026-09-04-row-16-jun-markl",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            16
+          ],
+          "numbers": [
+            1,
+            3
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "note": "9/4 台北國家音樂廳 2樓 16排 1、3 號分配給 Jun Markl。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     }
   ],
   "opentixAvailabilityMarkers": {
@@ -1482,6 +1509,31 @@
             "label": "已預訂",
             "source": "opus-manual-held-seat-map",
             "note": "9/4 第 10 排指定座位已預訂，座位圖以叉叉標示。"
+          },
+          "expectedSeatCount": 2
+        },
+        {
+          "id": "nch-held-2026-09-04-row-16-jun-markl",
+          "status": "taken",
+          "vipOnly": true,
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  16
+                ],
+                "numbers": [
+                  1,
+                  3
+                ]
+              }
+            ]
+          },
+          "display": {
+            "label": "已預訂",
+            "source": "opus-vip-taken-seat-map",
+            "note": "9/4 2樓 16排 1、3 號已分配給 VIP，公開座位圖以叉叉標示。"
           },
           "expectedSeatCount": 2
         }

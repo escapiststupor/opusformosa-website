@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-10T17:52:03+08:00",
+  "generatedAt": "2026-08-10T18:04:20+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 212,
+  "takenSeatCount": 214,
   "sections": [
     {
       "id": "nch-vip-5000",
@@ -189,7 +189,7 @@
       "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。",
       "originalName": "3600元區",
       "originalPrice": 3600,
-      "takenSeatCount": 3
+      "takenSeatCount": 5
     },
     {
       "id": "2070056997362507776",
@@ -15624,7 +15624,13 @@
       "originalSectionId": "2070056819110727680",
       "originalSectionName": "3600元區",
       "originalPrice": 3600,
-      "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+      "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 2樓 16排 1、3 號已分配給 VIP，公開座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓-16-2",
@@ -15678,7 +15684,13 @@
       "originalSectionId": "2070056819110727680",
       "originalSectionName": "3600元區",
       "originalPrice": 3600,
-      "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
+      "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。",
+      "taken": true,
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/4 2樓 16排 1、3 號已分配給 VIP，公開座位圖以叉叉標示。"
     },
     {
       "svgId": "2樓-16-4",
