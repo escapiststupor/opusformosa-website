@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "description": "Rules for regenerating Friends of Opus Formosa static OPENTIX seat maps. OPENTIX admin seat data remains the source of truth for seats that are not matched by Friends VIP rules. Friends VIP rules have highest priority and override any OPENTIX section, price, status, youth, reserved, unavailable, or excluded-seat data. Do not store OPENTIX credentials or tokens in this file; use local environment variables or GitHub Actions secrets.",
+  "description": "Rules for regenerating Friends of Opus Formosa static OPENTIX seat maps. OPENTIX admin/public seat data remains the source of truth for non-pulled seats. sectionOverrides is only for special non-ticketable areas; pulledSeatRecords is the source of truth for internally controlled Friends VIP seats and must resolve to explicit floor/row/number seats. All other unavailable seats are treated as OPENTIX public sold/unavailable. Do not store OPENTIX credentials or tokens in this file; use local environment variables or GitHub Actions secrets.",
   "rulePrecedence": [
     {
       "order": 1,
@@ -9,18 +9,30 @@
     },
     {
       "order": 2,
-      "source": "Friends VIP overrides",
-      "appliesTo": "any seat matched by sectionOverrides.match.sectionIds or sectionOverrides.match.seatSelectors",
-      "effect": "override OPENTIX data with the rule display name, kind, price, color, and source"
+      "source": "OPENTIX public saleability guard",
+      "appliesTo": "any seat whose OPENTIX public status is explicitly available",
+      "effect": "block legacy section-level VIP overrides; confirmed pulledSeatRecords remain the explicit internal-seat source"
     },
     {
       "order": 3,
+      "source": "Confirmed pulled Friends VIP records",
+      "appliesTo": "explicit floor/row/number seats matched by pulledSeatRecords.seatSelectors",
+      "effect": "override OPENTIX display data with the record display as an internally controlled Friends VIP seat"
+    },
+    {
+      "order": 4,
+      "source": "Confirmed pulled seat records",
+      "appliesTo": "seats matched by pulledSeatRecords.seatSelectors during internal admin import",
+      "effect": "mark confirmed internally pulled seats as internal-controlled; assignmentRecords may later assign them to a named recipient"
+    },
+    {
+      "order": 5,
       "source": "Friends taken seat markers",
       "appliesTo": "any Friends VIP seat matched by seatStatusOverrides.match.seatSelectors",
       "effect": "keep the Friends VIP style and add a taken marker so the seat is visibly crossed out"
     },
     {
-      "order": 4,
+      "order": 6,
       "source": "OPENTIX availability markers",
       "appliesTo": "public OPENTIX seats only",
       "effect": "if a public seat's OPENTIX status is no longer available, keep its public ticket-section style and add a taken marker"
@@ -65,335 +77,6 @@
     "source": "OPENTIX public seats API",
     "effect": "Use public OPENTIX seat status as the availability source because it updates sold/unavailable seats more reliably than the admin sections/seats response. Seat sections, prices, and SVG still come from the admin API."
   },
-  "operationRecords": [
-    {
-      "id": "ticket-pull-2026-08-07-1030-156",
-      "type": "ticket_pull",
-      "pulledAt": "2026-08-07T10:30:00+08:00",
-      "pulledAtPrecision": "hour",
-      "reportedAt": "2026-08-10",
-      "reportedTotalSeatCount": 156,
-      "evidence": {
-        "beforeSnapshotCommit": "4e5e48a",
-        "afterSnapshotCommit": "4838e4d",
-        "beforeSnapshotGeneratedAt": {
-          "2070048441140207616": "2026-08-06T18:46:45+08:00",
-          "2081582370096476160": "2026-08-06T17:33:51+08:00"
-        },
-        "afterSnapshotGeneratedAt": {
-          "2070048441140207616": "2026-08-07T12:30:34+08:00",
-          "2081582370096476160": "2026-08-07T12:30:38+08:00"
-        },
-        "observedAvailableToUnavailableSeatCount": 156
-      },
-      "components": [
-        {
-          "eventId": "2070048441140207616",
-          "date": "2026-09-04",
-          "label": "9/4 台北國家音樂廳 3600元區",
-          "ruleId": "nch-internal-vip-2026-09-04-3600",
-          "price": 3600,
-          "observedAvailableToUnavailableSeatCount": 106,
-          "classifiedAs": "internal_vip_ticket_pull",
-          "seatSelectors": [
-            {
-              "floor": "2樓",
-              "rows": [
-                1
-              ],
-              "numbers": [
-                2,
-                4,
-                "6-10",
-                "12-21"
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                2
-              ],
-              "numbers": [
-                4,
-                6,
-                8,
-                10,
-                12,
-                "14-20"
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                5
-              ],
-              "numbers": [
-                22,
-                24
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                6,
-                8,
-                10,
-                12,
-                14
-              ],
-              "numbers": [
-                "21-24"
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                7,
-                9,
-                11,
-                13
-              ],
-              "numbers": [
-                "22-25"
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                15
-              ],
-              "numbers": [
-                4,
-                6,
-                8,
-                "12-14",
-                16,
-                18,
-                20,
-                "22-25"
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                16
-              ],
-              "numbers": [
-                "1-24"
-              ]
-            },
-            {
-              "floor": "2樓",
-              "rows": [
-                17
-              ],
-              "numbers": [
-                23,
-                25
-              ]
-            }
-          ],
-          "alreadyUnavailableWithinCurrentRuleBeforePull": {
-            "count": 24,
-            "note": "These seats are also covered by the current 3600 VIP rule but were already unavailable or manually held before the 8/7 10:30 pull evidence window.",
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  1
-                ],
-                "numbers": [
-                  1,
-                  3,
-                  5,
-                  11
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  2
-                ],
-                "numbers": [
-                  1,
-                  2,
-                  3,
-                  5,
-                  7,
-                  9,
-                  11,
-                  13
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  15
-                ],
-                "numbers": [
-                  "1-3",
-                  5,
-                  7,
-                  9,
-                  10,
-                  11,
-                  15,
-                  17,
-                  19,
-                  21
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "eventId": "2081582370096476160",
-          "date": "2026-09-16",
-          "label": "9/16 台中國家歌劇院大劇院 3700元區",
-          "ruleId": "ntt-grand-vip-3700-side",
-          "price": 3700,
-          "observedAvailableToUnavailableSeatCount": 48,
-          "classifiedAs": "internal_vip_ticket_pull",
-          "seatSelectors": [
-            {
-              "floor": "2樓G21區",
-              "rows": [
-                2
-              ],
-              "numbers": [
-                27
-              ]
-            },
-            {
-              "floor": "2樓G21區",
-              "rows": [
-                "3-5"
-              ],
-              "numbers": [
-                27,
-                29
-              ]
-            },
-            {
-              "floor": "2樓G21區",
-              "rows": [
-                "6-8"
-              ],
-              "numbers": [
-                21,
-                23,
-                25,
-                27,
-                29
-              ]
-            },
-            {
-              "floor": "2樓G21區",
-              "rows": [
-                "9-10"
-              ],
-              "numbers": [
-                21,
-                23,
-                25
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                2
-              ],
-              "numbers": [
-                28
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                3,
-                5
-              ],
-              "numbers": [
-                26,
-                28
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                4
-              ],
-              "numbers": [
-                28,
-                30
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                6,
-                8
-              ],
-              "numbers": [
-                22,
-                24,
-                26
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                7
-              ],
-              "numbers": [
-                20,
-                22,
-                24
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                9
-              ],
-              "numbers": [
-                20,
-                22
-              ]
-            },
-            {
-              "floor": "2樓G22區",
-              "rows": [
-                10
-              ],
-              "numbers": [
-                22,
-                24
-              ]
-            }
-          ],
-          "overlapWithPreviousRecord": {
-            "recordId": "ntt-grand-2026-09-16-manual-held-rows-3-10",
-            "observedInSameStatusChangeWindowCount": 2,
-            "note": "These 3200元 seats changed status in the same 8/7 evidence window, but are attributed to the 8/6 17:00 ticket pull compensation seats.",
-            "seats": [
-              {
-                "floor": "2樓G21區",
-                "row": 11,
-                "number": 1
-              },
-              {
-                "floor": "2樓G21區",
-                "row": 11,
-                "number": 3
-              }
-            ]
-          }
-        }
-      ],
-      "note": "8/7 10:30 多調出 156 張票。Snapshot 前後觀察到 9/4 3600元區 106 席、9/16 3700元區 48 席、以及 9/16 2樓G21區 11排1/3 號共 156 席從可售變成不可售；其中 11排1/3 號已歸入 8/6 17:00 調票補位紀錄，避免重複計入可分配的 8/7 3700 元調票席。"
-    }
-  ],
   "assignmentRecords": [
     {
       "id": "assignment-2026-09-04-amber",
@@ -406,7 +89,6 @@
         "displayName": "Amber"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -454,7 +136,6 @@
         "displayName": "Armani"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -610,7 +291,6 @@
         "displayName": "簡秀枝"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -644,7 +324,6 @@
         "displayName": "邱"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -718,7 +397,6 @@
         "displayName": "CM"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -752,7 +430,6 @@
         "displayName": "Emme"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -790,7 +467,6 @@
         "displayName": "Glandys"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -826,7 +502,6 @@
         "displayName": "Jackson"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -866,7 +541,6 @@
         "displayName": "Jenny"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -918,7 +592,6 @@
         "displayName": "郭阿姨"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1008,7 +681,6 @@
         "displayName": "李副委員"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1034,40 +706,35 @@
       "note": "9/4 台北國家音樂廳 2 席分配給李副委員。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     },
     {
-      "id": "assignment-2026-09-04-lin-reporter",
+      "id": "assignment-2026-09-04-calvin-lai",
       "type": "vip_assignment",
       "eventId": "2070048441140207616",
       "date": "2026-09-04",
       "assignedAt": "2026-08-10",
       "assignedAtPrecision": "day",
       "assignee": {
-        "displayName": "林記者"
+        "displayName": "Calvin Lai"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-held-2026-09-04-row-10-public",
       "seatSelectors": [
         {
           "floor": "2樓",
           "rows": [
-            10
+            15
           ],
           "numbers": [
-            26,
-            28
+            9,
+            11,
+            13
           ]
         }
       ],
-      "expectedSeatCount": 2,
+      "expectedSeatCount": 3,
       "source": {
-        "type": "vip_assistant_workbook",
-        "file": "ticketing/VIPseats/0904VIP.xlsx",
-        "sheet": "國家音樂廳空白圖",
-        "cells": [
-          "BB20",
-          "BC20"
-        ]
+        "type": "user_confirmation",
+        "message": "9/4 2樓15排9、11、13 是 Calvin Lai。"
       },
-      "note": "9/4 台北國家音樂廳 2 席分配給林記者。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+      "note": "9/4 台北國家音樂廳 3 席分配給Calvin Lai。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     },
     {
       "id": "assignment-2026-09-04-lin-ruo-qiao",
@@ -1080,7 +747,6 @@
         "displayName": "林若喬"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1116,7 +782,6 @@
         "displayName": "Linda"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1156,7 +821,6 @@
         "displayName": "N"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1198,7 +862,6 @@
         "displayName": "Nicole"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1232,7 +895,6 @@
         "displayName": "Jun Markl"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-held-2026-09-04-row-16-jun-markl",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1259,7 +921,6 @@
         "displayName": "Tsai"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1299,7 +960,6 @@
         "displayName": "蔡的客人"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1363,7 +1023,6 @@
         "displayName": "蔡佩真"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1415,7 +1074,6 @@
         "displayName": "萬海"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1497,7 +1155,6 @@
         "displayName": "Wayne"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
       "seatSelectors": [
         {
           "floor": "2樓",
@@ -1537,7 +1194,6 @@
         "displayName": "Dr. C"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "wwy-vip-taken-2026-09-09",
       "seatSelectors": [
         {
           "floor": "1樓1號門",
@@ -1633,7 +1289,6 @@
         "displayName": "林若蕎"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "wwy-vip-taken-2026-09-09",
       "seatSelectors": [
         {
           "floor": "1樓1號門",
@@ -1683,6 +1338,38 @@
       "note": "9/9 衛武營音樂廳 10 席分配給林若蕎。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     },
     {
+      "id": "assignment-2026-09-09-nicole",
+      "type": "vip_assignment",
+      "eventId": "2069998010554765313",
+      "date": "2026-09-09",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "Nicole"
+      },
+      "publicVisibility": "anonymous",
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            13,
+            15,
+            17,
+            19
+          ]
+        }
+      ],
+      "expectedSeatCount": 4,
+      "source": {
+        "type": "user_confirmation",
+        "message": "9/9 第4排13、15、17、19 給 Nicole。"
+      },
+      "note": "9/9 衛武營音樂廳 4 席分配給Nicole。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
       "id": "assignment-2026-09-09-n",
       "type": "vip_assignment",
       "eventId": "2069998010554765313",
@@ -1693,7 +1380,6 @@
         "displayName": "N"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "wwy-vip-taken-2026-09-09",
       "seatSelectors": [
         {
           "floor": "1樓1號門",
@@ -1729,7 +1415,6 @@
         "displayName": "K"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -1793,7 +1478,6 @@
         "displayName": "Lai"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -1837,7 +1521,6 @@
         "displayName": "林若喬"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -1873,7 +1556,6 @@
         "displayName": "Sophie"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -1899,6 +1581,41 @@
       "note": "9/10 台北國家演奏廳 2 席分配給Sophie。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     },
     {
+      "id": "assignment-2026-09-10-s",
+      "type": "vip_assignment",
+      "eventId": "2069995305489129473",
+      "date": "2026-09-10",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "S"
+      },
+      "publicVisibility": "anonymous",
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            11,
+            12
+          ]
+        }
+      ],
+      "expectedSeatCount": 2,
+      "source": {
+        "type": "vip_assistant_workbook",
+        "file": "ticketing/VIPseats/0910VIP.xlsx",
+        "sheet": "空白座位圖",
+        "cells": [
+          "J11",
+          "X11"
+        ]
+      },
+      "note": "9/10 台北國家演奏廳 2 席分配給S。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    },
+    {
       "id": "assignment-2026-09-10-tsai-ching-chun",
       "type": "vip_assignment",
       "eventId": "2069995305489129473",
@@ -1909,7 +1626,6 @@
         "displayName": "蔡青純"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -1957,7 +1673,6 @@
         "displayName": "蔡佩真"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -2009,7 +1724,6 @@
         "displayName": "曾伉儷"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -2073,7 +1787,6 @@
         "displayName": "YPC"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -2117,7 +1830,6 @@
         "displayName": "Yvonne"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0910-vip-taken-front-28",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -2181,7 +1893,6 @@
         "displayName": "林若喬"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0912-vip-taken-row-6",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -2217,7 +1928,6 @@
         "displayName": "蔡佩真"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "nrh-0912-vip-taken-row-6",
       "seatSelectors": [
         {
           "floor": "地下樓BF",
@@ -2269,7 +1979,6 @@
         "displayName": "林若蕎"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "ntt-playhouse-0914-vip-taken-rows-9-12-center-left",
       "seatSelectors": [
         {
           "floor": "二樓P21區",
@@ -2345,7 +2054,6 @@
         "displayName": "由鉅"
       },
       "publicVisibility": "anonymous",
-      "relatedStatusRuleId": "ntt-grand-2026-09-16-manual-held-rows-3-10",
       "seatSelectors": [
         {
           "floor": "2樓G21區",
@@ -2638,7 +2346,7 @@
       "source": {
         "type": "user_confirmation",
         "confirmedAt": "2026-08-10",
-        "note": "使用既有 8/6 17:00 調票 150 席 taken rule；使用者確認此批分配給由鉅。"
+        "note": "使用者確認 9/16 這 150 席分配給由鉅；詳細歷史以 git snapshot 紀錄為準。"
       },
       "note": "9/16 台中國家歌劇院大劇院 150 席分配給由鉅。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
     }
@@ -2670,802 +2378,7 @@
         "title": "開幕之夜：林易與朋友們",
         "venue": "台北 國家音樂廳"
       },
-      "sectionOverrides": [
-        {
-          "id": "nch-vip-5000",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  3,
-                  5,
-                  7,
-                  9,
-                  11,
-                  13
-                ],
-                "numbers": [
-                  "1-21"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  4,
-                  6,
-                  8,
-                  10,
-                  12,
-                  14
-                ],
-                "numbers": [
-                  "1-20"
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-vip-5000",
-            "name": "5000元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 5000,
-            "color": "#B8872B",
-            "source": "opus-vip-seat-map",
-            "note": "2樓第 3 至 14 排中央區，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 246
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-640",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "4樓",
-                "rows": [
-                  "7"
-                ],
-                "numbers": [
-                  "19-21",
-                  "23-27",
-                  29,
-                  39,
-                  41
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "9"
-                ],
-                "numbers": [
-                  19,
-                  21,
-                  23
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-640",
-            "name": "640元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 640,
-            "color": "#6FCEF8",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 14
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-sightline-limited-640",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "3樓",
-                "rows": [
-                  "1"
-                ],
-                "numbers": [
-                  9
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "2E"
-                ],
-                "numbers": [
-                  "1-3",
-                  5,
-                  "7-10"
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-sightline-limited-640",
-            "name": "640元 VIP保留席（視線不良）",
-            "kind": "vip-reserved",
-            "price": 640,
-            "color": "#AE00C1",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 9
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-obstructed-640",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "27"
-                ],
-                "numbers": [
-                  25,
-                  27,
-                  37
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-obstructed-640",
-            "name": "640元 VIP保留席（視線受阻）",
-            "kind": "vip-reserved",
-            "price": 640,
-            "color": "#A64D79",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 3
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-former-youth-640",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "4樓",
-                "rows": [
-                  "11"
-                ],
-                "numbers": [
-                  35
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "12"
-                ],
-                "numbers": [
-                  21
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-former-youth-640",
-            "name": "640元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 640,
-            "color": "#C27BA0",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 2
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-790",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "4樓",
-                "rows": [
-                  "5"
-                ],
-                "numbers": [
-                  "19-21",
-                  23,
-                  25,
-                  27
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "6"
-                ],
-                "numbers": [
-                  19
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "7"
-                ],
-                "numbers": [
-                  "1-4",
-                  6
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "8"
-                ],
-                "numbers": [
-                  1,
-                  3,
-                  5
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "12"
-                ],
-                "numbers": [
-                  3
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-790",
-            "name": "790元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 790,
-            "color": "#8269DC",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 16
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-1200",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "3樓",
-                "rows": [
-                  "11"
-                ],
-                "numbers": [
-                  1
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "5"
-                ],
-                "numbers": [
-                  7,
-                  9,
-                  18
-                ]
-              },
-              {
-                "floor": "4樓",
-                "rows": [
-                  "2B"
-                ],
-                "numbers": [
-                  1,
-                  2,
-                  4
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-1200",
-            "name": "1200元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 1200,
-            "color": "#ADB72B",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 7
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-1500",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "4"
-                ],
-                "numbers": [
-                  37,
-                  38
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "9"
-                ],
-                "numbers": [
-                  39
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "29"
-                ],
-                "numbers": [
-                  23,
-                  25
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-1500",
-            "name": "1500元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 1500,
-            "color": "#3A8FB7",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 5
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-1800",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "9"
-                ],
-                "numbers": [
-                  35,
-                  37
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "19"
-                ],
-                "numbers": [
-                  31,
-                  33,
-                  35
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "20"
-                ],
-                "numbers": [
-                  29,
-                  31
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "28"
-                ],
-                "numbers": [
-                  7
-                ]
-              },
-              {
-                "floor": "3樓",
-                "rows": [
-                  "1"
-                ],
-                "numbers": [
-                  1
-                ]
-              },
-              {
-                "floor": "3樓",
-                "rows": [
-                  "2"
-                ],
-                "numbers": [
-                  1
-                ]
-              },
-              {
-                "floor": "3樓",
-                "rows": [
-                  "3"
-                ],
-                "numbers": [
-                  1
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-1800",
-            "name": "1800元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 1800,
-            "color": "#B32605",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 11
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-2100",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "1"
-                ],
-                "numbers": [
-                  "22-28"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "2"
-                ],
-                "numbers": [
-                  "21-24",
-                  26,
-                  28
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "12"
-                ],
-                "numbers": [
-                  29
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "18"
-                ],
-                "numbers": [
-                  25,
-                  27
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "19"
-                ],
-                "numbers": [
-                  27,
-                  29
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "25"
-                ],
-                "numbers": [
-                  1,
-                  3,
-                  21
-                ]
-              },
-              {
-                "floor": "3樓",
-                "rows": [
-                  "1B"
-                ],
-                "numbers": [
-                  10,
-                  12
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-2100",
-            "name": "2100元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2100,
-            "color": "#BA6FF8",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 23
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-2500",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "4"
-                ],
-                "numbers": [
-                  21
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "6"
-                ],
-                "numbers": [
-                  25
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "10"
-                ],
-                "numbers": [
-                  26,
-                  28
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "19"
-                ],
-                "numbers": [
-                  23
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "23"
-                ],
-                "numbers": [
-                  23
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-2500",
-            "name": "2500元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2500,
-            "color": "#0AD219",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 6
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-2800",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "5"
-                ],
-                "numbers": [
-                  23,
-                  25
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "17"
-                ],
-                "numbers": [
-                  7,
-                  9,
-                  13,
-                  15,
-                  17,
-                  18,
-                  20,
-                  21
-                ]
-              },
-              {
-                "floor": "3樓",
-                "rows": [
-                  "4"
-                ],
-                "numbers": [
-                  "1-5",
-                  7,
-                  9,
-                  11,
-                  13,
-                  15,
-                  17
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-2800",
-            "name": "2800元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2800,
-            "color": "#6F98F8",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 21
-        },
-        {
-          "id": "nch-internal-vip-2026-09-04-3600",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  "1"
-                ],
-                "numbers": [
-                  "1-21"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "2"
-                ],
-                "numbers": [
-                  "1-20"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "5"
-                ],
-                "numbers": [
-                  22,
-                  24
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "6"
-                ],
-                "numbers": [
-                  "21-24"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "7"
-                ],
-                "numbers": [
-                  "22-25"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "8"
-                ],
-                "numbers": [
-                  "21-24"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "9"
-                ],
-                "numbers": [
-                  "22-25"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "10"
-                ],
-                "numbers": [
-                  "21-24"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "11"
-                ],
-                "numbers": [
-                  "22-25"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "12"
-                ],
-                "numbers": [
-                  "21-24"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "13"
-                ],
-                "numbers": [
-                  "22-25"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "14"
-                ],
-                "numbers": [
-                  "21-24"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "15"
-                ],
-                "numbers": [
-                  "1-25"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "16"
-                ],
-                "numbers": [
-                  "1-24"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "rows": [
-                  "17"
-                ],
-                "numbers": [
-                  23,
-                  25
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "nch-internal-vip-3600",
-            "name": "3600元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 3600,
-            "color": "#FAAE17",
-            "source": "opus-internal-vip-seat-map",
-            "note": "OPENTIX 調票後不公開銷售，Opus Formosa 內部 Friends VIP 可售席。"
-          },
-          "expectedSeatCount": 130
-        }
-      ],
+      "sectionOverrides": [],
       "seatStatusOverrides": [
         {
           "id": "nch-vip-taken-2026-09-04",
@@ -3533,7 +2446,12 @@
                   5,
                   7,
                   9,
-                  "11-21"
+                  11,
+                  13,
+                  15,
+                  17,
+                  19,
+                  21
                 ]
               },
               {
@@ -3660,22 +2578,7 @@
                   13,
                   15
                 ]
-              }
-            ]
-          },
-          "display": {
-            "label": "已預訂",
-            "source": "opus-vip-taken-seat-map",
-            "note": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
-          },
-          "expectedSeatCount": 199
-        },
-        {
-          "id": "nch-held-2026-09-04-row-15-public",
-          "status": "taken",
-          "vipOnly": false,
-          "match": {
-            "seatSelectors": [
+              },
               {
                 "floor": "2樓",
                 "rows": [
@@ -3691,35 +2594,10 @@
           },
           "display": {
             "label": "已預訂",
-            "source": "opus-manual-held-seat-map",
-            "note": "9/4 第 15 排指定座位已預訂，座位圖以叉叉標示。"
+            "source": "opus-vip-taken-seat-map",
+            "note": "9/4 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 3
-        },
-        {
-          "id": "nch-held-2026-09-04-row-10-public",
-          "status": "taken",
-          "vipOnly": false,
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓",
-                "rows": [
-                  10
-                ],
-                "numbers": [
-                  26,
-                  28
-                ]
-              }
-            ]
-          },
-          "display": {
-            "label": "已預訂",
-            "source": "opus-manual-held-seat-map",
-            "note": "9/4 第 10 排指定座位已預訂，座位圖以叉叉標示。"
-          },
-          "expectedSeatCount": 2
+          "expectedSeatCount": 197
         },
         {
           "id": "nch-held-2026-09-04-row-16-jun-markl",
@@ -3758,223 +2636,7 @@
         "title": "跨世代的樂聲：三重奏到協奏曲",
         "venue": "高雄 衛武營音樂廳"
       },
-      "sectionOverrides": [
-        {
-          "id": "wwy-vip-4500-center",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "1樓1號門",
-                "rows": [
-                  "3-10"
-                ],
-                "numbers": [
-                  1,
-                  3,
-                  5,
-                  7,
-                  9,
-                  11
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  3,
-                  5,
-                  7,
-                  9
-                ],
-                "numbers": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  10,
-                  12
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  4,
-                  6,
-                  8,
-                  10
-                ],
-                "numbers": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  10
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "wwy-vip-4500-center",
-            "name": "4500元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 4500,
-            "color": "#DDA43A",
-            "source": "opus-vip-seat-map",
-            "note": "1樓第 3 至 10 排中央區，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 92
-        },
-        {
-          "id": "wwy-vip-3300-side-and-front",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "1樓1號門",
-                "rows": [
-                  1,
-                  2
-                ],
-                "numbers": [
-                  1,
-                  3,
-                  5,
-                  7,
-                  9,
-                  11,
-                  13,
-                  15,
-                  17,
-                  19
-                ]
-              },
-              {
-                "floor": "1樓1號門",
-                "rows": [
-                  "3-8"
-                ],
-                "numbers": [
-                  13,
-                  15,
-                  17,
-                  19
-                ]
-              },
-              {
-                "floor": "1樓1號門",
-                "rows": [
-                  9
-                ],
-                "numbers": [
-                  13,
-                  15,
-                  17
-                ]
-              },
-              {
-                "floor": "1樓1號門",
-                "rows": [
-                  10
-                ],
-                "numbers": [
-                  13
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  1
-                ],
-                "numbers": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  10,
-                  12,
-                  14,
-                  16,
-                  18,
-                  20
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  2
-                ],
-                "numbers": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  10,
-                  12,
-                  14,
-                  16,
-                  18
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  3,
-                  5,
-                  7
-                ],
-                "numbers": [
-                  14,
-                  16,
-                  18,
-                  20
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  4,
-                  6,
-                  8
-                ],
-                "numbers": [
-                  12,
-                  14,
-                  16,
-                  18
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  9
-                ],
-                "numbers": [
-                  14,
-                  16,
-                  18
-                ]
-              },
-              {
-                "floor": "1樓2號門",
-                "rows": [
-                  10
-                ],
-                "numbers": [
-                  12
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "wwy-vip-3300-side-and-front",
-            "name": "3300元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 3300,
-            "color": "#BA6FF8",
-            "source": "opus-vip-seat-map",
-            "note": "1樓第 1 至 2 排與第 3 至 10 排左右兩側區域，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 95
-        }
-      ],
+      "sectionOverrides": [],
       "seatStatusOverrides": [
         {
           "id": "wwy-vip-taken-2026-09-09",
@@ -4005,8 +2667,7 @@
                   1,
                   3,
                   5,
-                  7,
-                  9
+                  7
                 ]
               },
               {
@@ -4082,7 +2743,7 @@
             "source": "opus-vip-taken-seat-map",
             "note": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
           },
-          "expectedSeatCount": 37
+          "expectedSeatCount": 36
         }
       ]
     },
@@ -4096,35 +2757,7 @@
         "title": "歐陸夜曲",
         "venue": "台北 國家演奏廳"
       },
-      "sectionOverrides": [
-        {
-          "id": "nrh-0910-vip-2800",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "地下樓BF",
-                "rows": [
-                  "3-8"
-                ],
-                "numbers": [
-                  "1-13",
-                  15
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "2069995306608611328",
-            "name": "2800元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2800,
-            "color": "#FAAE17",
-            "source": "opus-vip-seat-map",
-            "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 84
-        }
-      ],
+      "sectionOverrides": [],
       "seatStatusOverrides": [
         {
           "id": "nrh-0910-vip-taken-front-28",
@@ -4214,35 +2847,7 @@
         "title": "異鄉之憶",
         "venue": "台北 國家演奏廳"
       },
-      "sectionOverrides": [
-        {
-          "id": "nrh-0912-vip-2800",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "地下樓BF",
-                "rows": [
-                  "3-8"
-                ],
-                "numbers": [
-                  "1-13",
-                  15
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "2069990342159491072",
-            "name": "2800元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2800,
-            "color": "#FAAE17",
-            "source": "opus-vip-seat-map",
-            "note": "地下樓 BF 第 3 至 8 排中央區，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 84
-        }
-      ],
+      "sectionOverrides": [],
       "seatStatusOverrides": [
         {
           "id": "nrh-0912-vip-taken-row-6",
@@ -4291,72 +2896,7 @@
         "title": "弦間絮語",
         "venue": "台中 國家歌劇院中劇院"
       },
-      "sectionOverrides": [
-        {
-          "id": "ntt-vip-left-center",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "二樓P21區",
-                "rows": [
-                  "8-12"
-                ],
-                "numbers": [
-                  1,
-                  3,
-                  5,
-                  7,
-                  9,
-                  11,
-                  13
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "ntt-vip-2500",
-            "name": "2500元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2500,
-            "color": "#FAAE17",
-            "source": "opus-vip-seat-map",
-            "note": "二樓 P21／P22 第 8 至 12 排中央區，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 35
-        },
-        {
-          "id": "ntt-vip-right-center",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "二樓P22區",
-                "rows": [
-                  "8-12"
-                ],
-                "numbers": [
-                  2,
-                  4,
-                  6,
-                  8,
-                  10,
-                  12,
-                  14
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "ntt-vip-2500",
-            "name": "2500元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 2500,
-            "color": "#FAAE17",
-            "source": "opus-vip-seat-map",
-            "note": "二樓 P21／P22 第 8 至 12 排中央區，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 35
-        }
-      ],
+      "sectionOverrides": [],
       "seatStatusOverrides": [
         {
           "id": "ntt-playhouse-0914-vip-taken-rows-9-12-center-left",
@@ -4406,203 +2946,6 @@
         "venue": "台中 國家歌劇院大劇院"
       },
       "sectionOverrides": [
-        {
-          "id": "ntt-grand-vip-4200-center",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  1
-                ],
-                "numbers": [
-                  "1-17"
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  "2-5"
-                ],
-                "numbers": [
-                  "1-25"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  1
-                ],
-                "numbers": [
-                  "2-16"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  2,
-                  4
-                ],
-                "numbers": [
-                  "2-26"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  3,
-                  5
-                ],
-                "numbers": [
-                  "2-24"
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "ntt-grand-vip-4200-center",
-            "name": "4200元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 4200,
-            "color": "#DDA43A",
-            "source": "opus-vip-seat-map",
-            "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 1 至 5 排中央座位，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 119
-        },
-        {
-          "id": "ntt-grand-vip-3700-side",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  2
-                ],
-                "numbers": [
-                  27
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  "3-5"
-                ],
-                "numbers": [
-                  27,
-                  29
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  2
-                ],
-                "numbers": [
-                  28
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  3,
-                  5
-                ],
-                "numbers": [
-                  26,
-                  28
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  4
-                ],
-                "numbers": [
-                  28,
-                  30
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  "6-8"
-                ],
-                "numbers": [
-                  21,
-                  23,
-                  25,
-                  27,
-                  29
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  "9-10"
-                ],
-                "numbers": [
-                  21,
-                  23,
-                  25
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  6,
-                  8
-                ],
-                "numbers": [
-                  22,
-                  24,
-                  26
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  7
-                ],
-                "numbers": [
-                  20,
-                  22,
-                  24
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  9
-                ],
-                "numbers": [
-                  20,
-                  22
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  10
-                ],
-                "numbers": [
-                  22,
-                  24
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "ntt-grand-vip-3700-side",
-            "name": "3700元 VIP保留席",
-            "kind": "vip-reserved",
-            "price": 3700,
-            "color": "#FAAE17",
-            "source": "opus-vip-seat-map",
-            "note": "台中國家歌劇院大劇院 2樓 G21／G22 3700 元區調票席，作為 Friends VIP 保留席顯示。"
-          },
-          "expectedSeatCount": 48
-        },
         {
           "id": "ntt-grand-2026-09-16-4f-closed-reserved",
           "match": {
@@ -4726,118 +3069,6 @@
             ]
           },
           "status": "taken",
-          "operationRecord": {
-            "type": "ticket_pull",
-            "pulledAt": "2026-08-06T17:00:00+08:00",
-            "pulledAtPrecision": "hour",
-            "targetSeatCount": 150,
-            "reportedAt": "2026-08-10",
-            "requestedVenueNotation": [
-              {
-                "floor": "2樓",
-                "row": 3,
-                "numbers": [
-                  "1-17"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 4,
-                "numbers": [
-                  "1-18"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 5,
-                "numbers": [
-                  "1-17"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 6,
-                "numbers": [
-                  "1-20"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 7,
-                "numbers": [
-                  "1-19"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 8,
-                "numbers": [
-                  "1-20"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 9,
-                "numbers": [
-                  "1-19"
-                ]
-              },
-              {
-                "floor": "2樓",
-                "row": 10,
-                "numbers": [
-                  "1-20"
-                ]
-              }
-            ],
-            "prePullPublicSoldEvidence": {
-              "snapshotCommit": "49acfb4",
-              "snapshotGeneratedAt": "2026-08-06T15:45:48+08:00",
-              "seats": [
-                {
-                  "floor": "2樓G21區",
-                  "row": 6,
-                  "number": 7,
-                  "status": 2,
-                  "source": "opentix-availability-marker"
-                },
-                {
-                  "floor": "2樓G21區",
-                  "row": 6,
-                  "number": 9,
-                  "status": 2,
-                  "source": "opentix-availability-marker"
-                }
-              ]
-            },
-            "actualPulledAdjustment": {
-              "excludeSeatsAlreadyPubliclySoldBeforePull": [
-                {
-                  "floor": "2樓G21區",
-                  "row": 6,
-                  "number": 7
-                },
-                {
-                  "floor": "2樓G21區",
-                  "row": 6,
-                  "number": 9
-                }
-              ],
-              "compensationSeats": [
-                {
-                  "floor": "2樓G21區",
-                  "row": 11,
-                  "number": 1
-                },
-                {
-                  "floor": "2樓G21區",
-                  "row": 11,
-                  "number": 3
-                }
-              ]
-            },
-            "note": "8/6 17:00 多調出 150 張。原指定 2樓 3-10 排範圍內，2樓 6 排 7、9 號在調票前已由 OPENTIX 公開狀態顯示不可售，因此實際調出範圍排除這兩席，並以 2樓 11 排 1、3 號補足。"
-          },
           "display": {
             "label": "已預訂",
             "source": "opus-manual-held-seat-map",
@@ -4856,7 +3087,967 @@
       "nonVipExcludedSeats"
     ],
     "opusRules": [
-      "friendsVipSectionsHighestPriority"
+      "friendsVipSectionsExceptPubliclyAvailableOpentixSeats"
     ]
-  }
+  },
+  "pulledSeatRecords": [
+    {
+      "id": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
+      "type": "pulled_seats",
+      "eventId": "2069998010554765313",
+      "label": "9/9 衛武營音樂廳 4500元區",
+      "ruleId": "wwy-vip-4500-center",
+      "price": 4500,
+      "expectedSeatCount": 92,
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            "3-10"
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "wwy-vip-4500-center",
+        "name": "4500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 4500,
+        "color": "#DDA43A",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 4500元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
+      "type": "pulled_seats",
+      "eventId": "2069998010554765313",
+      "label": "9/9 衛武營音樂廳 3300元區",
+      "ruleId": "wwy-vip-3300-side-and-front",
+      "price": 3300,
+      "expectedSeatCount": 95,
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            1,
+            2
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            "3-8"
+          ],
+          "numbers": [
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            13
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            1
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            3,
+            5,
+            7
+          ],
+          "numbers": [
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            4,
+            6,
+            8
+          ],
+          "numbers": [
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "1樓2號門",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            12
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "wwy-vip-3300-side-and-front",
+        "name": "3300元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 3300,
+        "color": "#BA6FF8",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 3300元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-07-27-1200-425:nrh-0910-vip-2800",
+      "type": "pulled_seats",
+      "eventId": "2069995305489129473",
+      "label": "9/10 台北國家演奏廳 2800元區",
+      "ruleId": "nrh-0910-vip-2800",
+      "price": 2800,
+      "expectedSeatCount": 84,
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            "3-8"
+          ],
+          "numbers": [
+            "1-13",
+            15
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "2069995306608611328",
+        "name": "2800元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2800,
+        "color": "#FAAE17",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 2800元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-07-27-1200-425:nrh-0912-vip-2800",
+      "type": "pulled_seats",
+      "eventId": "2069989384551358465",
+      "label": "9/12 台北國家演奏廳 2800元區",
+      "ruleId": "nrh-0912-vip-2800",
+      "price": 2800,
+      "expectedSeatCount": 84,
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            "3-8"
+          ],
+          "numbers": [
+            "1-13",
+            15
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "2069990342159491072",
+        "name": "2800元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2800,
+        "color": "#FAAE17",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 2800元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-07-27-1200-425:ntt-vip-left-center",
+      "type": "pulled_seats",
+      "eventId": "2070072493401051137",
+      "label": "9/14 台中國家歌劇院中劇院 左側2500元區",
+      "ruleId": "ntt-vip-left-center",
+      "price": 2500,
+      "expectedSeatCount": 35,
+      "seatSelectors": [
+        {
+          "floor": "二樓P21區",
+          "rows": [
+            "8-12"
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "ntt-vip-2500",
+        "name": "2500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2500,
+        "color": "#FAAE17",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 2500元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-07-27-1200-425:ntt-vip-right-center",
+      "type": "pulled_seats",
+      "eventId": "2070072493401051137",
+      "label": "9/14 台中國家歌劇院中劇院 右側2500元區",
+      "ruleId": "ntt-vip-right-center",
+      "price": 2500,
+      "expectedSeatCount": 35,
+      "seatSelectors": [
+        {
+          "floor": "二樓P22區",
+          "rows": [
+            "8-12"
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "ntt-vip-2500",
+        "name": "2500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2500,
+        "color": "#FAAE17",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 2500元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-07-28-1500-246:nch-vip-5000",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 5000元區",
+      "ruleId": "nch-vip-5000",
+      "price": 5000,
+      "expectedSeatCount": 246,
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ],
+          "numbers": [
+            "1-21"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "numbers": [
+            "1-20"
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-5000",
+        "name": "5000元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 5000,
+        "color": "#B8872B",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 5000元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-07-1030-156:nch-internal-vip-2026-09-04-3600",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 3600元區",
+      "ruleId": "nch-internal-vip-2026-09-04-3600",
+      "price": 3600,
+      "expectedSeatCount": 108,
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            1
+          ],
+          "numbers": [
+            2,
+            4,
+            "6-10",
+            "12-21"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            4,
+            6,
+            8,
+            10,
+            12,
+            "14-20"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            22,
+            24
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            6,
+            8,
+            10,
+            12,
+            14
+          ],
+          "numbers": [
+            "21-24"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            7,
+            9,
+            11,
+            13
+          ],
+          "numbers": [
+            "22-25"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            15
+          ],
+          "numbers": [
+            4,
+            6,
+            8,
+            9,
+            11,
+            "12-14",
+            16,
+            18,
+            20,
+            "22-25"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            16
+          ],
+          "numbers": [
+            "1-24"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            17
+          ],
+          "numbers": [
+            23,
+            25
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-internal-vip-3600",
+        "name": "3600元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 3600,
+        "color": "#FAAE17",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 3600元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-07-1030-156:ntt-grand-vip-3700-side",
+      "type": "pulled_seats",
+      "eventId": "2081582370096476160",
+      "label": "9/16 台中國家歌劇院大劇院 3700元區",
+      "ruleId": "ntt-grand-vip-3700-side",
+      "price": 3700,
+      "expectedSeatCount": 48,
+      "seatSelectors": [
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            27
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            "3-5"
+          ],
+          "numbers": [
+            27,
+            29
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            "6-8"
+          ],
+          "numbers": [
+            21,
+            23,
+            25,
+            27,
+            29
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            "9-10"
+          ],
+          "numbers": [
+            21,
+            23,
+            25
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            28
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            3,
+            5
+          ],
+          "numbers": [
+            26,
+            28
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            28,
+            30
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            6,
+            8
+          ],
+          "numbers": [
+            22,
+            24,
+            26
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            20,
+            22,
+            24
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            20,
+            22
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            22,
+            24
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "ntt-grand-vip-3700-side",
+        "name": "3700元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 3700,
+        "color": "#FAAE17",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 3700元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-06-1700-150:ntt-grand-pulled-150",
+      "type": "pulled_seats",
+      "eventId": "2081582370096476160",
+      "label": "9/16 台中國家歌劇院大劇院 150席",
+      "ruleId": "ntt-grand-pulled-150",
+      "expectedSeatCount": 150,
+      "seatSelectors": [
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            1,
+            3
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "ntt-grand-pulled-150",
+        "name": "VIP保留席",
+        "kind": "vip-reserved",
+        "price": null,
+        "color": "#DDA43A",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 Friends VIP 席。"
+      }
+    }
+  ]
 }

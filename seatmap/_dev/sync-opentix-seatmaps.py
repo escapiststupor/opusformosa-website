@@ -485,7 +485,32 @@ def override_matches(rule: dict[str, Any], seat: dict[str, Any]) -> bool:
     return False
 
 
-STATUS_FIELDS = ("taken", "availability", "takenLabel", "takenSource", "takenNote", "takenRuleType")
+def pulled_record_matches(record: dict[str, Any], seat: dict[str, Any]) -> bool:
+    if normalize_id(record.get("eventId")) != normalize_id(seat.get("eventId")):
+        return False
+    for selector in record.get("seatSelectors") or []:
+        if selector_matches(selector, seat):
+            return True
+    return False
+
+
+def pulled_records_for_event(config: dict[str, Any], event_id: str) -> list[dict[str, Any]]:
+    return [
+        record
+        for record in config.get("pulledSeatRecords") or []
+        if normalize_id(record.get("eventId")) == normalize_id(event_id)
+    ]
+
+
+STATUS_FIELDS = (
+    "taken",
+    "availability",
+    "takenLabel",
+    "takenSource",
+    "takenNote",
+    "takenRuleType",
+    "publicSold",
+)
 
 
 def normalize_status(value: Any) -> str:
@@ -497,8 +522,28 @@ def status_matches(value: Any, statuses: list[Any]) -> bool:
     return any(normalized == normalize_status(status) for status in statuses)
 
 
-def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict[str, Any]) -> list[str]:
+def has_opentix_public_available_status(seat: dict[str, Any], config: dict[str, Any]) -> bool:
+    raw_status = seat.get("status")
+    if raw_status is None or normalize_id(raw_status) == "":
+        return False
+    policy = config.get("opentixAvailabilityMarkers") or {}
+    available_statuses = policy.get("availableStatuses") or [0, "0"]
+    return status_matches(raw_status, available_statuses)
+
+
+def vip_override_is_blocked_by_public_sale(
+    seat: dict[str, Any],
+    display: dict[str, Any],
+    config: dict[str, Any],
+) -> bool:
+    if display.get("kind", "vip-reserved") != "vip-reserved":
+        return False
+    return has_opentix_public_available_status(seat, config)
+
+
+def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict[str, Any], config: dict[str, Any]) -> list[str]:
     status_counts: Counter[str] = Counter()
+    public_sale_block_counts: Counter[str] = Counter()
     for seat in final_seats:
         for key in STATUS_FIELDS:
             seat.pop(key, None)
@@ -506,6 +551,10 @@ def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict
         for rule in event_config.get("seatStatusOverrides") or []:
             if not override_matches(rule, seat):
                 continue
+            if has_opentix_public_available_status(seat, config):
+                status_counts[rule["id"]] += 1
+                public_sale_block_counts[rule["id"]] += 1
+                break
             if rule.get("vipOnly", True) and seat.get("kind") != "vip-reserved":
                 continue
             status_counts[rule["id"]] += 1
@@ -529,6 +578,11 @@ def apply_status_overrides(final_seats: list[dict[str, Any]], event_config: dict
         actual = status_counts[rule["id"]]
         if actual != expected:
             errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} taken seats, matched {actual}")
+    for rule_id, count in public_sale_block_counts.items():
+        print(
+            f"[warning] {event_config['eventId']} {rule_id}: skipped {count} taken marker(s) because OPENTIX public status is available",
+            file=sys.stderr,
+        )
     return errors
 
 
@@ -556,7 +610,8 @@ def apply_opentix_availability_markers(final_seats: list[dict[str, Any]], config
             continue
 
         seat["taken"] = True
-        seat["availability"] = "taken"
+        seat["availability"] = "public_sold"
+        seat["publicSold"] = True
         seat["takenLabel"] = display.get("label") or "OPENTIX 已售出／不可售"
         seat["takenSource"] = display.get("source") or "opentix-availability-marker"
         seat["takenRuleType"] = "opentix-availability-marker"
@@ -565,6 +620,49 @@ def apply_opentix_availability_markers(final_seats: list[dict[str, Any]], config
         count += 1
 
     return count
+
+
+def apply_pulled_seat_overrides(
+    final_seats: list[dict[str, Any]],
+    event_config: dict[str, Any],
+    config: dict[str, Any],
+) -> list[str]:
+    records = pulled_records_for_event(config, event_config["eventId"])
+    counts: Counter[str] = Counter()
+
+    for seat in final_seats:
+        for record in records:
+            if not pulled_record_matches(record, seat):
+                continue
+            display = record.get("display") or {}
+            counts[record["id"]] += 1
+            if "originalSectionId" not in seat:
+                seat["originalSectionId"] = seat.get("sectionId") or "opentix-unsectioned"
+            if "originalSectionName" not in seat and seat.get("sectionName"):
+                seat["originalSectionName"] = seat.get("sectionName")
+            if "originalPrice" not in seat and seat.get("price") is not None:
+                seat["originalPrice"] = seat.get("price")
+            section_id = display.get("sectionId") or record.get("ruleId") or record["id"]
+            seat["sectionId"] = normalize_id(section_id)
+            seat["sectionName"] = display.get("name") or record.get("label") or "Friends VIP 保留席"
+            seat["price"] = display.get("price", record.get("price"))
+            seat["kind"] = display.get("kind", "vip-reserved")
+            seat["color"] = display.get("color") or "#FAAE17"
+            seat["source"] = display.get("source", "opus-pulled-seat-map")
+            seat["pulledRecordId"] = record["id"]
+            if display.get("note") or record.get("note"):
+                seat["note"] = display.get("note") or record.get("note")
+            break
+
+    errors: list[str] = []
+    for record in records:
+        expected = record.get("expectedSeatCount")
+        if expected is None:
+            continue
+        actual = counts[record["id"]]
+        if actual != expected:
+            errors.append(f"{event_config['eventId']} {record['id']}: expected {expected} pulled seats, matched {actual}")
+    return errors
 
 
 def apply_rules(
@@ -577,6 +675,7 @@ def apply_rules(
     fallback = config["fallbacks"]["seatsOnlySection"]
     defaults = config["displayDefaults"]
     override_counts: Counter[str] = Counter()
+    public_sale_block_counts: Counter[str] = Counter()
     final: list[dict[str, Any]] = []
 
     for base_seat in seats:
@@ -606,6 +705,9 @@ def apply_rules(
             if override_matches(rule, base_seat):
                 display = rule["display"]
                 override_counts[rule["id"]] += 1
+                if vip_override_is_blocked_by_public_sale(base_seat, display, config):
+                    public_sale_block_counts[rule["id"]] += 1
+                    break
                 seat["originalSectionId"] = original_section_id
                 if official:
                     seat["originalSectionName"] = official.get("name")
@@ -630,24 +732,38 @@ def apply_rules(
         actual = override_counts[rule["id"]]
         if actual != expected:
             errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} VIP seats, matched {actual}")
-    errors.extend(apply_status_overrides(final, event_config))
+    errors.extend(apply_pulled_seat_overrides(final, event_config, config))
+    errors.extend(apply_status_overrides(final, event_config, config))
     apply_opentix_availability_markers(final, config)
     if errors and strict_counts:
         raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
     for error in errors:
         print(f"[warning] {error}", file=sys.stderr)
+    for rule_id, count in public_sale_block_counts.items():
+        print(
+            f"[warning] {event_config['eventId']} {rule_id}: skipped {count} VIP override(s) because OPENTIX public status is available",
+            file=sys.stderr,
+        )
 
     return sorted(final, key=lambda seat: (seat.get("floorId", ""), natural_key(seat.get("rowId", "")), natural_key(seat.get("number", ""))))
 
 
-def apply_section_overrides_to_existing(final_seats: list[dict[str, Any]], event_config: dict[str, Any]) -> list[str]:
+def apply_section_overrides_to_existing(
+    final_seats: list[dict[str, Any]],
+    event_config: dict[str, Any],
+    config: dict[str, Any],
+) -> list[str]:
     override_counts: Counter[str] = Counter()
+    public_sale_block_counts: Counter[str] = Counter()
     for seat in final_seats:
         for rule in event_config.get("sectionOverrides") or []:
             if not override_matches(rule, seat):
                 continue
             display = rule["display"]
             override_counts[rule["id"]] += 1
+            if vip_override_is_blocked_by_public_sale(seat, display, config):
+                public_sale_block_counts[rule["id"]] += 1
+                break
             if "originalSectionId" not in seat:
                 seat["originalSectionId"] = seat.get("sectionId") or "opentix-unsectioned"
             if "originalSectionName" not in seat and seat.get("sectionName"):
@@ -672,7 +788,40 @@ def apply_section_overrides_to_existing(final_seats: list[dict[str, Any]], event
         actual = override_counts[rule["id"]]
         if actual != expected:
             errors.append(f"{event_config['eventId']} {rule['id']}: expected {expected} VIP seats, matched {actual}")
+    for rule_id, count in public_sale_block_counts.items():
+        print(
+            f"[warning] {event_config['eventId']} {rule_id}: skipped {count} VIP override(s) because OPENTIX public status is available",
+            file=sys.stderr,
+        )
     return errors
+
+
+def restore_existing_seats_to_original_sections(
+    final_seats: list[dict[str, Any]],
+    existing_sections: list[dict[str, Any]],
+) -> None:
+    sections_by_id = {normalize_id(section.get("id")): section for section in existing_sections if section.get("id")}
+    for seat in final_seats:
+        original_section_id = normalize_id(seat.get("originalSectionId"))
+        if not original_section_id:
+            continue
+
+        original_section = sections_by_id.get(original_section_id)
+        seat["sectionId"] = original_section_id
+        seat["sectionName"] = (
+            original_section.get("name")
+            if original_section
+            else seat.get("originalSectionName") or seat.get("sectionName") or "未命名票區"
+        )
+        seat["price"] = (
+            original_section.get("price")
+            if original_section
+            else seat.get("originalPrice") if seat.get("originalPrice") is not None else seat.get("price")
+        )
+        seat["kind"] = original_section.get("kind", "public") if original_section else "public"
+        seat["color"] = original_section.get("color", seat.get("color") or "#999999") if original_section else seat.get("color") or "#999999"
+        seat["source"] = original_section.get("source", "opentix-price-section-restored") if original_section else "opentix-price-section-restored"
+        seat.pop("note", None)
 
 
 def natural_key(value: Any) -> tuple[int, Any]:
@@ -695,6 +844,11 @@ def build_sections(
         sample_by_section.setdefault(seat["sectionId"], seat)
 
     ordered_ids: list[str] = []
+    for record in pulled_records_for_event(config, event_config["eventId"]):
+        display = record.get("display") or {}
+        section_id = normalize_id(display.get("sectionId") or record.get("ruleId") or record.get("id"))
+        if section_id in counts and section_id not in ordered_ids:
+            ordered_ids.append(section_id)
     for rule in event_config.get("sectionOverrides") or []:
         display = rule["display"]
         section_id = normalize_id(display.get("sectionId") or (rule.get("match", {}).get("sectionIds") or [rule["id"]])[0])
@@ -1408,13 +1562,15 @@ def render_event_from_existing_snapshot(
     final_seats = copy.deepcopy(snapshot.get("seats") or [])
     if not final_seats:
         raise SyncError(f"Existing snapshot has no seats for event {event_id}.")
+    restore_existing_seats_to_original_sections(final_seats, snapshot.get("sections") or [])
     if refresh_public_status:
         public_statuses = fetch_public_seat_statuses(event_config, config)
         updated_count = overlay_public_statuses(final_seats, public_statuses)
         if public_statuses:
             print(f"[sync:local] {event_id}: refreshed public OPENTIX status for {len(public_statuses)} seats ({updated_count} changed)")
-    errors = apply_section_overrides_to_existing(final_seats, event_config)
-    errors.extend(apply_status_overrides(final_seats, event_config))
+    errors = apply_section_overrides_to_existing(final_seats, event_config, config)
+    errors.extend(apply_pulled_seat_overrides(final_seats, event_config, config))
+    errors.extend(apply_status_overrides(final_seats, event_config, config))
     apply_opentix_availability_markers(final_seats, config)
     if errors and strict_counts:
         raise SyncError("VIP rule count mismatch:\n" + "\n".join(errors))
@@ -1473,15 +1629,32 @@ def validate_config(config: dict[str, Any]) -> None:
         if key not in config:
             raise SyncError(f"Rules file missing {key}.")
     for event in config["events"]:
-        for key in ("programId", "eventId", "parentSeatingChartId", "sectionOverrides"):
+        for key in ("programId", "eventId", "parentSeatingChartId"):
             if key not in event:
                 raise SyncError(f"Event rule missing {key}: {event}")
-        for rule in event["sectionOverrides"]:
+        for rule in event.get("sectionOverrides") or []:
             if "id" not in rule or "match" not in rule or "display" not in rule:
                 raise SyncError(f"Invalid section override in event {event['eventId']}: {rule}")
         for rule in event.get("seatStatusOverrides") or []:
             if "id" not in rule or "match" not in rule or "status" not in rule:
                 raise SyncError(f"Invalid seat status override in event {event['eventId']}: {rule}")
+    for record in config.get("pulledSeatRecords") or []:
+        for key in ("id", "eventId", "seatSelectors", "expectedSeatCount", "display"):
+            if key not in record:
+                raise SyncError(f"Pulled seat record missing {key}: {record}")
+        for selector in record.get("seatSelectors") or []:
+            selector_keys = set(selector)
+            required_selector_keys = {"floor", "rows", "numbers"}
+            if not required_selector_keys.issubset(selector_keys):
+                missing = ", ".join(sorted(required_selector_keys - selector_keys))
+                raise SyncError(f"Pulled seat record {record['id']} selector must include {missing}.")
+            section_keys = {"sectionId", "sectionIds", "sectionName", "sectionNames"}
+            if selector_keys & section_keys:
+                invalid = ", ".join(sorted(selector_keys & section_keys))
+                raise SyncError(f"Pulled seat record {record['id']} selector must not use section-level keys: {invalid}.")
+        display = record.get("display") or {}
+        if display.get("kind", "vip-reserved") == "vip-reserved" and "name" not in display:
+            raise SyncError(f"Pulled seat record display missing name: {record['id']}")
     policy = config.get("opentixAvailabilityMarkers") or {}
     if policy.get("enabled", False):
         if not isinstance(policy.get("availableStatuses"), list) or not policy.get("availableStatuses"):
