@@ -65,6 +65,335 @@
     "source": "OPENTIX public seats API",
     "effect": "Use public OPENTIX seat status as the availability source because it updates sold/unavailable seats more reliably than the admin sections/seats response. Seat sections, prices, and SVG still come from the admin API."
   },
+  "operationRecords": [
+    {
+      "id": "ticket-pull-2026-08-07-1030-156",
+      "type": "ticket_pull",
+      "pulledAt": "2026-08-07T10:30:00+08:00",
+      "pulledAtPrecision": "hour",
+      "reportedAt": "2026-08-10",
+      "reportedTotalSeatCount": 156,
+      "evidence": {
+        "beforeSnapshotCommit": "4e5e48a",
+        "afterSnapshotCommit": "4838e4d",
+        "beforeSnapshotGeneratedAt": {
+          "2070048441140207616": "2026-08-06T18:46:45+08:00",
+          "2081582370096476160": "2026-08-06T17:33:51+08:00"
+        },
+        "afterSnapshotGeneratedAt": {
+          "2070048441140207616": "2026-08-07T12:30:34+08:00",
+          "2081582370096476160": "2026-08-07T12:30:38+08:00"
+        },
+        "observedAvailableToUnavailableSeatCount": 156
+      },
+      "components": [
+        {
+          "eventId": "2070048441140207616",
+          "date": "2026-09-04",
+          "label": "9/4 台北國家音樂廳 3600元區",
+          "ruleId": "nch-internal-vip-2026-09-04-3600",
+          "price": 3600,
+          "observedAvailableToUnavailableSeatCount": 106,
+          "classifiedAs": "internal_vip_ticket_pull",
+          "seatSelectors": [
+            {
+              "floor": "2樓",
+              "rows": [
+                1
+              ],
+              "numbers": [
+                2,
+                4,
+                "6-10",
+                "12-21"
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                2
+              ],
+              "numbers": [
+                4,
+                6,
+                8,
+                10,
+                12,
+                "14-20"
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                5
+              ],
+              "numbers": [
+                22,
+                24
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                6,
+                8,
+                10,
+                12,
+                14
+              ],
+              "numbers": [
+                "21-24"
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                7,
+                9,
+                11,
+                13
+              ],
+              "numbers": [
+                "22-25"
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                15
+              ],
+              "numbers": [
+                4,
+                6,
+                8,
+                "12-14",
+                16,
+                18,
+                20,
+                "22-25"
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                16
+              ],
+              "numbers": [
+                "1-24"
+              ]
+            },
+            {
+              "floor": "2樓",
+              "rows": [
+                17
+              ],
+              "numbers": [
+                23,
+                25
+              ]
+            }
+          ],
+          "alreadyUnavailableWithinCurrentRuleBeforePull": {
+            "count": 24,
+            "note": "These seats are also covered by the current 3600 VIP rule but were already unavailable or manually held before the 8/7 10:30 pull evidence window.",
+            "seatSelectors": [
+              {
+                "floor": "2樓",
+                "rows": [
+                  1
+                ],
+                "numbers": [
+                  1,
+                  3,
+                  5,
+                  11
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  2
+                ],
+                "numbers": [
+                  1,
+                  2,
+                  3,
+                  5,
+                  7,
+                  9,
+                  11,
+                  13
+                ]
+              },
+              {
+                "floor": "2樓",
+                "rows": [
+                  15
+                ],
+                "numbers": [
+                  "1-3",
+                  5,
+                  7,
+                  9,
+                  10,
+                  11,
+                  15,
+                  17,
+                  19,
+                  21
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "eventId": "2081582370096476160",
+          "date": "2026-09-16",
+          "label": "9/16 台中國家歌劇院大劇院 3700元區",
+          "ruleId": "ntt-grand-vip-3700-side",
+          "price": 3700,
+          "observedAvailableToUnavailableSeatCount": 48,
+          "classifiedAs": "internal_vip_ticket_pull",
+          "seatSelectors": [
+            {
+              "floor": "2樓G21區",
+              "rows": [
+                2
+              ],
+              "numbers": [
+                27
+              ]
+            },
+            {
+              "floor": "2樓G21區",
+              "rows": [
+                "3-5"
+              ],
+              "numbers": [
+                27,
+                29
+              ]
+            },
+            {
+              "floor": "2樓G21區",
+              "rows": [
+                "6-8"
+              ],
+              "numbers": [
+                21,
+                23,
+                25,
+                27,
+                29
+              ]
+            },
+            {
+              "floor": "2樓G21區",
+              "rows": [
+                "9-10"
+              ],
+              "numbers": [
+                21,
+                23,
+                25
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                2
+              ],
+              "numbers": [
+                28
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                3,
+                5
+              ],
+              "numbers": [
+                26,
+                28
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                4
+              ],
+              "numbers": [
+                28,
+                30
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                6,
+                8
+              ],
+              "numbers": [
+                22,
+                24,
+                26
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                7
+              ],
+              "numbers": [
+                20,
+                22,
+                24
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                9
+              ],
+              "numbers": [
+                20,
+                22
+              ]
+            },
+            {
+              "floor": "2樓G22區",
+              "rows": [
+                10
+              ],
+              "numbers": [
+                22,
+                24
+              ]
+            }
+          ],
+          "overlapWithPreviousRecord": {
+            "recordId": "ntt-grand-2026-09-16-manual-held-rows-3-10",
+            "observedInSameStatusChangeWindowCount": 2,
+            "note": "These 3200元 seats changed status in the same 8/7 evidence window, but are attributed to the 8/6 17:00 ticket pull compensation seats.",
+            "seats": [
+              {
+                "floor": "2樓G21區",
+                "row": 11,
+                "number": 1
+              },
+              {
+                "floor": "2樓G21區",
+                "row": 11,
+                "number": 3
+              }
+            ]
+          }
+        }
+      ],
+      "note": "8/7 10:30 多調出 156 張票。Snapshot 前後觀察到 9/4 3600元區 106 席、9/16 3700元區 48 席、以及 9/16 2樓G21區 11排1/3 號共 156 席從可售變成不可售；其中 11排1/3 號已歸入 8/6 17:00 調票補位紀錄，避免重複計入可分配的 8/7 3700 元調票席。"
+    }
+  ],
   "opentixAvailabilityMarkers": {
     "enabled": true,
     "appliesToKinds": [
@@ -1898,6 +2227,73 @@
                   28,
                   30
                 ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "6-8"
+                ],
+                "numbers": [
+                  21,
+                  23,
+                  25,
+                  27,
+                  29
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "9-10"
+                ],
+                "numbers": [
+                  21,
+                  23,
+                  25
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  6,
+                  8
+                ],
+                "numbers": [
+                  22,
+                  24,
+                  26
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  7
+                ],
+                "numbers": [
+                  20,
+                  22,
+                  24
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  9
+                ],
+                "numbers": [
+                  20,
+                  22
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  10
+                ],
+                "numbers": [
+                  22,
+                  24
+                ]
               }
             ]
           },
@@ -1908,9 +2304,9 @@
             "price": 3700,
             "color": "#FAAE17",
             "source": "opus-vip-seat-map",
-            "note": "台中國家歌劇院大劇院 2樓 G21／G22 第 2 至 5 排邊側座位，作為 Friends VIP 保留席顯示。"
+            "note": "台中國家歌劇院大劇院 2樓 G21／G22 3700 元區調票席，作為 Friends VIP 保留席顯示。"
           },
-          "expectedSeatCount": 14
+          "expectedSeatCount": 48
         },
         {
           "id": "ntt-grand-2026-09-16-4f-closed-reserved",
