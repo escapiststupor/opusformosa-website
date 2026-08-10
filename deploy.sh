@@ -5,6 +5,8 @@
 
 echo "🚀 Deploying Opus Formosa website..."
 
+DEPLOY_PATHS=( "." ":(exclude)internal-seatmap-admin" ":(exclude)internal-seatmap-admin/**" )
+
 # Ensure CNAME file exists for custom domain
 if [[ ! -f "CNAME" ]]; then
     echo "📄 Creating CNAME file for custom domain..."
@@ -24,9 +26,9 @@ mv style.min.css style.css
 echo "✅ CSS compressed"
 
 # Check if there are any changes to commit
-if [[ -n $(git status --porcelain) ]]; then
+if [[ -n $(git status --porcelain -- "${DEPLOY_PATHS[@]}") ]]; then
     echo "📝 Committing changes..."
-    git add .
+    git add -A -- "${DEPLOY_PATHS[@]}"
     git commit -m "Update website - $(date '+%Y-%m-%d %H:%M:%S')"
     echo "✅ Changes committed"
 else
