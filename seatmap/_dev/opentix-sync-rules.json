@@ -394,6 +394,39 @@
       "note": "8/7 10:30 多調出 156 張票。Snapshot 前後觀察到 9/4 3600元區 106 席、9/16 3700元區 48 席、以及 9/16 2樓G21區 11排1/3 號共 156 席從可售變成不可售；其中 11排1/3 號已歸入 8/6 17:00 調票補位紀錄，避免重複計入可分配的 8/7 3700 元調票席。"
     }
   ],
+  "assignmentRecords": [
+    {
+      "id": "assignment-2026-09-04-row-8-kuo-auntie",
+      "type": "vip_assignment",
+      "eventId": "2070048441140207616",
+      "date": "2026-09-04",
+      "assignedAt": "2026-08-10",
+      "assignedAtPrecision": "day",
+      "assignee": {
+        "displayName": "郭阿姨"
+      },
+      "publicVisibility": "anonymous",
+      "relatedStatusRuleId": "nch-vip-taken-2026-09-04",
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        }
+      ],
+      "expectedSeatCount": 6,
+      "note": "9/4 台北國家音樂廳 2樓 8排 1、3、5、7、9、11 號分配給郭阿姨。公開 seatmap 僅顯示已預訂，不顯示受配者姓名。"
+    }
+  ],
   "opentixAvailabilityMarkers": {
     "enabled": true,
     "appliesToKinds": [
