@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}{{ event.date_label }} · Opus Seatmap Admin{% endblock %}
+
+{% block content %}
+<section class="page-head event-head">
+  <div>
+    <p class="eyebrow">{{ event.venue }}</p>
+    <h1>{{ event.date_label }} {{ event.title }}</h1>
+  </div>
+  <a class="back-link" href="/admin">返回場次</a>
+</section>
+
+<section
+  class="seatmap-admin"
+  id="seatmapAdmin"
+  data-event-id="{{ event.event_id }}"
+  data-svg-url="/admin/events/{{ event.event_id }}/seatmap.svg"
+  data-seats-url="/admin/events/{{ event.event_id }}/seats.json"
+>
+  <div class="map-toolbar" aria-label="座位圖控制">
+    <div class="map-toolbar-group">
+      <span class="toolbar-label">縮放</span>
+      <button type="button" class="tool-button compact-button" data-map-action="zoom-out" aria-label="縮小座位圖">縮小</button>
+      <button type="button" class="tool-button compact-button" data-map-action="zoom-in" aria-label="放大座位圖">放大</button>
+    </div>
+    <div class="map-toolbar-group">
+      <button type="button" class="tool-button" id="openSeatEditor" disabled>編輯</button>
+      <button type="button" class="tool-button secondary-button" id="clearAllSelection" disabled>清除選擇</button>
+    </div>
+    <label class="search-field">
+      <span>搜尋</span>
+      <input id="seatSearch" autocomplete="off" placeholder="2樓 8排 1號 / 郭阿姨">
+    </label>
+    <p class="save-state" id="seatmapState" role="status">載入座位圖...</p>
+  </div>
+  <p class="map-help">先選取欲編輯的座位再點選「編輯」。</p>
+
+  <div class="seatmap-workspace">
+    <section class="admin-map-pane" aria-label="座位圖">
+      <div class="admin-map-wrap" id="adminMapWrap">
+        <div class="admin-map-inner" id="adminMapInner">
+          <div class="map-loading">載入 SVG...</div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="seat-editor" aria-label="座位摘要">
+      <div class="seat-editor-empty" id="seatEditorEmpty">
+        <p class="eyebrow">座位編輯</p>
+        <h2>請選取座位</h2>
+      </div>
+
+      <div class="selection-card" id="seatSelectionCard" hidden>
+        <p class="eyebrow">選取座位</p>
+        <h2 id="selectedSeatTitle"></h2>
+        <p id="selectedSeatMeta"></p>
+        <p class="seat-reason" id="selectedSeatReason"></p>
+        <div class="editor-actions">
+          <button type="button" id="openSeatEditorSide">編輯</button>
+          <button type="button" class="secondary-button" id="clearSelection">清除</button>
+        </div>
+      </div>
+
+      <div class="status-summary" id="statusSummary" aria-label="Status summary"></div>
+    </aside>
+  </div>
+
+  <dialog class="seat-editor-dialog" id="seatEditorDialog" aria-labelledby="seatDialogTitle">
+    <form class="seat-editor-form" id="seatEditorForm">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">座位編輯</p>
+          <h2 id="seatDialogTitle"></h2>
+          <p id="seatDialogMeta"></p>
+        </div>
+        <button type="button" class="secondary-button" id="closeSeatEditor">關閉</button>
+      </div>
+
+      <p class="seat-reason" id="seatDialogReason"></p>
+      <p class="seat-error-message" id="seatErrorMessage" hidden></p>
+      <p class="seat-lock-message" id="seatLockMessage" hidden></p>
+
+      <label id="seatActionLabel">
+        狀態
+        <select id="seatStatus" name="adminStatus"></select>
+      </label>
+
+      <label>
+        受配者
+        <input id="seatAssignee" name="assigneeName" autocomplete="off" placeholder="由鉅 / Wayne / 郭阿姨">
+      </label>
+
+      <label>
+        備註
+        <textarea id="seatNote" name="note" rows="4" placeholder="內部備註，可留空"></textarea>
+      </label>
+
+      <div class="editor-actions">
+        <button type="submit">儲存座位</button>
+      </div>
+    </form>
+  </dialog>
+
+</section>
+
+<script src="{{ url_for('static', path='/admin-seatmap.js') }}"></script>
+{% endblock %}

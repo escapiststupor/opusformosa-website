@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Events · Opus Seatmap Admin{% endblock %}
+
+{% block content %}
+<section class="page-head">
+  <p class="eyebrow">內部座位控管</p>
+  <h1>Friends VIP 座位分配</h1>
+</section>
+
+<section class="table-wrap events-table-wrap">
+  <table class="events-table">
+    <thead>
+      <tr>
+        <th>場次</th>
+        <th>地點</th>
+        <th class="num">座位</th>
+        <th class="num">VIP 可安排</th>
+        <th class="num">已分配</th>
+        <th class="num">OPENTIX 售出</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for event in events %}
+      <tr>
+        <td data-label="場次">
+          <strong>{{ event.date_label }}</strong>
+          <span>{{ event.title }}</span>
+        </td>
+        <td data-label="地點">{{ event.venue }}</td>
+        <td class="num" data-label="座位">{{ event.seat_count or 0 }}</td>
+        <td class="num" data-label="VIP 可安排">{{ event.vip_available_count or 0 }}</td>
+        <td class="num" data-label="已分配">{{ event.assigned_count or 0 }}</td>
+        <td class="num" data-label="OPENTIX 售出">{{ event.public_sold_count or 0 }}</td>
+        <td class="actions" data-label="操作"><a href="/admin/events/{{ event.event_id }}">開啟</a></td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="7" class="empty">尚未匯入場次。請先執行 import script。</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

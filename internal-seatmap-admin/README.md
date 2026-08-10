@@ -1,0 +1,123 @@
+# Opus Formosa Internal Seatmap Admin
+
+FastAPI + SQLite MVP for managing internal Friends VIP seat assignments.
+
+This app is intentionally small:
+
+- SQLite stores seat catalog snapshots and internal overrides.
+- Admin pages let staff search seats and set internal status / assignee.
+- Public API returns seat status without exposing assignee names.
+- Existing GitHub Pages static seatmaps can remain as fallback.
+
+## Local Setup
+
+```bash
+cd internal-seatmap-admin
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+python -m app.import_existing --repo-root ..
+uvicorn app.main:app --reload
+```
+
+Then open:
+
+- Admin UI: <http://localhost:8000/admin>
+- Public API example: <http://localhost:8000/public-seatmap/2070048441140207616>
+
+## Deployment Shape
+
+Production should run with Google login and a persistent Fly.io volume.
+
+### Google Login
+
+Local development uses `ADMIN_AUTH_MODE=dev`. Production should use:
+
+```bash
+ADMIN_AUTH_MODE=google
+```
+
+Create a Google OAuth Web application client with this redirect URI:
+
+```text
+https://api.opusformosa.org/auth/callback
+```
+
+Only emails listed in `ADMIN_ALLOWED_EMAILS` can enter `/admin`.
+
+### Fly.io
+
+Create the app and volume:
+
+```bash
+cd internal-seatmap-admin
+flyctl launch --name opus-seatmap-admin --region nrt --no-deploy
+flyctl volumes create seatmap_data --app opus-seatmap-admin --region nrt --size 1
+```
+
+Make sure the generated `fly.toml` contains:
+
+```toml
+[env]
+  DATABASE_PATH = "/data/seatmap.db"
+  ADMIN_AUTH_MODE = "google"
+  BASE_URL = "https://api.opusformosa.org"
+  CORS_ORIGINS = "https://opusformosa.org,https://www.opusformosa.org"
+
+[mounts]
+  source = "seatmap_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
+```
+
+Set secrets:
+
+```bash
+flyctl secrets set --app opus-seatmap-admin \
+  SESSION_SECRET="$(openssl rand -hex 32)" \
+  ADMIN_ALLOWED_EMAILS="owner@example.com,assistant@example.com" \
+  GOOGLE_CLIENT_ID="..." \
+  GOOGLE_CLIENT_SECRET="..."
+```
+
+Deploy:
+
+```bash
+flyctl deploy --app opus-seatmap-admin
+```
+
+### Initialize Production SQLite
+
+Do not commit `data/seatmap.db`; it contains internal assignment data.
+Instead, generate it locally and upload it to the Fly volume once:
+
+```bash
+cd internal-seatmap-admin
+DATABASE_PATH=./data/seatmap.db python -m app.import_existing --repo-root .. --reset
+flyctl ssh sftp put --app opus-seatmap-admin ./data/seatmap.db /data/seatmap.db
+```
+
+After uploading the DB, restart the app:
+
+```bash
+flyctl machine restart --app opus-seatmap-admin
+```
+
+### Custom Domain
+
+For production API URLs, point `api.opusformosa.org` to this Fly app:
+
+```bash
+flyctl certs add --app opus-seatmap-admin api.opusformosa.org
+flyctl certs show --app opus-seatmap-admin api.opusformosa.org
+```
+
+Then add the DNS records requested by Fly and keep `BASE_URL` set to
+`https://api.opusformosa.org`.
