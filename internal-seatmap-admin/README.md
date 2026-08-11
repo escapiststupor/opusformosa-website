@@ -64,6 +64,7 @@ Make sure the generated `fly.toml` contains:
   ADMIN_AUTH_MODE = "google"
   BASE_URL = "https://api.opusformosa.org"
   CORS_ORIGINS = "https://opusformosa.org,https://www.opusformosa.org"
+  PUBLIC_SEATMAP_ALLOWED_ORIGINS = "https://opusformosa.org,https://www.opusformosa.org"
   OPENTIX_ASSETS_DIR = "/data/opentix"
 
 [mounts]
@@ -135,6 +136,17 @@ It preserves internal `pulled` and `vip_assigned` overrides made by staff in
 the admin UI. Generated `public_sold` overrides from the old static import are
 removed because public sold status is now derived from the latest OPENTIX
 snapshot.
+
+### Public Seatmap API Origin Check
+
+`/public-seatmap/:eventId` returns anonymous availability only; it never returns
+assignee names. In production it also checks the browser `Origin` header, with
+`Referer` as a fallback, against `PUBLIC_SEATMAP_ALLOWED_ORIGINS`.
+
+This is a browser-origin guard rather than a secret auth mechanism. It prevents
+other sites from casually fetching the API from a browser, but a non-browser
+client can still spoof headers. Keep sensitive internal fields out of the public
+response.
 
 ### Custom Domain
 

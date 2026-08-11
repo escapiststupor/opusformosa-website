@@ -45,6 +45,12 @@ def cors_origins() -> list[str]:
     return [origin.strip() for origin in raw.split(",") if origin.strip()]
 
 
+def public_seatmap_allowed_origins() -> set[str]:
+    raw = os.environ.get("PUBLIC_SEATMAP_ALLOWED_ORIGINS", "")
+    origins = raw.split(",") if raw.strip() else cors_origins()
+    return {origin.strip().rstrip("/").lower() for origin in origins if origin.strip()}
+
+
 def base_url() -> str:
     return os.environ.get("BASE_URL", "").strip().rstrip("/")
 

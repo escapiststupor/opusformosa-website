@@ -27,6 +27,7 @@ from .config import (
     google_client_id,
     google_client_secret,
     opentix_assets_dir,
+    public_seatmap_allowed_origins,
     seatmap_sync_token,
 )
 from .db import get_db, init_db, row_to_dict, rows_to_dicts
@@ -242,6 +243,37 @@ def require_sync_token(request: Request) -> None:
 
     if not supplied or not secrets.compare_digest(supplied, expected):
         raise HTTPException(status_code=403, detail="Invalid seatmap sync token.")
+
+
+def origin_from_header(value: str) -> str:
+    try:
+        parsed = urllib.parse.urlsplit(value)
+    except ValueError:
+        return ""
+    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        return ""
+    return urllib.parse.urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), "", "", ""))
+
+
+def require_public_seatmap_origin(request: Request) -> None:
+    allowed_origins = public_seatmap_allowed_origins()
+    if not allowed_origins:
+        return
+
+    origin = origin_from_header(request.headers.get("origin", ""))
+    if origin:
+        if origin in allowed_origins:
+            return
+        raise HTTPException(status_code=403, detail="This public seatmap API origin is not allowed.")
+
+    referer_origin = origin_from_header(request.headers.get("referer", ""))
+    if referer_origin and referer_origin in allowed_origins:
+        return
+
+    if auth_mode() == "dev":
+        return
+
+    raise HTTPException(status_code=403, detail="This public seatmap API is only available from opusformosa.org.")
 
 
 def upsert_event_from_snapshot(db: Connection, event_id: str, payload: dict[str, Any]) -> None:
@@ -559,7 +591,12 @@ def root() -> RedirectResponse:
 
 
 @app.get("/public-seatmap/{event_id}")
-def public_seatmap(event_id: str, db: Connection = Depends(get_db)) -> dict[str, Any]:
+def public_seatmap(
+    event_id: str,
+    request: Request,
+    db: Connection = Depends(get_db),
+) -> dict[str, Any]:
+    require_public_seatmap_origin(request)
     event = event_or_404(db, event_id)
     rows = db.execute(
         """
