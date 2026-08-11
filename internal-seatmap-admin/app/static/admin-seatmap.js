@@ -51,6 +51,9 @@
     dragging: false,
     dragMoved: false,
     suppressClick: false,
+    activePointerId: null,
+    pointers: new Map(),
+    pinch: null,
     startX: 0,
     startY: 0,
     baseX: 0,
@@ -254,6 +257,89 @@
     applyTransform();
   }
 
+  function trackPointer(event) {
+    state.pointers.set(event.pointerId, {
+      clientX: event.clientX,
+      clientY: event.clientY,
+    });
+  }
+
+  function pointerList() {
+    return Array.from(state.pointers.values());
+  }
+
+  function pointerCenter(points) {
+    return {
+      x: (points[0].clientX + points[1].clientX) / 2,
+      y: (points[0].clientY + points[1].clientY) / 2,
+    };
+  }
+
+  function pointerDistance(points) {
+    return Math.hypot(points[0].clientX - points[1].clientX, points[0].clientY - points[1].clientY);
+  }
+
+  function beginPan(event) {
+    state.activePointerId = event.pointerId;
+    state.dragging = true;
+    state.dragMoved = false;
+    state.startX = event.clientX;
+    state.startY = event.clientY;
+    state.baseX = state.panX;
+    state.baseY = state.panY;
+    mapWrap.classList.add("is-dragging");
+  }
+
+  function beginPinch() {
+    const points = pointerList();
+    if (points.length < 2) return;
+    const distance = pointerDistance(points);
+    if (!Number.isFinite(distance) || distance <= 0) return;
+    const center = pointerCenter(points);
+    const rect = mapWrap.getBoundingClientRect();
+    state.pinch = {
+      startDistance: distance,
+      startScale: state.scale,
+      originX: (center.x - rect.left - state.panX) / state.scale,
+      originY: (center.y - rect.top - state.panY) / state.scale,
+    };
+    state.dragging = false;
+    state.dragMoved = true;
+    state.activePointerId = null;
+    hideTooltip();
+    mapWrap.classList.add("is-dragging");
+  }
+
+  function movePinch() {
+    if (!state.pinch) return;
+    const points = pointerList();
+    if (points.length < 2) return;
+    const distance = pointerDistance(points);
+    const center = pointerCenter(points);
+    if (!Number.isFinite(distance) || distance <= 0) return;
+    const rect = mapWrap.getBoundingClientRect();
+    const scale = clampScale(state.pinch.startScale * (distance / state.pinch.startDistance));
+    state.panX = center.x - rect.left - state.pinch.originX * scale;
+    state.panY = center.y - rect.top - state.pinch.originY * scale;
+    state.scale = scale;
+    applyTransform();
+  }
+
+  function finishGesture() {
+    const moved = state.dragMoved || Boolean(state.pinch);
+    state.dragging = false;
+    state.dragMoved = false;
+    state.activePointerId = null;
+    state.pinch = null;
+    if (!state.pointers.size) mapWrap.classList.remove("is-dragging");
+    if (!moved) return;
+    state.suppressClick = true;
+    hideTooltip();
+    window.setTimeout(() => {
+      state.suppressClick = false;
+    }, 120);
+  }
+
   function removeSeatMark(key) {
     mapInner.querySelectorAll("line.admin-seat-taken-mark").forEach((line) => {
       if (line.dataset.adminSeatKey === key) line.remove();
@@ -343,10 +429,6 @@
 
   function hideTooltip() {
     tooltip.hidden = true;
-  }
-
-  function isSeatTarget(target) {
-    return target instanceof Element && Boolean(target.closest("circle.admin-seat"));
   }
 
   function renderSummary() {
@@ -655,19 +737,30 @@
   function wireMapControls() {
     mapWrap.addEventListener("pointerdown", (event) => {
       if (event.button !== 0) return;
-      if (isSeatTarget(event.target)) return;
-      state.dragging = true;
-      state.dragMoved = false;
-      state.startX = event.clientX;
-      state.startY = event.clientY;
-      state.baseX = state.panX;
-      state.baseY = state.panY;
-      mapWrap.classList.add("is-dragging");
-      mapWrap.setPointerCapture(event.pointerId);
+      trackPointer(event);
+      hideTooltip();
+      try {
+        mapWrap.setPointerCapture(event.pointerId);
+      } catch (_error) {
+        // Some touch browsers may already have assigned capture.
+      }
+      if (state.pointers.size >= 2) {
+        beginPinch();
+        event.preventDefault();
+        return;
+      }
+      beginPan(event);
     });
 
     mapWrap.addEventListener("pointermove", (event) => {
-      if (!state.dragging) return;
+      if (!state.pointers.has(event.pointerId)) return;
+      trackPointer(event);
+      if (state.pinch) {
+        movePinch();
+        event.preventDefault();
+        return;
+      }
+      if (!state.dragging || state.activePointerId !== event.pointerId) return;
       const dx = event.clientX - state.startX;
       const dy = event.clientY - state.startY;
       if (Math.abs(dx) + Math.abs(dy) > 4) state.dragMoved = true;
@@ -676,21 +769,28 @@
       applyTransform();
     });
 
-    mapWrap.addEventListener("pointerup", (event) => {
-      if (!state.dragging) return;
-      state.dragging = false;
-      mapWrap.classList.remove("is-dragging");
-      state.suppressClick = state.dragMoved;
-      if (state.dragMoved) hideTooltip();
-      window.setTimeout(() => {
-        state.suppressClick = false;
-      }, 80);
+    function endPointer(event) {
+      const wasTracked = state.pointers.delete(event.pointerId);
+      if (!wasTracked) return;
       try {
         mapWrap.releasePointerCapture(event.pointerId);
       } catch (_error) {
         // Pointer capture may already be released by the browser.
       }
-    });
+      if (state.pinch) {
+        finishGesture();
+        return;
+      }
+      if (state.dragging && state.activePointerId === event.pointerId) {
+        finishGesture();
+        return;
+      }
+      if (!state.pointers.size) mapWrap.classList.remove("is-dragging");
+    }
+
+    mapWrap.addEventListener("pointerup", endPointer);
+    mapWrap.addEventListener("pointercancel", endPointer);
+    mapWrap.addEventListener("lostpointercapture", endPointer);
 
     mapWrap.addEventListener(
       "wheel",
