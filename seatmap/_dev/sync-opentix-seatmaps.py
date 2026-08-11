@@ -1140,13 +1140,21 @@ def build_legend(sections: list[dict[str, Any]]) -> str:
         count_text = f"{section.get('seatCount')} 席"
         if section.get("takenSeatCount"):
             count_text += f"／已預訂 {section.get('takenSeatCount')} 席"
+        section_key = "|".join(
+            [
+                str(section.get("kind") or ""),
+                str(section.get("name") or ""),
+                str(section.get("color") or ""),
+            ]
+        )
         rows.append(
-            "          <li class=\"legend-item\" data-kind=\"{kind}\">\n"
+            "          <li class=\"legend-item\" data-kind=\"{kind}\" data-section-key=\"{section_key}\">\n"
             "            <span class=\"swatch\" style=\"background:{color}\"></span>\n"
             "            <span class=\"legend-name\">{name}</span>\n"
             "            <span class=\"legend-count\">{count}</span>\n"
             "          </li>".format(
                 kind=html_attr(section.get("kind")),
+                section_key=html_attr(section_key),
                 color=html_attr(section.get("color")),
                 name=escape(str(section.get("name") or "")),
                 count=html_attr(count_text),
@@ -1155,13 +1163,29 @@ def build_legend(sections: list[dict[str, Any]]) -> str:
     return "\n".join(rows)
 
 
-def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, sections: list[dict[str, Any]], final_seats: list[dict[str, Any]]) -> str:
+def build_html(
+    event_config: dict[str, Any],
+    program: dict[str, Any],
+    svg: str,
+    sections: list[dict[str, Any]],
+    final_seats: list[dict[str, Any]],
+    config: dict[str, Any],
+) -> str:
     labels = event_config.get("labels") or {}
     header_title = display_title_for_header(event_config, program)
     page_title = f"{header_title} — Friends VIP 座位圖快照"
     meta = f"{labels.get('date', '')}｜{labels.get('venue', '')}".strip("｜")
     note = build_note(sections, final_seats)
     legend = build_legend(sections)
+    event_id = str(event_config["eventId"])
+    public_seatmap_url = f"https://api.opusformosa.org/public-seatmap/{event_id}"
+    defaults = config["displayDefaults"]
+    taken_mark_stroke = defaults.get("takenMarkStroke") or "#2f2417"
+    stroke_by_kind = {
+        "vip-reserved": defaults["vipStroke"],
+        "public": defaults["publicStroke"],
+        "reserved": defaults["reservedStroke"],
+    }
     return f"""<!DOCTYPE html>
 <html lang="zh-TW">
   <head>
@@ -1261,6 +1285,153 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
       const minZoom = 0.65;
       const maxZoom = 3.5;
       const formatPrice = (value) => value ? 'NT$' + Number(value).toLocaleString('zh-TW') : '未公開定價';
+      const publicSeatmapUrl = {json.dumps(public_seatmap_url, ensure_ascii=False)};
+      const svgNamespace = 'http://www.w3.org/2000/svg';
+      const takenMarkStroke = {json.dumps(taken_mark_stroke, ensure_ascii=False)};
+      const strokeByKind = {json.dumps(stroke_by_kind, ensure_ascii=False)};
+      const strokeWidthByKind = {{ 'vip-reserved': '2', public: '1', reserved: '1' }};
+      const seatBySvgId = new Map();
+      const seatByIdentity = new Map();
+
+      function seatIdentity(floor, row, number) {{
+        return [floor || '', row || '', number || ''].join('|');
+      }}
+
+      function sectionKeyForSeat(seat) {{
+        return [
+          seat.dataset.kind || '',
+          seat.dataset.sectionName || '',
+          seat.getAttribute('fill') || '',
+        ].join('|');
+      }}
+
+      function slugKind(value) {{
+        return String(value || 'seat').toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '') || 'seat';
+      }}
+
+      function setSeatKindClass(seat, kind) {{
+        Array.from(seat.classList).forEach((name) => {{
+          if (name.startsWith('seat-') && name !== 'seat' && name !== 'seat-taken') seat.classList.remove(name);
+        }});
+        seat.classList.add('seat-' + slugKind(kind));
+      }}
+
+      function removeTakenMarks(seatId) {{
+        document.querySelectorAll('line.seat-taken-mark').forEach((line) => {{
+          if (line.dataset.seatId === seatId) line.remove();
+        }});
+      }}
+
+      function svgNumber(value) {{
+        if (!Number.isFinite(value)) return '0';
+        if (Number.isInteger(value)) return String(value);
+        return value.toFixed(3).replace(/0+$/, '').replace(/\\.$/, '');
+      }}
+
+      function createTakenLine(seat, x1, y1, x2, y2, strokeWidth) {{
+        const line = document.createElementNS(svgNamespace, 'line');
+        line.classList.add('seat-taken-mark');
+        line.dataset.seatId = seat.dataset.seatId || '';
+        line.setAttribute('x1', svgNumber(x1));
+        line.setAttribute('y1', svgNumber(y1));
+        line.setAttribute('x2', svgNumber(x2));
+        line.setAttribute('y2', svgNumber(y2));
+        const transform = seat.getAttribute('transform');
+        if (transform) line.setAttribute('transform', transform);
+        line.setAttribute('stroke', takenMarkStroke);
+        line.setAttribute('stroke-width', svgNumber(strokeWidth));
+        line.setAttribute('stroke-linecap', 'round');
+        line.setAttribute('opacity', '0.92');
+        line.setAttribute('pointer-events', 'none');
+        return line;
+      }}
+
+      function addTakenMarks(seat) {{
+        const cx = Number(seat.getAttribute('cx'));
+        const cy = Number(seat.getAttribute('cy'));
+        const radius = Number(seat.getAttribute('r'));
+        if (!Number.isFinite(cx) || !Number.isFinite(cy) || !Number.isFinite(radius)) return;
+        const delta = radius * 0.78;
+        const strokeWidth = Math.max(2.2, radius * 0.28);
+        const lineA = createTakenLine(seat, cx - delta, cy - delta, cx + delta, cy + delta, strokeWidth);
+        const lineB = createTakenLine(seat, cx - delta, cy + delta, cx + delta, cy - delta, strokeWidth);
+        const next = seat.nextSibling;
+        seat.parentNode.insertBefore(lineA, next);
+        seat.parentNode.insertBefore(lineB, next);
+      }}
+
+      function setTakenState(seat, taken, label) {{
+        removeTakenMarks(seat.dataset.seatId || '');
+        if (taken) {{
+          seat.classList.add('seat-taken');
+          seat.dataset.taken = 'true';
+          seat.dataset.availability = 'taken';
+          seat.dataset.takenLabel = label || '已預訂';
+          seat.dataset.takenSource = 'opus-public-seatmap-api';
+          addTakenMarks(seat);
+          return;
+        }}
+        seat.classList.remove('seat-taken');
+        delete seat.dataset.taken;
+        seat.dataset.availability = 'available';
+        delete seat.dataset.takenLabel;
+        delete seat.dataset.takenSource;
+      }}
+
+      function refreshLegendCounts() {{
+        const counts = new Map();
+        seats.forEach((seat) => {{
+          const key = sectionKeyForSeat(seat);
+          const current = counts.get(key) || {{ total: 0, taken: 0 }};
+          current.total += 1;
+          if (seat.dataset.taken === 'true') current.taken += 1;
+          counts.set(key, current);
+        }});
+        document.querySelectorAll('.legend-item[data-section-key]').forEach((item) => {{
+          const count = counts.get(item.dataset.sectionKey);
+          const label = item.querySelector('.legend-count');
+          if (!count || !label) return;
+          label.textContent = count.taken ? count.total + ' 席／已預訂 ' + count.taken + ' 席' : count.total + ' 席';
+        }});
+      }}
+
+      function updateSeatFromPublicApi(apiSeat) {{
+        const seat = seatBySvgId.get(apiSeat.svgId) || seatByIdentity.get(seatIdentity(apiSeat.floorId, apiSeat.rowId, apiSeat.number));
+        if (!seat) return false;
+        if (apiSeat.floorId != null) seat.dataset.floor = apiSeat.floorId;
+        if (apiSeat.rowId != null) seat.dataset.row = apiSeat.rowId;
+        if (apiSeat.number != null) seat.dataset.number = apiSeat.number;
+        if (apiSeat.sectionId != null) seat.dataset.sectionId = apiSeat.sectionId;
+        if (apiSeat.sectionName != null) seat.dataset.sectionName = apiSeat.sectionName;
+        if (apiSeat.price != null) seat.dataset.price = apiSeat.price;
+        if (apiSeat.color) seat.setAttribute('fill', apiSeat.color);
+
+        const kind = apiSeat.kind || seat.dataset.kind || 'public';
+        seat.dataset.kind = kind;
+        setSeatKindClass(seat, kind);
+        seat.setAttribute('stroke', strokeByKind[kind] || strokeByKind.reserved || '#333333');
+        seat.setAttribute('stroke-width', strokeWidthByKind[kind] || '1');
+        setTakenState(seat, Boolean(apiSeat.taken) || apiSeat.availability === 'taken', apiSeat.label);
+        return true;
+      }}
+
+      async function syncPublicSeatmap() {{
+        try {{
+          const response = await fetch(publicSeatmapUrl, {{ cache: 'no-store', headers: {{ accept: 'application/json' }} }});
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          const payload = await response.json();
+          if (!payload || !Array.isArray(payload.seats)) throw new Error('Invalid public seatmap payload');
+          let applied = 0;
+          payload.seats.forEach((apiSeat) => {{
+            if (updateSeatFromPublicApi(apiSeat)) applied += 1;
+          }});
+          refreshLegendCounts();
+          if (activeSeat) setTipContent(activeSeat);
+          console.info('[seatmap] synced public seat status for ' + applied + ' seats.');
+        }} catch (error) {{
+          console.warn('[seatmap] public seat status sync failed; using generated snapshot.', error);
+        }}
+      }}
 
       function normalizeSvgViewBox() {{
         const svg = mapInner.querySelector('svg');
@@ -1396,6 +1567,8 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
       }}
 
       seats.forEach((seat) => {{
+        if (seat.dataset.seatId) seatBySvgId.set(seat.dataset.seatId, seat);
+        seatByIdentity.set(seatIdentity(seat.dataset.floor, seat.dataset.row, seat.dataset.number), seat);
         seat.addEventListener('mouseenter', showHoverTip);
         seat.addEventListener('mousemove', moveTip);
         seat.addEventListener('mouseleave', hideHoverTip);
@@ -1406,6 +1579,7 @@ def build_html(event_config: dict[str, Any], program: dict[str, Any], svg: str, 
       }});
 
       normalizeSvgViewBox();
+      syncPublicSeatmap();
 
       function markDragIfNeeded(event) {{
         if (!dragState) return;
@@ -1629,7 +1803,7 @@ def render_event(event_config: dict[str, Any], config: dict[str, Any], auth: Ope
     raw_svg = fetch_text(seat_svg_url)
     annotated_svg = annotate_svg(raw_svg, final_seats, config)
     snapshot = build_snapshot(event_config, program, event, sections, final_seats, seat_svg_url)
-    html = build_html(event_config, program, annotated_svg, sections, final_seats)
+    html = build_html(event_config, program, annotated_svg, sections, final_seats, config)
 
     write_json(ROOT / output["json"].format(eventId=event_id), snapshot, dry_run)
     write_text(ROOT / output["svg"].format(eventId=event_id), annotated_svg, dry_run)
@@ -1676,7 +1850,7 @@ def render_event_from_existing_snapshot(
     raw_svg = svg_path.read_text(encoding="utf-8")
     annotated_svg = annotate_svg(raw_svg, final_seats, config)
     program = snapshot.get("program") or fallback_program_and_event(event_config)[0]
-    html = build_html(event_config, program, annotated_svg, sections, final_seats)
+    html = build_html(event_config, program, annotated_svg, sections, final_seats, config)
 
     snapshot["generatedAt"] = datetime.now(TAIPEI).isoformat(timespec="seconds")
     snapshot["notes"] = append_unique_note(
