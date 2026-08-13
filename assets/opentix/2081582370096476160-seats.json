@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-13T23:19:08+08:00",
+  "generatedAt": "2026-08-14T00:13:57+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 168,
+  "takenSeatCount": 169,
   "sections": [
     {
       "id": "ntt-grand-vip-3700-side",
@@ -164,7 +164,8 @@
       "color": "#FAAE17",
       "kind": "public",
       "source": "opentix-price-section-restored",
-      "seatCount": 182
+      "seatCount": 182,
+      "takenSeatCount": 1
     },
     {
       "id": "generated-section|public|1300元區|1300|#F6703D",
@@ -17045,7 +17046,7 @@
       "rowId": "14",
       "number": "40",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2081582370096476160",
       "groupId": "2990199426",
       "rX": 1558,
@@ -17059,7 +17060,15 @@
       "price": 1600,
       "kind": "public",
       "color": "#FAAE17",
-      "source": "opentix-price-section-restored"
+      "source": "opentix-price-section-restored",
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓G22區-14-42",
@@ -42660,7 +42669,7 @@
       "rowId": "4R",
       "number": "8",
       "sectionId": "ntt-grand-4f-closed-reserved",
-      "status": 1,
+      "status": 0,
       "eventId": "2081582370096476160",
       "groupId": "5361309019",
       "rX": 1900,
@@ -42678,7 +42687,7 @@
       "originalSectionId": "2081628071961174016",
       "originalSectionName": "900元區",
       "originalPrice": 900,
-      "adminStatus": 0,
+      "adminStatus": 1,
       "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
     },
     {
