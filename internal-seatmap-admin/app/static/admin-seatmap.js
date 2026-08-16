@@ -38,6 +38,8 @@
 
   const lockedStatuses = new Set(["vip_assigned", "taken", "public_sold", "closed"]);
   const MIXED_VALUE = "(mixed value)";
+  const TOUCH_DRAG_THRESHOLD = 12;
+  const POINTER_DRAG_THRESHOLD = 4;
   const state = {
     seats: new Map(),
     circles: new Map(),
@@ -50,6 +52,7 @@
     panY: 0,
     dragging: false,
     dragMoved: false,
+    dragThreshold: POINTER_DRAG_THRESHOLD,
     suppressClick: false,
     activePointerId: null,
     pointers: new Map(),
@@ -283,6 +286,7 @@
     state.activePointerId = event.pointerId;
     state.dragging = true;
     state.dragMoved = false;
+    state.dragThreshold = event.pointerType === "touch" ? TOUCH_DRAG_THRESHOLD : POINTER_DRAG_THRESHOLD;
     state.startX = event.clientX;
     state.startY = event.clientY;
     state.baseX = state.panX;
@@ -621,8 +625,8 @@
       state.circles.set(key, circle);
       renderSeat(circle, seat);
       circle.addEventListener("click", (event) => {
-        if (state.suppressClick) return;
         event.stopPropagation();
+        if (state.suppressClick) return;
         selectSeat(key);
       });
       circle.addEventListener("pointerenter", (event) => {
@@ -763,7 +767,8 @@
       if (!state.dragging || state.activePointerId !== event.pointerId) return;
       const dx = event.clientX - state.startX;
       const dy = event.clientY - state.startY;
-      if (Math.abs(dx) + Math.abs(dy) > 4) state.dragMoved = true;
+      if (!state.dragMoved && Math.hypot(dx, dy) <= state.dragThreshold) return;
+      state.dragMoved = true;
       state.panX = state.baseX + dx;
       state.panY = state.baseY + dy;
       applyTransform();
