@@ -55,6 +55,7 @@
     dragThreshold: POINTER_DRAG_THRESHOLD,
     suppressClick: false,
     activePointerId: null,
+    pendingTapSeatKey: null,
     pointers: new Map(),
     pinch: null,
     startX: 0,
@@ -310,6 +311,7 @@
     state.dragging = false;
     state.dragMoved = true;
     state.activePointerId = null;
+    state.pendingTapSeatKey = null;
     hideTooltip();
     mapWrap.classList.add("is-dragging");
   }
@@ -329,19 +331,25 @@
     applyTransform();
   }
 
+  function suppressNextClick() {
+    state.suppressClick = true;
+    window.setTimeout(() => {
+      state.suppressClick = false;
+    }, 120);
+  }
+
   function finishGesture() {
     const moved = state.dragMoved || Boolean(state.pinch);
     state.dragging = false;
     state.dragMoved = false;
     state.activePointerId = null;
     state.pinch = null;
+    state.pendingTapSeatKey = null;
     if (!state.pointers.size) mapWrap.classList.remove("is-dragging");
-    if (!moved) return;
-    state.suppressClick = true;
+    if (!moved) return moved;
+    suppressNextClick();
     hideTooltip();
-    window.setTimeout(() => {
-      state.suppressClick = false;
-    }, 120);
+    return moved;
   }
 
   function removeSeatMark(key) {
@@ -590,6 +598,15 @@
   function selectSeat(key) {
     const clickedSeat = state.seats.get(key);
     if (!clickedSeat) return;
+    if (!clickedSeat.editable) {
+      state.selectedKey = null;
+      state.selectedKeys.clear();
+      setEditorError("");
+      renderSelected();
+      setStateText(clickedSeat.lockedReason || "此座位不可調度", "warn");
+      showTooltip(clickedSeat);
+      return;
+    }
     const wasSelected = state.selectedKeys.has(key);
     if (wasSelected) {
       state.selectedKeys.delete(key);
@@ -602,9 +619,7 @@
     renderSelected();
     const seats = selectedSeats();
     const allEditable = seats.length > 0 && seats.every((seat) => seat.editable);
-    if (!wasSelected && !clickedSeat.editable) {
-      setStateText(clickedSeat.lockedReason || selectionLockedReason(seats), "warn");
-    } else if (seats.length && !allEditable) {
+    if (seats.length && !allEditable) {
       setStateText(selectionLockedReason(seats), "warn");
     } else if (state.selectedKeys.size > 1) {
       setStateText(`已選取 ${state.selectedKeys.size.toLocaleString("en-US")} 個座位`, "");
@@ -743,6 +758,8 @@
       if (event.button !== 0) return;
       trackPointer(event);
       hideTooltip();
+      const seatTarget = event.target instanceof Element ? event.target.closest("circle.admin-seat") : null;
+      state.pendingTapSeatKey = seatTarget ? seatTarget.dataset.adminSeatKey || null : null;
       try {
         mapWrap.setPointerCapture(event.pointerId);
       } catch (_error) {
@@ -777,6 +794,8 @@
     function endPointer(event) {
       const wasTracked = state.pointers.delete(event.pointerId);
       if (!wasTracked) return;
+      const pendingTapSeatKey = state.pendingTapSeatKey;
+      const wasTapCandidate = state.dragging && state.activePointerId === event.pointerId && Boolean(pendingTapSeatKey);
       try {
         mapWrap.releasePointerCapture(event.pointerId);
       } catch (_error) {
@@ -787,7 +806,11 @@
         return;
       }
       if (state.dragging && state.activePointerId === event.pointerId) {
-        finishGesture();
+        const moved = finishGesture();
+        if (!moved && wasTapCandidate) {
+          suppressNextClick();
+          selectSeat(pendingTapSeatKey);
+        }
         return;
       }
       if (!state.pointers.size) mapWrap.classList.remove("is-dragging");
