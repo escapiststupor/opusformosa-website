@@ -382,7 +382,7 @@ def status_reason(row: dict[str, Any], status: str) -> str:
 
 
 def seat_is_editable(row: dict[str, Any], status: str) -> bool:
-    return status in {"pulled", "vip_assigned"}
+    return status in {"pulled", "vip_available", "vip_assigned"}
 
 
 def locked_reason(row: dict[str, Any], status: str) -> str:
