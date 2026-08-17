@@ -4048,6 +4048,98 @@
         "source": "opus-pulled-seat-map",
         "note": "已確認調票至內部控管的 Friends VIP 席。"
       }
+    },
+    {
+      "id": "ticket-pull-2026-08-17-1116-38:nch-vip-2500",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 2500元區",
+      "ruleId": "nch-vip-2500-2026-08-17",
+      "price": 2500,
+      "expectedSeatCount": 16,
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            "3-10"
+          ],
+          "numbers": [
+            26,
+            28
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-2500-2026-08-17",
+        "name": "2500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2500,
+        "color": "#0AD219",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-17 11:16 snapshot 新增調票至內部控管的 2500元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-17-1116-38:wwy-vip-2500",
+      "type": "pulled_seats",
+      "eventId": "2069998010554765313",
+      "label": "9/9 衛武營音樂廳 2500元區",
+      "ruleId": "wwy-vip-2500-2026-08-17",
+      "price": 2500,
+      "expectedSeatCount": 22,
+      "seatSelectors": [
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            "1-4"
+          ],
+          "numbers": [
+            21,
+            23,
+            25,
+            27
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            23,
+            25,
+            27
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            23,
+            25
+          ]
+        },
+        {
+          "floor": "1樓1號門",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            23
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "wwy-vip-2500-2026-08-17",
+        "name": "2500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2500,
+        "color": "#005CAF",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-17 11:16 snapshot 新增調票至內部控管的 2500元 VIP保留席。"
+      }
     }
   ]
 }
