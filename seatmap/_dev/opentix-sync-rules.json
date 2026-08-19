@@ -4140,6 +4140,142 @@
         "source": "opus-pulled-seat-map",
         "note": "已確認 2026-08-17 11:16 snapshot 新增調票至內部控管的 2500元 VIP保留席。"
       }
+    },
+    {
+      "id": "ticket-pull-2026-08-19-1357-64:nch-vip-1800",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 1800元區",
+      "ruleId": "nch-vip-1800-2026-08-19",
+      "price": 1800,
+      "expectedSeatCount": 31,
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            29
+          ],
+          "numbers": [
+            "1-21"
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30,
+            32,
+            34
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-1800-2026-08-19",
+        "name": "1800元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 1800,
+        "color": "#999999",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-19 13:57 snapshot 後新增調票至內部控管的 1800元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-19-1357-64:nch-vip-790",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 790元區",
+      "ruleId": "nch-vip-790-2026-08-19",
+      "price": 790,
+      "expectedSeatCount": 17,
+      "seatSelectors": [
+        {
+          "floor": "4樓",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            "1-17"
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-790-2026-08-19",
+        "name": "790元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 790,
+        "color": "#999999",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-19 13:57 snapshot 後新增調票至內部控管的 790元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-19-1357-64:wwy-vip-2100",
+      "type": "pulled_seats",
+      "eventId": "2069998010554765313",
+      "label": "9/9 衛武營音樂廳 2100元區",
+      "ruleId": "wwy-vip-2100-2026-08-19",
+      "price": 2100,
+      "expectedSeatCount": 16,
+      "seatSelectors": [
+        {
+          "floor": "2樓7號門",
+          "rows": [
+            "A4"
+          ],
+          "numbers": [
+            21,
+            23,
+            25
+          ]
+        },
+        {
+          "floor": "2樓7號門",
+          "rows": [
+            "A5"
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13
+          ]
+        },
+        {
+          "floor": "2樓7號門",
+          "rows": [
+            "A6"
+          ],
+          "numbers": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "wwy-vip-2100-2026-08-19",
+        "name": "2100元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2100,
+        "color": "#999999",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-19 13:57 snapshot 後新增調票至內部控管的 2100元 VIP保留席。"
+      }
     }
   ]
 }
