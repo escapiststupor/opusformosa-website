@@ -124,7 +124,8 @@
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1200,3200 --screenshot=/tmp/namecards.png http://localhost:8765/namecards.html)",
       "Bash(magick /tmp/namecards.png -crop 1200x1600+0+0 +repage /tmp/namecards-top.png)",
       "Bash(magick /tmp/namecards.png -crop 1200x1600+0+1400 +repage /tmp/namecards-mid.png)",
-      "Bash(magick *)"
+      "Bash(magick *)",
+      "Bash(inkscape \"/Users/pyen/OpusFormosa/ticketing/Friends of OF \\(logo\\)/川菱集團.ai\" --export-type=png --export-filename=\"/tmp/logos-convert/kawabishi.png\" --export-dpi=200)"
     ]
   }
 }
