@@ -120,7 +120,11 @@
       "Bash(cp hanshin-cropped.png /Users/pyen/OpusFormosa/website/assets/hanshin-logo.png)",
       "Bash(cp hanshin-arena-cropped.png /Users/pyen/OpusFormosa/website/assets/hanshin-arena-logo.png)",
       "Bash(cp 久年機構藍.png /Users/pyen/OpusFormosa/website/assets/joyear-logo.png)",
-      "Bash(cp 威宏控股.png /Users/pyen/OpusFormosa/website/assets/ww-holding-logo.png)"
+      "Bash(cp 威宏控股.png /Users/pyen/OpusFormosa/website/assets/ww-holding-logo.png)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1200,3200 --screenshot=/tmp/namecards.png http://localhost:8765/namecards.html)",
+      "Bash(magick /tmp/namecards.png -crop 1200x1600+0+0 +repage /tmp/namecards-top.png)",
+      "Bash(magick /tmp/namecards.png -crop 1200x1600+0+1400 +repage /tmp/namecards-mid.png)",
+      "Bash(magick *)"
     ]
   }
 }

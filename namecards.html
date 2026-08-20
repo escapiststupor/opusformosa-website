@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Opus Formosa · Namecards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0d0b09',
+              'ink-2': '#141110',
+              cream: '#f0e8d8',
+              'cream-warm': '#efe6d4',
+              'cream-dim': '#9e9080',
+              gold: '#c89840',
+              'gold-soft': '#b7883a',
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', 'serif'],
+              body: ['"Crimson Pro"', 'serif'],
+              label: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --card-w: 480px;
+        --card-h: 274px; /* 3.5:2 ratio */
+      }
+      html,
+      body {
+        background: #1a1613;
+      }
+      body {
+        font-family: 'Crimson Pro', serif;
+        color: #f0e8d8;
+      }
+
+      /* Ambient page atmosphere — a very faint gold vignette on a warm charcoal */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(1200px 700px at 25% 0%, rgba(200, 152, 64, 0.06), transparent 60%),
+          radial-gradient(900px 700px at 90% 100%, rgba(200, 152, 64, 0.05), transparent 55%),
+          #1a1613;
+        z-index: -2;
+      }
+      /* Grain */
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+
+      /* Card shell — realistic paper feel */
+      .card {
+        width: var(--card-w);
+        height: var(--card-h);
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 1px 0 rgba(255, 255, 255, 0.04) inset,
+          0 30px 60px -30px rgba(0, 0, 0, 0.7),
+          0 12px 24px -12px rgba(0, 0, 0, 0.5),
+          0 2px 4px rgba(200, 152, 64, 0.03);
+      }
+
+      /* ---------- FRONT (cream face) ---------- */
+      .front {
+        background:
+          radial-gradient(600px 300px at 50% 30%, rgba(200, 152, 64, 0.08), transparent 65%),
+          linear-gradient(180deg, #f2ead8 0%, #ece2cd 100%);
+        color: #4a3d29;
+      }
+      .front::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.16;
+        mix-blend-mode: multiply;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E");
+      }
+      .front-border {
+        position: absolute;
+        inset: 14px;
+        border: 0.5px solid rgba(200, 152, 64, 0.28);
+        border-radius: 3px;
+        pointer-events: none;
+      }
+
+      /* ---------- BACK (ink face) ---------- */
+      .back {
+        background:
+          radial-gradient(700px 400px at 100% 0%, rgba(200, 152, 64, 0.09), transparent 60%),
+          radial-gradient(500px 300px at 0% 100%, rgba(200, 152, 64, 0.05), transparent 60%),
+          linear-gradient(180deg, #0d0b09 0%, #14100c 100%);
+        color: #f0e8d8;
+      }
+      .back::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E");
+      }
+
+      .eyebrow {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.42em;
+        text-transform: uppercase;
+        font-size: 8.5px;
+      }
+      .role-label {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.36em;
+        text-transform: uppercase;
+        font-size: 9px;
+      }
+      .cn-name {
+        font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        line-height: 1;
+      }
+      .en-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+      }
+
+      /* Mountain-wave flourish (SVG stroke) */
+      .wave-rule {
+        display: block;
+        width: 100%;
+        height: 14px;
+      }
+      .wave-rule path {
+        stroke: rgba(200, 152, 64, 0.72);
+        stroke-width: 0.9;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .wave-rule.on-cream path {
+        stroke: rgba(139, 100, 34, 0.72);
+      }
+
+      /* Small OF monogram (letters + waves) for the back's top-left */
+      .of-mark {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        font-size: 10px;
+        color: rgba(200, 152, 64, 0.85);
+      }
+
+      /* Layout: pair per team member */
+      .pair {
+        display: grid;
+        grid-template-columns: var(--card-w) var(--card-w);
+        gap: 44px;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 1080px) {
+        .pair {
+          grid-template-columns: var(--card-w);
+        }
+      }
+      @media (max-width: 520px) {
+        :root {
+          --card-w: 90vw;
+          --card-h: calc(90vw * 0.571);
+        }
+      }
+
+      /* Toolbar */
+      .toolbar-btn {
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(240, 232, 216, 0.7);
+        border: 0.5px solid rgba(200, 152, 64, 0.35);
+        padding: 10px 18px;
+        border-radius: 2px;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        background: transparent;
+      }
+      .toolbar-btn:hover {
+        color: #f0e8d8;
+        border-color: rgba(200, 152, 64, 0.9);
+        background: rgba(200, 152, 64, 0.05);
+      }
+      .toolbar-btn:focus-visible {
+        outline: 1px solid #c89840;
+        outline-offset: 3px;
+      }
+
+      /* Header */
+      .page-eyebrow {
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: rgba(200, 152, 64, 0.75);
+      }
+      .page-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+      }
+
+      /* PRINT — single card per page, actual physical size */
+      @page {
+        size: 3.5in 2in;
+        margin: 0;
+      }
+      @media print {
+        html,
+        body {
+          background: white;
+        }
+        body::before,
+        body::after {
+          display: none;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-sheet {
+          display: block;
+        }
+        .pair {
+          display: contents;
+        }
+        .card {
+          width: 3.5in;
+          height: 2in;
+          border-radius: 0;
+          box-shadow: none;
+          page-break-after: always;
+          break-after: page;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <!-- Page header -->
+    <header class="no-print pt-20 pb-14 text-center px-6">
+      <p class="page-eyebrow mb-6">Opus Formosa &nbsp;·&nbsp; MMXXVI</p>
+      <h1 class="page-title text-4xl md:text-5xl text-cream mb-3 tracking-wide">Namecards</h1>
+      <p class="font-body italic text-cream-dim/80 text-lg">團隊名片・front &amp; back</p>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <button class="toolbar-btn" onclick="window.print()">Print set</button>
+        <a href="team.html" class="toolbar-btn">← Back to team</a>
+      </div>
+    </header>
+
+    <!-- Card set -->
+    <main class="pb-32">
+      <div class="max-w-[1100px] mx-auto space-y-24 px-6" id="cards"></div>
+    </main>
+
+    <template id="card-template">
+      <!-- FRONT -->
+      <div class="card front">
+        <div class="front-border"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center px-10 text-center">
+          <p class="eyebrow" style="color: rgba(139, 100, 34, 0.7); margin-bottom: 34px;">
+            Opus Formosa &nbsp;·&nbsp; MMXXVI
+          </p>
+          <!-- Wordmark, drawn as type so it prints crisply at any size -->
+          <div class="flex flex-col items-center" style="color:#8b6422;">
+            <span style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:36px; letter-spacing:0.02em; line-height:0.95;">Opus</span>
+            <span style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:36px; letter-spacing:0.02em; line-height:1.05;">Formosa</span>
+            <svg class="wave-rule on-cream" viewBox="0 0 200 18" preserveAspectRatio="none" style="width:150px; margin-top:6px;">
+              <path d="M2 12 C 20 12, 34 12, 50 12 C 58 12, 62 4, 70 4 C 78 4, 82 12, 90 12 C 94 12, 96 6, 100 6 C 104 6, 106 12, 110 12 C 118 12, 122 4, 130 4 C 138 4, 142 12, 150 12 C 166 12, 180 12, 198 12" />
+            </svg>
+          </div>
+          <p class="eyebrow" style="color: rgba(139, 100, 34, 0.6); margin-top: 30px; letter-spacing:0.5em;">
+            福 &nbsp;爾 &nbsp;摩 &nbsp;沙 &nbsp;藝 &nbsp;響
+          </p>
+        </div>
+      </div>
+
+      <!-- BACK -->
+      <div class="card back">
+        <!-- top row: OF mark + program-style opus number -->
+        <div class="absolute" style="top:20px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:flex-start;">
+          <span class="of-mark">
+            OPUS FORMOSA
+            <span style="display:block; font-family:'Inter',sans-serif; font-weight:300; letter-spacing:0.3em; font-size:7.5px; color:rgba(200,152,64,0.55); margin-top:2px;">
+              福爾摩沙藝響
+            </span>
+          </span>
+          <span class="eyebrow opus-tag" style="color: rgba(200,152,64,0.55);">— Op. 00</span>
+        </div>
+
+        <!-- name block -->
+        <div class="absolute" style="left:32px; right:32px; top:82px;">
+          <div class="cn-name text-cream cn-target" style="font-size:34px;">名字</div>
+          <div class="en-name text-cream-dim en-target" style="font-size:16px; margin-top:8px;">English Name</div>
+        </div>
+
+        <!-- flourish -->
+        <div class="absolute" style="left:32px; right:32px; top:172px;">
+          <svg class="wave-rule" viewBox="0 0 200 14" preserveAspectRatio="none" style="width:70px;">
+            <path d="M2 8 C 30 8, 50 8, 70 8 C 76 8, 80 3, 86 3 C 92 3, 96 8, 100 8 C 104 8, 106 5, 110 5 C 114 5, 116 8, 120 8 C 126 8, 130 3, 136 3 C 142 3, 146 8, 152 8 C 172 8, 188 8, 198 8" />
+          </svg>
+        </div>
+
+        <!-- role block -->
+        <div class="absolute" style="left:32px; right:32px; top:198px;">
+          <div class="role-label text-gold role-cn-target" style="color:#c89840;">職稱</div>
+          <div class="en-name text-cream-dim role-en-target" style="font-size:12px; margin-top:6px; font-style:italic; letter-spacing:0.02em;">
+            Role
+          </div>
+        </div>
+
+        <!-- footer: contact / website -->
+        <div class="absolute" style="left:32px; right:32px; bottom:20px; display:flex; justify-content:space-between; align-items:flex-end;">
+          <span class="link-target" style="font-family:'Inter',sans-serif; font-size:9px; letter-spacing:0.22em; text-transform:lowercase; color:rgba(200,152,64,0.72);"></span>
+          <span style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:10px; color:rgba(158,144,128,0.55);">opusformosa.org</span>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      const members = [
+        {
+          op: '01',
+          cn: '林 易',
+          en: 'Steven Lin',
+          roleCn: '藝術總監',
+          roleEn: 'Artistic Director',
+          link: 'stevenlinpiano.com',
+        },
+        {
+          op: '02',
+          cn: '嚴子晴',
+          en: 'Canglah Micyang',
+          roleCn: '秘書長',
+          roleEn: 'Secretary General',
+          link: 'canglah-micyang.com',
+        },
+        {
+          op: '03',
+          cn: '王資閔',
+          en: 'Jimmy Wang',
+          roleCn: '發展主任',
+          roleEn: 'Director of Development',
+          link: '',
+        },
+        {
+          op: '04',
+          cn: '陳逸庭',
+          en: 'Ethan Chen',
+          roleCn: '執行助理',
+          roleEn: 'Executive Assistant',
+          link: '',
+        },
+        {
+          op: '05',
+          cn: '柯曉慧',
+          en: 'Glandys Hiu Wai Or',
+          roleCn: '執行助理',
+          roleEn: 'Executive Assistant',
+          link: '',
+        },
+      ];
+
+      const container = document.getElementById('cards');
+      const tpl = document.getElementById('card-template');
+
+      members.forEach((m) => {
+        const clone = tpl.content.cloneNode(true);
+        const pair = document.createElement('div');
+        pair.className = 'pair';
+        pair.appendChild(clone);
+        container.appendChild(pair);
+
+        // fill in
+        const card = pair.querySelectorAll('.card')[1];
+        card.querySelector('.cn-target').textContent = m.cn;
+        card.querySelector('.en-target').textContent = m.en;
+        card.querySelector('.role-cn-target').innerHTML = m.roleCn.split('').join('&nbsp;');
+        card.querySelector('.role-en-target').textContent = m.roleEn;
+        card.querySelector('.opus-tag').innerHTML = '— Op. ' + m.op;
+        const linkEl = card.querySelector('.link-target');
+        if (m.link) linkEl.textContent = m.link;
+        else linkEl.remove();
+
+        // Long English names: shrink slightly
+        if (m.en.length > 14) {
+          card.querySelector('.en-target').style.fontSize = '14px';
+        }
+      });
+    </script>
+  </body>
+</html>
