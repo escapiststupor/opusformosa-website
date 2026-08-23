@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-23T19:54:41+08:00",
+  "generatedAt": "2026-08-23T20:26:04+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 58,
+  "takenSeatCount": 59,
   "sections": [
     {
       "id": "2069990342159491072",
@@ -100,7 +100,7 @@
       "kind": "public",
       "source": "opentix-price-section-restored",
       "seatCount": 43,
-      "takenSeatCount": 5
+      "takenSeatCount": 7
     },
     {
       "id": "generated-section|public|視線不良區|1000|#00A797",
@@ -110,7 +110,7 @@
       "kind": "public",
       "source": "opentix-price-section-restored",
       "seatCount": 11,
-      "takenSeatCount": 7
+      "takenSeatCount": 6
     },
     {
       "id": "generated-section|public|1000元區|1000|#BA6FF8",
@@ -5594,7 +5594,7 @@
       "rowId": "11",
       "number": "4",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2069989384551358465",
       "groupId": "2012283814",
       "rX": 883,
@@ -5609,7 +5609,14 @@
       "kind": "public",
       "color": "#86C166",
       "source": "opentix-price-section-restored",
-      "adminStatus": 2
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-11-5",
@@ -5640,7 +5647,7 @@
       "rowId": "11",
       "number": "6",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2069989384551358465",
       "groupId": "2012283814",
       "rX": 903,
@@ -5654,7 +5661,15 @@
       "price": 1500,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section-restored"
+      "source": "opentix-price-section-restored",
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "地下樓BF-11-8",
@@ -6618,7 +6633,7 @@
       "rowId": "13",
       "number": "21",
       "sectionId": "None",
-      "status": 2,
+      "status": 0,
       "eventId": "2069989384551358465",
       "groupId": "7767028591",
       "rX": 556,
@@ -6633,14 +6648,7 @@
       "kind": "public",
       "color": "#00A797",
       "source": "opentix-price-section-restored",
-      "adminStatus": 0,
-      "taken": true,
-      "availability": "public_sold",
-      "publicSold": true,
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "adminStatus": 2
     },
     {
       "svgId": "地下樓BF-14-1",
