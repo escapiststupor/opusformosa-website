@@ -2974,6 +2974,409 @@
             "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
           },
           "expectedSeatCount": 455
+        },
+        {
+          "id": "ntt-grand-2026-09-16-2f-g21-g22-planned-internal-hold",
+          "match": {
+            "seatSelectors": [
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  1
+                ],
+                "numbers": [
+                  "1-17"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  2
+                ],
+                "numbers": [
+                  "1-25"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  3
+                ],
+                "numbers": [
+                  "19-25"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  4
+                ],
+                "numbers": [
+                  "19-25"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  5
+                ],
+                "numbers": [
+                  "19-25"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  6
+                ],
+                "numbers": [
+                  "31-33"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  7
+                ],
+                "numbers": [
+                  "31-35"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  8
+                ],
+                "numbers": [
+                  "31-37"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  9
+                ],
+                "numbers": [
+                  "27-39"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  10
+                ],
+                "numbers": [
+                  "27-39"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  11
+                ],
+                "numbers": [
+                  "9-17",
+                  "23-41"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  12
+                ],
+                "numbers": [
+                  "31-43"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  13
+                ],
+                "numbers": [
+                  "27-41"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  14
+                ],
+                "numbers": [
+                  "1-45"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  15
+                ],
+                "numbers": [
+                  3,
+                  "11-19",
+                  23
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  16
+                ],
+                "numbers": [
+                  "1-33"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  17
+                ],
+                "numbers": [
+                  "1-49"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  18
+                ],
+                "numbers": [
+                  "1-51"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  19
+                ],
+                "numbers": [
+                  "1-53"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  20
+                ],
+                "numbers": [
+                  "1-15",
+                  "21-55"
+                ]
+              },
+              {
+                "floor": "2樓G21區",
+                "rows": [
+                  "2L"
+                ],
+                "numbers": [
+                  "1-13"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  1
+                ],
+                "numbers": [
+                  "2-16"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  2
+                ],
+                "numbers": [
+                  "2-26"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  3
+                ],
+                "numbers": [
+                  "18-24"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  4
+                ],
+                "numbers": [
+                  "20-26"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  5
+                ],
+                "numbers": [
+                  "18-24"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  6
+                ],
+                "numbers": [
+                  "28-34"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  7
+                ],
+                "numbers": [
+                  "26-34"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  8
+                ],
+                "numbers": [
+                  "28-38"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  9
+                ],
+                "numbers": [
+                  "24-38"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  10
+                ],
+                "numbers": [
+                  "26-40"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  11
+                ],
+                "numbers": [
+                  "8-16",
+                  "22-40"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  12
+                ],
+                "numbers": [
+                  "26-42"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  13
+                ],
+                "numbers": [
+                  "24-42"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  14
+                ],
+                "numbers": [
+                  "2-38",
+                  "42-44"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  15
+                ],
+                "numbers": [
+                  "4-22"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  16
+                ],
+                "numbers": [
+                  "2-30",
+                  36
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  17
+                ],
+                "numbers": [
+                  "2-44"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  18
+                ],
+                "numbers": [
+                  "2-46"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  19
+                ],
+                "numbers": [
+                  "2-46"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  20
+                ],
+                "numbers": [
+                  "2-24",
+                  "28-52"
+                ]
+              },
+              {
+                "floor": "2樓G22區",
+                "rows": [
+                  "2R"
+                ],
+                "numbers": [
+                  "2-14"
+                ]
+              }
+            ]
+          },
+          "display": {
+            "sectionId": "ntt-grand-2f-g21-g22-planned-internal-hold",
+            "name": "未調票保留席（暫不對外販售）",
+            "kind": "reserved-unknown",
+            "price": null,
+            "color": "#c8c2b6",
+            "source": "opus-planned-internal-hold-seat-map",
+            "note": "9/16 台中國家歌劇院大劇院二樓 G21/G22 目前預定內控，尚未完成調票，暫不開放選位或分配。"
+          },
+          "expectedSeatCount": 490
         }
       ],
       "seatStatusOverrides": [
