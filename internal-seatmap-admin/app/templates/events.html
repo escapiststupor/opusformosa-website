@@ -15,7 +15,7 @@
         <th>場次</th>
         <th>地點</th>
         <th class="num">座位</th>
-        <th class="num">VIP 可安排</th>
+        <th class="num">已調票未指定</th>
         <th class="num">已分配</th>
         <th class="num">OPENTIX 售出</th>
         <th></th>
@@ -30,7 +30,7 @@
         </td>
         <td data-label="地點">{{ event.venue }}</td>
         <td class="num" data-label="座位">{{ event.seat_count or 0 }}</td>
-        <td class="num" data-label="VIP 可安排">{{ event.vip_available_count or 0 }}</td>
+        <td class="num" data-label="已調票未指定">{{ event.vip_available_count or 0 }}</td>
         <td class="num" data-label="已分配">{{ event.assigned_count or 0 }}</td>
         <td class="num" data-label="OPENTIX 售出">{{ event.public_sold_count or 0 }}</td>
         <td class="actions" data-label="操作"><a href="/admin/events/{{ event.event_id }}">開啟</a></td>

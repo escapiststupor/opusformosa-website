@@ -105,7 +105,7 @@
       return seat.assigneeName ? `已預訂給${seat.assigneeName}${suffix}` : `已預訂${suffix}`;
     }
     if (seat.effectiveStatus === "closed") return `不開放販售${suffix}`;
-    if (seat.effectiveStatus === "vip_available") return `VIP可分配${suffix}`;
+    if (seat.effectiveStatus === "vip_available") return `已調票未指定${suffix}`;
     return `OPENTIX販售中${suffix}`;
   }
 

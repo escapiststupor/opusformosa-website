@@ -34,7 +34,7 @@ from .db import get_db, init_db, row_to_dict, rows_to_dicts
 
 
 STATUS_LABELS = {
-    "vip_available": "VIP 可安排",
+    "vip_available": "已調票未指定",
     "vip_assigned": "已調票且指定",
     "taken": "已預訂（舊）",
     "pulled": "已調票未指定",
@@ -377,7 +377,7 @@ def status_reason(row: dict[str, Any], status: str) -> str:
     if status == "pulled":
         return "已調票至內部控管，尚未指定受配者。"
     if status == "vip_available":
-        return "Friends VIP 保留席，可調票或指定給貴賓。"
+        return "已調票至內部控管，尚未指定受配者。"
     return "仍在opentix販售不可調度"
 
 
