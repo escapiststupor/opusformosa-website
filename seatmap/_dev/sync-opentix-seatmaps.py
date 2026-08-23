@@ -647,7 +647,17 @@ def apply_pulled_seat_overrides(
                 seat["originalSectionName"] = seat.get("sectionName")
             if "originalPrice" not in seat and seat.get("price") is not None:
                 seat["originalPrice"] = seat.get("price")
-            if "originalColor" not in seat and seat.get("color"):
+            if normalize_id(seat.get("source")) == "opus-planned-internal-hold-seat-map":
+                seat.pop("originalColor", None)
+            reserved_unknown_color = config.get("displayDefaults", {}).get("reservedUnknownColor")
+            if seat.get("originalColor") == reserved_unknown_color:
+                seat.pop("originalColor", None)
+            if (
+                "originalColor" not in seat
+                and seat.get("color")
+                and seat.get("color") != reserved_unknown_color
+                and not normalize_id(seat.get("source")).startswith("opus-")
+            ):
                 seat["originalColor"] = seat.get("color")
             section_id = display.get("sectionId") or record.get("ruleId") or record["id"]
             seat["sectionId"] = normalize_id(section_id)

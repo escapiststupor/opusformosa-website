@@ -2974,113 +2974,6 @@
             "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
           },
           "expectedSeatCount": 455
-        },
-        {
-          "id": "ntt-grand-2026-09-16-2f-g21-g22-rows-1-5-planned-internal-hold",
-          "match": {
-            "seatSelectors": [
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  1
-                ],
-                "numbers": [
-                  "1-17"
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  2
-                ],
-                "numbers": [
-                  "1-25"
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  3
-                ],
-                "numbers": [
-                  "19-25"
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  4
-                ],
-                "numbers": [
-                  "19-25"
-                ]
-              },
-              {
-                "floor": "2樓G21區",
-                "rows": [
-                  5
-                ],
-                "numbers": [
-                  "19-25"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  1
-                ],
-                "numbers": [
-                  "2-16"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  2
-                ],
-                "numbers": [
-                  "2-26"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  3
-                ],
-                "numbers": [
-                  "18-24"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  4
-                ],
-                "numbers": [
-                  "20-26"
-                ]
-              },
-              {
-                "floor": "2樓G22區",
-                "rows": [
-                  5
-                ],
-                "numbers": [
-                  "18-24"
-                ]
-              }
-            ]
-          },
-          "display": {
-            "sectionId": "ntt-grand-2f-g21-g22-rows-1-5-planned-internal-hold",
-            "name": "未調票保留席（暫不對外販售）",
-            "kind": "reserved-unknown",
-            "price": null,
-            "color": "#c8c2b6",
-            "source": "opus-planned-internal-hold-seat-map",
-            "note": "9/16 台中國家歌劇院大劇院二樓 G21/G22 第 1–5 排目前預定內控，尚未完成調票，暫不開放選位或分配。"
-          },
-          "expectedSeatCount": 67
         }
       ],
       "seatStatusOverrides": [
@@ -4922,6 +4815,116 @@
         "color": "#005CAF",
         "source": "opus-pulled-seat-map",
         "note": "已確認 2026-08-21 11:28 snapshot 新增調票至內部控管的 3200元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-23:ntt-grand-vip-4200-g21-g22-rows-1-5",
+      "type": "pulled_seats",
+      "eventId": "2081582370096476160",
+      "label": "9/16 台中國家歌劇院大劇院 4200元區 1–5排",
+      "ruleId": "ntt-grand-vip-4200-g21-g22-rows-1-5",
+      "price": 4200,
+      "expectedSeatCount": 67,
+      "seatSelectors": [
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            1
+          ],
+          "numbers": [
+            "1-17"
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            "1-25"
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            "19-25"
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            "19-25"
+          ]
+        },
+        {
+          "floor": "2樓G21區",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            "19-25"
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            1
+          ],
+          "numbers": [
+            "2-16"
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            "2-26"
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            "18-24"
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            "20-26"
+          ]
+        },
+        {
+          "floor": "2樓G22區",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            "18-24"
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "ntt-grand-vip-4200-g21-g22-rows-1-5",
+        "name": "4200元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 4200,
+        "color": "#DDA43A",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認調票至內部控管的 4200元 VIP保留席。"
       }
     }
   ]
