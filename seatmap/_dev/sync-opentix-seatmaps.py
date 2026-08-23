@@ -868,13 +868,36 @@ def restore_existing_seats_to_original_sections(
     existing_sections: list[dict[str, Any]],
 ) -> None:
     sections_by_id = {normalize_id(section.get("id")): section for section in existing_sections if section.get("id")}
+    public_sections_by_name_price: dict[tuple[str, int | None], dict[str, Any]] = {}
+    public_sections_by_name: dict[str, dict[str, Any]] = {}
+    ambiguous_public_section_names: set[str] = set()
+    for section in existing_sections:
+        if normalize_id(section.get("kind")) != "public":
+            continue
+        name = normalize_id(section.get("name"))
+        if not name:
+            continue
+        price = normalize_price(section.get("price"))
+        public_sections_by_name_price[(name, price)] = section
+        if name in public_sections_by_name:
+            ambiguous_public_section_names.add(name)
+        else:
+            public_sections_by_name[name] = section
+
     for seat in final_seats:
+        original_section_name = normalize_id(seat.get("originalSectionName"))
+        original_price = normalize_price(seat.get("originalPrice"))
         original_section_id = normalize_id(seat.get("originalSectionId"))
-        if not original_section_id:
+        if not original_section_id and not original_section_name and original_price is None:
             continue
 
-        original_section = sections_by_id.get(original_section_id)
-        seat["sectionId"] = original_section_id
+        original_section = sections_by_id.get(original_section_id) if original_section_id else None
+        if not original_section and original_section_name:
+            original_section = public_sections_by_name_price.get((original_section_name, original_price))
+        if not original_section and original_section_name and original_section_name not in ambiguous_public_section_names:
+            original_section = public_sections_by_name.get(original_section_name)
+
+        seat["sectionId"] = original_section_id or (original_section.get("id") if original_section else None)
         seat["sectionName"] = (
             original_section.get("name")
             if original_section
