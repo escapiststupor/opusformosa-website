@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-25T11:28:31+08:00",
+  "generatedAt": "2026-08-25T11:40:06+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 218,
+  "takenSeatCount": 216,
   "sections": [
     {
       "id": "wwy-vip-4500-center",
@@ -113,7 +113,7 @@
       "color": "#0AD219",
       "kind": "vip-reserved",
       "source": "opus-pulled-seat-map",
-      "seatCount": 40,
+      "seatCount": 42,
       "note": "已確認 2026-08-25 早上新增調票至內部控管的 2100元 VIP保留席。",
       "originalName": "2100元區",
       "originalPrice": 2100
@@ -125,7 +125,7 @@
       "color": "#005CAF",
       "kind": "vip-reserved",
       "source": "opus-pulled-seat-map",
-      "seatCount": 40,
+      "seatCount": 38,
       "note": "已確認 2026-08-25 早上新增調票至內部控管的 2500元 VIP保留席。",
       "originalName": "2500元區",
       "originalPrice": 2500
@@ -146,7 +146,7 @@
       "color": "#005CAF",
       "kind": "public",
       "source": "opentix-price-section-restored",
-      "seatCount": 51,
+      "seatCount": 53,
       "takenSeatCount": 8
     },
     {
@@ -156,8 +156,8 @@
       "color": "#0AD219",
       "kind": "public",
       "source": "opentix-price-section-restored",
-      "seatCount": 132,
-      "takenSeatCount": 19
+      "seatCount": 130,
+      "takenSeatCount": 17
     },
     {
       "id": "generated-section|public|評鑑席|10|#D2EE4D",
@@ -318,8 +318,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -346,8 +346,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -374,8 +374,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -402,8 +402,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -430,8 +430,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -458,8 +458,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -486,8 +486,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -514,8 +514,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -542,8 +542,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -570,8 +570,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -772,8 +772,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -800,8 +800,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -828,8 +828,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -856,8 +856,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -884,8 +884,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -912,8 +912,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -940,8 +940,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -968,8 +968,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -996,8 +996,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -1024,8 +1024,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -1226,8 +1226,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1254,8 +1254,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1282,8 +1282,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1310,8 +1310,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1338,8 +1338,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1366,8 +1366,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1394,8 +1394,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -1422,8 +1422,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -1450,8 +1450,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -1478,8 +1478,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -1680,8 +1680,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1708,8 +1708,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1736,8 +1736,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1764,8 +1764,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -1792,8 +1792,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -1826,8 +1826,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -1860,8 +1860,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -1894,8 +1894,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -1928,8 +1928,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -1962,8 +1962,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2163,8 +2163,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2197,8 +2197,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2231,8 +2231,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2265,8 +2265,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2299,8 +2299,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -2327,8 +2327,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -2355,8 +2355,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2383,8 +2383,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2411,8 +2411,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2439,8 +2439,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2613,8 +2613,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2647,8 +2647,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2681,8 +2681,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2715,8 +2715,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2749,8 +2749,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -2783,8 +2783,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -2811,8 +2811,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2839,8 +2839,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2867,8 +2867,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -2895,8 +2895,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3011,8 +3011,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3045,8 +3045,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3079,8 +3079,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3113,8 +3113,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -3147,8 +3147,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3175,8 +3175,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3203,8 +3203,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3231,8 +3231,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3259,8 +3259,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3287,8 +3287,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3373,8 +3373,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3401,8 +3401,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3429,8 +3429,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3457,8 +3457,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3485,8 +3485,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3513,8 +3513,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3541,8 +3541,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3569,8 +3569,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3597,8 +3597,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3625,8 +3625,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3653,8 +3653,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3681,8 +3681,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3709,8 +3709,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3737,8 +3737,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3765,8 +3765,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3793,8 +3793,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3821,8 +3821,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3849,8 +3849,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3877,8 +3877,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -3905,8 +3905,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3933,8 +3933,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3961,8 +3961,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -3989,8 +3989,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -4017,8 +4017,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -4045,8 +4045,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -4073,8 +4073,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4299,8 +4299,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4327,8 +4327,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4355,8 +4355,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4383,8 +4383,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4411,8 +4411,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4439,8 +4439,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4467,8 +4467,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4495,8 +4495,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4523,8 +4523,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4551,8 +4551,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4753,8 +4753,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4781,8 +4781,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4809,8 +4809,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4837,8 +4837,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4865,8 +4865,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4893,8 +4893,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4921,8 +4921,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4949,8 +4949,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -4977,8 +4977,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5179,8 +5179,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5207,8 +5207,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5235,8 +5235,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5263,8 +5263,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5291,8 +5291,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5319,8 +5319,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5347,8 +5347,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5375,8 +5375,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5403,8 +5403,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5431,8 +5431,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5633,8 +5633,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5661,8 +5661,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5689,8 +5689,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5717,8 +5717,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5745,8 +5745,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -5773,8 +5773,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5801,8 +5801,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5829,8 +5829,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -5857,8 +5857,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6052,8 +6052,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6086,8 +6086,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6120,8 +6120,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6154,8 +6154,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6188,8 +6188,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6222,8 +6222,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6256,8 +6256,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6284,8 +6284,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6312,8 +6312,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6340,8 +6340,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6513,8 +6513,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6547,8 +6547,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6581,8 +6581,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6615,8 +6615,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6649,8 +6649,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6683,8 +6683,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6711,8 +6711,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6739,8 +6739,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6767,8 +6767,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -6883,8 +6883,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6917,8 +6917,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6951,8 +6951,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -6985,8 +6985,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -7019,8 +7019,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -7053,8 +7053,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。",
       "taken": true,
       "availability": "taken",
@@ -7087,8 +7087,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7115,8 +7115,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7143,8 +7143,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7171,8 +7171,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7257,8 +7257,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7285,8 +7285,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7313,8 +7313,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7341,8 +7341,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7369,8 +7369,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7397,8 +7397,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7425,8 +7425,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7453,8 +7453,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7481,8 +7481,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7509,8 +7509,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7537,8 +7537,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7565,8 +7565,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7593,8 +7593,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7621,8 +7621,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7649,8 +7649,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7677,8 +7677,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7705,8 +7705,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7733,8 +7733,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -7761,8 +7761,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7789,8 +7789,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7817,8 +7817,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7845,8 +7845,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7873,8 +7873,8 @@
       "originalSectionId": "2070020615125032960",
       "originalSectionName": "4500元區",
       "originalPrice": 4500,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "originalColor": "#DDA43A",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-4500-center",
       "note": "已確認調票至內部控管的 4500元 VIP保留席。"
     },
     {
@@ -7901,8 +7901,8 @@
       "originalSectionId": "2072172813926539264",
       "originalSectionName": "3300元區",
       "originalPrice": 3300,
-      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "originalColor": "#BA6FF8",
+      "pulledRecordId": "ticket-pull-2026-07-27-1200-425:wwy-vip-3300-side-and-front",
       "note": "已確認調票至內部控管的 3300元 VIP保留席。"
     },
     {
@@ -27791,7 +27791,7 @@
       "floorId": "2樓8號門",
       "rowId": "A2",
       "number": "28",
-      "sectionId": "wwy-vip-2500-2026-08-25",
+      "sectionId": "generated-section|public|2500元區|2500|#005CAF",
       "status": 0,
       "eventId": "2069998010554765313",
       "groupId": "934764059",
@@ -27802,24 +27802,22 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2500元 VIP保留席",
+      "sectionName": "2500元區",
       "price": 2500,
-      "kind": "vip-reserved",
+      "kind": "public",
       "color": "#005CAF",
-      "source": "opus-pulled-seat-map",
+      "source": "opentix-price-section-restored",
       "originalSectionId": "None",
       "originalSectionName": "2500元區",
       "originalPrice": 2500,
-      "originalColor": "#005CAF",
-      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2500",
-      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2500元 VIP保留席。"
+      "originalColor": "#005CAF"
     },
     {
       "svgId": "2樓8號門-A2-30",
       "floorId": "2樓8號門",
       "rowId": "A2",
       "number": "30",
-      "sectionId": "wwy-vip-2500-2026-08-25",
+      "sectionId": "generated-section|public|2500元區|2500|#005CAF",
       "status": 0,
       "eventId": "2069998010554765313",
       "groupId": "6452225463",
@@ -27830,17 +27828,15 @@
       "parentSeatingChartId": 21,
       "isConsecutive": false,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2500元 VIP保留席",
+      "sectionName": "2500元區",
       "price": 2500,
-      "kind": "vip-reserved",
+      "kind": "public",
       "color": "#005CAF",
-      "source": "opus-pulled-seat-map",
+      "source": "opentix-price-section-restored",
       "originalSectionId": "None",
       "originalSectionName": "2500元區",
       "originalPrice": 2500,
-      "originalColor": "#005CAF",
-      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2500",
-      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2500元 VIP保留席。"
+      "originalColor": "#005CAF"
     },
     {
       "svgId": "2樓8號門-A2-32",
@@ -28008,7 +28004,7 @@
       "floorId": "2樓8號門",
       "rowId": "A3",
       "number": "10",
-      "sectionId": "None",
+      "sectionId": "wwy-vip-2100-2026-08-25",
       "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "2456893733",
@@ -28019,26 +28015,25 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2100元區",
+      "sectionName": "2100元 VIP保留席",
       "price": 2100,
-      "kind": "public",
+      "kind": "vip-reserved",
       "color": "#0AD219",
-      "source": "opentix-price-section-restored",
+      "source": "opus-pulled-seat-map",
       "adminStatus": 0,
-      "taken": true,
-      "availability": "public_sold",
-      "publicSold": true,
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "originalSectionId": "None",
+      "originalSectionName": "2100元區",
+      "originalPrice": 2100,
+      "originalColor": "#0AD219",
+      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2100",
+      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2100元 VIP保留席。"
     },
     {
       "svgId": "2樓8號門-A3-12",
       "floorId": "2樓8號門",
       "rowId": "A3",
       "number": "12",
-      "sectionId": "None",
+      "sectionId": "wwy-vip-2100-2026-08-25",
       "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "3629794086",
@@ -28049,19 +28044,18 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2100元區",
+      "sectionName": "2100元 VIP保留席",
       "price": 2100,
-      "kind": "public",
+      "kind": "vip-reserved",
       "color": "#0AD219",
-      "source": "opentix-price-section-restored",
+      "source": "opus-pulled-seat-map",
       "adminStatus": 0,
-      "taken": true,
-      "availability": "public_sold",
-      "publicSold": true,
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "originalSectionId": "None",
+      "originalSectionName": "2100元區",
+      "originalPrice": 2100,
+      "originalColor": "#0AD219",
+      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2100",
+      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2100元 VIP保留席。"
     },
     {
       "svgId": "2樓8號門-A3-14",

@@ -636,6 +636,7 @@ def apply_pulled_seat_overrides(
     counts: Counter[str] = Counter()
 
     for seat in final_seats:
+        seat.pop("pulledRecordId", None)
         for record in records:
             if not pulled_record_matches(record, seat):
                 continue
