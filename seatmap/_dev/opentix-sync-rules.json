@@ -4658,6 +4658,74 @@
       }
     },
     {
+      "id": "ticket-pull-2026-08-25-1730-14:nrh-0910-vip-1800",
+      "type": "pulled_seats",
+      "eventId": "2069995305489129473",
+      "label": "9/10 台北國家演奏廳 1800元區 3–9排 17/19號",
+      "ruleId": "nrh-0910-vip-1800-2026-08-25",
+      "price": 1800,
+      "expectedSeatCount": 13,
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            "3-8"
+          ],
+          "numbers": [
+            17,
+            19
+          ]
+        },
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            19
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nrh-0910-vip-1800-2026-08-25",
+        "name": "1800元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 1800,
+        "color": "#6F98F8",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-25 17:30 調票至內部控管的 1800元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-25-1730-14:nrh-0910-vip-2200",
+      "type": "pulled_seats",
+      "eventId": "2069995305489129473",
+      "label": "9/10 台北國家演奏廳 2200元區 9排17號",
+      "ruleId": "nrh-0910-vip-2200-2026-08-25",
+      "price": 2200,
+      "expectedSeatCount": 1,
+      "seatSelectors": [
+        {
+          "floor": "地下樓BF",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            17
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nrh-0910-vip-2200-2026-08-25",
+        "name": "2200元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2200,
+        "color": "#FF6464",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-25 17:30 調票至內部控管的 2200元 VIP保留席。"
+      }
+    },
+    {
       "id": "ticket-pull-2026-08-21-1128-272:ntt-playhouse-vip-2200",
       "type": "pulled_seats",
       "eventId": "2070072493401051137",
