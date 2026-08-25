@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-25T14:04:05+08:00",
+  "generatedAt": "2026-08-25T14:07:05+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -113,7 +113,7 @@
       "color": "#0AD219",
       "kind": "vip-reserved",
       "source": "opus-pulled-seat-map",
-      "seatCount": 42,
+      "seatCount": 40,
       "note": "已確認 2026-08-25 早上新增調票至內部控管的 2100元 VIP保留席。",
       "originalName": "2100元區",
       "originalPrice": 2100
@@ -125,7 +125,7 @@
       "color": "#005CAF",
       "kind": "vip-reserved",
       "source": "opus-pulled-seat-map",
-      "seatCount": 38,
+      "seatCount": 40,
       "note": "已確認 2026-08-25 早上新增調票至內部控管的 2500元 VIP保留席。",
       "originalName": "2500元區",
       "originalPrice": 2500
@@ -28012,7 +28012,7 @@
       "floorId": "2樓8號門",
       "rowId": "A3",
       "number": "10",
-      "sectionId": "wwy-vip-2100-2026-08-25",
+      "sectionId": "wwy-vip-2500-2026-08-25",
       "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "2456893733",
@@ -28023,8 +28023,8 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2100元 VIP保留席",
-      "price": 2100,
+      "sectionName": "2500元 VIP保留席",
+      "price": 2500,
       "kind": "vip-reserved",
       "color": "#0AD219",
       "source": "opus-pulled-seat-map",
@@ -28033,15 +28033,15 @@
       "originalSectionName": "2100元區",
       "originalPrice": 2100,
       "originalColor": "#0AD219",
-      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2100",
-      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2100元 VIP保留席。"
+      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2500",
+      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2500元 VIP保留席。"
     },
     {
       "svgId": "2樓8號門-A3-12",
       "floorId": "2樓8號門",
       "rowId": "A3",
       "number": "12",
-      "sectionId": "wwy-vip-2100-2026-08-25",
+      "sectionId": "wwy-vip-2500-2026-08-25",
       "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "3629794086",
@@ -28052,8 +28052,8 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "2100元 VIP保留席",
-      "price": 2100,
+      "sectionName": "2500元 VIP保留席",
+      "price": 2500,
       "kind": "vip-reserved",
       "color": "#0AD219",
       "source": "opus-pulled-seat-map",
@@ -28062,8 +28062,8 @@
       "originalSectionName": "2100元區",
       "originalPrice": 2100,
       "originalColor": "#0AD219",
-      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2100",
-      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2100元 VIP保留席。"
+      "pulledRecordId": "ticket-pull-2026-08-25-morning-560:wwy-vip-2500",
+      "note": "已確認 2026-08-25 早上新增調票至內部控管的 2500元 VIP保留席。"
     },
     {
       "svgId": "2樓8號門-A3-14",

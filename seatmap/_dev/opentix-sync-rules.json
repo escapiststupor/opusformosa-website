@@ -5230,10 +5230,10 @@
       "id": "ticket-pull-2026-08-25-morning-560:wwy-vip-2100",
       "type": "pulled_seats",
       "eventId": "2069998010554765313",
-      "label": "9/9 衛武營音樂廳 2100元區 D2排與A3排",
+      "label": "9/9 衛武營音樂廳 2100元區 D2排",
       "ruleId": "wwy-vip-2100-2026-08-25",
       "price": 2100,
-      "expectedSeatCount": 42,
+      "expectedSeatCount": 40,
       "seatSelectors": [
         {
           "floor": "2樓3號門",
@@ -5291,16 +5291,6 @@
         {
           "floor": "2樓8號門",
           "rows": [
-            "A3"
-          ],
-          "numbers": [
-            10,
-            12
-          ]
-        },
-        {
-          "floor": "2樓8號門",
-          "rows": [
             "D2"
           ],
           "numbers": [
@@ -5335,7 +5325,7 @@
       "label": "9/9 衛武營音樂廳 2500元區 A2/A3排",
       "ruleId": "wwy-vip-2500-2026-08-25",
       "price": 2500,
-      "expectedSeatCount": 38,
+      "expectedSeatCount": 40,
       "seatSelectors": [
         {
           "floor": "2樓7號門",
@@ -5404,7 +5394,9 @@
           "numbers": [
             2,
             4,
-            6
+            6,
+            10,
+            12
           ]
         }
       ],
