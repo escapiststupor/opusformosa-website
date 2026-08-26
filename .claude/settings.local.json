@@ -128,7 +128,10 @@
       "Bash(inkscape \"/Users/pyen/OpusFormosa/ticketing/Friends of OF \\(logo\\)/川菱集團.ai\" --export-type=png --export-filename=\"/tmp/logos-convert/kawabishi.png\" --export-dpi=200)",
       "Bash(sed -i '' '/<p class=\"font-body text-cream-dim\\\\/50 text-\\\\[0.6rem\\\\] tracking-wide\">NT\\\\$/d' partners.html en/partners.html)",
       "Bash(grep -c 'NT\\\\$50,000\\\\|NT\\\\$100,000' partners.html en/partners.html)",
-      "Bash(inkscape *)"
+      "Bash(inkscape *)",
+      "Bash(git ls-tree *)",
+      "Bash(gh api *)",
+      "Bash(git rm *)"
     ]
   }
 }
