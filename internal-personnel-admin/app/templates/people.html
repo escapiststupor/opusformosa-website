@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}人員資料庫{% endblock %}
+{% block content %}
+<section class="intro">
+  <div><div class="eyebrow">People, roles & contact</div><h1>人員資料庫</h1></div>
+  <div><p>全部人員一次列出；直接輸入即可搜尋姓名、職稱和聯絡資料。</p><div class="intro-actions"><a class="button secondary" href="{{ admin_base }}/payments">付款總覽</a><a class="button secondary" href="{{ admin_base }}/labor-reports/new">為多人生成勞報單</a><a class="button" href="{{ admin_base }}/people/new">新增人員</a></div></div>
+</section>
+<div class="search directory-search">
+  <input id="person-search" autocomplete="off" placeholder="搜尋姓名、Email、電話、LINE ID、職稱、國籍" aria-label="搜尋人員">
+  <p id="person-search-count" aria-live="polite">共 {{ people|length }} 人</p>
+</div>
+<section class="directory" id="person-directory">
+  <div class="directory-head"><span>姓名</span><span>職稱</span><span>聯絡方式</span><span>證件號碼</span><span>證件</span><span></span></div>
+  {% for person in people %}
+  <a class="person" href="{{ admin_base }}/people/{{ person.id }}" data-person-search="{{ [person.display_name, person.legal_name_zh, person.legal_name_en, person.roles, person.email, person.phone, person.line_id, person.id_document_number, person.nationality]|join(' ')|lower }}">
+    <div class="name">{% if person.legal_name_zh %}{{ person.legal_name_zh }}{% endif %}{% if person.legal_name_zh and person.legal_name_en %}<span class="alternate-name">／</span>{% endif %}{% if person.legal_name_en %} {{ person.legal_name_en }}{% endif %}{% if not person.legal_name_zh and not person.legal_name_en %}{{ person.display_name }}{% endif %}</div>
+    <div class="roles">{% for item in (person.roles or '').split(',') if item %}<span class="role">{{ item }}</span>{% endfor %}</div>
+    <div>{{ person.email or '—' }}<div class="legal">{{ person.phone or '' }}</div></div>
+    <div class="mono">{{ person.id_document_number or '—' }}</div>
+    <div class="doc {% if person.id_document_status == 'verified' %}verified{% endif %}">{{ {'missing':'缺件','received':'待核驗','verified':'已核驗'}[person.id_document_status] }}</div>
+    <span class="chevron">›</span>
+  </a>
+  {% else %}
+  <div class="empty">尚未建立人員資料。<br><a href="{{ admin_base }}/people/new">新增第一位人員</a></div>
+  {% endfor %}
+  <div class="empty" id="person-search-empty" hidden>沒有符合的結果。<br>請改用姓名、職稱或聯絡資料搜尋。</div>
+</section>
+<script src="{{ root_prefix }}/static/person-search.js"></script>
+{% endblock %}

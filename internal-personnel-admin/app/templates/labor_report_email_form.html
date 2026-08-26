@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}寄出勞報單{% endblock %}
+{% block content %}
+<form class="form-card email-form" method="post" action="{{ admin_base }}/labor-reports/{{ report.id }}/email">
+  <div class="form-top"><div><div class="eyebrow">Send labour report</div><h1>寄出勞報單 email</h1><p class="form-lead">附件會自動帶入未簽版 PDF。送出前可修改收件人、主旨與內文。</p></div><button class="button" {% if not smtp_enabled %}disabled{% endif %}>確認寄出</button></div>
+  {% if smtp_enabled %}<div class="notice">寄件人：{{ mail_from }}。按下「確認寄出」後會立即寄出，並自動副本給 opusformosa@gmail.com；收件人、主旨、內文與時間會記錄在這張勞報單下。</div>{% else %}<div class="notice">寄信服務尚未設定，因此目前不能送出。完成 SMTP 設定後，此頁即可直接寄信。</div>{% endif %}
+  <section class="form-section"><h2>這次寄送</h2><div class="grid">
+    <label class="field"><span>勞報單</span><input disabled value="{{ report.work_period or report.work_date }} · {{ report.work_description }} · NT$ {{ '{:,}'.format(report.gross_amount) }}"></label>
+    <label class="field"><span>附件</span><input disabled value="{{ report.recipient_name }}_{{ report.work_date }}_勞務報酬單.pdf"></label>
+    <label class="field full"><span>收件人 email *</span><input required type="email" name="recipient_email" value="{{ person.email or '' }}"></label>
+    <label class="field full"><span>主旨 *</span><input required name="subject" value="{{ default_subject }}"></label>
+    <label class="field full"><span>內文 *</span><textarea required name="body">{{ default_body }}</textarea></label>
+  </div></section>
+  <footer class="form-footer"><a class="back" href="{{ admin_base }}/people/{{ person.id }}">← 回 {{ person.display_name }}</a><button class="button" {% if not smtp_enabled %}disabled{% endif %}>確認寄出</button></footer>
+</form>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}{{ '新增人員' if is_new else person.display_name }}{% endblock %}
+{% block content %}
+<form class="form-card" method="post" action="{{ admin_base }}/people/save">
+  <input type="hidden" name="person_id" value="{{ person.id or '' }}">
+  <div class="form-top"><div><div class="eyebrow">{{ 'New record' if is_new else 'Personnel record' }}</div><h1>{{ '新增人員' if is_new else person.display_name }}</h1></div><div class="form-actions">{% if not is_new %}{% if labor_report_eligible %}<a class="button secondary" href="{{ admin_base }}/people/{{ person.id }}/labor-reports/new">為此人生成勞報單</a>{% else %}<span class="button disabled" title="需有證件號碼及已上傳的證件檔">缺證件，不能生成勞報單</span>{% endif %}{% endif %}<button class="button">儲存人員資料</button></div></div>
+  {% if request.query_params.get('saved') %}<div class="saved">已儲存。</div>{% endif %}
+  <section class="form-section"><h2>辨識與職稱</h2><p>顯示名稱用於所有內部查詢；可填多個職稱。</p><div class="grid">
+    <label class="field"><span>顯示名稱 *</span><input required name="display_name" value="{{ person.display_name or '' }}"></label>
+    <label class="field"><span>職稱（以逗號分隔）</span><input name="role_names_text" value="{{ roles_text }}" placeholder="小提琴、首席、行政"></label>
+    <label class="field"><span>法定中文姓名</span><input name="legal_name_zh" value="{{ person.legal_name_zh or '' }}"></label>
+    <label class="field"><span>法定英文姓名</span><input name="legal_name_en" value="{{ person.legal_name_en or '' }}"></label>
+    <label class="field"><span>專業年資</span><input name="professional_experience" value="{{ person.professional_experience or '' }}" inputmode="numeric"></label>
+  </div></section>
+  <section class="form-section"><h2>聯絡資料</h2><div class="grid">
+    <label class="field"><span>Email</span><input type="email" name="email" value="{{ person.email or '' }}"></label>
+    <label class="field"><span>聯絡電話</span><input name="phone" value="{{ person.phone or '' }}"></label>
+    <label class="field"><span>LINE ID（選填）</span><input name="line_id" value="{{ person.line_id or '' }}" autocomplete="off"></label>
+    <label class="field"><span>國籍</span><input name="nationality" value="{{ person.nationality or '' }}"></label>
+    <label class="field"><span>居住狀態 *</span><select name="residency_status">{% for value in residency_statuses %}<option value="{{ value }}" {% if person.residency_status == value or (not person.residency_status and value == '未設定') %}selected{% endif %}>{{ '未設定／待確認' if value == '未設定' else value }}</option>{% endfor %}</select></label>
+    <label class="field full"><span>戶籍地址／永久地址</span><input name="permanent_address" value="{{ person.permanent_address or '' }}"></label>
+    <label class="field full"><span>通訊地址</span><input name="mailing_address" value="{{ person.mailing_address or '' }}"></label>
+  </div></section>
+  <section class="form-section"><h2>證件與帳戶</h2><p>證件正反面收到並核對後，才標示為已核驗。</p><div class="grid three">
+    <label class="field"><span>出生日期（選填）</span><input name="birth_date" value="{{ person.birth_date or '' }}" placeholder="YYYY-MM-DD；僅知年份可填 YYYY"></label>
+    <label class="field"><span>證件類型 *</span><select name="id_document_type">{% for value in id_document_types %}<option value="{{ value }}" {% if person.id_document_type == value or (not person.id_document_type and value == '未設定') %}selected{% endif %}>{{ '未設定／待確認' if value == '未設定' else value }}</option>{% endfor %}</select></label>
+    <label class="field"><span>證件號碼</span><input name="id_document_number" value="{{ person.id_document_number or '' }}"></label>
+    <label class="field"><span>證件狀態</span><select name="id_document_status">{% for value,label in [('missing','缺件'),('received','已收到，待核驗'),('verified','已核驗')] %}<option value="{{ value }}" {% if person.id_document_status == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+    <label class="field full"><span>證件備註</span><input name="id_document_note" value="{{ person.id_document_note or '' }}"></label>
+    <label class="field"><span>銀行名稱｜Bank name</span><input name="bank_name" value="{{ person.bank_name or '' }}"></label>
+    <label class="field"><span>銀行代碼｜Bank code</span><input name="bank_code" value="{{ person.bank_code or '' }}" inputmode="numeric"></label>
+    <label class="field"><span>分行名稱｜Branch name</span><input name="bank_branch" value="{{ person.bank_branch or '' }}"></label>
+    <label class="field"><span>分行代碼｜Branch code</span><input name="bank_branch_code" value="{{ person.bank_branch_code or '' }}" inputmode="numeric"></label>
+    <label class="field"><span>戶名｜Account holder’s name</span><input name="bank_account_holder" value="{{ person.bank_account_holder or '' }}"></label>
+    <label class="field"><span>銀行帳號｜Bank account number</span><input name="bank_account_number" value="{{ person.bank_account_number or '' }}" inputmode="numeric"></label>
+  </div></section>
+  <section class="form-section"><h2>內部備註</h2><div class="grid"><label class="field full"><span>備註</span><textarea name="notes">{{ person.notes or '' }}</textarea></label><label class="check"><input type="checkbox" name="is_active" {% if person.is_active is not defined or person.is_active %}checked{% endif %}>目前合作中／可排入工作</label></div></section>
+  <footer class="form-footer"><a class="back" href="{{ admin_base }}">← 回人員資料庫</a><button class="button">儲存人員資料</button></footer>
+ </form>
+{% if not is_new %}
+<section class="document-card report-card" aria-labelledby="reports-title">
+  <div class="document-heading"><div><div class="eyebrow">Labour remuneration</div><h2 id="reports-title">勞報單</h2><p>未簽版由系統產生；收到對方簽回的 PDF 後，在同一筆上傳已簽版。建立後不可修改；如填錯請作廢後重新生成。作廢單會保留紀錄，但不會列入付款。</p></div>{% if labor_report_eligible %}<a class="button" href="{{ admin_base }}/people/{{ person.id }}/labor-reports/new">生成勞報單</a>{% endif %}</div>
+  {% if request.query_params.get('labor_report_created') %}<div class="saved">未簽版勞報單已建立。</div>{% endif %}{% if request.query_params.get('labor_report_voided') %}<div class="saved">勞報單已作廢，作廢通知與原始紀錄已保留。</div>{% endif %}{% if request.query_params.get('signed_labor_report') %}<div class="saved">已簽版勞報單已上傳，這張單會列入付款總覽。</div>{% endif %}{% if request.query_params.get('labor_report_emailed') %}<div class="saved">勞報單 email 已寄出，寄送紀錄已保留。</div>{% endif %}
+  {% if labor_reports %}<ul class="report-list">{% for report in labor_reports %}<li><div class="report-info"><strong>{{ report.work_period }} · {{ report.work_description }}</strong><small>{{ income_labels.get(report.income_category, report.income_category) }} · NT$ {{ '{:,}'.format(report.gross_amount) }} · {{ report.payment_month }} 付款{% if report.voided_at %} · <span class="voided">已作廢 {{ report.voided_at }}</span>{% elif report.last_emailed_at %} · 已寄 {{ report.last_emailed_at }}{% endif %}</small></div><div class="report-actions"><a class="preview-link" href="{{ admin_base }}/labor-reports/{{ report.id }}/unsigned" target="_blank" rel="noopener">未簽版 PDF</a>{% if report.voided_at %}<span class="voided">已作廢</span>{% elif not report.signed_storage_path %}<a class="preview-link" href="{{ admin_base }}/labor-reports/{{ report.id }}/email">{{ '重寄 email' if report.email_count else '寄出 email' }}{% if report.email_count %}（{{ report.email_count }}）{% endif %}</a>{% if report.email_count %}<a class="text-button danger" href="{{ admin_base }}/labor-reports/{{ report.id }}/void">作廢</a>{% else %}<form class="report-delete" method="post" action="{{ admin_base }}/labor-reports/{{ report.id }}/void-without-email"><button class="text-button danger">作廢</button></form>{% endif %}<form class="signed-upload" method="post" action="{{ admin_base }}/labor-reports/{{ report.id }}/signed" enctype="multipart/form-data"><label class="file-picker compact"><span>上傳已簽 PDF</span><input required name="signed_file" type="file" accept=".pdf,application/pdf" onchange="if (this.files.length) this.form.requestSubmit()"></label></form>{% else %}<a class="preview-link" href="{{ admin_base }}/labor-reports/{{ report.id }}/signed">已簽版 PDF</a>{% endif %}</div></li>{% endfor %}</ul>{% else %}<div class="document-empty">尚未建立勞報單。{% if not labor_report_eligible %}請先補齊證件號碼、證件類型、居住狀態並上傳證件檔。{% endif %}</div>{% endif %}
+</section>
+<section class="document-card" aria-labelledby="documents-title">
+  <div class="document-heading"><div><div class="eyebrow">Private files</div><h2 id="documents-title">證件檔案</h2><p>上傳後只可透過已登入的內部系統下載；檔案不會有公開網址。</p></div></div>
+  {% if request.query_params.get('uploaded') %}<div class="saved">已上傳 {{ request.query_params.get('uploaded') }} 份檔案，證件狀態已標示為待核驗。</div>{% endif %}
+  {% if documents %}<ul class="document-list">{% for document in documents %}<li><span class="document-file"><strong>{{ document.original_filename }}</strong><small>{{ document.created_at }} · {{ document.file_size }} bytes</small></span><span class="document-actions"><a class="preview-link" href="{{ admin_base }}/people/{{ person.id }}/documents/{{ document.id }}/preview" target="_blank" rel="noopener">預覽</a><a class="download-link" href="{{ admin_base }}/people/{{ person.id }}/documents/{{ document.id }}/download">下載</a></span></li>{% endfor %}</ul>{% else %}<div class="document-empty">尚未有透過本系統登錄的證件檔。</div>{% endif %}
+  <form class="upload-form" method="post" action="{{ admin_base }}/people/{{ person.id }}/documents" enctype="multipart/form-data">
+    <label class="file-picker"><span>選擇檔案</span><input required name="files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.heic,application/pdf,image/png,image/jpeg,image/heic"></label>
+    <button class="button">上傳證件檔</button>
+    <p>可一次選多份；單一檔案最多 20 MB。接受 PDF、PNG、JPG、JPEG、HEIC。</p>
+  </form>
+</section>
+{% endif %}
+{% endblock %}

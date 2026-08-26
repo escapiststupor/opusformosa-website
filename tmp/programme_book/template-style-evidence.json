@@ -1,0 +1,133 @@
+{
+  "input": "/Users/pyen/Downloads/\u7bc0\u76ee\u55ae/\u7bc0\u76ee\u672c.docx",
+  "fonts_by_char_count": {
+    "Garamond": 2753,
+    "STFangsong": 536,
+    "BiauKai": 172,
+    "Bradley Hand ITC TT-Bold": 1
+  },
+  "direct_run_formatting_runs": 234,
+  "direct_paragraph_formatting_paragraphs": 63,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 25,
+      "text": "R. Schumann: Violin Sonata No. 1 in a minor, Op. 105",
+      "style": "Normal"
+    },
+    {
+      "para_index": 26,
+      "text": "\u8212\u66fc\uff1aa \u5c0f\u8abf\u7b2c\u4e00\u865f\u5c0f\u63d0\u7434\u594f\u9cf4\u66f2\uff0c\u4f5c\u54c1105",
+      "style": "Normal"
+    },
+    {
+      "para_index": 30,
+      "text": "T. Takemitsu: Distance de F\u00e9e",
+      "style": "Normal"
+    },
+    {
+      "para_index": 31,
+      "text": "\u6b66\u6eff\u5fb9\uff1a\u5996\u7cbe\u4e4b\u8ddd\u96e2",
+      "style": "Normal"
+    },
+    {
+      "para_index": 38,
+      "text": "O. Messiaen: Theme and Variations",
+      "style": "Normal"
+    },
+    {
+      "para_index": 39,
+      "text": "\u6885\u6e58\uff1a\u4e3b\u984c\u8207\u8b8a\u594f",
+      "style": "Normal"
+    },
+    {
+      "para_index": 44,
+      "text": "M. Ravel: Violin Sonata No.2 in G Major",
+      "style": "Normal"
+    },
+    {
+      "para_index": 45,
+      "text": "\u62c9\u5a01\u723e\uff1aG\u5927\u8abf\u7b2c\u4e8c\u865f\u5c0f\u63d0\u7434\u594f\u9cf4\u66f2",
+      "style": "Normal"
+    },
+    {
+      "para_index": 48,
+      "text": "F. Waxman: Carmen Fantasie",
+      "style": "Normal"
+    },
+    {
+      "para_index": 49,
+      "text": "\u74e6\u514b\u65af\u66fc\uff1a\u5361\u9580\u5e7b\u60f3\u66f2",
+      "style": "Normal"
+    },
+    {
+      "para_index": 58,
+      "text": "\u5c0f\u63d0\u7434/\u56b4\u5b50\u6674",
+      "style": "Normal"
+    },
+    {
+      "para_index": 61,
+      "text": "\u92fc\u7434/\u9ec3\u58eb\u860b ",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "\nViolin Sonata No. 1 in a minor, Op. 105                                                                     R. Schumann",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "text": "a \u5c0f\u8abf\u7b2c\u4e00\u865f\u5c0f\u63d0\u7434\u594f\u9cf4\u66f2\uff0c\u4f5c\u54c1105                                                            \u8212\u66fc(1810-1856)",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "    I. Mit Leidenschaftlichem Ausdruck \u5145\u6eff\u6fc0\u60c5\u7684",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "II. Allegretto\u5c0f\u5feb\u677f",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "III. Lebhaft\u5145\u6eff\u6d3b\u529b\u7684",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "\n",
+        "style": "Normal"
+      },
+      {
+        "para_index": 1,
+        "run_text": "Violin Sonata No. 1 in a minor, Op. 105",
+        "style": "Normal"
+      },
+      {
+        "para_index": 1,
+        "run_text": "                                                                     ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 1,
+        "run_text": "R. Schumann",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "a ",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}
