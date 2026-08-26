@@ -5,7 +5,7 @@
 
 echo "🚀 Deploying Opus Formosa website..."
 
-DEPLOY_PATHS=( "." ":(exclude)internal-seatmap-admin" ":(exclude)internal-seatmap-admin/**" )
+DEPLOY_PATHS=( "." ":(exclude)internal-seatmap-admin" ":(exclude)internal-seatmap-admin/**" ":(exclude)internal-personnel-admin" ":(exclude)internal-personnel-admin/**" ":(exclude)CONTEXT.md" )
 
 # Ensure CNAME file exists for custom domain
 if [[ ! -f "CNAME" ]]; then

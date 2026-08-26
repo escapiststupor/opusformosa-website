@@ -1,9 +1,0 @@
-fastapi
-uvicorn[standard]
-jinja2
-python-multipart
-itsdangerous
-authlib
-httpx
-python-dotenv
-reportlab
