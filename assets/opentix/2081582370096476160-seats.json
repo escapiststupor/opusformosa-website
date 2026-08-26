@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-26T15:12:52+08:00",
+  "generatedAt": "2026-08-26T16:04:07+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 199,
+  "takenSeatCount": 201,
   "sections": [
     {
       "id": "ntt-grand-vip-3700-side",
@@ -213,7 +213,7 @@
       "seatCount": 182,
       "originalName": "1600元區",
       "originalPrice": 1600,
-      "takenSeatCount": 3
+      "takenSeatCount": 5
     },
     {
       "id": "generated-section|public|1300元區|1300|#F6703D",
@@ -37355,7 +37355,7 @@
       "rowId": "30",
       "number": "12",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2081582370096476160",
       "groupId": "7499318596",
       "rX": 1240,
@@ -37369,7 +37369,15 @@
       "price": 1600,
       "kind": "public",
       "color": "#FAAE17",
-      "source": "opentix-price-section-restored"
+      "source": "opentix-price-section-restored",
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓G24區-30-14",
@@ -37377,7 +37385,7 @@
       "rowId": "30",
       "number": "14",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2081582370096476160",
       "groupId": "7499318596",
       "rX": 1261,
@@ -37391,7 +37399,15 @@
       "price": 1600,
       "kind": "public",
       "color": "#FAAE17",
-      "source": "opentix-price-section-restored"
+      "source": "opentix-price-section-restored",
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓G24區-30-16",
