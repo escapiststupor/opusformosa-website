@@ -6534,6 +6534,605 @@
         "source": "opus-pulled-seat-map",
         "note": "已確認 2026-08-25 早上新增調票至內部控管的 2800元 VIP保留席。"
       }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-2800",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 2800元區 8/27下午調票",
+      "ruleId": "nch-vip-2800-2026-08-27",
+      "price": 2800,
+      "expectedSeatCount": 1,
+      "seatSelectors": [
+        {
+          "floor": "3樓",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            18
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-2800-2026-08-27",
+        "name": "2800元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2800,
+        "color": "#6F98F8",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 2800元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-2500",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 2500元區 8/27下午調票",
+      "ruleId": "nch-vip-2500-2026-08-27",
+      "price": 2500,
+      "expectedSeatCount": 12,
+      "seatSelectors": [
+        {
+          "floor": "3樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            19,
+            21,
+            23,
+            25
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            18,
+            20,
+            22,
+            24
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            20,
+            22,
+            24,
+            26
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-2500-2026-08-27",
+        "name": "2500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2500,
+        "color": "#0AD219",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 2500元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-2100",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 2100元區 8/27下午調票",
+      "ruleId": "nch-vip-2100-2026-08-27",
+      "price": 2100,
+      "expectedSeatCount": 57,
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            25,
+            27,
+            "29-32"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            12
+          ],
+          "numbers": [
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            13
+          ],
+          "numbers": [
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            15
+          ],
+          "numbers": [
+            "30-33"
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            18
+          ],
+          "numbers": [
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            26
+          ],
+          "numbers": [
+            "1-15"
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            27,
+            29,
+            31,
+            33
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            26,
+            28,
+            30,
+            32
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            28,
+            30,
+            32,
+            34
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31,
+            33
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-2100-2026-08-27",
+        "name": "2100元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 2100,
+        "color": "#BA6FF8",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 2100元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-1800",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 1800元區 8/27下午調票",
+      "ruleId": "nch-vip-1800-2026-08-27",
+      "price": 1800,
+      "expectedSeatCount": 50,
+      "seatSelectors": [
+        {
+          "floor": "2樓",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            12
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            13
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            18
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "2樓",
+          "rows": [
+            19
+          ],
+          "numbers": [
+            34,
+            36
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            1
+          ],
+          "numbers": [
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            2
+          ],
+          "numbers": [
+            3,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            3
+          ],
+          "numbers": [
+            3,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            4
+          ],
+          "numbers": [
+            37,
+            39,
+            41
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            5
+          ],
+          "numbers": [
+            34,
+            36,
+            38,
+            40
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            6
+          ],
+          "numbers": [
+            36,
+            38,
+            40
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            7
+          ],
+          "numbers": [
+            35,
+            37,
+            39
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            8
+          ],
+          "numbers": [
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31,
+            33
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-1800-2026-08-27",
+        "name": "1800元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 1800,
+        "color": "#B32605",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 1800元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-1500",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 1500元區 8/27下午調票",
+      "ruleId": "nch-vip-1500-2026-08-27",
+      "price": 1500,
+      "expectedSeatCount": 20,
+      "seatSelectors": [
+        {
+          "floor": "3樓",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-1500-2026-08-27",
+        "name": "1500元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 1500,
+        "color": "#3A8FB7",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 1500元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-1200",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 1200元區 8/27下午調票",
+      "ruleId": "nch-vip-1200-2026-08-27",
+      "price": 1200,
+      "expectedSeatCount": 14,
+      "seatSelectors": [
+        {
+          "floor": "3樓",
+          "rows": [
+            9
+          ],
+          "numbers": [
+            22,
+            24
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            10
+          ],
+          "numbers": [
+            22,
+            24
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-1200-2026-08-27",
+        "name": "1200元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 1200,
+        "color": "#ADB72B",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 1200元 VIP保留席。"
+      }
+    },
+    {
+      "id": "ticket-pull-2026-08-27-1340-159:nch-vip-640",
+      "type": "pulled_seats",
+      "eventId": "2070048441140207616",
+      "label": "9/4 台北國家音樂廳 640元區 8/27下午調票",
+      "ruleId": "nch-vip-640-2026-08-27",
+      "price": 640,
+      "expectedSeatCount": 5,
+      "seatSelectors": [
+        {
+          "floor": "3樓",
+          "rows": [
+            1
+          ],
+          "numbers": [
+            9
+          ]
+        },
+        {
+          "floor": "3樓",
+          "rows": [
+            11
+          ],
+          "numbers": [
+            25,
+            27,
+            29,
+            31
+          ]
+        }
+      ],
+      "display": {
+        "sectionId": "nch-vip-640-2026-08-27",
+        "name": "640元 VIP保留席",
+        "kind": "vip-reserved",
+        "price": 640,
+        "color": "#AE00C1",
+        "source": "opus-pulled-seat-map",
+        "note": "已確認 2026-08-27 下午新增調票至內部控管的 640元 VIP保留席。"
+      }
     }
   ]
 }
