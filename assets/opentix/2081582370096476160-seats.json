@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-30T01:42:38+08:00",
+  "generatedAt": "2026-08-30T04:01:41+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -43094,7 +43094,7 @@
       "rowId": "4L",
       "number": "11",
       "sectionId": "ntt-grand-4f-closed-reserved",
-      "status": 3,
+      "status": 0,
       "eventId": "2081582370096476160",
       "groupId": "3092690517",
       "rX": 363,
@@ -43112,7 +43112,7 @@
       "originalSectionId": "2081628006353870848",
       "originalSectionName": "1300元區",
       "originalPrice": 1300,
-      "adminStatus": 0,
+      "adminStatus": 3,
       "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
     },
     {
@@ -43121,7 +43121,7 @@
       "rowId": "4L",
       "number": "13",
       "sectionId": "ntt-grand-4f-closed-reserved",
-      "status": 3,
+      "status": 0,
       "eventId": "2081582370096476160",
       "groupId": "6520268155",
       "rX": 364,
@@ -43139,7 +43139,7 @@
       "originalSectionId": "2081628006353870848",
       "originalSectionName": "1300元區",
       "originalPrice": 1300,
-      "adminStatus": 0,
+      "adminStatus": 3,
       "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
     },
     {
@@ -43148,7 +43148,7 @@
       "rowId": "4L",
       "number": "15",
       "sectionId": "ntt-grand-4f-closed-reserved",
-      "status": 3,
+      "status": 0,
       "eventId": "2081582370096476160",
       "groupId": "2501146185",
       "rX": 364,
@@ -43166,7 +43166,7 @@
       "originalSectionId": "2081628006353870848",
       "originalSectionName": "1300元區",
       "originalPrice": 1300,
-      "adminStatus": 0,
+      "adminStatus": 3,
       "note": "9/16 台中國家歌劇院大劇院四樓席次未開放販售，座位圖以保留區顯示。"
     },
     {
