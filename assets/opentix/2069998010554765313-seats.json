@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-08-30T08:46:32+08:00",
+  "generatedAt": "2026-08-30T13:55:14+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -27396,7 +27396,7 @@
       "rowId": "A1",
       "number": "44",
       "sectionId": "None",
-      "status": 1,
+      "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "8351091158",
       "rX": 1551,
@@ -27411,7 +27411,7 @@
       "kind": "public",
       "color": "#005CAF",
       "source": "opentix-price-section-restored",
-      "adminStatus": 0,
+      "adminStatus": 1,
       "taken": true,
       "availability": "public_sold",
       "publicSold": true,
