@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-09-01T12:39:35+08:00",
+  "generatedAt": "2026-09-01T15:38:06+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -30,7 +30,7 @@
     "Public seats with OPENTIX status outside configured available statuses are automatically marked taken and crossed out.",
     "Seat availability status is overlaid from the OPENTIX public seats API when available; admin data remains the source for sections, prices, and SVG."
   ],
-  "takenSeatCount": 249,
+  "takenSeatCount": 251,
   "sections": [
     {
       "id": "wwy-vip-4500-center",
@@ -131,6 +131,18 @@
       "originalPrice": 2500
     },
     {
+      "id": "wwy-vip-10-2026-09-01",
+      "name": "10元 VIP保留席",
+      "price": 10,
+      "color": "#979797",
+      "kind": "vip-reserved",
+      "source": "opus-pulled-seat-map",
+      "seatCount": 1,
+      "note": "依 2026-08-31 22:30 票務信件確認，1樓1號門11排9號改為可調票座位並調出為10元貴賓票。",
+      "originalName": "控台席",
+      "originalPrice": 10
+    },
+    {
       "id": "generated-section|public|館方工作席|10|#FDFF00",
       "name": "館方工作席",
       "price": 10,
@@ -176,8 +188,7 @@
       "color": "#979797",
       "kind": "public",
       "source": "opentix-price-section-restored",
-      "seatCount": 27,
-      "takenSeatCount": 1
+      "seatCount": 26
     },
     {
       "id": "generated-section|public|1800元區|1800|#FF6464",
@@ -197,7 +208,7 @@
       "kind": "public",
       "source": "opentix-price-section-restored",
       "seatCount": 134,
-      "takenSeatCount": 6
+      "takenSeatCount": 7
     },
     {
       "id": "generated-section|public|790元區|790|#6FCEF8",
@@ -281,7 +292,7 @@
       "kind": "public",
       "source": "opentix-price-section-restored",
       "seatCount": 403,
-      "takenSeatCount": 92
+      "takenSeatCount": 94
     },
     {
       "id": "generated-section|public|青年席位300元（原價640）|640|#C27BA0",
@@ -4171,7 +4182,7 @@
       "floorId": "1樓1號門",
       "rowId": "11",
       "number": "9",
-      "sectionId": "None",
+      "sectionId": "wwy-vip-10-2026-09-01",
       "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "1939270904",
@@ -4182,19 +4193,18 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "控台席",
+      "sectionName": "10元 VIP保留席",
       "price": 10,
-      "kind": "public",
+      "kind": "vip-reserved",
       "color": "#979797",
-      "source": "opentix-price-section-restored",
+      "source": "opus-pulled-seat-map",
       "adminStatus": 0,
-      "taken": true,
-      "availability": "public_sold",
-      "publicSold": true,
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "originalSectionId": "None",
+      "originalSectionName": "控台席",
+      "originalPrice": 10,
+      "originalColor": "#979797",
+      "pulledRecordId": "ticket-pull-2026-09-01-0909-control-seat-10:wwy-vip-10",
+      "note": "依 2026-08-31 22:30 票務信件確認，1樓1號門11排9號改為可調票座位並調出為10元貴賓票。"
     },
     {
       "svgId": "1樓1號門-12-1",
@@ -26541,7 +26551,7 @@
       "rowId": "D4",
       "number": "1",
       "sectionId": "None",
-      "status": 0,
+      "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "4836594635",
       "rX": 508,
@@ -26555,7 +26565,15 @@
       "price": 1200,
       "kind": "public",
       "color": "#FAAE17",
-      "source": "opentix-price-section-restored"
+      "source": "opentix-price-section-restored",
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "2樓7號門-D4-3",
@@ -44886,7 +44904,7 @@
       "rowId": "A4",
       "number": "19",
       "sectionId": "None",
-      "status": 0,
+      "status": 3,
       "eventId": "2069998010554765313",
       "groupId": "6281714382",
       "rX": 940,
@@ -44900,7 +44918,15 @@
       "price": 640,
       "kind": "public",
       "color": "#86C166",
-      "source": "opentix-price-section-restored"
+      "source": "opentix-price-section-restored",
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓15號門-A4-21",
@@ -44908,7 +44934,7 @@
       "rowId": "A4",
       "number": "21",
       "sectionId": "None",
-      "status": 0,
+      "status": 3,
       "eventId": "2069998010554765313",
       "groupId": "6281714382",
       "rX": 920,
@@ -44923,7 +44949,14 @@
       "kind": "public",
       "color": "#86C166",
       "source": "opentix-price-section-restored",
-      "adminStatus": 3
+      "adminStatus": 0,
+      "taken": true,
+      "availability": "public_sold",
+      "publicSold": true,
+      "takenLabel": "OPENTIX 已售出／不可售",
+      "takenSource": "opentix-availability-marker",
+      "takenRuleType": "opentix-availability-marker",
+      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓15號門-A4-23",
