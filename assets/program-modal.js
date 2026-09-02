@@ -237,7 +237,7 @@
               { role: '鋼琴', name: 'Kyu Yeon Kim' }
             ] },
           { composer: '佛瑞', composerAlt: 'Gabriel Fauré',
-            title: 'g 小調第一號鋼琴四重奏，作品 15', titleAlt: 'Piano Quartet No. 1 in G minor, Op. 15',
+            title: 'c 小調第一號鋼琴四重奏，作品 15', titleAlt: 'Piano Quartet No. 1 in C minor, Op. 15',
             performers: [
               { role: '小提琴', name: 'Boris Borgolotto' },
               { role: '中提琴', name: 'Adrien La Marca' },
@@ -271,7 +271,7 @@
               { role: 'Piano', name: 'Kyu Yeon Kim' }
             ] },
           { composer: 'Gabriel Fauré', composerAlt: '佛瑞',
-            title: 'Piano Quartet No. 1 in G minor, Op. 15', titleAlt: 'g 小調第一號鋼琴四重奏，作品 15',
+            title: 'Piano Quartet No. 1 in C minor, Op. 15', titleAlt: 'c 小調第一號鋼琴四重奏，作品 15',
             performers: [
               { role: 'Violin', name: 'Boris Borgolotto' },
               { role: 'Viola', name: 'Adrien La Marca' },
