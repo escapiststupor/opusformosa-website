@@ -22,7 +22,7 @@
     "showSeatings": true,
     "hideSeatsBeforeOnSale": false
   },
-  "generatedAt": "2026-09-02T16:43:32+08:00",
+  "generatedAt": "2026-09-02T17:06:38+08:00",
   "notes": [
     "This file is a static seat-map snapshot for Friends of Opus Formosa seat inquiries.",
     "OPENTIX admin data is the source of truth for non-VIP seats. Friends VIP rules override OPENTIX data for matched seats.",
@@ -191,6 +191,19 @@
       "originalPrice": 1200
     },
     {
+      "id": "wwy-vip-640-2026-09-02",
+      "name": "640元 VIP保留席",
+      "price": 640,
+      "color": "#86C166",
+      "kind": "vip-reserved",
+      "source": "opus-pulled-seat-map",
+      "seatCount": 1,
+      "note": "已確認 2026-09-02 下午新增調票至內部控管，指定給張貴琴。",
+      "originalName": "640區",
+      "originalPrice": 640,
+      "takenSeatCount": 1
+    },
+    {
       "id": "generated-section|public|館方工作席|10|#FDFF00",
       "name": "館方工作席",
       "price": 10,
@@ -339,8 +352,8 @@
       "color": "#86C166",
       "kind": "public",
       "source": "opentix-price-section-restored",
-      "seatCount": 403,
-      "takenSeatCount": 95
+      "seatCount": 402,
+      "takenSeatCount": 94
     },
     {
       "id": "generated-section|public|青年席位300元（原價640）|640|#C27BA0",
@@ -45591,7 +45604,7 @@
       "floorId": "3樓15號門",
       "rowId": "A3",
       "number": "13",
-      "sectionId": "None",
+      "sectionId": "wwy-vip-640-2026-09-02",
       "status": 2,
       "eventId": "2069998010554765313",
       "groupId": "3855955545",
@@ -45602,19 +45615,24 @@
       "parentSeatingChartId": 21,
       "isConsecutive": true,
       "statusSource": "opentix-public-seats-api",
-      "sectionName": "640區",
+      "sectionName": "640元 VIP保留席",
       "price": 640,
-      "kind": "public",
+      "kind": "vip-reserved",
       "color": "#86C166",
-      "source": "opentix-price-section-restored",
+      "source": "opus-pulled-seat-map",
       "adminStatus": 0,
+      "originalSectionId": "None",
+      "originalSectionName": "640區",
+      "originalPrice": 640,
+      "originalColor": "#86C166",
+      "pulledRecordId": "ticket-pull-2026-09-02-1541-88:wwy-vip-640",
+      "note": "已確認 2026-09-02 下午新增調票至內部控管，指定給張貴琴。",
       "taken": true,
-      "availability": "public_sold",
-      "publicSold": true,
-      "takenLabel": "OPENTIX 已售出／不可售",
-      "takenSource": "opentix-availability-marker",
-      "takenRuleType": "opentix-availability-marker",
-      "takenNote": "公開販售座位若 OPENTIX 狀態不再是可售，維持原票區樣式並以叉叉標示。"
+      "availability": "taken",
+      "takenLabel": "已預訂",
+      "takenSource": "opus-vip-taken-seat-map",
+      "takenRuleType": "manual-seat-status-override",
+      "takenNote": "9/9 Friends VIP 已預訂席次，維持 VIP 樣式並以叉叉標示。"
     },
     {
       "svgId": "3樓15號門-A3-15",
