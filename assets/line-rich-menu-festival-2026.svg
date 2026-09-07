@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="540" viewBox="0 0 800 540">
+  <defs>
+    <filter id="soften"><feGaussianBlur stdDeviation="0.2"/></filter>
+    <linearGradient id="veil" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8f2e8" stop-opacity=".14"/><stop offset="1" stop-color="#123f3d" stop-opacity=".10"/></linearGradient>
+    <style>
+      .num { font: 500 10px 'Avenir Next', 'Helvetica Neue', sans-serif; letter-spacing: 1.7px; fill: #254442; }
+      .title { font-family: 'PingFang TC', 'Noto Serif TC', 'Songti TC', serif; font-weight: 500; font-size: 25px; letter-spacing: 1.1px; fill: #183533; }
+      .sub { font-family: 'PingFang TC', 'Noto Sans TC', sans-serif; font-weight: 400; font-size: 12px; letter-spacing: 1.35px; fill: #40615e; }
+      .rule { stroke: #f9f5ed; stroke-opacity: .82; stroke-width: 1; }
+      .accent { fill: #bd674f; }
+    </style>
+  </defs>
+  <image x="0" y="0" width="800" height="540" preserveAspectRatio="xMidYMid slice" xlink:href="line-rich-menu-festival-2026-background.png"/>
+  <rect width="800" height="540" fill="url(#veil)"/>
+  <path class="rule" d="M266.667 0V540M533.333 0V540M0 270H800"/>
+  <g text-anchor="middle">
+    <g transform="translate(133.333 135)">
+      <circle class="accent" cx="0" cy="-44" r="3"/>
+      <text class="num" y="-27">01 / TAIPEI</text>
+      <text class="title" y="9">開幕之夜合照</text>
+      <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
+    </g>
+    <g transform="translate(400 135)">
+      <circle class="accent" cx="0" cy="-44" r="3"/>
+      <text class="num" y="-27">02 / KAOHSIUNG</text>
+      <text class="title" y="3">衛武營節目</text>
+      <text class="sub" y="29">三重奏到協奏曲</text>
+      <path d="M-61 47H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
+    </g>
+    <g transform="translate(666.667 135)">
+      <circle class="accent" cx="0" cy="-44" r="3"/>
+      <text class="num" y="-27">03 / TAIPEI</text>
+      <text class="title" y="9">歐陸夜曲</text>
+      <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
+    </g>
+    <g transform="translate(133.333 405)">
+      <circle class="accent" cx="0" cy="-44" r="3"/>
+      <text class="num" y="-27">04 / TAIPEI</text>
+      <text class="title" y="9">異鄉之憶</text>
+      <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
+    </g>
+    <g transform="translate(400 405)">
+      <circle class="accent" cx="0" cy="-44" r="3"/>
+      <text class="num" y="-27">05 / TAICHUNG</text>
+      <text class="title" y="9">弦間絮語</text>
+      <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
+    </g>
+    <g transform="translate(666.667 405)">
+      <circle class="accent" cx="0" cy="-44" r="3"/>
+      <text class="num" y="-27">06 / TAICHUNG</text>
+      <text class="title" y="3">閉幕之夜</text>
+      <text class="sub" y="29">林易與朋友們</text>
+      <path d="M-61 47H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
+    </g>
+  </g>
+</svg>
