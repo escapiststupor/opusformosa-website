@@ -16,38 +16,38 @@
   <g text-anchor="middle">
     <g transform="translate(133.333 135)">
       <circle class="accent" cx="0" cy="-44" r="3"/>
-      <text class="num" y="-27">01 / TAIPEI</text>
+      <text class="num" y="-27">Sep 04</text>
       <text class="title" y="9">開幕之夜合照</text>
       <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
     </g>
     <g transform="translate(400 135)">
       <circle class="accent" cx="0" cy="-44" r="3"/>
-      <text class="num" y="-27">02 / KAOHSIUNG</text>
+      <text class="num" y="-27">Sep 09</text>
       <text class="title" y="3">衛武營節目</text>
       <text class="sub" y="29">三重奏到協奏曲</text>
       <path d="M-61 47H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
     </g>
     <g transform="translate(666.667 135)">
       <circle class="accent" cx="0" cy="-44" r="3"/>
-      <text class="num" y="-27">03 / TAIPEI</text>
+      <text class="num" y="-27">Sep 10</text>
       <text class="title" y="9">歐陸夜曲</text>
       <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
     </g>
     <g transform="translate(133.333 405)">
       <circle class="accent" cx="0" cy="-44" r="3"/>
-      <text class="num" y="-27">04 / TAIPEI</text>
+      <text class="num" y="-27">Sep 12</text>
       <text class="title" y="9">異鄉之憶</text>
       <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
     </g>
     <g transform="translate(400 405)">
       <circle class="accent" cx="0" cy="-44" r="3"/>
-      <text class="num" y="-27">05 / TAICHUNG</text>
+      <text class="num" y="-27">Sep 14</text>
       <text class="title" y="9">弦間絮語</text>
       <path d="M-61 28H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
     </g>
     <g transform="translate(666.667 405)">
       <circle class="accent" cx="0" cy="-44" r="3"/>
-      <text class="num" y="-27">06 / TAICHUNG</text>
+      <text class="num" y="-27">Sep 16</text>
       <text class="title" y="3">閉幕之夜</text>
       <text class="sub" y="29">林易與朋友們</text>
       <path d="M-61 47H61" stroke="#284946" stroke-width="1" stroke-opacity=".42"/>
