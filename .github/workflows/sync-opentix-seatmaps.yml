@@ -1,15 +1,6 @@
 name: Sync OPENTIX seat maps
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - ".github/workflows/sync-opentix-seatmaps.yml"
-      - "seatmap/_dev/**"
-      - "internal-seatmap-admin/**"
-  schedule:
-    - cron: "*/20 * * * *"
   workflow_dispatch:
 
 permissions:
