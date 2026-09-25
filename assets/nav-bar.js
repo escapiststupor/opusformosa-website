@@ -2,6 +2,7 @@
   var isEn = false;
   var base = "";
   var currentId = "index";
+  var showFestivalSupportLink = false;
 
   var items = [
     { id: "index", page: "", labelZh: "首頁", labelEn: "Home" },
@@ -90,6 +91,7 @@
   }
 
   function renderFestivalSupportLink() {
+    if (!showFestivalSupportLink) return "";
     if (currentId !== "friends" && currentId !== "festival2026") return "";
 
     var href = isEn ? "/en/2026-friends.html" : "/2026-friends.html";
