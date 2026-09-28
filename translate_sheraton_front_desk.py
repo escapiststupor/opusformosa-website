@@ -115,7 +115,7 @@ for row, values in zip(cars.rows[1:], car_rows):
 for paragraph, text in zip(document.paragraphs[6:12], [
     "Phyllis Canglah M. — WhatsApp：https://wa.me/qr/BBW55DSGXCD5H1\nEthan（Yiting）— WhatsApp：https://wa.me/qr/G7JIT5KAJTLON1",
     "Ethan：Ethan —［電話］",
-    "Glandys：Glandys —［電話］",
+    "",
     "車隊服務：Car Service —［電話］",
     "喜來登：台北喜來登大飯店 — No. 12, Sec. 1, Zhongxiao East Road, Zhongzheng District, Taipei, Taiwan 10049 — +886-2-2321-5511",
     "Phyllis：Phyllis —［電話］",

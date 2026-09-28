@@ -4,8 +4,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-render_root = Path('/private/tmp/glandys_doc_renders')
-output_root = Path('/private/tmp/glandys_doc_contacts')
+render_root = Path('/private/tmp/logistics_doc_renders')
+output_root = Path('/private/tmp/logistics_doc_contacts')
 output_root.mkdir(parents=True, exist_ok=True)
 pages = []
 for directory in sorted(render_root.iterdir()):

@@ -104,7 +104,6 @@ REPLACEMENTS = [
     ("Sep 14 dress rehearsal and Chamber Series III concert.", "9月14日彩排與室內樂系列 III 演出場地。"),
     ("Sep 16 closing concert dress rehearsal and concert.", "9月16日閉幕音樂會彩排與演出場地。"),
     ("Sep 2 sponsor dinner. Core arrival 17:00; Aimi may arrive 18:00.", "9月2日贊助人晚宴。主要出席人員17:00到場；Aimi可於18:00抵達。"),
-    ("Glandys", "Glandys"),
     ("WhatsApp local contact", "WhatsApp 當地聯絡人"),
     ("Sheraton Grand Taipei", "台北喜來登大飯店"),
     ("Wang Tai Foundation", "旺台基金會"),

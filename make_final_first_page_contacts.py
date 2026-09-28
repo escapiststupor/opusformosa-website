@@ -2,8 +2,8 @@ from math import ceil
 from pathlib import Path
 from PIL import Image, ImageDraw
 
-root = Path('/private/tmp/glandys_doc_renders_final')
-out = Path('/private/tmp/glandys_final_first_page_contacts')
+root = Path('/private/tmp/logistics_doc_renders_final')
+out = Path('/private/tmp/logistics_final_first_page_contacts')
 out.mkdir(parents=True, exist_ok=True)
 pages = [(directory.name, directory / 'page-1.png') for directory in sorted(root.iterdir())]
 for number in range(ceil(len(pages) / 4)):
