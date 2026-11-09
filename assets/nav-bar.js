@@ -151,11 +151,12 @@
           var festivalActive = currentId === "festival2026" || currentId === "festival2027" || currentId === "artists2026";
           var yearLinks = ["2026", "2027"].map(function (year) {
             var selected = currentId === "festival" + year;
-            return '<a href="' + pageHref("festival" + year, isEn ? "en" : "zh") + '"' +
-              (selected ? ' aria-current="page"' : '') + '>' + year + '</a>' +
+            return '<div class="festival-nav__edition"><span class="festival-nav__year">' + year + '</span>' +
+              '<a href="' + pageHref("festival" + year, isEn ? "en" : "zh") + '"' +
+              (selected ? ' aria-current="page"' : '') + '>' + (isEn ? "Festival" : "音樂節") + '</a>' +
               (year === "2026" ? '<a href="' + pageHref("artists2026", isEn ? "en" : "zh") + '"' +
                 (currentId === "artists2026" ? ' aria-current="page"' : '') + '>' +
-                (isEn ? "2026 Artists" : "2026 藝術家") + '</a>' : '');
+                (isEn ? "Artists" : "藝術家") + '</a>' : '') + '</div>';
           }).join("");
           return '<details class="festival-nav">' +
             '<summary class="' + (festivalActive ? activeClass : linkClass) + '">' +

@@ -6,6 +6,8 @@ nav-bar { display: block; }
 .festival-nav__arrow { width: 7px; height: 7px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); }
 .festival-nav[open] .festival-nav__arrow { transform: rotate(225deg); }
 .festival-nav__years { padding: 6px 16px 6px 28px; background: #0d0b09; }
+.festival-nav__year { display: block; padding: 10px 16px 4px; color: #c89840; font-weight: 600; }
+.festival-nav__edition + .festival-nav__edition { margin-top: 6px; border-top: 1px solid rgba(200,152,64,.22); }
 .festival-nav__years a { display: block; padding: 10px 16px; color: #f0e8d8; text-decoration: none; }
 .festival-nav__years a:hover, .festival-nav__years a[aria-current="page"] { color: #c89840; }
 .festival-nav summary:focus-visible, .festival-nav__years a:focus-visible { outline: 2px solid #c89840; outline-offset: 3px; }
