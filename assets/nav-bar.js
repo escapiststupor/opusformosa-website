@@ -155,7 +155,7 @@
             var selected = currentId === "festival" + year;
             return '<div class="festival-nav__edition"><span class="festival-nav__year">' + year + '</span>' +
               '<a href="' + pageHref("festival" + year, isEn ? "en" : "zh") + '"' +
-              (selected ? ' aria-current="page"' : '') + '>' + (isEn ? "Festival" : "音樂節") + '</a>' +
+              (selected ? ' aria-current="page"' : '') + '>' + (isEn ? "Concert Information" : "演出資訊") + '</a>' +
               '<a href="' + pageHref("artists" + year, isEn ? "en" : "zh") + '"' +
                 (currentId === "artists" + year ? ' aria-current="page"' : '') + '>' +
                 (isEn ? "Artists" : "藝術家") + '</a></div>';
