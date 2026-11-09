@@ -15,6 +15,7 @@
     { id: "team", page: "team", labelZh: "團隊介紹", labelEn: "Team" },
     { id: "bilbao", page: "bilbao", labelZh: "畢爾包", labelEn: "Bilbao" },
     { id: "festival2026", page: "festival2026", labelZh: "Edition 2026", labelEn: "Edition 2026" },
+    { id: "festival2027", page: "festival2027", labelZh: "2027 音樂節", labelEn: "Edition 2027" },
     { id: "artists", page: "artists", labelZh: "藝術家", labelEn: "Artists" },
     { id: "partners", page: "partners", labelZh: "贊助夥伴", labelEn: "Partners" },
     { id: "friends", page: "friends", labelZh: "支持我們", labelEn: "Support Us" },
@@ -28,6 +29,7 @@
     "bilbao",
     "donors",
     "festival2026",
+    "festival2027",
     "2026-friends",
     "artists",
     "friends",
@@ -61,6 +63,7 @@
     if (path === "team") return "team";
     if (path === "bilbao") return "bilbao";
     if (path === "festival2026") return "festival2026";
+    if (path === "festival2027") return "festival2027";
     if (path === "2026-friends") return "2026-friends";
     if (path === "artists") return "artists";
     if (path === "partners") return "partners";
