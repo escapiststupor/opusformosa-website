@@ -1,5 +1,18 @@
 html { font-size: 17px; }
 nav-bar { display: block; }
+.festival-nav { position: relative; }
+.festival-nav summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; }
+.festival-nav summary::-webkit-details-marker { display: none; }
+.festival-nav__arrow { width: 7px; height: 7px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); }
+.festival-nav[open] .festival-nav__arrow { transform: rotate(225deg); }
+.festival-nav__years { padding: 6px 16px 6px 28px; background: #0d0b09; }
+.festival-nav__years a { display: block; padding: 10px 16px; color: #f0e8d8; text-decoration: none; }
+.festival-nav__years a:hover, .festival-nav__years a[aria-current="page"] { color: #c89840; }
+.festival-nav summary:focus-visible, .festival-nav__years a:focus-visible { outline: 2px solid #c89840; outline-offset: 3px; }
+.festival-nav summary:active, .festival-nav__years a:active { color: #c89840; }
+@media (min-width: 1024px) {
+  .festival-nav__years { position: absolute; top: 100%; left: 0; min-width: 140px; margin-top: 16px; padding: 6px; border: 1px solid rgba(200,152,64,.35); box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+}
 body { padding-top: 64px; }
 
 nav-bar nav {

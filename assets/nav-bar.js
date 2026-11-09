@@ -14,8 +14,7 @@
     },
     { id: "team", page: "team", labelZh: "團隊介紹", labelEn: "Team" },
     { id: "bilbao", page: "bilbao", labelZh: "畢爾包", labelEn: "Bilbao" },
-    { id: "festival2026", page: "festival2026", labelZh: "Edition 2026", labelEn: "Edition 2026" },
-    { id: "festival2027", page: "festival2027", labelZh: "2027 音樂節", labelEn: "Edition 2027" },
+    { id: "festival", labelZh: "音樂節", labelEn: "Festival" },
     { id: "artists", page: "artists", labelZh: "藝術家", labelEn: "Artists" },
     { id: "partners", page: "partners", labelZh: "贊助夥伴", labelEn: "Partners" },
     { id: "friends", page: "friends", labelZh: "支持我們", labelEn: "Support Us" },
@@ -149,6 +148,18 @@
     /* Same-language nav links (no lang switcher) */
     var linksHtml = items
       .map(function (item) {
+        if (item.id === "festival") {
+          var festivalActive = currentId === "festival2026" || currentId === "festival2027";
+          var yearLinks = ["2026", "2027"].map(function (year) {
+            var selected = currentId === "festival" + year;
+            return '<a href="' + pageHref("festival" + year, isEn ? "en" : "zh") + '"' +
+              (selected ? ' aria-current="page"' : '') + '>' + year + '</a>';
+          }).join("");
+          return '<details class="festival-nav">' +
+            '<summary class="' + (festivalActive ? activeClass : linkClass) + '">' +
+            (isEn ? item.labelEn : item.labelZh) + '<span class="festival-nav__arrow" aria-hidden="true"></span></summary>' +
+            '<div class="festival-nav__years">' + yearLinks + '</div></details>';
+        }
         var isActive = item.id === currentId;
         var cls = isActive ? activeClass : linkClass;
         var href = pageHref(item.page, isEn ? "en" : "zh");
@@ -204,6 +215,18 @@
   NavBarElement.prototype.connectedCallback = function () {
     var lang = getLang(this);
     this.innerHTML = render(lang);
+    var festival = this.querySelector(".festival-nav");
+    if (festival) {
+      document.addEventListener("click", function (event) {
+        if (!festival.contains(event.target)) festival.open = false;
+      });
+      festival.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          festival.open = false;
+          festival.querySelector("summary").focus();
+        }
+      });
+    }
   };
   Object.setPrototypeOf(NavBarElement, HTMLElement);
   customElements.define("nav-bar", NavBarElement);
