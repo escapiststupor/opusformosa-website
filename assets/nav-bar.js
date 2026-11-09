@@ -15,7 +15,6 @@
     { id: "team", page: "team", labelZh: "團隊介紹", labelEn: "Team" },
     { id: "bilbao", page: "bilbao", labelZh: "畢爾包", labelEn: "Bilbao" },
     { id: "festival", labelZh: "音樂節", labelEn: "Festival" },
-    { id: "artists", page: "artists", labelZh: "藝術家", labelEn: "Artists" },
     { id: "partners", page: "partners", labelZh: "贊助夥伴", labelEn: "Partners" },
     { id: "friends", page: "friends", labelZh: "支持我們", labelEn: "Support Us" },
   ];
@@ -30,7 +29,7 @@
     "festival2026",
     "festival2027",
     "2026-friends",
-    "artists",
+    "artists2026",
     "friends",
     "partners",
   ];
@@ -64,7 +63,7 @@
     if (path === "festival2026") return "festival2026";
     if (path === "festival2027") return "festival2027";
     if (path === "2026-friends") return "2026-friends";
-    if (path === "artists") return "artists";
+    if (path === "artists2026") return "artists2026";
     if (path === "partners") return "partners";
     if (path === "friends") return "friends";
     return "index";
@@ -149,11 +148,14 @@
     var linksHtml = items
       .map(function (item) {
         if (item.id === "festival") {
-          var festivalActive = currentId === "festival2026" || currentId === "festival2027";
+          var festivalActive = currentId === "festival2026" || currentId === "festival2027" || currentId === "artists2026";
           var yearLinks = ["2026", "2027"].map(function (year) {
             var selected = currentId === "festival" + year;
             return '<a href="' + pageHref("festival" + year, isEn ? "en" : "zh") + '"' +
-              (selected ? ' aria-current="page"' : '') + '>' + year + '</a>';
+              (selected ? ' aria-current="page"' : '') + '>' + year + '</a>' +
+              (year === "2026" ? '<a href="' + pageHref("artists2026", isEn ? "en" : "zh") + '"' +
+                (currentId === "artists2026" ? ' aria-current="page"' : '') + '>' +
+                (isEn ? "2026 Artists" : "2026 藝術家") + '</a>' : '');
           }).join("");
           return '<details class="festival-nav">' +
             '<summary class="' + (festivalActive ? activeClass : linkClass) + '">' +
